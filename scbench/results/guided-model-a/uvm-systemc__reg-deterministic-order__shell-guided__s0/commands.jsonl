@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "grep -rn \"get_registers\" src/"}
+{"tool": "run_command", "args": "grep -E \"m_regs|m_blks|m_mems|m_maps\" src/uvmsc/reg/uvm_reg_block.h src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "run_command", "args": "grep -n -C 5 \"m_blks\\|m_regs\\|m_mems\\|m_maps\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n -C 5 \"get_memories\\|get_maps\\|get_submaps\" src/uvmsc/reg/uvm_reg_map.cpp src/uvmsc/reg/uvm_reg_map.h src/uvmsc/reg/uvm_reg_block.cpp src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "grep -n -C 5 \"get_registers\" ~/Tools/uvm-core/src/reg/uvm_reg_block.svh"}
+{"tool": "run_command", "args": "grep -n -C 5 \"regs\\[\" ~/Tools/uvm-core/src/reg/uvm_reg_block.svh"}
+{"tool": "run_command", "args": "grep -n -C 5 \"regs\" ~/Tools/uvm-core/src/reg/uvm_reg_map.svh"}
+{"tool": "run_command", "args": "grep -n -A 25 \"function void uvm_reg_map::get_registers\" ~/Tools/uvm-core/src/reg/uvm_reg_map.svh"}
+{"tool": "run_command", "args": "find tests -name \"*reg*\""}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests/70regs -type d"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/examples/simple/registers -maxdepth 2"}
+{"tool": "run_command", "args": "grep -rn \"get_registers\\|get_memories\\|get_blocks\" tests/"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/examples/simple/registers/models/fifo_reg/golden/fifo_reg.log"}
+{"tool": "run_command", "args": "cat CMakeLists.txt"}
+{"tool": "run_command", "args": "echo SYSTEMC_HOME=$SYSTEMC_HOME"}
+{"tool": "run_command", "args": "cat tests/CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_BUILD_TYPE=Debug"}
+{"tool": "run_command", "args": "grep -n -C 10 \"m_blksT\" src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "sed -n '340,390p' src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "sed -n '1815,1910p' src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "sed -n '270,360p' src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "run_command", "args": "grep -n -A 10 \"function void uvm_reg_block::get_maps\" ~/Tools/uvm-core/src/reg/uvm_reg_block.svh"}
+{"tool": "run_command", "args": "grep -rn \"m_blks\\|m_regs\\b\\|m_mems\\b\\|m_maps\\b\\|m_vregs\" src/"}
+{"tool": "run_command", "args": "grep -n \"erase\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n \"erase\\|delete\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "sed -n '330,345p' src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "grep -n \"protected:\\|private:\" src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "grep -n -A 15 \"function void uvm_reg_block::add_block\" ~/Tools/uvm-core/src/reg/uvm_reg_block.svh"}
+{"tool": "run_command", "args": "grep -n -A 20 \"function uvm_reg_map uvm_reg_block::create_map\" ~/Tools/uvm-core/src/reg/uvm_reg_block.svh"}
+{"tool": "run_command", "args": "grep -n -A 25 \"function void uvm_reg_block::add_map\" ~/Tools/uvm-core/src/reg/uvm_reg_block.svh"}
+{"tool": "run_command", "args": "grep -rn \"get_inst_id\" src/"}
+{"tool": "run_command", "args": "sed -n '138,150p' src/uvmsc/base/uvm_object.cpp"}
+{"tool": "run_command", "args": "sed -n '50,75p' src/uvmsc/base/uvm_object.cpp"}
+{"tool": "run_command", "args": "grep -n \"id\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "head -n 45 src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "grep -n \"include.*uvm_reg\" src/uvmsc/reg/uvm_mem.h src/uvmsc/reg/uvm_reg_map.h src/uvmsc/reg/uvm_vreg.h"}
+{"tool": "run_command", "args": "sed -n '380,410p' src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-70regs-02regs-10maxsize"}
+{"tool": "run_command", "args": "ctest --test-dir build -R unit_tests/70regs/02regs/10maxsize -V"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/golden/test.log"}
+{"tool": "run_command", "args": "grep -n \"m_roots\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -rn \"get_registers\" tests/"}
+{"tool": "run_command", "args": "sed -n '115,140p' src/uvmsc/reg/uvm_reg.cpp"}
+{"tool": "run_command", "args": "sed -n '115,140p' src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "run_command", "args": "sed -n '140,155p' src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "run_command", "args": "sed -n '110,125p' src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/golden/test.log"}
+{"tool": "run_command", "args": "grep -n \"add_map\" src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "sed -n '290,315p' src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30order/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30order/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_BUILD_TYPE=Debug"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-70regs-02regs-30order"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 30order -V"}
+{"tool": "run_command", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/build/tests/unit_tests-70regs-02regs-30order"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30order/test.cpp"}

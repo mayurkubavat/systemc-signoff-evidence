@@ -1,0 +1,75 @@
+{
+  "task": "uvm-systemc:global-forward-declarations",
+  "arm": "shell",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 182,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 3,
+      "manage_task": 5,
+      "read_file": 24,
+      "run_command": 26
+    },
+    "tool_calls_total": 58,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 268703,
+      "output_tokens": 15893,
+      "thinking_tokens": 11389,
+      "cache_read_input_tokens": 2320188
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 337.9,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/06global_names",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-00basic-99fixes-06global_names",
+          "seconds": 11.9,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 31,
+              "col": 1,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 38,
+              "col": 19,
+              "message": "incompatible pointer types assigning to 'uvm_object *' from 'uvm_event *'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 40,
+              "col": 56,
+              "message": "member access into incomplete type 'uvm_object'"
+            }
+          ],
+          "error_count": 3,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": [
+      " 3 files changed, 7 insertions(+), 7 deletions(-)"
+    ]
+  },
+  "status": "fail"
+}

@@ -1,0 +1,44 @@
+{"tool": "run_command", "args": "rg -n \"reg_rw\""}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/src/uvmsc/reg/uvm_reg_map.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log 1"}
+{"tool": "run_command", "args": "rg -n \"reg_rw\" src/"}
+{"tool": "run_command", "args": "git log -n 5 --oneline src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "echo $SYSTEMC_HOME && which cmake ninja ctest"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "170 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/CMakeLists.txt 121"}
+{"tool": "run_command", "args": "cmake -G Ninja -B build -DCMAKE_PREFIX_PATH=~/.local/opt/accellera/systemc"}
+{"tool": "run_command", "args": "cmake -G Ninja -B build -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=~/.local/opt/accellera/systemc"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | head -n 40"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"factory/basic|registers\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build -t targets | rg \"check|test|examples-simple-factory-basic\" | head -n 20"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ninja -C build examples-simple-factory-basic examples-simple-registers-models-aliasing examples-simple-registers-models-ro_wo_same_addr"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"factory/basic|registers\" --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"reg_rw|already registered|type_name\" build/tests/Testing/uvm-systemc/examples/simple/registers/models/aliasing/sc_main.log || head -n 30 build/tests/Testing/uvm-systemc/examples/simple/registers/models/aliasing/sc_main.log"}
+{"tool": "run_command", "args": "head -n 20 tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log"}
+{"tool": "run_command", "args": "head -n 20 build/tests/Testing/uvm-systemc/examples/simple/registers/models/aliasing/sc_main.log"}
+{"tool": "run_command", "args": "rg -n \"UVM_OBJECT_UTILS|UVM_COMPONENT_UTILS\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "rg -n \"All types registered with the factory\""}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s2/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "ninja -C build uvm-systemc examples-simple-factory-basic examples-simple-registers-models-aliasing examples-simple-registers-models-ro_wo_same_addr"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"factory/basic|registers\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "read_file", "args": "1385 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log 1360"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log 25"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j 8"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/CMakeLists.txt 60"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/70regs/"}
+{"tool": "read_file", "args": "40 <worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/03maps/01reg_rw_factory/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/03maps/01reg_rw_factory/golden/test.log"}
+{"tool": "run_command", "args": "cmake -G Ninja -B build -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=~/.local/opt/accellera/systemc"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-70regs-03maps-01reg_rw_factory"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"01reg_rw_factory|factory/basic|registers\" --output-on-failure"}
+{"tool": "run_command", "args": "git status -s"}

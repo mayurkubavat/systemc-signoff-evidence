@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" src/"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "find ~/Tools/uvm-core/src -name \"*reg_map*\""}
+{"tool": "read_file", "args": "110 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 40"}
+{"tool": "run_command", "args": "grep -n \"reg_rw\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "grep -n \"class \" ~/Tools/uvm-core/src/reg/uvm_reg_map.svh"}
+{"tool": "run_command", "args": "git log -S \"reg_rw\" -p src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "git grep \"reg_rw\""}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log 1"}
+{"tool": "run_command", "args": "git log --oneline -n 30"}
+{"tool": "run_command", "args": "git show bc5db8b"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/test.cpp 1"}
+{"tool": "run_command", "args": "find examples tests -name \"top.h\""}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/top.h 1"}
+{"tool": "read_file", "args": "85 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/top.h 61"}
+{"tool": "run_command", "args": "grep -n \"reg_rw\" src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" src/"}
+{"tool": "run_command", "args": "grep -rn \"class.*rw\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME: $SYSTEMC_HOME\""}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -n \"ENABLE_TESTS\" CMakeLists.txt || grep -n \"BUILD_TEST\" CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -i \"option\" CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -n -C 10 \"ENABLE_REGRESSION\" CMakeLists.txt"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 51"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 121"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-factory-basic"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"examples/simple/factory/basic\" -V"}
+{"tool": "run_command", "args": "grep -rn \"registered twice\" src/"}
+{"tool": "run_command", "args": "grep -rn \"register\" src/uvmsc/factory/"}
+{"tool": "read_file", "args": "195 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/factory/uvm_default_factory.cpp 165"}
+{"tool": "run_command", "args": "ls -R tests/tests/uvm-systemc/bugs"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-registers-models-aliasing && ctest --test-dir build -R \"examples/simple/registers/models/aliasing\" -V"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/build/tests/Testing/uvm-systemc/examples/simple/registers/models/aliasing/sc_main.run-test.log 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/build/tests/Testing/uvm-systemc/examples/simple/registers/models/aliasing/sc_main.log 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/cmake/run-test.py 50"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/cmake/run-test.py 101"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses/sc_main.cpp"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "git log --grep=\"reg_rw\""}
+{"tool": "run_command", "args": "ls -R tests/tests/uvm-systemc/unit_tests/70regs/"}
+{"tool": "run_command", "args": "ls -R tests/tests/uvm-systemc/unit_tests/00basic/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/01fields/04write/test.cpp 1"}
+{"tool": "run_command", "args": "git log -p -n 1 tests/tests/uvm-systemc/unit_tests/70regs/01fields/04write/"}
+{"tool": "run_command", "args": "git log -p -n 1 d3092c26ea01e8a3980a5c060b943019447591db~1 tests/tests/uvm-systemc/unit_tests/70regs/01fields/04write/"}
+{"tool": "run_command", "args": "git log --all --grep=\"reg_rw\""}
+{"tool": "run_command", "args": "git show a2e326f02dd74f38ca6dee4d03c81c6c79526d53"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"05factory_reg_rw\""}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-05factory_reg_rw"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"05factory_reg_rw\" -V"}
+{"tool": "read_file", "args": "95 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 40"}

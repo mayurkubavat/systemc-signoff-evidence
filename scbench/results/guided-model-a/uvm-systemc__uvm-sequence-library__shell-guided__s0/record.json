@@ -8,24 +8,23 @@
     "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "read_file": 33,
-      "run_command": 25
+      "run_command": 59
     },
-    "tool_calls_total": 58,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 307427,
-      "output_tokens": 20343,
-      "thinking_tokens": 16231,
-      "cache_read_input_tokens": 2764403
+      "input_tokens": 261453,
+      "output_tokens": 11383,
+      "thinking_tokens": 7604,
+      "cache_read_input_tokens": 2327756
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 226.8,
+    "wall_s": 146.5,
     "graded_status": "fail"
   },
   "grade": {
@@ -39,7 +38,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-30seq-02sequence_library",
-          "seconds": 3.9,
+          "seconds": 3.3,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-sequence-library__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",

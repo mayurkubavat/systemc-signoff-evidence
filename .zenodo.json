@@ -8,7 +8,7 @@
       "affiliation": "Independent Researcher"
     }
   ],
-  "description": "Independent review reports, measurement scripts and data behind the report Proof Before Push, which applies a sign-off checklist (fail-then-pass test, baseline regression, clean build, independent review) to 58 change branches in four open SystemC verification libraries: SystemC, UVM-SystemC, CRAVE and FC4SC. Includes a manifest pinning each measured branch to its commit and instructions to reproduce Table 1. This release also contains SCBench: 15 maintenance tasks graded by hidden regression tests, the scbench-mcp verification tool server, the harness, and scrubbed results of a pilot with coding agents, with models labelled Model A, B and C.",
+  "description": "Independent review reports, measurement scripts and data behind the report Proof Before Push, which applies a sign-off checklist (fail-then-pass test, baseline regression, clean build, independent review) to 58 change branches in four open SystemC verification libraries: SystemC, UVM-SystemC, CRAVE and FC4SC. Includes a manifest pinning each measured branch to its commit and instructions to reproduce Table 1. This release also contains SCBench: 15 maintenance tasks graded by hidden regression tests, the scbench-mcp verification tool server, the harness, and scrubbed results of a pilot with coding agents, with models labelled Model A, B and C. Version 1.2.0 isolates each agent workspace from the repository history (a first harness version let one model reach the reference changes; the audit and the affected runs are included), and reports that model's rerun.",
   "license": "Apache-2.0",
   "keywords": [
     "SystemC",
@@ -18,5 +18,5 @@
     "regression"
   ],
   "access_right": "open",
-  "version": "1.1.0"
+  "version": "1.2.0"
 }

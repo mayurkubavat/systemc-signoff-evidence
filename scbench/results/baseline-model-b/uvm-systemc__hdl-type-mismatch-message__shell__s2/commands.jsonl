@@ -1,0 +1,38 @@
+{"tool": "run_command", "args": "rg -n \"uvm_hdl_read|uvm_hdl_deposit|HDL_DEPOSIT|HDL_READ\""}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/dpi/uvm_hdl.h 1"}
+{"tool": "read_file", "args": "420 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/dpi/uvm_hdl.h 251"}
+{"tool": "run_command", "args": "ls -la && echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" -DBUILD_TESTS=ON"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "cmake --build build"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/reg/uvm_sc_if.h 1"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/01hdl/test.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"uvm_reg_data_t\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 70regs --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-30bkdr-01hdl unit_tests-70regs-30bkdr-10paths"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"70regs/30bkdr\" --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"uvm_extract_path_index\" src/"}
+{"tool": "read_file", "args": "600 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/base/uvm_globals.cpp 525"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/dpi/uvm_hdl.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/reg/uvm_reg_model.h 1"}
+{"tool": "run_command", "args": "rg -n \"UVM_REG_DATA_WIDTH\" src/"}
+{"tool": "run_command", "args": "rg -n \"not of type uvm_sc_if\""}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/dpi/uvm_hdl.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/dpi/uvm_hdl.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/src/uvmsc/dpi/uvm_hdl.h"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/ && rg -n \"30bkdr\" tests/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "295 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/01hdl/test.cpp 200"}
+{"tool": "run_command", "args": "rg -l \"uvm_report_catcher\" tests/"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp 1"}
+{"tool": "read_file", "args": "139 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp 81"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20err_msg/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-30bkdr-01hdl unit_tests-70regs-30bkdr-10paths unit_tests-70regs-30bkdr-20err_msg"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/CMakeLists.txt 101"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/10paths/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20err_msg/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-70regs-30bkdr-01hdl unit_tests-70regs-30bkdr-10paths unit_tests-70regs-30bkdr-20err_msg"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"70regs/30bkdr\" --output-on-failure"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__hdl-type-mismatch-message__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20err_msg/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"70regs/30bkdr\" --output-on-failure"}
+{"tool": "run_command", "args": "git status && git diff src/"}

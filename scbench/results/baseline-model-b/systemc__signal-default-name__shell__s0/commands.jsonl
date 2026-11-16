@@ -1,0 +1,34 @@
+{"tool": "run_command", "args": "rg -n \"class sc_signal|sc_signal\\(\" src/sysc/communication/"}
+{"tool": "read_file", "args": "420 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 140"}
+{"tool": "run_command", "args": "rg -n \"sc_signal_t|sc_signal<|sc_gen_unique_name\" src/sysc/communication/"}
+{"tool": "run_command", "args": "ls -la && echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && which cmake ninja ctest"}
+{"tool": "read_file", "args": "560 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 420"}
+{"tool": "read_file", "args": "150 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_buffer.h 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DBUILD_SOURCE_DOCUMENTATION=OFF"}
+{"tool": "run_command", "args": "ls tests/ && rg -n \"ENABLE_REGRESSION\" CMakeLists.txt tests/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DBUILD_SOURCE_DOCUMENTATION=OFF -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "cmake --build build --target systemc && ctest --test-dir build -N -R \"sc_signal|sc_buffer\""}
+{"tool": "run_command", "args": "ctest --test-dir build -N | head -n 40"}
+{"tool": "read_file", "args": "100 <worktree>/systemc__signal-default-name__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "rg -n \"enable_testing|add_subdirectory.*tests|ENABLE_REGRESSION\" CMakeLists.txt"}
+{"tool": "read_file", "args": "150 <worktree>/systemc__signal-default-name__shell__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ctest --test-dir build/tests -N | head -n 30"}
+{"tool": "run_command", "args": "ctest --test-dir build/tests -N -R \"signal|buffer|comm\""}
+{"tool": "run_command", "args": "ls -la tests/systemc/communication/sc_signal/constructors/"}
+{"tool": "read_file", "args": "100 <worktree>/systemc__signal-default-name__shell__s0/tests/systemc/communication/sc_signal/constructors/test01.cpp 1"}
+{"tool": "run_command", "args": "ls tests/systemc/communication/sc_signal/constructors/golden/ && cat tests/systemc/communication/sc_signal/constructors/golden/*"}
+{"tool": "read_file", "args": "90 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal_resolved.h 50"}
+{"tool": "read_file", "args": "130 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal_rv.h 90"}
+{"tool": "read_file", "args": "145 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 50"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal_rv.h"}
+{"tool": "run_command", "args": "ls tests/systemc/communication/sc_signal/constructors/ && ls tests/systemc/communication/sc_buffer/"}
+{"tool": "run_command", "args": "ls tests/systemc/communication/sc_signal/"}
+{"tool": "write_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/tests/systemc/communication/sc_signal/default_name/default_name.cpp"}
+{"tool": "write_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/tests/systemc/communication/sc_signal/default_name/golden/default_name.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DBUILD_SOURCE_DOCUMENTATION=OFF -DENABLE_REGRESSION=ON && cmake --build build --target systemc systemc-communication-sc_signal-default_name systemc-communication-sc_signal-constructors systemc-communication-sc_buffer-test01 systemc-communication-sc_buffer-test02 systemc-communication-sc_signal_resolved-test01 systemc-communication-sc_signal_rv-test01"}
+{"tool": "run_command", "args": "ctest --test-dir build/tests --output-on-failure -R \"sc_signal/(default_name|constructors)|sc_buffer/test0[12]|sc_signal_resolved/test01|sc_signal_rv/test01\""}
+{"tool": "run_command", "args": "git status && git diff src/"}

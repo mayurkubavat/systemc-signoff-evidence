@@ -10,24 +10,25 @@
     "tool_calls": {
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "read_file": 8,
-      "run_command": 4,
-      "search_web": 44
+      "mcp__scbench__run_test": 1,
+      "read_file": 12,
+      "run_command": 18,
+      "search_web": 25
     },
     "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 264541,
-      "output_tokens": 9183,
-      "thinking_tokens": 6809,
-      "cache_read_input_tokens": 2751228
+      "input_tokens": 253080,
+      "output_tokens": 7311,
+      "thinking_tokens": 3470,
+      "cache_read_input_tokens": 2521903
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 280.7,
+    "wall_s": 283.6,
     "graded_status": "fail"
   },
   "grade": {
@@ -41,7 +42,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-30seq-02sequence_library",
-          "seconds": 4.5,
+          "seconds": 3.4,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s2/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",

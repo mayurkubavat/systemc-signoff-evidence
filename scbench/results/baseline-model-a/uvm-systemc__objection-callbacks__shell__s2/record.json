@@ -5,28 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 183,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 6,
-      "read_file": 18,
-      "run_command": 24,
-      "search_web": 11
+      "manage_task": 8,
+      "read_file": 19,
+      "run_command": 26,
+      "search_web": 6
     },
     "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 239230,
-      "output_tokens": 9061,
-      "thinking_tokens": 5532,
-      "cache_read_input_tokens": 3226535
+      "input_tokens": 262763,
+      "output_tokens": 10038,
+      "thinking_tokens": 6148,
+      "cache_read_input_tokens": 2702661
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 223.4,
+    "wall_s": 212.9,
     "graded_status": "fail"
   },
   "grade": {
@@ -40,7 +40,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-40phasing-30objection_callbacks",
-          "seconds": 6.4,
+          "seconds": 3.3,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",

@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "find . -maxdepth 3 -not -path '*/.*'"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME && ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -in \"test\" CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ctest --test-dir build -j8"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00hello\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build -t targets"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-00hello && ctest --test-dir build -R \"00hello\" --output-on-failure"}
+{"tool": "run_command", "args": "git grep -i \"heartbeat\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" filetype:svh OR \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"HBFAIL\" \"NOEVNT\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"class uvm_heartbeat\" \"HBFAIL\""}
+{"tool": "search_web", "args": "site:github.com \"class uvm_heartbeat\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update of objection\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" uvm"}
+{"tool": "search_web", "args": "\"uvm_error\" \"ILHBVNT\" OR \"NOEVNT\""}
+{"tool": "search_web", "args": "\"function void start\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"No event\" uvm"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"start\""}
+{"tool": "search_web", "args": "\"NOEVNT\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"filename:uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"src/base/uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"class uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"uvm_report_fatal\" \"HBFAIL\" OR \"uvm_fatal\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"since last event trigger at time\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" uvm"}
+{"tool": "search_web", "args": "\"HBFAIL\" \"objection\" \"mode\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat_callback\""}
+{"tool": "run_command", "args": "find src -name \"*objection*\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s0/src/uvmsc/phasing/uvm_objection_callback.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp 1"}
+{"tool": "read_file", "args": "134 <worktree>/uvm-systemc__uvm-heartbeat__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp 100"}
+{"tool": "run_command", "args": "git log -n 5 --stat"}
+{"tool": "run_command", "args": "find tests -name \"*heartbeat*\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" OR \"ILHBVNT\" uvm"}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_warning\" OR \"uvm_error\" OR \"uvm_report\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" site:github.com"}
+{"tool": "search_web", "args": "\"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not recieve an update of\""}

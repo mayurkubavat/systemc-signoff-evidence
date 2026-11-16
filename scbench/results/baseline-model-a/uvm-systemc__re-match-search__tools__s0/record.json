@@ -9,25 +9,27 @@
     "non_json_lines": 0,
     "tool_calls": {
       "mcp__scbench__build": 1,
-      "mcp__scbench__list_tests": 2,
-      "read_file": 26,
-      "run_command": 17,
-      "search_web": 13
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 1,
+      "read_file": 28,
+      "run_command": 23,
+      "search_web": 3
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 269431,
-      "output_tokens": 23591,
-      "thinking_tokens": 19964,
-      "cache_read_input_tokens": 2292943
+      "input_tokens": 257292,
+      "output_tokens": 22307,
+      "thinking_tokens": 18491,
+      "cache_read_input_tokens": 1830399
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 222.6,
+    "wall_s": 276.3,
     "graded_status": "fail"
   },
   "grade": {

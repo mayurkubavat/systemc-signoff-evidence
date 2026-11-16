@@ -10,26 +10,26 @@
     "tool_calls": {
       "edit_file": 4,
       "mcp__scbench__build": 2,
-      "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_regression": 2,
+      "mcp__scbench__list_tests": 3,
+      "mcp__scbench__run_regression": 3,
       "mcp__scbench__run_test": 9,
-      "read_file": 13,
-      "run_command": 28
+      "read_file": 14,
+      "run_command": 23
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 271923,
-      "output_tokens": 19411,
-      "thinking_tokens": 14803,
-      "cache_read_input_tokens": 2607959
+      "input_tokens": 252128,
+      "output_tokens": 16287,
+      "thinking_tokens": 11503,
+      "cache_read_input_tokens": 2092131
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 315.4,
+    "wall_s": 409.4,
     "graded_status": "pass"
   },
   "grade": {

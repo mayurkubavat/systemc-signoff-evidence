@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "grep -i \"regression\" CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -DENABLE_REGRESSION=ON && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00hello\" -V"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep hello"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep -E \"test|check|all\""}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/cb src/uvmsc/phasing"}
+{"tool": "manage_task", "args": "status <id>/task-20"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "252 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.h 151"}
+{"tool": "manage_task", "args": "status <id>/task-27"}
+{"tool": "run_command", "args": "grep -rn \"uvm_callbacks\" src/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/report/uvm_report_catcher.h 25"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/macros/uvm_callback_defines.h 1"}
+{"tool": "read_file", "args": "184 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/macros/uvm_callback_defines.h 101"}
+{"tool": "manage_task", "args": "status <id>/task-27"}
+{"tool": "run_command", "args": "find tests -name \"*callback*\""}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/callbacks/basic/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s2/tests/tests/uvm-systemc/examples/simple/callbacks/basic/bus_driver_cb.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s2/tests/tests/uvm-systemc/examples/simple/callbacks/basic/bus_driver.h 1"}
+{"tool": "manage_task", "args": "status <id>/task-27"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.cpp 100"}
+{"tool": "manage_task", "args": "status <id>/task-27"}
+{"tool": "manage_task", "args": "status <id>/task-27"}
+{"tool": "run_command", "args": "sleep 2"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/04objection/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/04objection/test.cpp 1"}
+{"tool": "run_command", "args": "grep -rn \"objection\" tests/"}
+{"tool": "search_web", "args": "\"uvm_objection_callback\" \"uvm_objection\" raised dropped all_dropped"}
+{"tool": "search_web", "args": "\"uvm_objection_callback\" \"uvm_objection.sv\" filetype:sv OR github"}
+{"tool": "search_web", "args": "\"site:github.com\" \"uvm_objection_callback\" \"uvm_objection.svh\""}
+{"tool": "search_web", "args": "\"uvm_do_callbacks\" \"uvm_objection_callback\""}
+{"tool": "search_web", "args": "\"site:github.com\" \"uvm-core\" OR \"uvm\" \"raised(this, obj, source_obj\" OR \"all_dropped(this, obj, source_obj\""}
+{"tool": "search_web", "args": "\"site:github.com\" \"uvm_objection.svh\" \"all_dropped\" \"raised\""}
+{"tool": "search_web", "args": "\"site:github.com\" \"uvm_objection.svh\" \"uvm_do_callbacks\" OR \"m_raise\" OR \"m_propagate\""}
+{"tool": "search_web", "args": "\"uvm_register_cb(uvm_objection, uvm_objection_callback)\""}
+{"tool": "search_web", "args": "\"site:github.com\" \"uvm_objection\" \"raised(\" \"dropped(\" \"all_dropped(\""}
+{"tool": "run_command", "args": "grep -n -E \"void uvm_objection::\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.cpp 300"}
+{"tool": "run_command", "args": "grep -n -E \"raised\\(|dropped\\(|all_dropped\\(\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "650 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.cpp 580"}
+{"tool": "read_file", "args": "790 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.cpp 720"}
+{"tool": "read_file", "args": "880 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/phasing/uvm_objection.cpp 820"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks\" \"uvm_objection\" \"uvm_objection_callback\""}
+{"tool": "search_web", "args": "\"site:github.com\" \"uvm_do_callbacks\" \"uvm_objection_callback\""}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/cb/uvm_callback_iter.h 1"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/cb/uvm_callbacks.h 80"}
+{"tool": "read_file", "args": "300 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/cb/uvm_callbacks.h 240"}
+{"tool": "run_command", "args": "grep -rn \"m_register_cb\" src/"}
+{"tool": "read_file", "args": "815 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/base/uvm_object.cpp 790"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__objection-callbacks__shell__s2/src/uvmsc/report/uvm_report_catcher.cpp 40"}
+{"tool": "run_command", "args": "grep -n \"m_register_cb\" src/uvmsc/report/uvm_report_catcher.*"}
+{"tool": "run_command", "args": "grep -n \"m_register_cb\" src/uvmsc/report/uvm_report_object.*"}
+{"tool": "run_command", "args": "grep -rn \"uvm_report_cb\" src/"}

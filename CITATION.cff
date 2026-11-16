@@ -16,6 +16,7 @@ abstract: >-
   hidden regression tests, the scbench-mcp verification tool server, the
   harness, and scrubbed results of a pilot with coding agents, with models
   labelled Model A, B and C.
+version: 1.2.0
 license: Apache-2.0
 repository-code: "https://github.com/mayurkubavat/systemc-signoff-evidence"
 keywords:

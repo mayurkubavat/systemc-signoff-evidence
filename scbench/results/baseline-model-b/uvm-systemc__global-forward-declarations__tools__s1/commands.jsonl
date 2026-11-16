@@ -1,0 +1,45 @@
+{"tool": "run_command", "args": "rg -n \"class uvm_object;|class uvm_printer;|class uvm_event_callback;\" src/"}
+{"tool": "run_command", "args": "rg -n \"add_callback|delete_callback\" src/"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/dap/uvm_simple_lock_dap.h 1"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/dap/uvm_set_before_get_dap.h 1"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/dap/uvm_get_to_lock_dap.h 1"}
+{"tool": "run_command", "args": "python3 -c '\nimport glob, re\nfor p in sorted(glob.glob(\"src/**/*.h\", recursive=True)):\n    with open(p) as f:\n        lines = f.readlines()\n    in_ns = False\n    for i, line in enumerate(lines, 1):\n        if re.match(r\"^\\s*namespace\\s+uvm\\b\", line):\n            in_ns = True\n        if re.match(r\"^\\s*class\\s+uvm_\\w+\\s*;\", line):\n            if not in_ns:\n                print(f\"{p}:{i}: [GLOBAL] {line.strip()}\")\n'"}
+{"tool": "run_command", "args": "python3 -c '\nimport glob, re\nfor p in sorted(glob.glob(\"src/**/*.h\", recursive=True)):\n    with open(p) as f:\n        lines = f.readlines()\n    in_ns = False\n    for i, line in enumerate(lines, 1):\n        if re.match(r\"^\\s*namespace\\s+uvm\\b\", line):\n            in_ns = True\n        if re.match(r\"^\\s*(class|struct)\\s+uvm_\\w+\", line):\n            if not in_ns:\n                print(f\"{p}:{i}: [GLOBAL] {line.strip()}\")\n'"}
+{"tool": "run_command", "args": "rg -n \"uvm_event_callback\" src/"}
+{"tool": "read_file", "args": "40 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/base/uvm_event.cpp 1"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/base/uvm_event.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/dap/uvm_get_to_lock_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/dap/uvm_set_before_get_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/dap/uvm_simple_lock_dap.h"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "run_command", "args": "ls -la tests/uvm-systemc/unit_tests/00basic/99fixes/"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "ls -la tests/ tests/tests/uvm-systemc/unit_tests/00basic/99fixes/ 2>&1 || ls -la tests/uvm-systemc/ 2>&1"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"01global_comparer\" tests/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/01global_comparer'} scbench run_test"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/src/uvmsc/base/uvm_event_callback.h 35"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/golden/test.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl'} scbench run_test"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/golden/test.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl'} scbench run_test"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/test.cpp"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl'} scbench run_test"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__tools__s1/build-scbench/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/test.log 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl/golden/test.log"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decl'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{} scbench run_regression"}
+{"tool": "run_command", "args": "git status -s && git diff src/"}

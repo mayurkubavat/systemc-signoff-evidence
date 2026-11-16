@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "git grep -n \"exists(\" src/"}
+{"tool": "read_file", "args": "430 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 350"}
+{"tool": "read_file", "args": "350 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 250"}
+{"tool": "read_file", "args": "255 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 230"}
+{"tool": "run_command", "args": "grep -n -A 20 \"function bit exists\" ~/Tools/uvm-core/src/base/uvm_config_db.svh"}
+{"tool": "run_command", "args": "git --git-dir=~/Tools/uvm-core/.git grep -n \"function bit exists\""}
+{"tool": "run_command", "args": "find tests -name \"*config*\" -o -name \"*cfg*\""}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/examples/simple/configuration"}
+{"tool": "run_command", "args": "find tests -type d -maxdepth 4"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/examples/simple/configuration/manual"}
+{"tool": "run_command", "args": "git grep -n \"manual\" tests/"}
+{"tool": "run_command", "args": "find . -name \"CMakeLists.txt\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/99fixes/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_184"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_184/basic_read_write_memory_management"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/00hello"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/00hello/test.cpp 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/00hello/golden/test.log 1"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "grep -n \"ENABLE_REGRESSION\" CMakeLists.txt"}
+{"tool": "read_file", "args": "560 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/CMakeLists.txt 525"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "git grep -l \"uvm_config_db\" tests/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/configuration/manual/sc_main.cpp 1"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-01global_comparer"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"01global_comparer\" --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ninja -C build examples-simple-configuration-manual && ctest --test-dir build -R \"examples/simple/configuration/manual\" --output-on-failure"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/cmake/run-test.py 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "run_command", "args": "python3 -c \"import os; print(os.path.exists('~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh'))\""}
+{"tool": "read_file", "args": "150 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 80"}
+{"tool": "read_file", "args": "380 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 250"}
+{"tool": "read_file", "args": "450 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 380"}
+{"tool": "read_file", "args": "480 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 450"}
+{"tool": "run_command", "args": "git grep -n \"uvm_root\" src/uvmsc/base/uvm_root.cpp"}
+{"tool": "run_command", "args": "git grep -n \"get_root\" src/uvmsc/conf/"}
+{"tool": "run_command", "args": "./build/tests/unit_tests-00basic-99fixes-01global_comparer"}
+{"tool": "read_file", "args": "290 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/cmake/run-test.py 230"}
+{"tool": "read_file", "args": "229 <worktree>/uvm-systemc__config-db-exists__shell-guided__s0/cmake/run-test.py 150"}
+{"tool": "run_command", "args": "git grep -l \"test started\" tests/"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02config_db_exists/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__config-db-exists__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02config_db_exists/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-02config_db_exists"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02config_db_exists\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__config-db-exists__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-02config_db_exists"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02config_db_exists\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build examples-simple-configuration-manual && ctest --test-dir build -R \"configuration\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-00hello unit_tests-00basic-99fixes-01global_comparer && ctest --test-dir build -R \"00basic\" --output-on-failure"}

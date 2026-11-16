@@ -5,28 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 178,
+    "events": 182,
     "non_json_lines": 0,
     "tool_calls": {
       "edit_file": 1,
-      "read_file": 18,
-      "run_command": 37,
-      "write_file": 1
+      "manage_task": 10,
+      "read_file": 15,
+      "run_command": 33
     },
-    "tool_calls_total": 57,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 277466,
-      "output_tokens": 25248,
-      "thinking_tokens": 19831,
-      "cache_read_input_tokens": 3189143
+      "input_tokens": 272246,
+      "output_tokens": 24243,
+      "thinking_tokens": 20139,
+      "cache_read_input_tokens": 3013799
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 271.8,
+    "wall_s": 214.8,
     "graded_status": "pass"
   },
   "grade": {
@@ -47,7 +47,7 @@
       }
     ],
     "agent_diffstat": [
-      " 1 file changed, 8 insertions(+), 3 deletions(-)"
+      " 1 file changed, 3 insertions(+), 2 deletions(-)"
     ]
   },
   "status": "pass"

@@ -1,0 +1,38 @@
+{"tool": "run_command", "args": "rg -n \"set_offset|m_mems_info\" src/ test/"}
+{"tool": "run_command", "args": "ls -la && ls -la test/tests/uvm/reg/ 2>/dev/null || find test -maxdepth 3 -type d"}
+{"tool": "run_command", "args": "find tests -maxdepth 4 -type d | grep -E \"reg|mem\""}
+{"tool": "read_file", "args": "1845 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 1755"}
+{"tool": "read_file", "args": "2270 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 2165"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs"}
+{"tool": "run_command", "args": "rg -n \"stride|m_mems_by_offset\" ~/Tools/uvm-core/src/reg/uvm_reg_map.svh"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/05mem"}
+{"tool": "run_command", "args": "rg -n \"05mem|70regs\" tests/ CMakeLists.txt"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/05mem/20mem_access && ls -la tests/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\""}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/20mem_access/test.cpp 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/20mem_access/golden/test.log 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/10maxsize/test.cpp 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/10maxsize/golden/test.log 1"}
+{"tool": "run_command", "args": "rg -n \"stride|get_mem_by_offset\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "1015 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 978"}
+{"tool": "read_file", "args": "1890 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 1840"}
+{"tool": "run_command", "args": "rg -n \"get_physical_addresses\\(\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R 70regs/05mem"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/30small_mem_offset/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/30small_mem_offset/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build && cmake --build build --target unit_tests-70regs-05mem-30small_mem_offset"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 30small_mem_offset --output-on-failure"}
+{"tool": "read_file", "args": "900 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 818"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/30small_mem_offset/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-05mem-30small_mem_offset && ctest --test-dir build -R 30small_mem_offset --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-05mem-30small_mem_offset && ctest --test-dir build -R 30small_mem_offset --output-on-failure"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/30small_mem_offset/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 30small_mem_offset --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R 70regs"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-01fields-01reset unit_tests-70regs-01fields-02policy unit_tests-70regs-01fields-04write unit_tests-70regs-01fields-10maxsize unit_tests-70regs-02regs-10maxsize unit_tests-70regs-02regs-20compare_mismatch unit_tests-70regs-05mem-10maxsize unit_tests-70regs-05mem-20mem_access unit_tests-70regs-05mem-30small_mem_offset unit_tests-70regs-30bkdr-01hdl unit_tests-70regs-30bkdr-10paths && ctest --test-dir build -R 70regs --output-on-failure"}
+{"tool": "run_command", "args": "git status -s && git diff src/"}

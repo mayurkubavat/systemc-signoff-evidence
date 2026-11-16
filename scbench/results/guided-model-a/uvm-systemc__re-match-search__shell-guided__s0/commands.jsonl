@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "grep -rn \"uvm_re_match\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_re_match\" ~/Tools/uvm-core/src"}
+{"tool": "run_command", "args": "find ~/Tools/uvm-core/src -name \"*regex*\""}
+{"tool": "read_file", "args": "150 ~/Tools/uvm-core/src/dpi/uvm_regex.cc 1"}
+{"tool": "read_file", "args": "250 ~/Tools/uvm-core/src/dpi/uvm_regex.cc 151"}
+{"tool": "read_file", "args": "350 ~/Tools/uvm-core/src/dpi/uvm_regex.cc 251"}
+{"tool": "read_file", "args": "470 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 410"}
+{"tool": "read_file", "args": "500 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 460"}
+{"tool": "read_file", "args": "425 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 350"}
+{"tool": "read_file", "args": "320 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 270"}
+{"tool": "read_file", "args": "270 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 230"}
+{"tool": "read_file", "args": "450 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 380"}
+{"tool": "run_command", "args": "grep -rn \"wait_modified\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "300 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 200"}
+{"tool": "read_file", "args": "130 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 50"}
+{"tool": "read_file", "args": "420 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 310"}
+{"tool": "run_command", "args": "grep -rn \"uvm_is_match\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "355 ~/Tools/uvm-core/src/base/uvm_globals.svh 335"}
+{"tool": "run_command", "args": "grep -rn \"uvm_root::\" src/"}
+{"tool": "read_file", "args": "90 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_root.cpp 75"}
+{"tool": "read_file", "args": "440 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_root.cpp 420"}
+{"tool": "run_command", "args": "grep -rn \"get_full_name\" src/"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 145"}
+{"tool": "run_command", "args": "grep -rn \"m_name = \" src/uvmsc/base/uvm_component.cpp"}
+{"tool": "read_file", "args": "375 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 315"}
+{"tool": "run_command", "args": "grep -rn \"m_parent\" src/uvmsc/base/uvm_component.cpp"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 80"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_base.cpp 150"}
+{"tool": "run_command", "args": "grep -rn \"match_scope\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "595 ~/Tools/uvm-core/src/base/uvm_resource_base.svh 580"}
+{"tool": "run_command", "args": "grep -rn \"match_scope\" src/"}
+{"tool": "read_file", "args": "360 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 320"}
+{"tool": "read_file", "args": "585 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 530"}
+{"tool": "run_command", "args": "git log -p -S \"match_scope\" -n 2 src/uvmsc/conf/uvm_resource_base.cpp"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_db.h 120"}
+{"tool": "run_command", "args": "grep -rn \"::set(\" src/uvmsc/conf/uvm_resource_db.h"}
+{"tool": "read_file", "args": "220 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_db.h 190"}
+{"tool": "read_file", "args": "480 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 445"}
+{"tool": "run_command", "args": "grep -rn \"lookup_name\" src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "read_file", "args": "345 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 298"}
+{"tool": "run_command", "args": "grep -rn \"match\" src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "read_file", "args": "545 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 500"}
+{"tool": "read_file", "args": "297 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 240"}
+{"tool": "run_command", "args": "find tests -name \"*config*\" -o -name \"*regex*\" -o -name \"*resource*\""}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/99fixes/ tests/tests/uvm-systemc/bugs/"}
+{"tool": "run_command", "args": "grep -rn \"add_subdirectory\" ."}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -type d -name \"golden\""}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/configuration/manual/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "55 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 50"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}

@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "grep -rn \"set_offset\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "grep -rn \"set_offset\" src/uvmsc/reg/uvm_reg_map.cpp ~/Tools/uvm-core/src/reg/uvm_reg_map.svh"}
+{"tool": "run_command", "args": "grep -rn \"set_offset\" src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "read_file", "args": "210 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_mem.cpp 150"}
+{"tool": "run_command", "args": "grep -rn \"m_set_mem_offset\" src/uvmsc/"}
+{"tool": "run_command", "args": "grep -rn \"get_size()\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "read_file", "args": "1860 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 1755"}
+{"tool": "read_file", "args": "2230 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 2170"}
+{"tool": "read_file", "args": "50 ~/Tools/uvm-core/src/reg/uvm_reg_map.svh 1"}
+{"tool": "run_command", "args": "grep -n -C 15 \"stride\" ~/Tools/uvm-core/src/reg/uvm_reg_map.svh"}
+{"tool": "run_command", "args": "grep -rn \"get_physical_addresses\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "read_file", "args": "870 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 815"}
+{"tool": "read_file", "args": "945 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 871"}
+{"tool": "run_command", "args": "git log -p -n 3 src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "grep -rn \"m_mems_by_offset\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "grep -rn \"CMAKE_CXX_STANDARD\" CMakeLists.txt"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/CMakeLists.txt 51"}
+{"tool": "run_command", "args": "grep -rn \"delete\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "grep -rn \"mem_range\" src/uvmsc/"}
+{"tool": "run_command", "args": "find tests -type d -maxdepth 3"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -name \"*reg*\""}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests/70regs/05mem"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/bugs"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses/sc_main.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/20mem_access/test.cpp 1"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\"; which ninja; which cmake; which ctest"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -rn \"ENABLE_REGRESSION\" CMakeLists.txt"}
+{"tool": "run_command", "args": "mkdir -p build && cd build && cmake -GNinja -DCMAKE_BUILD_TYPE=Debug -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME .."}
+{"tool": "run_command", "args": "ninja -C build uvm-systemc"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"05mem\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-70regs-05mem-10maxsize"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"05mem/10maxsize\" --output-on-failure"}
+{"tool": "run_command", "args": "grep -n -C 5 \"mem_range.stride\" src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "read_file", "args": "2260 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 2190"}
+{"tool": "read_file", "args": "1885 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 1780"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/CMakeLists.txt 50"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/05mem/10maxsize/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/10maxsize/test.cpp 1"}
+{"tool": "run_command", "args": "grep -n -A 25 \"uvm_mem::get_address(\" src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "read_file", "args": "670 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_mem.cpp 633"}
+{"tool": "run_command", "args": "grep -n -A 10 \"struct uvm_reg_map_addr_range\" src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.h 40"}
+{"tool": "run_command", "args": "grep -rn \"struct.*uvm_reg_map_addr_range\" src/uvmsc/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_reg_map_addr_range\" src/uvmsc/"}
+{"tool": "read_file", "args": "385 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/src/uvmsc/reg/uvm_reg_model.h 370"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/20mem_access/test.cpp 100"}
+{"tool": "read_file", "args": "211 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses/sc_main.cpp 100"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/cmake/run-test.py 1"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/cmake/run-test.py 81"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses/golden/sc_main.log 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/20mem_access/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride_offset/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride_offset/golden/test.log"}

@@ -1,0 +1,88 @@
+{
+  "task": "uvm-systemc:re-match-search",
+  "arm": "tools",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 2,
+      "read_file": 26,
+      "run_command": 17,
+      "search_web": 13
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 269431,
+      "output_tokens": 23591,
+      "thinking_tokens": 19964,
+      "cache_read_input_tokens": 2292943
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 222.6,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/04re_match",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__re-match-search__tools__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/04re_match/test.log",
+        "golden_diff": [
+          "--- 04re_match/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,27 +1,17 @@",
+          " SystemC Simulation",
+          " UVM_INFO @ 0 s: reporter [RNTST] Running test test...",
+          "-get 'in_env' in 'test.env': 1",
+          "-get 'in_env' in 'test.env.agent0': 1",
+          "+get 'in_env' in 'test.env': not found",
+          "+get 'in_env' in 'test.env.agent0': not found",
+          " get 'in_env' in 'test.other': not found",
+          " get 'only_env' in 'test.env': 2",
+          " get 'only_env' in 'test.env.agent0': not found",
+          "-get 'agent' in 'test.env.agent1.drv': 3",
+          "+get 'agent' in 'test.env.agent1.drv': not found",
+          " get 'agent' in 'test.env.agentx': not found",
+          " get 'glob' in 'test.env.agent0': 4",
+          " get 'glob' in 'top.test.env': not found",
+          "-20 ns: test.a was notified",
+          "+10 ns: test.a was notified",
+          "+40 ns: test.b was notified of speed",
+          " 40 ns: test.a was notified of speed",
+          "-50 ns: test.b was notified of speed",
+          "-70 ns: uvm_top was notified of level",
+          "-resource with empty scope found in '': 1, in 'test.a': 0",
+          "-** UVM TEST PASSED **",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 80 ns: reporter [UVM/REPORT/SERVER]",
+          "---- UVM Report Summary ---",
+          "-** Report counts by severity",
+          "-UVM_INFO      :   1",
+          "-UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "-UVM_FATAL     :   0",
+          "-** Report counts by id",
+          "-[RNTST]                 1",
+          "-UVM_INFO @ 80 ns: reporter [FINISH] UVM-SystemC phasing completed; simulation finished",
+          "+Error: (E549) uncaught exception: An empty regex is not allowed in the POSIX grammar.",
+          "+In file: <removed by verify-uvm.pl>",
+          "+In process: test.exec_proc_run_test_0 @ 70 ns"
+        ]
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

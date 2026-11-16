@@ -1,0 +1,54 @@
+{"tool": "run_command", "args": "ls -la && env | grep SYSTEMC"}
+{"tool": "run_command", "args": "rg -n \"set_domain|~uvm_component|m_children\" src/"}
+{"tool": "read_file", "args": "715 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp 620"}
+{"tool": "read_file", "args": "1475 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp 1425"}
+{"tool": "read_file", "args": "485 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.h 400"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug"}
+{"tool": "run_command", "args": "rg -n \"ENABLE_REGRESSION|add_test|enable_testing\" CMakeLists.txt tests/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_REGRESSION=ON && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j8"}
+{"tool": "read_file", "args": "130 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j8"}
+{"tool": "read_file", "args": "175 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp 75"}
+{"tool": "read_file", "args": "1645 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp 1575"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_domain.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"~uvm_phase|m_schedule\" src/"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_root.cpp 315"}
+{"tool": "read_file", "args": "231 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_domain.cpp 151"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_phase.cpp 100"}
+{"tool": "read_file", "args": "620 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_phase.cpp 420"}
+{"tool": "read_file", "args": "420 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_phase.cpp 310"}
+{"tool": "run_command", "args": "rg -n \"~uvm_phase|~uvm_domain\" src/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_domain.h 50"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/phasing/uvm_phase.h 45"}
+{"tool": "run_command", "args": "rg -n \"m_schedule_list|m_common\\b\" src/"}
+{"tool": "run_command", "args": "rg -n \"m_children_by_handle|m_comp_parent|m_children_cnt\" src/"}
+{"tool": "read_file", "args": "85 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp 45"}
+{"tool": "run_command", "args": "rg -n \"m_comp_parent\" src/"}
+{"tool": "manage_task", "args": "status <id>/task-21"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"40phasing\" --output-on-failure -j8"}
+{"tool": "manage_task", "args": "kill <id>/task-21"}
+{"tool": "read_file", "args": "260 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp 180"}
+{"tool": "run_command", "args": "rg -n \"m_schedule_list\" ."}
+{"tool": "run_command", "args": "rg -n \"uvm_component\" src/uvmsc/phasing/"}
+{"tool": "run_command", "args": "rg -n \"m_add_child\" src/"}
+{"tool": "read_file", "args": "420 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.h 385"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/src/uvmsc/base/uvm_component.cpp"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/10domains/01twodomains/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/10domains/01twodomains/test.cpp 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/CMakeLists.txt 130"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion/ && ls -la tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion/golden/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/02component_delete_domain/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/02component_delete_domain/golden/test.log"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s2/tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/02component_delete_domain/test.cpp"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_REGRESSION=ON && cmake --build build --target uvm-systemc unit_tests-40phasing-99fixes-02component_delete_domain"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02component_delete_domain\" --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"40phasing/(01|02|04|05|06|08|09|10domains/05|10domains/06|20|99)\" --output-on-failure -j8"}
+{"tool": "run_command", "args": "git status && git diff src/"}

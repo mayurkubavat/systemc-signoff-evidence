@@ -1,0 +1,646 @@
+{
+  "config": {
+    "first_start": "2026-11-16T00:16:19-08:00",
+    "model": "model-a",
+    "max_turns": 60,
+    "timeout_s": 3600,
+    "arms": [
+      "shell-guided",
+      "tools-guided"
+    ],
+    "seeds": 1,
+    "only": null,
+    "tasks_sha256": "9d09d8d42d86d897",
+    "runs_planned": 30,
+    "order": "seed-major",
+    "jobs": 3,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "harness_commit": "e281cad",
+    "last_start": "2026-11-16T00:16:19-08:00",
+    "starts": [
+      "2026-11-16T00:16:19-08:00"
+    ]
+  },
+  "runs_planned": 30,
+  "records": 30,
+  "status_counts": {
+    "fail": 25,
+    "pass": 5
+  },
+  "rate_limited_events_in_log": 3,
+  "error_events_in_log": 0,
+  "limit_probes": 12,
+  "usage_window_first_last": null,
+  "suspect_tasks": [
+    "uvm-systemc:uvm-sequence-library"
+  ],
+  "arms": {
+    "shell-guided": {
+      "graded": 15,
+      "pass": 3,
+      "pass_at_1": 0.2,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 15,
+          "pass": 3,
+          "rate": 0.2
+        }
+      },
+      "pass_at_3": 0.2,
+      "pass_at_3_tasks": 15,
+      "any_pass_tasks": 3,
+      "turns": {
+        "n": 15,
+        "mean": 59.73,
+        "median": 60,
+        "total": 896
+      },
+      "wall_s": {
+        "n": 15,
+        "mean": 209.49,
+        "median": 206.5,
+        "total": 3142.3
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 15,
+        "mean": 23747.93,
+        "median": 20035,
+        "total": 356219
+      },
+      "tool_calls": {
+        "scbench": 0,
+        "Bash": 560,
+        "total": 874,
+        "scbench_per_run": 0,
+        "Bash_per_run": 37.33
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 14,
+      "timed_out": 0
+    },
+    "tools-guided": {
+      "graded": 15,
+      "pass": 2,
+      "pass_at_1": 0.133,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 15,
+          "pass": 2,
+          "rate": 0.133
+        }
+      },
+      "pass_at_3": 0.133,
+      "pass_at_3_tasks": 15,
+      "any_pass_tasks": 2,
+      "turns": {
+        "n": 15,
+        "mean": 60,
+        "median": 60,
+        "total": 900
+      },
+      "wall_s": {
+        "n": 15,
+        "mean": 211.6,
+        "median": 212.8,
+        "total": 3174.0
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 15,
+        "mean": 25149.8,
+        "median": 25698,
+        "total": 377247
+      },
+      "tool_calls": {
+        "scbench": 93,
+        "Bash": 400,
+        "total": 878,
+        "scbench_per_run": 6.2,
+        "Bash_per_run": 26.67
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 15,
+      "timed_out": 0
+    }
+  },
+  "arms_valid": {
+    "shell-guided": {
+      "graded": 14,
+      "pass": 3,
+      "pass_at_1": 0.214,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 14,
+          "pass": 3,
+          "rate": 0.214
+        }
+      },
+      "pass_at_3": 0.214,
+      "pass_at_3_tasks": 14,
+      "any_pass_tasks": 3,
+      "turns": {
+        "n": 14,
+        "mean": 59.71,
+        "median": 60.0,
+        "total": 836
+      },
+      "wall_s": {
+        "n": 14,
+        "mean": 213.99,
+        "median": 206.95,
+        "total": 2995.8
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 14,
+        "mean": 24631.14,
+        "median": 21693.0,
+        "total": 344836
+      },
+      "tool_calls": {
+        "scbench": 0,
+        "Bash": 501,
+        "total": 815,
+        "scbench_per_run": 0,
+        "Bash_per_run": 35.79
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 13,
+      "timed_out": 0
+    },
+    "tools-guided": {
+      "graded": 14,
+      "pass": 2,
+      "pass_at_1": 0.143,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 14,
+          "pass": 2,
+          "rate": 0.143
+        }
+      },
+      "pass_at_3": 0.143,
+      "pass_at_3_tasks": 14,
+      "any_pass_tasks": 2,
+      "turns": {
+        "n": 14,
+        "mean": 60,
+        "median": 60.0,
+        "total": 840
+      },
+      "wall_s": {
+        "n": 14,
+        "mean": 213.68,
+        "median": 213.65,
+        "total": 2991.5
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 14,
+        "mean": 25110.64,
+        "median": 23886.0,
+        "total": 351549
+      },
+      "tool_calls": {
+        "scbench": 90,
+        "Bash": 374,
+        "total": 820,
+        "scbench_per_run": 6.43,
+        "Bash_per_run": 26.71
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 14,
+      "timed_out": 0
+    }
+  },
+  "per_task": {
+    "systemc:signal-default-name": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:component-schedule-lifetime": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:config-db-exists": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:global-forward-declarations": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:hdl-type-mismatch-message": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:objection-callbacks": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:re-match-search": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:reg-deterministic-order": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:reg-map-internal-names": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:reg-map-small-memory": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:resource-pool-spell-check": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:sequencer-killed-requests": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:uvm-heartbeat": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:uvm-pool": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:uvm-sequence-library": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    }
+  },
+  "failures": [
+    {
+      "task": "systemc:signal-default-name",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'default constructed items: 4', got 'default constructed items: 8'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "systemc:signal-default-name",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'default constructed items: 4', got 'default constructed items: 8'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:component-schedule-lifetime",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'parent and child deleted', got ''",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:component-schedule-lifetime",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'parent and child deleted', got ''",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:hdl-type-mismatch-message",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow (sc_object) can', got 'UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow is not of type '",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:hdl-type-mismatch-message",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow (sc_object) can', got 'UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow is not of type '",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:objection-callbacks",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:32: expected class name",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:objection-callbacks",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:32: expected class name",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:re-match-search",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected \"get 'in_env' in 'test.env': 1\", got \"get 'in_env' in 'test.env': not found\"",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:re-match-search",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected \"get 'in_env' in 'test.env': 1\", got \"get 'in_env' in 'test.env': not found\"",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:reg-deterministic-order",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'registers of the block: reg0 reg1 reg2 reg3', got ''",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:reg-deterministic-order",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'registers of the block: reg0 reg1 reg2 reg3', got ''",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:reg-map-internal-names",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'created the user class reg_rw, marker 42', got 'UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] The factor'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:reg-map-small-memory",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'one: offset 0x100, addresses 0x100 to 0x100, stride 4', got 'one: offset 0x100, addresses 0x100 to 0x100, stride 0'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:reg-map-small-memory",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'one: offset 0x100, addresses 0x100 to 0x100, stride 4', got 'one: offset 0x100, addresses 0x100 to 0x100, stride 0'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:resource-pool-spell-check",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'num_packets = 42', got 'UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] read_by_na'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:resource-pool-spell-check",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'num_packets = 42', got 'UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] read_by_na'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:sequencer-killed-requests",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'UVM_ERROR <removed by verify-uvm.pl> @ 10 ns: test.sqr [SEQLCKZMB] The', got ''",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:sequencer-killed-requests",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'UVM_ERROR <removed by verify-uvm.pl> @ 10 ns: test.sqr [SEQLCKZMB] The', got 'UVM_FATAL @ 10 ns: test.sqr [uvm_sequence_controller] is_blocked passe'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:uvm-heartbeat",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:80: unknown type name 'uvm_heartbeat'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:uvm-heartbeat",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:80: unknown type name 'uvm_heartbeat'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:uvm-pool",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:32: no template named 'uvm_pool'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:uvm-pool",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:32: no template named 'uvm_pool'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:uvm-sequence-library",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:86: no template named 'uvm_sequence_library'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    },
+    {
+      "task": "uvm-systemc:uvm-sequence-library",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: test.cpp:86: no template named 'uvm_sequence_library'",
+      "turns": 60,
+      "terminal_reason": "max_turns"
+    }
+  ]
+}

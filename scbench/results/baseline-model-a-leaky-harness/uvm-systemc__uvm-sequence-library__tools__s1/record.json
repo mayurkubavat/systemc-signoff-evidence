@@ -1,0 +1,171 @@
+{
+  "task": "uvm-systemc:uvm-sequence-library",
+  "arm": "tools",
+  "seed": 1,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 183,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 1,
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 1,
+      "read_file": 10,
+      "run_command": 7,
+      "search_web": 40
+    },
+    "tool_calls_total": 60,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 258546,
+      "output_tokens": 9397,
+      "thinking_tokens": 6548,
+      "cache_read_input_tokens": 2570679
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 285.7,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/30seq/02sequence_library",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-30seq-02sequence_library",
+          "seconds": 8.4,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 86,
+              "col": 24,
+              "message": "no template named 'uvm_sequence_library'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "unknown type name 'UVM_SEQUENCE_LIBRARY_UTILS'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 92,
+              "col": 52,
+              "message": "no template named 'uvm_sequence_library'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 94,
+              "col": 5,
+              "message": "use of undeclared identifier 'init_sequence_library'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 98,
+              "col": 42,
+              "message": "use of undeclared identifier 'sequences_executed'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 99,
+              "col": 51,
+              "message": "use of undeclared identifier 'seqs_distrib'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 103,
+              "col": 26,
+              "message": "no template named 'uvm_sequence_library'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 107,
+              "col": 3,
+              "message": "unknown type name 'UVM_SEQUENCE_LIBRARY_UTILS'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 109,
+              "col": 56,
+              "message": "no template named 'uvm_sequence_library'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 111,
+              "col": 5,
+              "message": "use of undeclared identifier 'init_sequence_library'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 130,
+              "col": 3,
+              "message": "a type specifier is required for all declarations"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 139,
+              "col": 3,
+              "message": "a type specifier is required for all declarations"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 140,
+              "col": 3,
+              "message": "a type specifier is required for all declarations"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 218,
+              "col": 19,
+              "message": "use of undeclared identifier 'uvm_sequence_library_cfg'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 218,
+              "col": 44,
+              "message": "expected expression"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 219,
+              "col": 11,
+              "message": "unknown type name 'uvm_sequence_library_cfg'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 223,
+              "col": 19,
+              "message": "unknown type name 'uvm_sequence_lib_mode'; did you mean 'uvm_sequencer_arb_mode'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 224,
+              "col": 42,
+              "message": "use of undeclared identifier 'UVM_SEQ_LIB_USER'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 268,
+              "col": 10,
+              "message": "no member named 'get_sequences' in 'seq_lib'"
+            }
+          ],
+          "error_count": 19,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

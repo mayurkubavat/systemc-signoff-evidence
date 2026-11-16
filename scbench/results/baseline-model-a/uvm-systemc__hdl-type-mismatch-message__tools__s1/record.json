@@ -8,29 +8,28 @@
     "events": 181,
     "non_json_lines": 0,
     "tool_calls": {
-      "edit_file": 2,
+      "edit_file": 3,
       "manage_task": 1,
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_regression": 1,
       "mcp__scbench__run_test": 2,
-      "read_file": 23,
-      "run_command": 27
+      "read_file": 32,
+      "run_command": 17
     },
-    "tool_calls_total": 58,
+    "tool_calls_total": 57,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 271795,
-      "output_tokens": 37205,
-      "thinking_tokens": 30794,
-      "cache_read_input_tokens": 2587532
+      "input_tokens": 280438,
+      "output_tokens": 35716,
+      "thinking_tokens": 29251,
+      "cache_read_input_tokens": 2763595
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 266.3,
+    "wall_s": 242.7,
     "graded_status": "fail"
   },
   "grade": {
@@ -69,7 +68,7 @@
       }
     ],
     "agent_diffstat": [
-      " 1 file changed, 49 insertions(+), 5 deletions(-)"
+      " 1 file changed, 37 insertions(+), 6 deletions(-)"
     ]
   },
   "status": "fail"

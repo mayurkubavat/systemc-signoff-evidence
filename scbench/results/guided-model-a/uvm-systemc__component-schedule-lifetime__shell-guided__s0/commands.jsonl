@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "grep -rn \"set_domain\" src/"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 80"}
+{"tool": "run_command", "args": "grep -rn \"~uvm_component\" src/"}
+{"tool": "read_file", "args": "700 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 625"}
+{"tool": "read_file", "args": "1460 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 1430"}
+{"tool": "run_command", "args": "grep -rn \"define_domain\" ~/Tools/uvm-core/src/"}
+{"tool": "read_file", "args": "2535 ~/Tools/uvm-core/src/base/uvm_component.svh 2475"}
+{"tool": "run_command", "args": "grep -rn \"m_schedule_list\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sched\" src/"}
+{"tool": "run_command", "args": "grep -rn \"~uvm_domain\" src/ ; grep -rn \"~uvm_phase\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_domain(\" src/"}
+{"tool": "run_command", "args": "ls src/uvmsc/phasing/"}
+{"tool": "run_command", "args": "grep -rn \"m_children\" src/uvmsc/base/uvm_component*"}
+{"tool": "read_file", "args": "1650 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 1595"}
+{"tool": "run_command", "args": "grep -rn \"remove_child\" src/ ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "grep -rn \"m_children\" src/uvmsc/base/"}
+{"tool": "read_file", "args": "480 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.h 460"}
+{"tool": "read_file", "args": "435 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.h 400"}
+{"tool": "run_command", "args": "grep -rn \"m_add_child\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_children_by_handle\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_children\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "grep -rn \"get_name\" src/uvmsc/base/uvm_component.*"}
+{"tool": "read_file", "args": "240 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.cpp 200"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_root.h 100"}
+{"tool": "run_command", "args": "grep -rn \"run_test\" src/uvmsc/base/uvm_root.cpp"}
+{"tool": "read_file", "args": "190 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_root.cpp 122"}
+{"tool": "run_command", "args": "grep -rn \"m_schedule_list\" ."}
+{"tool": "run_command", "args": "grep -rn \"remove_child\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_comp_parent\" src/"}
+{"tool": "read_file", "args": "410 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/src/uvmsc/base/uvm_component.h 380"}
+{"tool": "run_command", "args": "find tests -name \"*.cpp\""}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/40phasing/10domains/01twodomains/test.cpp"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion/test.cpp"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion/golden/test.log"}
+{"tool": "run_command", "args": "cat CMakeLists.txt"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "cmake -B build -GNinja -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-40phasing-10domains-01twodomains"}
+{"tool": "run_command", "args": "ctest --test-dir build -R unit_tests-40phasing-10domains-01twodomains --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 10domains/01twodomains --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-40phasing-10domains-02reusedom && ctest --test-dir build -R 10domains/02reusedom --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-40phasing-99fixes-01finish_on_completion && ctest --test-dir build -R 99fixes/01finish_on_completion --output-on-failure"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/tests/CMakeLists.txt 100"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/02delete_component/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__component-schedule-lifetime__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/02delete_component/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -GNinja -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | grep delete_component"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-40phasing-99fixes-02delete_component"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 99fixes/02delete_component --output-on-failure"}
+{"tool": "run_command", "args": "./build/tests/unit_tests-40phasing-99fixes-02delete_component"}
+{"tool": "run_command", "args": "lldb ./build/tests/unit_tests-40phasing-99fixes-02delete_component -o \"run\" -o \"bt\" -o \"quit\""}
+{"tool": "manage_task", "args": "status <id>/task-114"}
+{"tool": "manage_task", "args": "kill <id>/task-114"}

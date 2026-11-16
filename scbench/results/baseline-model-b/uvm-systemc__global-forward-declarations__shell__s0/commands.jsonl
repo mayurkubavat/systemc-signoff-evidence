@@ -1,0 +1,53 @@
+{"tool": "run_command", "args": "git status; ls -la"}
+{"tool": "run_command", "args": "rg -n \"class uvm_object;|class uvm_printer;|class uvm_event_callback;\" src/"}
+{"tool": "run_command", "args": "rg -n \"uvm_event_callback\" src/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/dap/uvm_simple_lock_dap.h 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/dap/uvm_set_before_get_dap.h 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\"; which cmake ninja ctest"}
+{"tool": "run_command", "args": "python3 -c '\nimport glob, re\nfor p in sorted(glob.glob(\"src/**/*.h\", recursive=True)):\n    with open(p) as f:\n        lines = f.readlines()\n    in_ns = False\n    for i, l in enumerate(lines, 1):\n        if re.match(r\"^\\s*namespace\\s+uvm\\b\", l):\n            in_ns = True\n        if not in_ns and re.match(r\"^\\s*(class|struct)\\s+uvm_\\w+\\s*;\", l):\n            print(f\"{p}:{i}: {l.strip()}\")\n'"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ls -la tests/"}
+{"tool": "run_command", "args": "rg -n \"option\\(\" CMakeLists.txt"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_event.h 60"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_event_callback.h 1"}
+{"tool": "read_file", "args": "45 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_event.cpp 1"}
+{"tool": "read_file", "args": "355 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_event.cpp 305"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "run_command", "args": "python3 -c '\nimport glob, re\nfor p in sorted(glob.glob(\"src/**/*.h\", recursive=True)):\n    with open(p) as f:\n        lines = f.readlines()\n    in_ns = False\n    for i, l in enumerate(lines, 1):\n        if re.match(r\"^\\s*namespace\\s+uvm\\b\", l):\n            in_ns = True\n        if not in_ns and re.match(r\"^\\s*(class|struct|enum)\\s+\\w+\\s*;\", l):\n            print(f\"{p}:{i}: {l.strip()}\")\n'"}
+{"tool": "read_file", "args": "40 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_mutex.h 1"}
+{"tool": "read_file", "args": "55 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_object.h 30"}
+{"tool": "run_command", "args": "ls tests/headers/ tests/tests/uvm-systemc/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs/ tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/base/uvm_event.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/dap/uvm_set_before_get_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/src/uvmsc/dap/uvm_simple_lock_dap.h"}
+{"tool": "run_command", "args": "cmake --build build"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_343/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/ tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/ tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses/golden/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "manage_task", "args": "status <id>/task-47"}
+{"tool": "run_command", "args": "rg -n \"configure_and_add_regression_test|GLOB\" tests/CMakeLists.txt"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-00basic-99fixes-02global_forward_decls"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02global_forward_decls && ctest --test-dir build -R 02global_forward_decls --output-on-failure"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02global_forward_decls && ctest --test-dir build -R 02global_forward_decls --output-on-failure"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_forward_decls/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 02global_forward_decls --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j8"}
+{"tool": "run_command", "args": "git status -s && git diff src/"}
+{"tool": "manage_task", "args": "status <id>/task-86"}

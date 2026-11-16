@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "find src -maxdepth 4"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/base/uvm_base.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvm.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvm"}
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git log -n 5 --oneline"}
+{"tool": "run_command", "args": "git show c4945ec"}
+{"tool": "run_command", "args": "grep -rn \"uvm_heartbeat\" ."}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/RELEASENOTES.md 155"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" \"NOEVNT\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"HBFAIL\" \"uvm_objection\" filetype:svh OR github"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"class uvm_heartbeat\" github"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" \"Did not receive an update\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"UVM Heartbeats: Proving the Bench Works\""}
+{"tool": "search_web", "args": "\"HBFAIL\" \"ILHBVNT\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"function void start\" \"ILHBVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"\\\"HBFAIL\\\"\" \"\\\"ILHBVNT\\\"\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat_cbs\" OR \"uvm_heartbeat_callback\" OR \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"Did not receive an update of %s for component\""}
+{"tool": "search_web", "args": "\"`uvm_fatal(\\\"HBFAIL\\\"\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"Did not receive an update\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"The list of registered components is:\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\""}
+{"tool": "search_web", "args": "\"Did not recieve an update\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"Did not recieve an update\" site:github.com"}
+{"tool": "search_web", "args": "\"Did not recieve an update of\" \"last event trigger\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_warning\" OR \"uvm_error\" OR \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm\""}
+{"tool": "search_web", "args": "\"Start each heartbeat with one event\""}
+{"tool": "search_web", "args": "\"heartbeats\" OR \"heartbeat\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"heartbeat\""}
+{"tool": "search_web", "args": "\"The Watchdog That Barked at Everyone\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"NOEVNT\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" OR \"NOEVNT\" OR \"HBFAIL\""}
+{"tool": "search_web", "args": "\"uvm_warning\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"ILHBVNT\""}
+{"tool": "run_command", "args": "find ~ -name \"uvm_heartbeat.svh\" 2>/dev/null"}
+{"tool": "manage_task", "args": "kill <id>/task-104"}
+{"tool": "read_file", "args": "100 ~/Tools/uvm-core/src/base/uvm_heartbeat.svh 1"}
+{"tool": "read_file", "args": "250 ~/Tools/uvm-core/src/base/uvm_heartbeat.svh 101"}
+{"tool": "read_file", "args": "425 ~/Tools/uvm-core/src/base/uvm_heartbeat.svh 251"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/base/uvm_event.h 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/base/uvm_event.cpp 60"}

@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/objections/basic'} scbench run_test"}
+{"tool": "run_command", "args": "find src -name \"*objection*\" -o -name \"*callback*\""}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "252 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_objection.h 151"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callback.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callbacks.h 1"}
+{"tool": "run_command", "args": "git grep \"uvm_reg_cbs\""}
+{"tool": "run_command", "args": "git grep -n \"uvm_objection\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvm.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvm 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_phasing.h 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_cbs.h 1"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_objection.cpp 300"}
+{"tool": "run_command", "args": "git grep -n \"raised(\" src/uvmsc/"}
+{"tool": "run_command", "args": "git grep -n \"dropped(\" src/uvmsc/"}
+{"tool": "search_web", "args": "\"class uvm_objection_callback\" uvm_objection site:github.com"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks\" uvm_objection site:github.com"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks(uvm_objection, uvm_objection_callback\" site:github.com"}
+{"tool": "search_web", "args": "\"function void uvm_objection::raised\" site:github.com"}
+{"tool": "search_web", "args": "\"function void uvm_objection::all_dropped\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks\" \"all_dropped\" uvm_objection site:github.com"}
+{"tool": "search_web", "args": "\"function void raised\" \"uvm_objection\" \"uvm_objection_callback\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks(uvm_objection, uvm_objection_callback, dropped\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks(uvm_objection, uvm_objection_callback, all_dropped\" site:github.com"}
+{"tool": "run_command", "args": "git grep \"UVM_DO_CALLBACKS\" src/"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/macros/uvm_callback_defines.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callback_iter.h 1"}
+{"tool": "read_file", "args": "650 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_objection.cpp 585"}
+{"tool": "run_command", "args": "git grep -n \"m_raise\" src/uvmsc/"}
+{"tool": "read_file", "args": "730 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_objection.cpp 670"}
+{"tool": "read_file", "args": "850 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/uvm_objection.cpp 730"}
+{"tool": "run_command", "args": "git grep \"m_register_pair\" src/"}
+{"tool": "read_file", "args": "300 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callbacks.h 190"}
+{"tool": "read_file", "args": "862 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callbacks.h 800"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_typed_callbacks.h 1"}
+{"tool": "run_command", "args": "git grep \"check_registration\" src/"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callbacks_base.cpp 110"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_typed_callbacks.h 150"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_typed_callbacks.h 130"}
+{"tool": "run_command", "args": "git grep -E \"::add\\(\\s*(nullptr|NULL|0)\""}
+{"tool": "run_command", "args": "git grep \"uvm_report_cb\" src/"}
+{"tool": "run_command", "args": "git grep \"uvm_report_catcher\" src/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/report/uvm_report_catcher.cpp 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/phasing/files.am 1"}
+{"tool": "run_command", "args": "git grep \"uvm_callbacks.h\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/report/uvm_report_catcher.h 1"}
+{"tool": "run_command", "args": "git grep \"UVM_REGISTER_CB\" src/uvmsc/report/"}
+{"tool": "run_command", "args": "git grep \"m_register_cb\" src/uvmsc/report/"}
+{"tool": "run_command", "args": "git grep \"m_register_cb\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/base/uvm_object.cpp 70"}
+{"tool": "run_command", "args": "git grep -n -A 10 \"bool uvm_object::m_register_cb\" src/uvmsc/base/"}
+{"tool": "read_file", "args": "450 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callbacks.h 320"}
+{"tool": "read_file", "args": "650 <worktree>/uvm-systemc__objection-callbacks__tools__s0/src/uvmsc/cb/uvm_callbacks.h 500"}

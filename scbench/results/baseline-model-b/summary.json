@@ -155,7 +155,7 @@
   },
   "arms_valid": {
     "shell": {
-      "graded": 45,
+      "graded": 42,
       "pass": 28,
       "pass_at_1": 0.667,
       "pass_at_1_per_seed": {
@@ -179,16 +179,16 @@
       "pass_at_3_tasks": 14,
       "any_pass_tasks": 10,
       "turns": {
-        "n": 45,
-        "mean": 44.49,
-        "median": 44,
-        "total": 2002
+        "n": 42,
+        "mean": 43.88,
+        "median": 41.5,
+        "total": 1843
       },
       "wall_s": {
-        "n": 45,
-        "mean": 267.5,
-        "median": 258.9,
-        "total": 12037.3
+        "n": 42,
+        "mean": 262.8,
+        "median": 258.0,
+        "total": 11037.7
       },
       "cost_usd": {
         "n": 0,
@@ -197,24 +197,24 @@
         "total": 0
       },
       "output_tokens": {
-        "n": 45,
-        "mean": 23623.64,
-        "median": 22092,
-        "total": 1063064
+        "n": 42,
+        "mean": 22003.1,
+        "median": 20993.0,
+        "total": 924130
       },
       "tool_calls": {
         "scbench": 0,
-        "Bash": 1120,
-        "total": 2415,
+        "Bash": 1030,
+        "total": 2205,
         "scbench_per_run": 0,
-        "Bash_per_run": 24.89
+        "Bash_per_run": 24.52
       },
       "web_search_calls": 0,
       "hit_max_turns": 8,
       "timed_out": 0
     },
     "tools": {
-      "graded": 45,
+      "graded": 42,
       "pass": 29,
       "pass_at_1": 0.69,
       "pass_at_1_per_seed": {
@@ -238,16 +238,16 @@
       "pass_at_3_tasks": 14,
       "any_pass_tasks": 10,
       "turns": {
-        "n": 45,
-        "mean": 32.78,
-        "median": 34,
-        "total": 1475
+        "n": 42,
+        "mean": 31.86,
+        "median": 32.5,
+        "total": 1338
       },
       "wall_s": {
-        "n": 45,
-        "mean": 284.48,
-        "median": 275.4,
-        "total": 12801.5
+        "n": 42,
+        "mean": 280.33,
+        "median": 268.6,
+        "total": 11773.9
       },
       "cost_usd": {
         "n": 0,
@@ -256,17 +256,17 @@
         "total": 0
       },
       "output_tokens": {
-        "n": 45,
-        "mean": 23490,
-        "median": 23002,
-        "total": 1057050
+        "n": 42,
+        "mean": 21864.19,
+        "median": 21484.5,
+        "total": 918296
       },
       "tool_calls": {
-        "scbench": 504,
-        "Bash": 641,
-        "total": 2570,
-        "scbench_per_run": 11.2,
-        "Bash_per_run": 14.24
+        "scbench": 475,
+        "Bash": 577,
+        "total": 2331,
+        "scbench_per_run": 11.31,
+        "Bash_per_run": 13.74
       },
       "web_search_calls": 0,
       "hit_max_turns": 0,

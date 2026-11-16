@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "grep -rn \"uvm_object_string_pool\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_pool\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "300 ~/Tools/uvm-core/src/base/uvm_pool.svh 1"}
+{"tool": "read_file", "args": "382 ~/Tools/uvm-core/src/base/uvm_pool.svh 301"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/conf/uvm_object_string_pool.h 1"}
+{"tool": "run_command", "args": "find src/ -name \"*queue*\""}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/conf/uvm_queue.h 1"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/conf/uvm_queue.h 151"}
+{"tool": "read_file", "args": "394 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/conf/uvm_queue.h 251"}
+{"tool": "run_command", "args": "grep -rn \"uvm_queue.h\" src/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/conf/uvm_conf.h 1"}
+{"tool": "run_command", "args": "find src/ -name \"uvm*\""}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvm 1"}
+{"tool": "run_command", "args": "find tests/ -name \"*pool*\" -o -name \"*queue*\""}
+{"tool": "run_command", "args": "ls tests/"}
+{"tool": "run_command", "args": "ls tests/tests"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_184"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_184/basic_read_write_memory_management"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/00hello"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/00hello/test.cpp 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/00hello/golden"}
+{"tool": "run_command", "args": "find tests -name \"CMakeLists.txt\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "echo $SYSTEMC_HOME"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -i \"regression\" CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "grep -rn \"QUEUEDEL\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "165 ~/Tools/uvm-core/src/base/uvm_queue.svh 145"}
+{"tool": "run_command", "args": "git log -p src/uvmsc/conf/uvm_object_string_pool.h"}
+{"tool": "run_command", "args": "grep -rn \"uvm_report_warning\" src/"}
+{"tool": "run_command", "args": "grep -rn \"print(\" src/uvmsc/base/uvm_object.*"}
+{"tool": "run_command", "args": "grep -rn \"print_\" src/uvmsc/print/uvm_printer.h"}
+{"tool": "run_command", "args": "sed -n '105,120p' src/uvmsc/print/uvm_printer.h"}
+{"tool": "run_command", "args": "grep -A 20 \"uvm_printer::print_generic\" src/uvmsc/print/uvm_printer.cpp"}
+{"tool": "run_command", "args": "grep -A 40 \"void uvm_printer::print_generic\" src/uvmsc/print/uvm_printer.cpp"}
+{"tool": "run_command", "args": "grep -C 10 \"itoa\" ~/Tools/uvm-core/src/base/uvm_pool.svh"}
+{"tool": "run_command", "args": "git -C ~/Tools/uvm-core log -p -S \"itoa\" src/base/uvm_pool.svh"}
+{"tool": "run_command", "args": "git -C ~/Tools/uvm-core tag"}
+{"tool": "run_command", "args": "grep -rn \"print_array_header\" src/ tests/"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/configuration/manual/classC.h 40"}
+{"tool": "run_command", "args": "grep -rn \"create(\" src/uvmsc/base/uvm_object.*"}
+{"tool": "read_file", "args": "265 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/base/uvm_object.cpp 245"}
+{"tool": "run_command", "args": "grep -rn \"aa_object_string\" src/ tests/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_field_aa_object_string\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell-guided__s0/src/uvmsc/print/uvm_printer.h 85"}
+{"tool": "run_command", "args": "grep -A 25 \"uvm_printer::print_object(\" src/uvmsc/print/uvm_printer.cpp"}
+{"tool": "run_command", "args": "grep -A 25 \"uvm_printer::print_object_header(\" src/uvmsc/print/uvm_printer.cpp"}
+{"tool": "run_command", "args": "grep -rn \"print_object(\" src/"}
+{"tool": "run_command", "args": "grep -rn \"\\[-key\" ~/Tools/uvm-core"}
+{"tool": "run_command", "args": "git -C ~/Tools/uvm-core log -S \"itoa(cnt)\" -p"}
+{"tool": "run_command", "args": "grep -rn \"\\[-key\" tests/ src/"}
+{"tool": "run_command", "args": "grep -rn \"pool\" tests/"}

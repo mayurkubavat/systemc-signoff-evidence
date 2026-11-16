@@ -1,0 +1,66 @@
+{"tool": "run_command", "args": "find src/uvmsc/seq test/tests/uvmsc/seq -maxdepth 3 2>/dev/null || find . -maxdepth 3 -name \"*sequencer*\""}
+{"tool": "run_command", "args": "grep -rn \"SEQLCKZMB\\|SEQREQZMB\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "ls -la; env | grep -E \"SYSTEMC|CMAKE\""}
+{"tool": "run_command", "args": "find tests -maxdepth 4 -path \"*seq*\""}
+{"tool": "read_file", "args": "710 ~/Tools/uvm-core/src/seq/uvm_sequencer_base.svh 540"}
+{"tool": "run_command", "args": "grep -rn \"m_wait_for_arbitration_completed\\|m_select_sequence\\|m_lock_arbitration\\|arb_sequence_q\\|lock_list\" src/uvmsc/seq/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sequence_request\\|process_id\\|sc_process_handle\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "330 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 275"}
+{"tool": "read_file", "args": "980 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 825"}
+{"tool": "read_file", "args": "1310 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 1235"}
+{"tool": "run_command", "args": "grep -rn \"uvm_process\\|sc_get_current_process_handle\\|sc_process_handle\" src/"}
+{"tool": "read_file", "args": "210 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.h 165"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/phasing/uvm_process.h 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/examples_uvmsc/sequence; ls tests/tests/uvm-systemc/ 2>/dev/null | head -n 30"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -rn \"SystemC\\|BUILD_TESTING\\|ENABLE_TESTS\\|sequence_lock_grab\" CMakeLists.txt tests/CMakeLists.txt tests/tests/uvm-systemc/CMakeLists.txt 2>/dev/null | head -n 40"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -maxdepth 3 -name \"*seq*\""}
+{"tool": "run_command", "args": "cmake -S . -B build -G Ninja -DBUILD_TESTING=ON"}
+{"tool": "run_command", "args": "cmake -S . -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"seq\""}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab tests/tests/uvm-systemc/bugs | head -n 40"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs/bug_184 tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple/golden/test.log 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "cmake --build build --target examples_uvmsc-sequence-sequence_lock_grab && ctest --test-dir build -R \"sequence_lock_grab\" --output-on-failure"}
+{"tool": "run_command", "args": "grep -rn \"kill\\|m_sequence_process\" src/uvmsc/seq/uvm_sequence_base.cpp src/uvmsc/seq/uvm_sequence_base.h"}
+{"tool": "run_command", "args": "grep -n \"terminated\\|valid\\|dynamic\\|status\" $SYSTEMC_HOME/include/sysc/kernel/sc_process_handle.h"}
+{"tool": "read_file", "args": "820 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 725"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 60"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/golden/test.log"}
+{"tool": "run_command", "args": "cmake -S . -B build -G Ninja -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ctest --test-dir build -R \"02killed_requests\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ctest --test-dir build -R \"02killed_requests\" --timeout 5 --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ctest --test-dir build -R \"02killed_requests\" --timeout 5 --output-on-failure"}
+{"tool": "read_file", "args": "375 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer.h 335"}
+{"tool": "read_file", "args": "1150 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 1090"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer.h"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ctest --test-dir build -R \"02killed_requests\" --timeout 5 --output-on-failure"}
+{"tool": "run_command", "args": "git diff src/"}
+{"tool": "run_command", "args": "./build/tests/unit_tests-40phasing-20sequences-02killed_requests | head -n 30"}
+{"tool": "read_file", "args": "725 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 690"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ./build/tests/unit_tests-40phasing-20sequences-02killed_requests"}
+{"tool": "run_command", "args": "lldb -o \"run\" -o \"bt\" -b ./build/tests/unit_tests-40phasing-20sequences-02killed_requests"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ./build/tests/unit_tests-40phasing-20sequences-02killed_requests"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab/seq_arb_driver.h 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-20sequences-02killed_requests && ./build/tests/unit_tests-40phasing-20sequences-02killed_requests"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02killed_requests/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02killed_requests\" --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-sequence-basic_read_write_sequence examples_uvmsc-sequence-arbitration examples_uvmsc-sequence-basic_read_write_sequence_tlm1 examples_uvmsc-sequence-basic_read_write_sequence_try examples_uvmsc-sequence-basic_read_write_start_item examples_uvmsc-sequence-sequence_lock_grab unit_tests-40phasing-20sequences-01simple unit_tests-40phasing-20sequences-02killed_requests && ctest --test-dir build -R \"seq\" --output-on-failure"}
+{"tool": "run_command", "args": "git status -s"}

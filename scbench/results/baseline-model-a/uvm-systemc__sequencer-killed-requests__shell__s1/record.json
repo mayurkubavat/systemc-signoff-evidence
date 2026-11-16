@@ -5,27 +5,27 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 181,
+    "events": 178,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 13,
-      "read_file": 12,
-      "run_command": 34
+      "manage_task": 2,
+      "read_file": 27,
+      "run_command": 28
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 57,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 266839,
-      "output_tokens": 22697,
-      "thinking_tokens": 19097,
-      "cache_read_input_tokens": 2829606
+      "input_tokens": 298649,
+      "output_tokens": 40547,
+      "thinking_tokens": 36564,
+      "cache_read_input_tokens": 3611490
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 211.6,
+    "wall_s": 275.7,
     "graded_status": "fail"
   },
   "grade": {
@@ -34,14 +34,19 @@
       {
         "passed": false,
         "test": "uvm-systemc/unit_tests/30seq/01lock_zombie",
-        "seconds": 0.3,
-        "uvm_counts": null,
-        "first_uvm_problem": null,
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 1,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 1
+        },
+        "first_uvm_problem": "UVM_FATAL @ 10 ns: test.sqr [uvm_sequence_controller] is_blocked passed nullptr sequence_ptr",
         "sim_log": "<worktree>/uvm-systemc__sequencer-killed-requests__shell__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/01lock_zombie/test.log",
         "golden_diff": [
           "--- 01lock_zombie/golden/test.log",
           "+++ test.log.stripped",
-          "@@ -2,23 +2,3 @@",
+          "@@ -2,23 +2,17 @@",
           " UVM_INFO @ 0 s: reporter [RNTST] Running test test...",
           " 10 ns: driver got item 100",
           " 10 ns: the two waiting processes were killed",
@@ -54,17 +59,25 @@
           "-60 ns: driver got item 201",
           "-sequencer is free",
           "-UVM_INFO <removed by verify-uvm.pl> @ 210 ns: reporter [UVM/REPORT/SERVER]",
-          "---- UVM Report Summary ---",
-          "-** Report counts by severity",
-          "-UVM_INFO      :   1",
-          "-UVM_WARNING   :   0",
+          "+UVM_FATAL @ 10 ns: test.sqr [uvm_sequence_controller] is_blocked passed nullptr sequence_ptr",
+          "+UVM_INFO <removed by verify-uvm.pl> @ 10 ns: reporter [UVM/REPORT/SERVER]",
+          " --- UVM Report Summary ---",
+          " ** Report counts by severity",
+          " UVM_INFO      :   1",
+          " UVM_WARNING   :   0",
           "-UVM_ERROR     :   2",
           "-UVM_FATAL     :   0",
-          "-** Report counts by id",
-          "-[RNTST]                 1",
+          "+UVM_ERROR     :   0",
+          "+UVM_FATAL     :   1",
+          " ** Report counts by id",
+          " [RNTST]                 1",
           "-[SEQLCKZMB]             1",
           "-[SEQREQZMB]             1",
-          "-UVM_INFO @ 210 ns: reporter [FINISH] UVM-SystemC phasing completed; simulation finished"
+          "-UVM_INFO @ 210 ns: reporter [FINISH] UVM-SystemC phasing completed; simulation finished",
+          "+[uvm_sequence_controller]                                      1",
+          "+Error: (E549) uncaught exception: Simulation terminated by uvm_root::die()",
+          "+In file: <removed by verify-uvm.pl>",
+          "+In process: test.drv.exec_proc_run_test_drv_0 @ 10 ns"
         ]
       }
     ],

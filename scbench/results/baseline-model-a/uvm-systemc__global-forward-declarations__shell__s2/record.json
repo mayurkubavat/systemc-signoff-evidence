@@ -5,46 +5,71 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 179,
+    "events": 178,
     "non_json_lines": 0,
     "tool_calls": {
-      "edit_file": 4,
+      "edit_file": 3,
       "manage_task": 1,
       "read_file": 23,
-      "run_command": 28,
-      "schedule": 1
+      "run_command": 30
     },
     "tool_calls_total": 57,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 253535,
-      "output_tokens": 15488,
-      "thinking_tokens": 10515,
-      "cache_read_input_tokens": 2502006
+      "input_tokens": 266701,
+      "output_tokens": 17007,
+      "thinking_tokens": 12240,
+      "cache_read_input_tokens": 2674811
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 237.4,
-    "graded_status": "pass"
+    "wall_s": 230.8,
+    "graded_status": "fail"
   },
   "grade": {
-    "passed": true,
+    "passed": false,
     "tests": [
       {
-        "passed": true,
+        "passed": false,
         "test": "uvm-systemc/unit_tests/00basic/99fixes/06global_names",
-        "seconds": 0.3,
-        "uvm_counts": null,
-        "first_uvm_problem": null,
-        "sim_log": "<worktree>/uvm-systemc__global-forward-declarations__shell__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.log"
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-00basic-99fixes-06global_names",
+          "seconds": 3.6,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 31,
+              "col": 1,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 38,
+              "col": 19,
+              "message": "incompatible pointer types assigning to 'uvm_object *' from 'uvm_event *'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 40,
+              "col": 56,
+              "message": "member access into incomplete type 'uvm_object'"
+            }
+          ],
+          "error_count": 3,
+          "warning_count": 1,
+          "linker_errors": []
+        }
       }
     ],
     "agent_diffstat": [
-      " 4 files changed, 9 insertions(+), 9 deletions(-)"
+      " 3 files changed, 7 insertions(+), 7 deletions(-)"
     ]
   },
-  "status": "pass"
+  "status": "fail"
 }

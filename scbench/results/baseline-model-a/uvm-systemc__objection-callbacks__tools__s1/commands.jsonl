@@ -1,0 +1,59 @@
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/objections/basic'} scbench run_test"}
+{"tool": "run_command", "args": "find src -type f"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvm.h 1"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvm.h 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_phasing.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 1"}
+{"tool": "run_command", "args": "grep -rn \"UVM_REGISTER_CB\" src/"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/macros/uvm_callback_defines.h 20"}
+{"tool": "read_file", "args": "184 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/macros/uvm_callback_defines.h 65"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callback_iter.h 1"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 100"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/reg/uvm_reg_cbs.h 1"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/reg/uvm_reg_cbs_types.h 1"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "252 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.h 151"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.cpp 1"}
+{"tool": "run_command", "args": "grep -n -E \"raised|dropped|all_dropped\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.cpp 300"}
+{"tool": "read_file", "args": "630 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.cpp 600"}
+{"tool": "read_file", "args": "790 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.cpp 765"}
+{"tool": "read_file", "args": "860 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/uvm_objection.cpp 830"}
+{"tool": "run_command", "args": "grep -rn \"uvm_objection_callback\" ."}
+{"tool": "search_web", "args": "\"uvm_objection_callback\" \"uvm_objection_cbs_t\""}
+{"tool": "search_web", "args": "\"class uvm_objection_callback\" \"uvm_callback\" github"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks\" \"uvm_objection\" \"uvm_objection_callback\""}
+{"tool": "search_web", "args": "\"m_raise\" \"uvm_do_callbacks\" \"uvm_objection\" filetype:svh OR site:github.com"}
+{"tool": "search_web", "args": "\"uvm_do_callbacks(uvm_objection,uvm_objection_callback\""}
+{"tool": "run_command", "args": "grep -rn \"m_register_cb\" src/"}
+{"tool": "read_file", "args": "275 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 240"}
+{"tool": "read_file", "args": "580 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 520"}
+{"tool": "run_command", "args": "grep -n -C 15 \"m_register_pair\" src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "read_file", "args": "350 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 270"}
+{"tool": "run_command", "args": "grep -rn -C 10 \"check_registration\" src/uvmsc/"}
+{"tool": "run_command", "args": "grep -n -C 20 \"m_is_registered\" src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/report/uvm_report_catcher.cpp 35"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/report/uvm_report_catcher.h 220"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/base/uvm_object.cpp 70"}
+{"tool": "read_file", "args": "805 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/base/uvm_object.cpp 790"}
+{"tool": "run_command", "args": "grep -rn \"uvm_reg_cbs\" src/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_cbs.h 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/files.am 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/phasing/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/base/uvm_event_callback.h 1"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callback.h 1"}
+{"tool": "search_web", "args": "\"class uvm_objection\" \"uvm_do_callbacks\" site:github.com"}
+{"tool": "search_web", "args": "\"comp.dropped(this\" \"uvm_do_callbacks\" site:github.com"}
+{"tool": "search_web", "args": "\"comp.all_dropped(this\" \"uvm_do_callbacks\" site:github.com"}
+{"tool": "run_command", "args": "grep -rn \"UVM_DO_CALLBACKS\" src/"}
+{"tool": "read_file", "args": "172 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callback_iter.h 80"}
+{"tool": "read_file", "args": "650 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 570"}
+{"tool": "read_file", "args": "760 <worktree>/uvm-systemc__objection-callbacks__tools__s1/src/uvmsc/cb/uvm_callbacks.h 640"}

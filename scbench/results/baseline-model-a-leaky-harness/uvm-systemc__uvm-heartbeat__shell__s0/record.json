@@ -1,0 +1,54 @@
+{
+  "task": "uvm-systemc:uvm-heartbeat",
+  "arm": "shell",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 0,
+    "events": 231,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 2,
+      "read_file": 4,
+      "run_command": 46
+    },
+    "tool_calls_total": 52,
+    "num_turns": 54,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 243046,
+      "output_tokens": 10551,
+      "thinking_tokens": 6754,
+      "cache_read_input_tokens": 2386376
+    },
+    "duration_ms": 233681,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 236.3,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/12heartbeat",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 2,
+          "UVM_WARNING": 9,
+          "UVM_ERROR": 1,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": "UVM_ERROR @ 190 ns: test [ILHBVNT] start() was called for: hb with trigger other which is different from the original trigger hb_event",
+        "sim_log": "<worktree>/uvm-systemc__uvm-heartbeat__shell__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/12heartbeat/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 4 files changed, 8 insertions(+)"
+    ]
+  },
+  "status": "pass"
+}

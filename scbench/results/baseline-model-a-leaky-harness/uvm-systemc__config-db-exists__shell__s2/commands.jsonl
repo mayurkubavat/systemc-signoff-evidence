@@ -1,0 +1,57 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git grep -n \"exists(\""}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_config_db.h 90"}
+{"tool": "read_file", "args": "430 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_config_db.h 300"}
+{"tool": "read_file", "args": "305 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_config_db.h 240"}
+{"tool": "run_command", "args": "git grep -n \"get_by_name\""}
+{"tool": "read_file", "args": "440 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_resource_pool.cpp 410"}
+{"tool": "run_command", "args": "git grep \"config_db.*exists\""}
+{"tool": "run_command", "args": "git grep \"config_db\" tests/"}
+{"tool": "run_command", "args": "find tests -name \"*.cpp\" | grep unit_tests"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell__s2/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "git grep -i \"test\" CMakeLists.txt"}
+{"tool": "read_file", "args": "540 <worktree>/uvm-systemc__config-db-exists__shell__s2/CMakeLists.txt 510"}
+{"tool": "run_command", "args": "mkdir -p build && cd build && cmake -GNinja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME .."}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00hello\" --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build help"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "manage_task", "args": "status <id>/task-40"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "manage_task", "args": "status <id>/task-46"}
+{"tool": "run_command", "args": "git grep -n \"configuration/manual\""}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"configuration/manual\" --output-on-failure"}
+{"tool": "run_command", "args": "git grep -n -A 30 \"lookup_name(\" src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "read_file", "args": "545 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_resource_pool.cpp 510"}
+{"tool": "run_command", "args": "git log -p -n 5 src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "run_command", "args": "git log -L 380,398:src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests/ -type d"}
+{"tool": "run_command", "args": "git grep -n \"01global_comparer\" tests/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s2/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__config-db-exists__shell__s2/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "55 <worktree>/uvm-systemc__config-db-exists__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 45"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "run_command", "args": "git grep -n \"get_full_name\" src/uvmsc/base/uvm_root.*"}
+{"tool": "run_command", "args": "git grep -n \"uvm_root::uvm_root\" src/uvmsc/"}
+{"tool": "read_file", "args": "90 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/base/uvm_root.cpp 70"}
+{"tool": "run_command", "args": "git grep -n \"uvm_root\" src/uvmsc/base/uvm_default_coreservice_t.cpp"}
+{"tool": "run_command", "args": "git grep -n -A 15 \"m_uvm_get_root()\" src/uvmsc/base/uvm_root.cpp"}
+{"tool": "run_command", "args": "git grep -n \"uvm_resource<T>::uvm_resource\" src/uvmsc/conf/"}
+{"tool": "read_file", "args": "165 <worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_resource.h 145"}
+{"tool": "run_command", "args": "git grep -n \"exists\" src/uvmsc/conf/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__config-db-exists__shell__s2/tests/tests/uvm-systemc/examples/simple/configuration/manual/sc_main.cpp 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs/"}
+{"tool": "run_command", "args": "ls -R tests/tests/uvm-systemc/bugs/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/configuration/manual/golden/"}
+{"tool": "run_command", "args": "git log -p tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/40phasing/99fixes/01finish_on_completion"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__config-db-exists__shell__s2/src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s2/cmake/run-test.py 1"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__config-db-exists__shell__s2/cmake/run-test.py 100"}

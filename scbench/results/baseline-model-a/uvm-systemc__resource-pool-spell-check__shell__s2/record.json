@@ -4,50 +4,73 @@
   "seed": 2,
   "model": "model-a",
   "agent": {
-    "exit": 0,
-    "events": 190,
+    "exit": 1,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
+      "manage_task": 4,
       "read_file": 13,
-      "run_command": 33
+      "run_command": 19,
+      "search_web": 22
     },
-    "tool_calls_total": 46,
-    "num_turns": 49,
+    "tool_calls_total": 58,
+    "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 219948,
-      "output_tokens": 10627,
-      "thinking_tokens": 7468,
-      "cache_read_input_tokens": 1923567
+      "input_tokens": 260332,
+      "output_tokens": 17401,
+      "thinking_tokens": 14244,
+      "cache_read_input_tokens": 2899582
     },
-    "duration_ms": 179779,
-    "terminal_reason": null,
+    "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 182.5,
-    "graded_status": "pass"
+    "wall_s": 316.3,
+    "graded_status": "fail"
   },
   "grade": {
-    "passed": true,
+    "passed": false,
     "tests": [
       {
-        "passed": true,
+        "passed": false,
         "test": "uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name",
         "seconds": 0.3,
         "uvm_counts": {
-          "UVM_INFO": 2,
+          "UVM_INFO": 0,
           "UVM_WARNING": 0,
-          "UVM_ERROR": 0,
+          "UVM_ERROR": 1,
           "UVM_FATAL": 0
         },
-        "first_uvm_problem": null,
-        "sim_log": "<worktree>/uvm-systemc__resource-pool-spell-check__shell__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.log"
+        "first_uvm_problem": "UVM_ERROR <worktree>/uvm-systemc__resource-pool-spell-check__shell__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.cpp(43) @ 0 s: reporter [Test] read_by_name() did not find existing resource 'num_packets'",
+        "sim_log": "<worktree>/uvm-systemc__resource-pool-spell-check__shell__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.log",
+        "golden_diff": [
+          "--- 02resource_read_by_name/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,14 +1,12 @@",
+          " SystemC Simulation",
+          "-num_packets = 42",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/CONFIGDB/SPELLCHK] num_packet not located, did you mean num_packets",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/CONFIGDB/SPELLCHK] mode_c not located, did you mean mode_a|mode_b",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] read_by_name() did not find existing resource 'num_packets'",
+          " UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
+          " --- UVM Report Summary ---",
+          " ** Report counts by severity",
+          "-UVM_INFO      :   2",
+          "+UVM_INFO      :   0",
+          " UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "+UVM_ERROR     :   1",
+          " UVM_FATAL     :   0",
+          " ** Report counts by id",
+          "-[UVM/CONFIGDB/SPELLCHK]                                      2",
+          "-** UVM TEST PASSED **",
+          "+[Test]                  1",
+          "+!! UVM TEST FAILED !!"
+        ]
       }
     ],
-    "agent_diffstat": [
-      " 1 file changed, 57 insertions(+), 3 deletions(-)"
-    ]
+    "agent_diffstat": []
   },
-  "status": "pass"
+  "status": "fail"
 }

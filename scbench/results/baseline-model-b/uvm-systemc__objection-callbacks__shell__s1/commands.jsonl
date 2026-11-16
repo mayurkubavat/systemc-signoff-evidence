@@ -1,0 +1,68 @@
+{"tool": "run_command", "args": "ls -la && echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "rg -n \"class uvm_objection|class uvm_callback|uvm_callbacks<\" src/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"ENABLE_REGRESSION|add_test|enable_testing\" CMakeLists.txt tests/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | rg -i \"objection|cb|callback\""}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"callbacks/basic|objections/basic|04objection\" --output-on-failure"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-callbacks-basic examples-simple-objections-basic unit_tests-40phasing-04objection && ctest --test-dir build -R \"callbacks/basic|objections/basic|04objection\" --output-on-failure"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "350 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.cpp 1"}
+{"tool": "read_file", "args": "700 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.cpp 350"}
+{"tool": "read_file", "args": "1187 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.cpp 701"}
+{"tool": "run_command", "args": "rg -n \"UVM_DO_CALLBACKS|UVM_REGISTER_CB\" src/ examples/ tests/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/macros/uvm_callback_defines.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/cb/uvm_callback.h 1"}
+{"tool": "run_command", "args": "rg -n \"m_register_cb\" src/"}
+{"tool": "read_file", "args": "330 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/cb/uvm_callbacks.h 235"}
+{"tool": "read_file", "args": "860 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/cb/uvm_callbacks.h 730"}
+{"tool": "run_command", "args": "rg -n \"m_register_pair|m_register_cb\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/base/uvm_object.cpp 70"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/report/uvm_report_catcher.cpp 35"}
+{"tool": "run_command", "args": "rg -n \"m_am_i_a|check_registration\" src/uvmsc/cb/"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/phasing/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_phasing.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvm.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/files.am 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/report/uvm_report_catcher.h 20"}
+{"tool": "run_command", "args": "rg -n \"UVM_CB_TRACE_NOOBJ|is_enabled|callback_mode\" src/uvmsc/"}
+{"tool": "read_file", "args": "390 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/cb/uvm_callbacks.h 300"}
+{"tool": "read_file", "args": "170 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/cb/uvm_callbacks_base.cpp 120"}
+{"tool": "read_file", "args": "90 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/base/uvm_event_callback.h 30"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/reg/uvm_reg_cbs_types.h 30"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__objection-callbacks__shell__s1/examples/uvmsc/simple/callbacks/basic/bus_driver_cb.h 1"}
+{"tool": "run_command", "args": "rg -n \"uvm_objection\\.h|uvm_callbacks\\.h|uvm_callback_defines\\.h\" src/"}
+{"tool": "read_file", "args": "525 <worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/cb/uvm_callbacks.h 460"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/04objection/test.cpp 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__objection-callbacks__shell__s1/examples/uvmsc/simple/callbacks/basic/sc_main.cpp 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target uvm-systemc examples-simple-callbacks-basic examples-simple-objections-basic unit_tests-40phasing-04objection"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/04objection/"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/CMakeLists.txt 121"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/04objection/golden/"}
+{"tool": "read_file", "args": "30 <worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/04objection/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-40phasing-05objection_callbacks && ctest --test-dir build -R \"05objection_callbacks\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-05objection_callbacks && ctest --test-dir build -R \"05objection_callbacks\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-05objection_callbacks && ctest --test-dir build -R \"05objection_callbacks\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__objection-callbacks__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/05objection_callbacks/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"callbacks/basic|objections/basic|04objection|05objection_callbacks\" --output-on-failure"}
+{"tool": "run_command", "args": "git status"}

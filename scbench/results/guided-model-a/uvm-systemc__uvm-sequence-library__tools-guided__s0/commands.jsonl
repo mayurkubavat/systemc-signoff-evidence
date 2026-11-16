@@ -1,0 +1,58 @@
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "run_command", "args": "find ~/Tools/uvm-core/src -name \"*sequence_lib*\""}
+{"tool": "read_file", "args": "200 ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh 1"}
+{"tool": "read_file", "args": "450 ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh 201"}
+{"tool": "read_file", "args": "700 ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh 451"}
+{"tool": "read_file", "args": "869 ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh 701"}
+{"tool": "run_command", "args": "grep -rn \"UVM_SEQUENCE_LIBRARY_UTILS\" ~/Tools/uvm-core/src; grep -rn \"UVM_ADD_TO_SEQ_LIB\" ~/Tools/uvm-core/src"}
+{"tool": "run_command", "args": "grep -ri \"sequence_library_utils\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "500 ~/Tools/uvm-core/src/macros/uvm_sequence_defines.svh 380"}
+{"tool": "read_file", "args": "322 ~/Tools/uvm-core/src/macros/uvm_sequence_defines.svh 200"}
+{"tool": "run_command", "args": "find src -name \"*.h\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_seq.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/macros/uvm_sequence_defines.h 1"}
+{"tool": "read_file", "args": "173 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/macros/uvm_sequence_defines.h 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvm.h 1"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvm.h 170"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "find unit_tests -name \"*seq*\""}
+{"tool": "run_command", "args": "find . -maxdepth 3 -type d"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -name \"*sequence*\""}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/40phasing/20sequences"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/40phasing/20sequences/01simple'} scbench run_test"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequence.h 1"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequence_base.h 1"}
+{"tool": "read_file", "args": "235 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequence_base.h 151"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequence_base.cpp 1"}
+{"tool": "run_command", "args": "grep -rn \"starting_phase\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "1040 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequence_base.cpp 970"}
+{"tool": "run_command", "args": "grep -rn \"m_safe_raise_starting_phase\" ~/Tools/uvm-core/src/seq/"}
+{"tool": "run_command", "args": "grep -rn -A 20 \"uvm_rand_send\" ~/Tools/uvm-core/src/macros/uvm_sequence_defines.svh"}
+{"tool": "run_command", "args": "grep -rn \"set_item_context\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "110 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequence_item.cpp 75"}
+{"tool": "run_command", "args": "grep -rn \"print_sequence_info\" src/"}
+{"tool": "run_command", "args": "grep -rn \"get_type()\" src/ tests/"}
+{"tool": "read_file", "args": "280 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/macros/uvm_object_defines.h 240"}
+{"tool": "run_command", "args": "grep -rn \"get_type\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/factory/uvm_object_registry.h 1"}
+{"tool": "run_command", "args": "grep -rn \"uvm_object_registry.*uvm_sequence_item\" src/"}
+{"tool": "run_command", "args": "grep -rn -A 25 \"create_object_by_type\" src/uvmsc/factory/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_config_db\" tests/"}
+{"tool": "read_file", "args": "145 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/tests/tests/uvm-systemc/examples/integrated/ubus/test_lib.h 120"}
+{"tool": "run_command", "args": "grep -rn -A 20 \"default_sequence\" src/uvmsc/seq/"}
+{"tool": "run_command", "args": "grep -rn \"randomize\" src/uvmsc/"}
+{"tool": "read_file", "args": "100 <cli-home>/... 1"}
+{"tool": "run_command", "args": "grep -rni \"crave\" src/ CMakeLists.txt tests/"}
+{"tool": "run_command", "args": "grep -rn \"rand()\" tests/ src/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 30"}
+{"tool": "run_command", "args": "grep -rn \"urandom\" src/"}
+{"tool": "run_command", "args": "grep -rn \"urandom_range\" src/"}
+{"tool": "run_command", "args": "grep -rn -B 5 -A 20 \"M_UVM_OBJECT_REGISTRY_INTERNAL\" src/uvmsc/macros/"}
+{"tool": "read_file", "args": "190 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/factory/uvm_object_registry.h 100"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-sequence-library__tools-guided__s0/src/uvmsc/base/uvm_coreservice_t.cpp 1"}

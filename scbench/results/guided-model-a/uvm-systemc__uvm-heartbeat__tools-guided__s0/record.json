@@ -5,31 +5,30 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 181,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 2,
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_test": 2,
-      "read_file": 23,
-      "run_command": 28
+      "mcp__scbench__run_test": 1,
+      "read_file": 20,
+      "run_command": 35
     },
-    "tool_calls_total": 57,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 271688,
-      "output_tokens": 15690,
-      "thinking_tokens": 11738,
-      "cache_read_input_tokens": 2137281
+      "input_tokens": 263440,
+      "output_tokens": 17592,
+      "thinking_tokens": 13848,
+      "cache_read_input_tokens": 2362296
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 187.1,
+    "wall_s": 183.6,
     "graded_status": "fail"
   },
   "grade": {
@@ -43,7 +42,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-00basic-12heartbeat",
-          "seconds": 9.1,
+          "seconds": 3.4,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",

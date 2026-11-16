@@ -1,0 +1,65 @@
+{"tool": "run_command", "args": "rg -n \"wait_for_grant|lock|grab|arbitrate|seq_req\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.h 1"}
+{"tool": "read_file", "args": "400 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp 250"}
+{"tool": "read_file", "args": "650 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp 401"}
+{"tool": "read_file", "args": "950 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp 651"}
+{"tool": "read_file", "args": "1319 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp 951"}
+{"tool": "run_command", "args": "rg -n \"uvm_process|sc_process_handle|killed|terminated\" src/uvmsc/"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/phasing/uvm_process.h 1"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab'} scbench run_test"}
+{"tool": "read_file", "args": "690 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequence_base.cpp 600"}
+{"tool": "read_file", "args": "420 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequence_base.cpp 310"}
+{"tool": "run_command", "args": "rg -n \"uvm_sequence_request|arb_sequence_q|process_id|SEQLCKZMB|SEQREQZMB\" src/"}
+{"tool": "read_file", "args": "130 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp 1"}
+{"tool": "read_file", "args": "390 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer.h 330"}
+{"tool": "run_command", "args": "rg -n \"m_sequence_process\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "310 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequence_base.cpp 250"}
+{"tool": "run_command", "args": "rg -n \"process_id|uvm_process\\b\" examples/ tests/"}
+{"tool": "run_command", "args": "rg -n \"m_get_sqr_sequence_id\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "1165 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequence_base.cpp 1125"}
+{"tool": "run_command", "args": "ls -la tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls -la tests/ tests/uvm-systemc/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer.h"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples_uvmsc/sequence/arbitration'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples_uvmsc/sequence/basic_read_write_sequence_try'} scbench run_test"}
+{"tool": "run_command", "args": "find . -name \"*sequence_lock_grab*\" -o -path \"*sequence_lock_grab*\""}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab/grab_seq.h 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab/lock_seq.h 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab/arb_example_seq.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab/seq_arb_driver.h 1"}
+{"tool": "read_file", "args": "915 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp 825"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/build-scbench/tests/Testing/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab/sc_main.log 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab'} scbench run_test"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench run_regression"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/integrated/ubus'} scbench run_test"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/unit_tests/50seq/01killed_requests/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/unit_tests/50seq/01killed_requests/golden/test.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/50seq/01killed_requests'} scbench run_test"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/unit_tests/50seq/01killed_requests/test.cpp"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/50seq/01killed_requests'} scbench run_test"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/build-scbench/tests/Testing/uvm-systemc/unit_tests/50seq/01killed_requests/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/tests/tests/uvm-systemc/unit_tests/50seq/01killed_requests/golden/test.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/50seq/01killed_requests'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'sequence'} scbench run_regression"}
+{"tool": "run_command", "args": "git status -s"}

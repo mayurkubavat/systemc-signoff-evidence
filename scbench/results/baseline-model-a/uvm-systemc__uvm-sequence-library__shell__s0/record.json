@@ -5,27 +5,29 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 180,
+    "events": 184,
     "non_json_lines": 0,
     "tool_calls": {
+      "manage_task": 4,
       "read_file": 14,
-      "run_command": 18,
-      "search_web": 27
+      "run_command": 20,
+      "schedule": 4,
+      "search_web": 16
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 259980,
-      "output_tokens": 6655,
-      "thinking_tokens": 3607,
-      "cache_read_input_tokens": 2526648
+      "input_tokens": 250252,
+      "output_tokens": 7792,
+      "thinking_tokens": 4725,
+      "cache_read_input_tokens": 2526553
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 225.0,
+    "wall_s": 231.6,
     "graded_status": "fail"
   },
   "grade": {
@@ -39,7 +41,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-30seq-02sequence_library",
-          "seconds": 6.4,
+          "seconds": 4.1,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",

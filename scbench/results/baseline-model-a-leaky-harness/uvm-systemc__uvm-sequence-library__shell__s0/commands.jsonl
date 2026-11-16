@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "pwd && ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\"; which cmake ninja ctest"}
+{"tool": "run_command", "args": "ls -la src/uvm src/uvm/seq"}
+{"tool": "run_command", "args": "find src -maxdepth 3"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_seq.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_sequence_defines.h 1"}
+{"tool": "read_file", "args": "173 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_sequence_defines.h 100"}
+{"tool": "run_command", "args": "ls tests; ls tests/uvmsc"}
+{"tool": "run_command", "args": "find tests -maxdepth 3"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests -maxdepth 3"}
+{"tool": "run_command", "args": "find tests -name \"*seq*\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/examples/integrated/ubus/ubus_example_master_seq_lib.h 1"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/examples/integrated/ubus/ubus_example_master_seq_lib.h 100"}
+{"tool": "read_file", "args": "341 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/examples/integrated/ubus/ubus_example_master_seq_lib.h 250"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/examples/integrated/ubus/vip/ubus_master_seq_lib.h 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/files.am 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -n \"tests\" CMakeLists.txt"}
+{"tool": "read_file", "args": "545 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/CMakeLists.txt 525"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00hello\""}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-00hello"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00hello\" --output-on-failure"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sequence_library\" ."}
+{"tool": "run_command", "args": "grep -rni \"sequence_library\" ."}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"uvm_sequence_library_cfg\" \"SEQLIB\" github"}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"Accellera\" filetype:svh OR site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"class uvm_sequence_library_cfg\" \"select_sequence\" \"sequences_executed\""}
+{"tool": "search_web", "args": "\"task uvm_sequence_library::body\" OR \"function void uvm_sequence_library::init_sequence_library\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" site:github.com \"m_add_typewide_sequence\" OR \"m_init_sequence_library\" OR \"init_sequence_library\""}
+{"tool": "search_web", "args": "site:raw.githubusercontent.com \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"task body()\" \"edaplayground\""}
+{"tool": "search_web", "args": "\"m_add_typewide_sequence\" \"select_sequence\" \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "\"SEQLIB/\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB\" \"uvm_sequence_library\" \"uvm_info\" OR \"uvm_warning\" OR \"uvm_error\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"SEQLIB/\" \"MIN_GT_MAX\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"SEQLIB/\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"SEQLIB/START\" OR \"SEQLIB/NOSEQS\" OR \"SEQLIB/DSTRB\""}
+{"tool": "search_web", "args": "\"SEQLIB/START\" \"Starting sequence library\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"Starting sequence library\" \"iterations in mode\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"Starting sequence library\" \"iterations in mode\" \"uvm_info\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/NOSEQS\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/DSTRB\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/DSTRB\" \"uvm_info\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library_cfg\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library_cfg extends uvm_object\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"m_add_typewide_sequence\" \"m_static_check\" OR \"m_init_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"m_static_check\" site:github.com \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "\"function bit\" \"m_check\" \"uvm_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"m_check\" \"seq_type.create_object\" \"SEQLIB\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/BAD_SEQ_TYPE\" \"Cannot add to sequence library\" site:github.com"}
+{"tool": "search_web", "args": "\"function void\" \"add_sequence\" \"uvm_sequence_library\" site:github.com"}

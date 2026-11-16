@@ -1,0 +1,66 @@
+{"tool": "run_command", "args": "git status && ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && cmake --version && ninja --version && ctest --version"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DBUILD_TESTS=ON"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j8"}
+{"tool": "run_command", "args": "cmake --build build --target check -j8"}
+{"tool": "run_command", "args": "ls -la src/ src/uvmsc/ src/uvmsc/seq/ src/uvmsc/macros/"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_seq.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/CMakeLists.txt"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/files.am"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_sequence_defines.h 1"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm.h"}
+{"tool": "run_command", "args": "rg -n \"sequence_library|seq_lib|SEQ_LIB\" src/ tests/ docs/ examples/"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence.h 1"}
+{"tool": "read_file", "args": "300 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence.h 151"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_base.h 1"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_base.h 151"}
+{"tool": "run_command", "args": "rg -n \"UVM_OBJECT_.*UTILS\" src/uvmsc/macros/uvm_object_defines.h"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_object_defines.h 1"}
+{"tool": "read_file", "args": "279 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_object_defines.h 141"}
+{"tool": "run_command", "args": "rg -n \"rand\\(|srand|mt19937|random\" src/uvmsc/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 35"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/factory/uvm_object_wrapper.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/factory/uvm_object_registry.h 1"}
+{"tool": "run_command", "args": "rg -n \"default_sequence|start_phase_sequence\" src/uvmsc/"}
+{"tool": "read_file", "args": "270 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 178"}
+{"tool": "manage_task", "args": "status <id>/task-12"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/base/uvm_object_globals.h 100"}
+{"tool": "manage_task", "args": "status <id>/task-12"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/print/uvm_printer.h 60"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/conf/uvm_config_db.h 40"}
+{"tool": "run_command", "args": "rg -n \"CXX_STANDARD|cxx_std\" CMakeLists.txt cmake/ src/"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/factory/uvm_object_registry.h 101"}
+{"tool": "read_file", "args": "310 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/conf/uvm_config_db.h 240"}
+{"tool": "read_file", "args": "360 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/conf/uvm_config_db.h 311"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_item.h 40"}
+{"tool": "run_command", "args": "rg -n \"uvm_sequence_base::(create_item|start_item)\" src/uvmsc/seq/uvm_sequence_base.cpp"}
+{"tool": "read_file", "args": "740 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_base.cpp 670"}
+{"tool": "run_command", "args": "rg -n \"finish_item\" examples/ tests/tests/uvm-systemc/examples_uvmsc/sequence/"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_library.h"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_library.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_seq.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/CMakeLists.txt"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/files.am"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_sequence_defines.h"}
+{"tool": "run_command", "args": "cmake --build build --target uvm-systemc -j8"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_library.h"}
+{"tool": "run_command", "args": "cmake --build build --target uvm-systemc -j8"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple/"}
+{"tool": "run_command", "args": "rg -n \"20sequences\" tests/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple/test.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"GLOB\" tests/CMakeLists.txt"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02seq_lib/test.cpp"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-40phasing-20sequences-02seq_lib -j8"}
+{"tool": "read_file", "args": "210 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/CMakeLists.txt 165"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple/golden/"}
+{"tool": "run_command", "args": "c++ -std=gnu++17 -Isrc -Ibuild -I$SYSTEMC_HOME/include tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02seq_lib/test.cpp -Lbuild/src -L$SYSTEMC_HOME/lib -luvm-systemc -lsystemc -Wl,-rpath,$(pwd)/build/src -Wl,-rpath,$SYSTEMC_HOME/lib -o build/test_seq_lib && ./build/test_seq_lib"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_library.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/macros/uvm_sequence_defines.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02seq_lib/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target uvm-systemc -j8 && c++ -std=gnu++17 -Isrc -Ibuild -I$SYSTEMC_HOME/include tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02seq_lib/test.cpp -Lbuild/src -L$SYSTEMC_HOME/lib -luvm-systemc -lsystemc -Wl,-rpath,$(pwd)/build/src -Wl,-rpath,$SYSTEMC_HOME/lib -o build/test_seq_lib && ./build/test_seq_lib"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/01simple/golden/test.log"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-sequence-library__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/20sequences/02seq_lib/golden/test.log"}
+{"tool": "run_command", "args": "rm -f build/test_seq_lib && cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-40phasing-20sequences-02seq_lib -j8 && ctest --test-dir build -R \"20sequences|examples_uvmsc/sequence\" --output-on-failure"}
+{"tool": "run_command", "args": "git status"}

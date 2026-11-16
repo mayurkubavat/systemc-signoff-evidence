@@ -1,0 +1,40 @@
+{"tool": "run_command", "args": "rg -n \"class (uvm_object|uvm_printer|uvm_event_callback)\" src/"}
+{"tool": "run_command", "args": "ls -d build* tests/ 2>/dev/null; find tests -maxdepth 3 -name \"*event*\" -o -name \"*policy*\" 2>/dev/null"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.h 25"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_simple_lock_dap.h 25"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h 25"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_before_get_dap.h 25"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.h 61"}
+{"tool": "run_command", "args": "find tests -maxdepth 3"}
+{"tool": "run_command", "args": "rg -n \"uvm_event_callback\" src/uvmsc/base/uvm_event.cpp"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/bugs/ tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\"; which cmake ninja ctest"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_343/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses tests/tests/uvm-systemc/unit_tests/00basic"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/00hello tests/tests/uvm-systemc/unit_tests/00basic/99fixes"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/CMakeLists.txt 121"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "rg -n \"ENABLE_REGRESSION\" CMakeLists.txt cmake/"}
+{"tool": "read_file", "args": "30 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/00hello/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_fwd_decls/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_fwd_decls/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=~/.local/opt/accellera/systemc"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02global_fwd_decls"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_simple_lock_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_before_get_dap.h"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02global_fwd_decls && ctest --test-dir build -R 02global_fwd_decls --output-on-failure"}
+{"tool": "run_command", "args": "cat build/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02global_fwd_decls/test.log"}
+{"tool": "run_command", "args": "./build/tests/unit_tests-00basic-99fixes-02global_fwd_decls"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_fwd_decls/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02global_fwd_decls && ctest --test-dir build -R 02global_fwd_decls --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_fwd_decls/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02global_fwd_decls && ctest --test-dir build -R 02global_fwd_decls --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"00basic|event\""}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-00hello unit_tests-00basic-99fixes-01global_comparer && ctest --test-dir build -R \"00basic\" --output-on-failure"}
+{"tool": "run_command", "args": "git status -s"}

@@ -5,30 +5,29 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 183,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 1,
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "read_file": 10,
-      "run_command": 7,
-      "search_web": 40
+      "read_file": 14,
+      "run_command": 5,
+      "search_web": 38
     },
-    "tool_calls_total": 60,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 258546,
-      "output_tokens": 9397,
-      "thinking_tokens": 6548,
-      "cache_read_input_tokens": 2570679
+      "input_tokens": 243235,
+      "output_tokens": 7416,
+      "thinking_tokens": 4589,
+      "cache_read_input_tokens": 2636426
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 285.7,
+    "wall_s": 304.7,
     "graded_status": "fail"
   },
   "grade": {
@@ -42,7 +41,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-30seq-02sequence_library",
-          "seconds": 8.4,
+          "seconds": 3.7,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",

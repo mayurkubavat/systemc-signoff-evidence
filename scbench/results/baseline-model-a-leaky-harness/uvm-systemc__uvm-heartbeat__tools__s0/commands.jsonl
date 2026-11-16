@@ -1,0 +1,58 @@
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "find src -maxdepth 3 -type d"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/base"}
+{"tool": "run_command", "args": "git grep -l \"uvm_objection\" src/"}
+{"tool": "run_command", "args": "find src -name \"*.h\""}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s0/src/uvm.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s0/src/uvm"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s0/src/uvmsc/base/uvm_base.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s0/src/uvmsc/base/CMakeLists.txt"}
+{"tool": "run_command", "args": "git log -S \"heartbeat\""}
+{"tool": "run_command", "args": "git grep -i \"heartbeat\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" \"NOEVNT\" \"ILHBVNT\" github uvm-1.2"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"HBFAIL\" github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"HBFAIL\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" site:github.com/accellera-official"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" site:raw.githubusercontent.com OR site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat extends uvm_object\" site:github.com"}
+{"tool": "search_web", "args": "\"Did not receive an update of\" site:github.com"}
+{"tool": "search_web", "args": "\"ILHBVNT\" github"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"NOEVNT\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_fatal(\\\"ILHBVNT\" OR \"uvm_error(\\\"ILHBVNT\" OR \"uvm_fatal(\\\"HBFAIL\" OR \"uvm_error(\\\"HBFAIL\""}
+{"tool": "search_web", "args": "`\"NOEVNT\"` `\"uvm_heartbeat\"`"}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"since last event trigger\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"NOEVNT\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat\" \"UVM_\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"different event\""}
+{"tool": "search_web", "args": "\"heartbeat\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"NOEVNT\""}
+{"tool": "search_web", "args": "\"heartbeat\""}
+{"tool": "search_web", "args": "\"Heartbeats: Proving the Bench Works, Window by Window\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" site:github.com/uvm"}
+{"tool": "search_web", "args": "\"ILHBVNT\" site:github.com"}
+{"tool": "search_web", "args": "site:github.com/nitronis/UVM \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "site:github.com/nitronis/UVM \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "site:github.com/nitronis/UVM \"uvm_heartbeat_modes\""}
+{"tool": "search_web", "args": "\"nitronis/UVM\" \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_fatal\" OR \"uvm_error\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"start\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"heartbeat\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat::start\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\""}
+{"tool": "search_web", "args": "\"NOEVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"HBFAIL\" \"UVM_ONE_ACTIVE\" OR \"UVM_ANY_ACTIVE\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"start\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"HBFAIL\""}

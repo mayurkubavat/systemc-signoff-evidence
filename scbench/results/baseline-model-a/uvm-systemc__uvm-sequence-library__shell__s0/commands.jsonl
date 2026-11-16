@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME: $SYSTEMC_HOME\"\ncmake --version\nninja --version\nctest --version"}
+{"tool": "run_command", "args": "git status && git log -n 5 --oneline"}
+{"tool": "run_command", "args": "ls -la src/uvm src/uvm/seq"}
+{"tool": "run_command", "args": "ls -la src"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/seq"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -n -C 5 -i \"test\" CMakeLists.txt | head -n 40"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00hello\" -V"}
+{"tool": "run_command", "args": "ninja -C build -t targets"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "schedule", "args": "5 Check build status"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "schedule", "args": "5 Check ctest status"}
+{"tool": "schedule", "args": "10 Check ctest completion"}
+{"tool": "schedule", "args": "20 Wait for ctest"}
+{"tool": "manage_task", "args": "status <id>/task-33"}
+{"tool": "manage_task", "args": "kill <id>/task-38"}
+{"tool": "manage_task", "args": "kill <id>/task-40"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm.h 1"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm.h 110"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvm.h 200"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_seq.h 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/files.am 1"}
+{"tool": "manage_task", "args": "status <id>/task-33"}
+{"tool": "run_command", "args": "git grep -i \"sequence_lib\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"select_sequence\" \"selection_mode\" \"min_random_count\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" github"}
+{"tool": "search_web", "args": "\"SEQLIB/\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"body()\" \"SEQLIB\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"default_sequence.config\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"default_sequence.selection_mode\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"SEQLIB/\""}
+{"tool": "search_web", "args": "\"SEQLIB/START\" uvm"}
+{"tool": "search_web", "args": "site:github.com \"uvm_sequence_library.svh\" \"SEQLIB\""}
+{"tool": "search_web", "args": "site:github.com \"Starting sequence library\" \"iterations in mode\""}
+{"tool": "search_web", "args": "site:github.com \"Starting sequence library\" \"iterations in mode\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "site:github.com \"m_get_config\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "site:github.com \"default_sequence.selection_mode\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "site:github.com \"default_sequence.min_random_count\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "site:github.com \"function void\" \"m_get_config\" \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "site:github.com \"if (starting_phase != null)\" \"phase_name\" \"uvm_sequence_library\""}
+{"tool": "run_command", "args": "git grep \"default_sequence\""}
+{"tool": "read_file", "args": "320 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 275"}
+{"tool": "run_command", "args": "grep -n \"default_sequence\" src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "read_file", "args": "235 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 190"}
+{"tool": "read_file", "args": "265 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 235"}
+{"tool": "run_command", "args": "grep -n -C 10 \"m_start_default_seq_proc\" src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "run_command", "args": "grep -n -C 20 \"uvm_sequence_base::start(\" src/uvmsc/seq/uvm_sequence_base.cpp"}
+{"tool": "read_file", "args": "210 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_base.cpp 145"}
+{"tool": "read_file", "args": "260 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_base.cpp 211"}
+{"tool": "run_command", "args": "grep -n -C 20 \"m_start_core\" src/uvmsc/seq/uvm_sequence_base.cpp"}
+{"tool": "read_file", "args": "1040 <worktree>/uvm-systemc__uvm-sequence-library__shell__s0/src/uvmsc/seq/uvm_sequence_base.cpp 990"}

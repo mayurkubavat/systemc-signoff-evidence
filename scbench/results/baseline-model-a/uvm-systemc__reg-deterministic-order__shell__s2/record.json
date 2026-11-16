@@ -5,28 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 184,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 20,
-      "read_file": 12,
-      "run_command": 26,
-      "schedule": 1
+      "manage_task": 3,
+      "read_file": 25,
+      "run_command": 29,
+      "schedule": 2
     },
     "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 257192,
-      "output_tokens": 7910,
-      "thinking_tokens": 4183,
-      "cache_read_input_tokens": 2186964
+      "input_tokens": 253449,
+      "output_tokens": 15101,
+      "thinking_tokens": 11225,
+      "cache_read_input_tokens": 2936027
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 133.3,
+    "wall_s": 185.8,
     "graded_status": "fail"
   },
   "grade": {
@@ -35,7 +35,7 @@
       {
         "passed": false,
         "test": "uvm-systemc/unit_tests/70regs/02regs/30creation_order",
-        "seconds": 0.3,
+        "seconds": 0.4,
         "uvm_counts": null,
         "first_uvm_problem": null,
         "sim_log": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.log",

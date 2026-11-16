@@ -1,0 +1,77 @@
+{
+  "task": "uvm-systemc:resource-pool-spell-check",
+  "arm": "tools",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 1,
+      "read_file": 10,
+      "run_command": 20,
+      "search_web": 27
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 253348,
+      "output_tokens": 14492,
+      "thinking_tokens": 11576,
+      "cache_read_input_tokens": 2313216
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 249.0,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 0,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 1,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": "UVM_ERROR <worktree>/uvm-systemc__resource-pool-spell-check__tools__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.cpp(43) @ 0 s: reporter [Test] read_by_name() did not find existing resource 'num_packets'",
+        "sim_log": "<worktree>/uvm-systemc__resource-pool-spell-check__tools__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.log",
+        "golden_diff": [
+          "--- 02resource_read_by_name/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,14 +1,12 @@",
+          " SystemC Simulation",
+          "-num_packets = 42",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/CONFIGDB/SPELLCHK] num_packet not located, did you mean num_packets",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/CONFIGDB/SPELLCHK] mode_c not located, did you mean mode_a|mode_b",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] read_by_name() did not find existing resource 'num_packets'",
+          " UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
+          " --- UVM Report Summary ---",
+          " ** Report counts by severity",
+          "-UVM_INFO      :   2",
+          "+UVM_INFO      :   0",
+          " UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "+UVM_ERROR     :   1",
+          " UVM_FATAL     :   0",
+          " ** Report counts by id",
+          "-[UVM/CONFIGDB/SPELLCHK]                                      2",
+          "-** UVM TEST PASSED **",
+          "+[Test]                  1",
+          "+!! UVM TEST FAILED !!"
+        ]
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la ~/Tools/uvm-core/src/seq/"}
+{"tool": "run_command", "args": "ls -la src/uvm/seq/"}
+{"tool": "run_command", "args": "find . -maxdepth 3 -not -path '*/.*'"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/seq/ src/uvm/"}
+{"tool": "run_command", "args": "ls -la src/"}
+{"tool": "run_command", "args": "cat src/uvm"}
+{"tool": "run_command", "args": "cat src/uvmsc/seq/uvm_seq.h"}
+{"tool": "run_command", "args": "cat src/uvm.h"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "head -n 60 CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -n -C 5 \"SYSTEMC\" CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -n -C 5 \"ENABLE_REGRESSION\" CMakeLists.txt"}
+{"tool": "run_command", "args": "find tests -name \"*seq*\""}
+{"tool": "run_command", "args": "head -n 50 tests/tests/uvm-systemc/examples/integrated/ubus/vip/ubus_master_seq_lib.h"}
+{"tool": "run_command", "args": "tail -n 60 tests/tests/uvm-systemc/examples/integrated/ubus/vip/ubus_master_seq_lib.h"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/examples/integrated/ubus/ubus_example_master_seq_lib.h"}
+{"tool": "run_command", "args": "head -n 100 ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "sed -n '101,250p' ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "sed -n '251,450p' ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "sed -n '451,700p' ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "sed -n '701,900p' ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "sed -n '901,1000p' ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "wc -l ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "sed -n '800,869p' ~/Tools/uvm-core/src/seq/uvm_sequence_library.svh"}
+{"tool": "run_command", "args": "grep -rn \"UVM_SEQUENCE_LIBRARY_UTILS\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "grep -rni \"sequence_library_utils\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "sed -n '225,320p' ~/Tools/uvm-core/src/macros/uvm_sequence_defines.svh"}
+{"tool": "run_command", "args": "grep -rni \"add_to_seq\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "sed -n '180,225p' ~/Tools/uvm-core/src/macros/uvm_sequence_defines.svh"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/macros/"}
+{"tool": "run_command", "args": "cat src/uvmsc/macros/uvm_sequence_defines.h"}
+{"tool": "run_command", "args": "grep -rni \"sequence_library\" src/ tests/"}
+{"tool": "run_command", "args": "head -n 60 src/uvmsc/seq/uvm_sequence.h"}
+{"tool": "run_command", "args": "sed -n '61,150p' src/uvmsc/seq/uvm_sequence.h"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "cat tests/tests/CMakeLists.txt"}
+{"tool": "run_command", "args": "head -n 50 tests/CMakeLists.txt"}
+{"tool": "run_command", "args": "tail -n 60 tests/CMakeLists.txt"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples_uvmsc/sequence/basic_read_write_sequence_tlm1/"}
+{"tool": "run_command", "args": "sed -n '50,110p' tests/CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sequence_lib_mode\" ~/Tools/uvm-core/src/"}
+{"tool": "run_command", "args": "sed -n '490,515p' ~/Tools/uvm-core/src/base/uvm_object_globals.svh"}
+{"tool": "run_command", "args": "cat src/uvmsc/base/uvm_object_globals.h"}
+{"tool": "run_command", "args": "cat src/uvmsc/seq/CMakeLists.txt"}
+{"tool": "run_command", "args": "cat src/uvmsc/seq/files.am"}
+{"tool": "run_command", "args": "cat src/uvmsc/macros/uvm_macros.h"}
+{"tool": "run_command", "args": "cat tests/headers/uvm-systemc.txt"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples_uvmsc/sequence/"}
+{"tool": "run_command", "args": "ctest --test-dir build -R basic_read_write_start_item --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target examples_uvmsc-sequence-basic_read_write_start_item"}
+{"tool": "run_command", "args": "ctest --test-dir build -R basic_read_write_start_item --output-on-failure"}
+{"tool": "run_command", "args": "grep -rn \"get_type()\" src/"}
+{"tool": "run_command", "args": "sed -n '250,285p' src/uvmsc/macros/uvm_object_defines.h"}
+{"tool": "run_command", "args": "cat src/uvmsc/factory/uvm_object_wrapper.h"}
+{"tool": "run_command", "args": "grep -rn \"CMAKE_CXX_STANDARD\" CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -rn -C 3 \"std=\" CMakeLists.txt"}
+{"tool": "run_command", "args": "sed -n '1,100p' src/uvmsc/macros/uvm_object_defines.h"}
+{"tool": "run_command", "args": "cat src/uvmsc/factory/uvm_object_registry.h"}

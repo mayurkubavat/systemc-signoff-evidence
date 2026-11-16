@@ -5,27 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 178,
+    "events": 181,
     "non_json_lines": 0,
     "tool_calls": {
-      "read_file": 11,
+      "manage_task": 1,
+      "read_file": 6,
       "run_command": 18,
-      "search_web": 28
+      "search_web": 34
     },
-    "tool_calls_total": 57,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 253185,
-      "output_tokens": 6557,
-      "thinking_tokens": 3860,
-      "cache_read_input_tokens": 2601932
+      "input_tokens": 256555,
+      "output_tokens": 8103,
+      "thinking_tokens": 5412,
+      "cache_read_input_tokens": 2776361
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 262.0,
+    "wall_s": 277.9,
     "graded_status": "fail"
   },
   "grade": {
@@ -34,7 +35,7 @@
       {
         "passed": false,
         "test": "uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name",
-        "seconds": 0.3,
+        "seconds": 0.4,
         "uvm_counts": {
           "UVM_INFO": 0,
           "UVM_WARNING": 0,

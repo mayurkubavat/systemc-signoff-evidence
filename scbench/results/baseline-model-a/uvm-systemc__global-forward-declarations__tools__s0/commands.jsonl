@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "50 <cli-home>/... 1"}
+{"tool": "read_file", "args": "50 <cli-home>/... 1"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "run_command", "args": "find . -name \"uvm_event.h\" -o -name \"*policy*\" -o -name \"*access*\""}
+{"tool": "run_command", "args": "grep -rn \"class uvm_printer\" src/"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event.h 70"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event.h 140"}
+{"tool": "run_command", "args": "grep -rn \"add_callback\" src/"}
+{"tool": "read_file", "args": "340 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event.cpp 300"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event.cpp 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event_callback.h 1"}
+{"tool": "run_command", "args": "find src -name \"*policy*.h\""}
+{"tool": "run_command", "args": "grep -rn \"class uvm_object\" src/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_set_before_get_dap.h 20"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h 20"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_simple_lock_dap.h 20"}
+{"tool": "run_command", "args": "python3 -c '\nimport os, re\n\nfor root, dirs, files in os.walk(\"src\"):\n    for file in files:\n        if file.endswith((\".h\", \".hpp\", \".cpp\")):\n            path = os.path.join(root, file)\n            with open(path) as f:\n                content = f.read()\n            # check lines before \"namespace uvm\"\n            lines = content.splitlines()\n            in_ns = False\n            for i, line in enumerate(lines):\n                s = line.strip()\n                if \"namespace uvm\" in s and not s.startswith(\"/\u2026"}
+{"tool": "run_command", "args": "python3 -c '\nimport os, re\n\nfor root, dirs, files in os.walk(\"src\"):\n    for file in files:\n        if file.endswith((\".h\", \".hpp\", \".cpp\")):\n            path = os.path.join(root, file)\n            with open(path) as f:\n                content = f.read()\n            lines = content.splitlines()\n            ns_depth = 0\n            for i, line in enumerate(lines):\n                s = line.strip()\n                if \"namespace uvm\" in s and not s.startswith(\"//\") and not s.startswith(\"/*\") and \"{\" in s:\n     \u2026"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_set_get_dap_base.h 1"}
+{"tool": "run_command", "args": "find src -name \"uvm*\" -maxdepth 2"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvm.h 1"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvm.h 100"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvm.h 200"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvm 1"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/01global_comparer'} scbench run_test"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/01global_comparer'} scbench run_test"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/01global_comparer'} scbench run_test"}
+{"tool": "run_command", "args": "git checkout tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp"}
+{"tool": "run_command", "args": "grep -rn \"forward declaration\" src/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/print/uvm_printer.h 35"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_object.h 35"}
+{"tool": "run_command", "args": "grep -rn \"uvm_event_callback\" src/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "run_command", "args": "python3 -c '\nimport os, re\n\nfor root, dirs, files in os.walk(\"src/uvmsc\"):\n    for file in files:\n        if file.endswith((\".h\", \".hpp\")):\n            path = os.path.join(root, file)\n            with open(path) as f:\n                content = f.read()\n            lines = content.splitlines()\n            ns_depth = 0\n            for i, line in enumerate(lines):\n                s = line.strip()\n                if s.startswith(\"//\") or s.startswith(\"/*\") or s.startswith(\"*\"):\n                    continue\n    \u2026"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/base/uvm_event.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_set_before_get_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/src/uvmsc/dap/uvm_simple_lock_dap.h"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__tools__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/00basic/99fixes/01global_comparer'} scbench run_test"}
+{"tool": "run_command", "args": "git checkout tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp"}
+{"tool": "call_mcp_tool", "args": "{} scbench run_regression"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/fifo_reg'} scbench run_test"}
+{"tool": "run_command", "args": "git diff"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/integrated/ubus'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/40phasing/10domains/01twodomains'} scbench run_test"}
+{"tool": "run_command", "args": "git log -n 5"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/unit_tests/00basic/99fixes/CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -rn \"01global_comparer\" tests/"}

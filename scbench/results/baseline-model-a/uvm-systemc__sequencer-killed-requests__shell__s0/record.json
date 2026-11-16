@@ -5,27 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 179,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 7,
-      "read_file": 13,
-      "run_command": 39
+      "manage_task": 1,
+      "read_file": 20,
+      "run_command": 32,
+      "search_web": 5
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 267549,
-      "output_tokens": 23579,
-      "thinking_tokens": 19921,
-      "cache_read_input_tokens": 2403948
+      "input_tokens": 275353,
+      "output_tokens": 43023,
+      "thinking_tokens": 39189,
+      "cache_read_input_tokens": 3239703
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 210.0,
+    "wall_s": 351.6,
     "graded_status": "fail"
   },
   "grade": {
@@ -41,14 +42,14 @@
         "golden_diff": [
           "--- 01lock_zombie/golden/test.log",
           "+++ test.log.stripped",
-          "@@ -2,23 +2,3 @@",
+          "@@ -2,23 +2,5 @@",
           " UVM_INFO @ 0 s: reporter [RNTST] Running test test...",
           " 10 ns: driver got item 100",
           " 10 ns: the two waiting processes were killed",
           "-UVM_ERROR <removed by verify-uvm.pl> @ 10 ns: test.sqr [SEQLCKZMB] The task responsible for requesting a lock on sequencer 'test.sqr' for sequence 'test.sqr.lock_zombie' has been killed, to avoid a deadlock the sequence will be removed from the arbitration queues.",
           "-UVM_ERROR <removed by verify-uvm.pl> @ 10 ns: test.sqr [SEQREQZMB] The task responsible for requesting a wait_for_grant on sequencer 'test.sqr' for sequence 'grant_zombie' has been killed, to avoid a deadlock the sequence will be removed from the arbitration queues.",
-          "-20 ns: driver got item 101",
-          "-30 ns: driver got item 102",
+          " 20 ns: driver got item 101",
+          " 30 ns: driver got item 102",
           "-40 ns: driver got item 300",
           "-50 ns: driver got item 200",
           "-60 ns: driver got item 201",

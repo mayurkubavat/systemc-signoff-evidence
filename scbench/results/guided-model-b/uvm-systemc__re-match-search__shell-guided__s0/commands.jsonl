@@ -1,0 +1,49 @@
+{"tool": "run_command", "args": "rg -n \"uvm_re_match|wait_modified\" src/ tests/"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "read_file", "args": "310 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 250"}
+{"tool": "read_file", "args": "470 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 370"}
+{"tool": "read_file", "args": "330 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 240"}
+{"tool": "read_file", "args": "470 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 395"}
+{"tool": "read_file", "args": "210 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_base.cpp 120"}
+{"tool": "read_file", "args": "600 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 515"}
+{"tool": "read_file", "args": "375 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 310"}
+{"tool": "run_command", "args": "find tests/ -maxdepth 4 -type d"}
+{"tool": "run_command", "args": "rg -n \"uvm_re_match|uvm_glob_to_re|wait_modified\" ~/Tools/uvm-core/src/"}
+{"tool": "read_file", "args": "120 ~/Tools/uvm-core/src/dpi/uvm_regex.cc 60"}
+{"tool": "read_file", "args": "310 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 230"}
+{"tool": "run_command", "args": "rg -n \"config_db|resource_db|uvm_re_match|wait_modified\" tests/"}
+{"tool": "read_file", "args": "60 ~/Tools/uvm-core/src/dpi/uvm_regex.cc 1"}
+{"tool": "read_file", "args": "345 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 305"}
+{"tool": "read_file", "args": "230 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 140"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/"}
+{"tool": "read_file", "args": "445 ~/Tools/uvm-core/src/base/uvm_config_db_implementation.svh 345"}
+{"tool": "read_file", "args": "165 ~/Tools/uvm-core/src/base/uvm_config_db.svh 100"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/ tests/tests/uvm-systemc/bugs/bug_184/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/ tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match_search/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match_search/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match_search && ctest --test-dir build -R 02re_match_search --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match_search/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match_search && ctest --test-dir build -R 02re_match_search --output-on-failure"}
+{"tool": "read_file", "args": "560 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp 470"}
+{"tool": "read_file", "args": "305 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 225"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_globals.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match_search && ctest --test-dir build -R 02re_match_search --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"get_full_name\" src/uvmsc/base/uvm_root.*"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/base/uvm_root.cpp 100"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h 330"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match_search && ctest --test-dir build -R 02re_match_search --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match_search/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 02re_match_search --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-configuration-manual unit_tests-00basic-00hello unit_tests-00basic-99fixes-01global_comparer && ctest --test-dir build -R \"(00basic|configuration/manual)\" --output-on-failure"}
+{"tool": "run_command", "args": "git status -s && git diff src/"}

@@ -1,0 +1,57 @@
+{"tool": "run_command", "args": "rg -n \"uvm_object_string_pool|uvm_pool|uvm_event_pool|POOLDEL\""}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && ls -la src/uvmsc/conf/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-pool__shell__s0/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/files.am 1"}
+{"tool": "run_command", "args": "rg -n \"TEST|test\" CMakeLists.txt"}
+{"tool": "read_file", "args": "540 <worktree>/uvm-systemc__uvm-pool__shell__s0/CMakeLists.txt 520"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_object_string_pool.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_conf.h 1"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_queue.h 1"}
+{"tool": "run_command", "args": "cmake --build build -j 8"}
+{"tool": "run_command", "args": "rg -n \"class uvm_event\\b\" src/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/print/uvm_printer.h 1"}
+{"tool": "read_file", "args": "260 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/print/uvm_printer.h 121"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | head -n 40"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvm.h 1"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "read_file", "args": "394 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_queue.h 151"}
+{"tool": "run_command", "args": "rg -n \"print_array_header|print_array_footer|print_generic|print_object\" src/uvmsc/print/uvm_printer.cpp"}
+{"tool": "read_file", "args": "265 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/print/uvm_printer.cpp 220"}
+{"tool": "read_file", "args": "420 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/print/uvm_printer.cpp 360"}
+{"tool": "read_file", "args": "550 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/print/uvm_printer.cpp 455"}
+{"tool": "run_command", "args": "rg -n \"void copy\\(|void do_copy\\(|void print\\(|std::string sprint\\(|void do_print\\(\" src/uvmsc/base/uvm_object.h"}
+{"tool": "run_command", "args": "rg -n \"uvm_object::(copy|do_copy|sprint|do_print)\" src/uvmsc/base/uvm_object.cpp"}
+{"tool": "read_file", "args": "340 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/base/uvm_object.cpp 299"}
+{"tool": "read_file", "args": "455 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/base/uvm_object.cpp 430"}
+{"tool": "run_command", "args": "rg -n \"uvm_object::do_copy\" src/"}
+{"tool": "run_command", "args": "rg -n \"uvm_event\" src/uvmsc/base/uvm_base.h"}
+{"tool": "run_command", "args": "rg -n \"format_row\" src/uvmsc/print/"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/print/uvm_table_printer.cpp 80"}
+{"tool": "run_command", "args": "rg -n -A 35 \"uvm_printer::adjust_name\" src/uvmsc/print/uvm_printer.cpp"}
+{"tool": "run_command", "args": "rg -n \"CXX_STANDARD\" CMakeLists.txt"}
+{"tool": "run_command", "args": "rg -n \"class uvm_barrier\" src/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/04conf/ 2>/dev/null || ls -la tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_pool.h"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_object_string_pool.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/uvm_conf.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/CMakeLists.txt"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/src/uvmsc/conf/files.am"}
+{"tool": "run_command", "args": "cmake --build build --target uvm-systemc -j 8"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__uvm-pool__shell__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/tests/tests/uvm-systemc/unit_tests/04conf/01pool/test.cpp"}
+{"tool": "run_command", "args": "mkdir -p tests/tests/uvm-systemc/unit_tests/04conf/01pool/golden && touch tests/tests/uvm-systemc/unit_tests/04conf/01pool/golden/test.log && cmake -B build -G Ninja -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-04conf-01pool -j 8"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-pool__shell__s0/tests/tests/uvm-systemc/unit_tests/04conf/01pool/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-04conf-01pool -j 8 && ./build/tests/unit_tests-04conf-01pool"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 04conf/01pool --output-on-failure"}
+{"tool": "run_command", "args": "cp build/tests/Testing/uvm-systemc/unit_tests/04conf/01pool/test.log.stripped tests/tests/uvm-systemc/unit_tests/04conf/01pool/golden/test.log && ctest --test-dir build -R 04conf/01pool --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests -j 8 && ctest --test-dir build --output-on-failure -j 8"}
+{"tool": "run_command", "args": "git status"}

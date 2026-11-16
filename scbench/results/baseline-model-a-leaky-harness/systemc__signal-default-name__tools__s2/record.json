@@ -1,0 +1,62 @@
+{
+  "task": "systemc:signal-default-name",
+  "arm": "tools",
+  "seed": 2,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 4,
+      "mcp__scbench__build": 2,
+      "mcp__scbench__list_tests": 3,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 7,
+      "read_file": 25,
+      "run_command": 17
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 270731,
+      "output_tokens": 33533,
+      "thinking_tokens": 28704,
+      "cache_read_input_tokens": 3217914
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 331.0,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "systemc/communication/sc_signal/default_name",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/systemc__signal-default-name__tools__s2/build-grade/tests/Testing/systemc/communication/sc_signal/default_name/default_name.log",
+        "golden_diff": [
+          "--- default_name/golden/default_name.log",
+          "+++ default_name.log.stripped",
+          "@@ -4,4 +4,4 @@",
+          " buffer_0",
+          " buf_0",
+          "",
+          "-default constructed items: 4",
+          "+default constructed items: 8"
+        ]
+      }
+    ],
+    "agent_diffstat": [
+      " 1 file changed, 13 insertions(+), 6 deletions(-)"
+    ]
+  },
+  "status": "fail"
+}

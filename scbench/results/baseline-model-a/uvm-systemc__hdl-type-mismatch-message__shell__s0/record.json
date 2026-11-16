@@ -5,27 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 178,
+    "events": 181,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 3,
-      "read_file": 15,
-      "run_command": 37
+      "manage_task": 13,
+      "read_file": 14,
+      "run_command": 30,
+      "schedule": 1
     },
-    "tool_calls_total": 55,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 270027,
-      "output_tokens": 34834,
-      "thinking_tokens": 30541,
-      "cache_read_input_tokens": 3536642
+      "input_tokens": 289702,
+      "output_tokens": 34868,
+      "thinking_tokens": 30929,
+      "cache_read_input_tokens": 2981208
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 401.3,
+    "wall_s": 285.8,
     "graded_status": "fail"
   },
   "grade": {

@@ -1,0 +1,55 @@
+{
+  "task": "uvm-systemc:config-db-exists",
+  "arm": "shell-guided",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 1,
+      "read_file": 18,
+      "run_command": 38,
+      "write_file": 2
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 240899,
+      "output_tokens": 19552,
+      "thinking_tokens": 15176,
+      "cache_read_input_tokens": 1945398
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 170.7,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists",
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 1,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__config-db-exists__shell-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 1 file changed, 1 insertion(+), 1 deletion(-)"
+    ]
+  },
+  "status": "pass"
+}

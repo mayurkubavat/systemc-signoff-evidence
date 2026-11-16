@@ -1,0 +1,61 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'reg'} scbench run_regression"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/fifo_reg'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch'} scbench run_test"}
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git log -n 5"}
+{"tool": "run_command", "args": "git grep \"get_registers\""}
+{"tool": "run_command", "args": "git grep -n \"std::map\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "375 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/src/uvmsc/reg/uvm_reg_block.h 335"}
+{"tool": "run_command", "args": "git grep \"m_blks\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep -n \"id++\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "1930 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/src/uvmsc/reg/uvm_reg_block.cpp 1815"}
+{"tool": "run_command", "args": "git grep \" id;\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"get_maps\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"get_submaps\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"get_memories\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"get_blocks\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"get_virtual_registers\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"get_fields\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"m_fields\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep -n -A 15 \"get_maps(\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "cat unit_tests/70regs/02regs/20compare_mismatch/test.cpp"}
+{"tool": "run_command", "args": "find . -name \"20compare_mismatch\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/test.cpp 1"}
+{"tool": "read_file", "args": "190 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/test.cpp 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 1"}
+{"tool": "read_file", "args": "536 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 450"}
+{"tool": "run_command", "args": "git grep -n -A 30 \"uvm_reg::do_print\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep -n -A 35 \"uvm_reg_map::do_print\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep -n -A 30 \"uvm_reg_map::get_registers\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep -n -A 10 \"uvm_mem::get_virtual_registers\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "85 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/golden/test.log 45"}
+{"tool": "run_command", "args": "git log -p -n 2 tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/70regs/02regs/"}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'fifo_reg'} scbench run_regression"}
+{"tool": "run_command", "args": "ps aux | grep mcp"}
+{"tool": "call_mcp_tool", "args": "{'pattern': ''} scbench run_regression"}
+{"tool": "run_command", "args": "git grep -n \"map\" src/uvmsc/reg/uvm_vreg.h"}
+{"tool": "run_command", "args": "git grep \"get_inst_id\" src/uvmsc/"}
+{"tool": "run_command", "args": "git grep -n -A 20 \"uvm_object::get_inst_id\" src/uvmsc/base/uvm_object.cpp"}
+{"tool": "run_command", "args": "git grep -n -A 15 \"uvm_object::uvm_object\" src/uvmsc/base/uvm_object.cpp"}
+{"tool": "run_command", "args": "git grep \"id\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "git grep -n \"id++\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "git log -S \"m_blks\\[blk\\]\""}
+{"tool": "run_command", "args": "git grep -n \"m_pending\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/src/uvmsc/reg/uvm_reg_block.h 1"}
+{"tool": "run_command", "args": "git grep \"uvm_reg_block(\" src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/src/uvmsc/reg/uvm_reg_block.cpp 20"}
+{"tool": "run_command", "args": "git grep \"uvm_reg_block.h\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/src/uvmsc/reg/uvm_reg_model.h 1"}
+{"tool": "run_command", "args": "git grep \"uvm_reg_model.h\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep \"class uvm_reg_map\" src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "run_command", "args": "git grep -n \"m_mems_by_offset\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "git grep -n \"std::map\" src/uvmsc/reg/uvm_reg_file.h"}
+{"tool": "read_file", "args": "345 <worktree>/uvm-systemc__reg-deterministic-order__tools__s1/src/uvmsc/reg/uvm_reg_block.h 320"}

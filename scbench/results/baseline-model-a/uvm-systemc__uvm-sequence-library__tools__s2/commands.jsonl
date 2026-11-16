@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "run_command", "args": "cat <cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'seq'} scbench list_tests"}
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "find src -type f"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvm.h 1"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvm.h 150"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/seq/uvm_seq.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/macros/uvm_sequence_defines.h 1"}
+{"tool": "read_file", "args": "173 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/macros/uvm_sequence_defines.h 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/seq/uvm_sequence.h 1"}
+{"tool": "read_file", "args": "227 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/seq/uvm_sequence.h 100"}
+{"tool": "run_command", "args": "git log -S \"uvm_sequence_library\""}
+{"tool": "run_command", "args": "grep -rn \"SEQLIB\" src/ tests/ examples/ unit_tests/ 2>/dev/null"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "find tests -maxdepth 3"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -type d -maxdepth 4"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/sequence/basic_read_write_sequence'} scbench run_test"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/sequence/basic_read_write_sequence"}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"uvm_sequence_lib_mode\" UVM 1.2"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"SEQLIB\" github"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"SEQLIB/START\" \"SEQLIB/NOSEQS\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"function void init_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"task body\" \"select_sequence\" filetype:svh OR site:raw.githubusercontent.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"default_sequence.config\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" site:github.com/accellera-official"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"m_get_config\" site:github.com"}
+{"tool": "search_web", "args": "\"function void uvm_sequence_library::m_get_config\" site:github.com"}
+{"tool": "search_web", "args": "\"task uvm_sequence_library::body\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/START\" \"Starting sequence library\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/DSTRB\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/DSTRB\" \"SEQLIB/START\" \"SEQLIB/END\" site:github.com"}
+{"tool": "search_web", "args": "\"accellera-official\" \"uvm_sequence_library.svh\" \"SEQLIB/START\""}
+{"tool": "search_web", "args": "\"accellera-official\" \"uvm_sequence_library.svh\" \"SEQLIB/END\""}
+{"tool": "search_web", "args": "\"accellera-official\" \"uvm_sequence_library.svh\" \"SEQLIB/DSTRB\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library_cfg\" site:github.com/accellera-official/uvm-core"}
+{"tool": "search_web", "args": "\"`uvm_sequence_library_utils\" site:github.com/accellera-official/uvm-core"}
+{"tool": "search_web", "args": "\"`define uvm_sequence_library_utils\" site:github.com"}
+{"tool": "search_web", "args": "\"`define uvm_add_to_seq_lib\" site:github.com"}
+{"tool": "search_web", "args": "\"m_add_typewide_sequence\" site:github.com"}
+{"tool": "search_web", "args": "\"accellera-official\" \"uvm_sequence_library.svh\" \"body()\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"task body\" \"selection_mode\" github"}
+{"tool": "search_web", "args": "\"task uvm_sequence_library::body\" \"execute_item\" site:github.com"}
+{"tool": "run_command", "args": "curl -s https://raw.githubusercontent.com/accellera-official/uvm-core/master/src/seq/uvm_sequence_library.svh | head -n 120"}
+{"tool": "run_command", "args": "curl -s https://raw.githubusercontent.com/accellera-official/uvm-core/UVM_1_2_RELEASE/src/seq/uvm_sequence_library.svh | wc -l"}
+{"tool": "run_command", "args": "git ls-remote --tags https://github.com/accellera-official/uvm-core.git"}
+{"tool": "run_command", "args": "curl -s https://raw.githubusercontent.com/taichi-ishitani/uvm-1.2/master/src/seq/uvm_sequence_library.svh | wc -l"}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"Copyright 2012\" site:raw.githubusercontent.com"}
+{"tool": "run_command", "args": "curl -s https://raw.githubusercontent.com/edaplayground/eda-playground/master/docs/_static/uvm-1.2/src/seq/uvm_sequence_library.svh | wc -l"}
+{"tool": "run_command", "args": "curl -s https://raw.githubusercontent.com/edaplayground/eda-playground/master/docs/_static/uvm-1.2/src/macros/uvm_sequence_defines.svh | grep -A 30 \"uvm_sequence_library_utils\""}
+{"tool": "run_command", "args": "curl -s https://raw.githubusercontent.com/edaplayground/eda-playground/master/docs/_static/uvm-1.2/src/macros/uvm_sequence_defines.svh | grep -B 5 -A 20 \"uvm_add_to_seq_lib\""}
+{"tool": "run_command", "args": "mkdir -p <cli-home>/... && curl -s https://raw.githubusercontent.com/edaplayground/eda-playground/master/docs/_static/uvm-1.2/src/seq/uvm_sequence_library.svh > <cli-home>/..."}
+{"tool": "read_file", "args": "150 <cli-home>/... 1"}
+{"tool": "read_file", "args": "300 <cli-home>/... 151"}
+{"tool": "read_file", "args": "500 <cli-home>/... 301"}
+{"tool": "read_file", "args": "660 <cli-home>/... 501"}

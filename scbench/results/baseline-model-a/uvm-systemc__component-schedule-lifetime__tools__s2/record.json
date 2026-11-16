@@ -5,31 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 180,
+    "events": 184,
     "non_json_lines": 0,
     "tool_calls": {
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_regression": 1,
-      "mcp__scbench__run_test": 3,
-      "read_file": 28,
-      "run_command": 24,
-      "search_web": 1
+      "read_file": 17,
+      "run_command": 42
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 61,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 282428,
-      "output_tokens": 31062,
-      "thinking_tokens": 27101,
-      "cache_read_input_tokens": 2677828
+      "input_tokens": 252459,
+      "output_tokens": 33325,
+      "thinking_tokens": 29489,
+      "cache_read_input_tokens": 2484287
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 230.0,
+    "wall_s": 237.1,
     "graded_status": "fail"
   },
   "grade": {
@@ -38,7 +35,7 @@
       {
         "passed": false,
         "test": "uvm-systemc/unit_tests/40phasing/20component_lifetime",
-        "seconds": 0.3,
+        "seconds": 0.4,
         "uvm_counts": null,
         "first_uvm_problem": null,
         "sim_log": "<worktree>/uvm-systemc__component-schedule-lifetime__tools__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/40phasing/20component_lifetime/test.log",

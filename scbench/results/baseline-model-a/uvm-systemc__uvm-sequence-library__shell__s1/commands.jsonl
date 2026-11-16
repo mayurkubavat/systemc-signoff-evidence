@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la && echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "find src -type f"}
+{"tool": "run_command", "args": "find tests -maxdepth 3"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME && ninja -C build"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "300 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/CMakeLists.txt 151"}
+{"tool": "read_file", "args": "450 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/CMakeLists.txt 301"}
+{"tool": "read_file", "args": "559 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/CMakeLists.txt 451"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R bug_184 --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build bugs-bug_184-basic_read_write_memory_management"}
+{"tool": "run_command", "args": "ctest --test-dir build -R bug_184"}
+{"tool": "manage_task", "args": "status <id>/task-30"}
+{"tool": "manage_task", "args": "status <id>/task-30"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/cmake/run-test.py 1"}
+{"tool": "manage_task", "args": "status <id>/task-30"}
+{"tool": "run_command", "args": "ps aux | grep basic_read_write"}
+{"tool": "manage_task", "args": "status <id>/task-30"}
+{"tool": "run_command", "args": "cat build/tests/Testing/uvm-systemc/bugs/bug_184/basic_read_write_memory_management/sc_main.run-test.log"}
+{"tool": "run_command", "args": "./build/tests/bugs-bug_184-basic_read_write_memory_management"}
+{"tool": "manage_task", "args": "kill <id>/task-46"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/seq/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvmsc/seq/uvm_seq.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvm.h 1"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvm.h 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvmsc/macros/uvm_sequence_defines.h 1"}
+{"tool": "read_file", "args": "173 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvmsc/macros/uvm_sequence_defines.h 101"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sequence_lib\" ."}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"UVM_SEQUENCE_LIBRARY_UTILS\" \"UVM_ADD_TO_SEQ_LIB\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"m_sequences\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"m_typewide_sequences\" \"SEQLIB\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"select_sequence\" \"m_ordered_sequences\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"default_sequence.config\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"task body()\" site:github.com"}
+{"tool": "search_web", "args": "\"task execute\" \"uvm_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/\" \"uvm_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/MAX_ZERO\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library_cfg\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"m_get_config\" site:github.com"}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" site:github.com"}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" \"uvm_config_db\" site:github.com"}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" \"m_get_config\" site:github.com"}
+{"tool": "search_web", "args": "\"default_sequence.min_random_count\" site:github.com"}
+{"tool": "search_web", "args": "\"task uvm_sequence_library::execute\" site:github.com"}
+{"tool": "search_web", "args": "\"seqs_distrib\" \"uvm_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"do_print\" \"uvm_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"printer.print_array_header(\\\"typewide_sequences\\\"\" site:github.com"}
+{"tool": "search_web", "args": "\"printer.print_field_int(\\\"min_random_count\\\"\" site:github.com"}
+{"tool": "search_web", "args": "\"seqs_distrib[typ]\" \"print_field_int\" site:github.com"}
+{"tool": "run_command", "args": "grep -rn \"print_field_int\" src/"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__uvm-sequence-library__shell__s1/src/uvmsc/print/uvm_printer.h 70"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"m_static_check\" site:github.com"}
+{"tool": "search_web", "args": "\"function bit uvm_sequence_library::m_check\" site:github.com"}

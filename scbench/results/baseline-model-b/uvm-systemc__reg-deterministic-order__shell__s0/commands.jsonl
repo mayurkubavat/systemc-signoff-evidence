@@ -1,0 +1,77 @@
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "rg -n \"get_registers|get_memories|get_blocks\" src/"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && which cmake ninja ctest"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug"}
+{"tool": "run_command", "args": "rg -n \"ENABLE_REGRESSION\" CMakeLists.txt tests/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -R reg"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "run_command", "args": "rg -n \"std::map|std::set\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "rg -n \"map<|set<\" src/uvmsc/reg/"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "read_file", "args": "400 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.h 330"}
+{"tool": "read_file", "args": "400 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.h 270"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j8"}
+{"tool": "run_command", "args": "rg -n \"m_blks|m_regs|m_mems|m_vregs|m_maps|m_roots\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "rg -n \"m_parent_maps|m_submaps|m_submap_rights|m_regs_info|m_mems_info|m_regs_by_offset|m_mems_by_offset\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -R \"70regs|registers|03regnull\""}
+{"tool": "read_file", "args": "315 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 150"}
+{"tool": "read_file", "args": "680 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 450"}
+{"tool": "read_file", "args": "1965 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 1815"}
+{"tool": "read_file", "args": "785 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 660"}
+{"tool": "read_file", "args": "2395 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 2280"}
+{"tool": "run_command", "args": "rg -n \"m_maps|m_vregs\" src/uvmsc/reg/uvm_reg.cpp src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "rg -n \"m_fields\" src/uvmsc/reg/uvm_reg.h src/uvmsc/reg/uvm_vreg.h"}
+{"tool": "run_command", "args": "rg -n \"\\bid\\b\" src/uvmsc/reg/uvm_reg_block.cpp src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "run_command", "args": "rg -n \"get_inst_id|m_inst_id\" src/uvmsc/base/uvm_object.h src/uvmsc/base/uvm_object.cpp"}
+{"tool": "read_file", "args": "105 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/base/uvm_object.cpp 50"}
+{"tool": "run_command", "args": "rg -n \"uvm_reg_map_addr_range\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "390 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_model.h 370"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "manage_task", "args": "status <id>/task-31"}
+{"tool": "manage_task", "args": "kill <id>/task-31"}
+{"tool": "run_command", "args": "rg -n \"CXX_STANDARD|CMAKE_CXX\" CMakeLists.txt"}
+{"tool": "run_command", "args": "rg -n \"m_inst_id|g_inst_count\" src/"}
+{"tool": "read_file", "args": "1015 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 990"}
+{"tool": "read_file", "args": "1880 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 1715"}
+{"tool": "run_command", "args": "rg -n \"m_pending|m_update_thread\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "head -n 55 src/uvmsc/reg/uvm_reg_block.h src/uvmsc/reg/uvm_reg_map.h src/uvmsc/reg/uvm_reg.h src/uvmsc/reg/uvm_mem.h"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_model.h 1"}
+{"tool": "read_file", "args": "401 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_model.h 365"}
+{"tool": "run_command", "args": "rg -n \"m_rootsT|m_blksT|m_regsT|m_vregsT|m_memsT|m_mapsT|m_parent_maps_t|m_submaps_t|m_submap_rights_t|m_regs_info_t|m_mems_info_t|m_mems_by_offset_t|m_maps_t|m_vregs_t|m_pending_t\" src/ tests/ examples/"}
+{"tool": "read_file", "args": "45 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_predictor.h 25"}
+{"tool": "run_command", "args": "rg -n \"class uvm_vreg\" src/uvmsc/reg/uvm_vreg.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "read_file", "args": "436 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg.h 422"}
+{"tool": "read_file", "args": "396 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_mem.h 370"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_backdoor.h 105"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_mem.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_mem.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_predictor.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_backdoor.h"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "run_command", "args": "ninja -C build uvm-systemc"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"70regs|unit_tests|configure_and_add_regression_test\" tests/CMakeLists.txt"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/CMakeLists.txt 160"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/golden/ && cat tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/golden/test.log"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_REGRESSION=ON && ninja -C build unit_tests-70regs-02regs-30creation_order"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-70regs-02regs-30creation_order && ./build/tests/unit_tests-70regs-02regs-30creation_order"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -R 30creation_order"}

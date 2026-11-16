@@ -1,0 +1,62 @@
+{"tool": "run_command", "args": "ls -la && rg -n \"get_registers|get_memories|get_blocks\" src/"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && cmake --version && ninja --version && ctest --version"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "rg -n \"TEST|enable_testing|option\" CMakeLists.txt"}
+{"tool": "read_file", "args": "559 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/CMakeLists.txt 520"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j4"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests && ctest --test-dir build --output-on-failure -j4"}
+{"tool": "run_command", "args": "rg -n \"std::map\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "rg -n \"std::set|std::unordered_\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "395 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_block.h 335"}
+{"tool": "run_command", "args": "rg -n \"m_roots|m_blks|m_regs|m_vregs|m_mems|m_maps\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "read_file", "args": "1960 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_block.cpp 1815"}
+{"tool": "read_file", "args": "335 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_map.h 280"}
+{"tool": "read_file", "args": "465 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg.h 420"}
+{"tool": "read_file", "args": "405 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_mem.h 370"}
+{"tool": "run_command", "args": "rg -n \"m_maps|m_vregs\" src/uvmsc/reg/uvm_vreg.h src/uvmsc/reg/uvm_reg.cpp src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "rg -n \"m_parent_maps|m_submaps|m_submap_rights|m_regs_info|m_mems_info|m_mems_by_offset\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "manage_task", "args": "status <id>/task-18"}
+{"tool": "manage_task", "args": "status <id>/task-18"}
+{"tool": "run_command", "args": "rg -n \"->add_block|->add_reg\\(|->add_vreg|->add_mem|->add_map|add_block\\(|add_reg\\(|add_vreg\\(|add_mem\\(|add_map\\(\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "rg -n -- \"->add_block|->add_reg\\(|->add_vreg|->add_mem|->add_map|add_block\\(|add_reg\\(|add_vreg\\(|add_mem\\(|add_map\\(\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "175 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_block.cpp 60"}
+{"tool": "run_command", "args": "rg -n \"~uvm_reg_block\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "1815 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_block.cpp 1770"}
+{"tool": "run_command", "args": "rg -n \"CXX_STANDARD\" CMakeLists.txt cmake/"}
+{"tool": "run_command", "args": "rg -n \"m_inst_id|get_inst_id\" src/uvmsc/base/"}
+{"tool": "run_command", "args": "rg -n \"uvm_reg_map_addr_range\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "390 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_model.h 360"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 20compare_mismatch --output-on-failure"}
+{"tool": "read_file", "args": "2395 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_map.cpp 2285"}
+{"tool": "run_command", "args": "rg -n \"do_print\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "95 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/base/uvm_object.cpp 50"}
+{"tool": "run_command", "args": "rg -n \"m_pending\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "rg -n \"#include\" src/uvmsc/reg/uvm_reg_block.h src/uvmsc/reg/uvm_reg_map.h src/uvmsc/reg/uvm_reg.h src/uvmsc/reg/uvm_mem.h src/uvmsc/reg/uvm_reg_predictor.h"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_model.h 1"}
+{"tool": "read_file", "args": "401 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_model.h 380"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_mem.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_mem.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_predictor.h"}
+{"tool": "run_command", "args": "cmake --build build && cmake --build build --target all-tests"}
+{"tool": "manage_task", "args": "status <id>/task-94"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests/70regs -maxdepth 3"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp 1"}
+{"tool": "manage_task", "args": "status <id>/task-94"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/CMakeLists.txt 130"}
+{"tool": "manage_task", "args": "status <id>/task-94"}
+{"tool": "read_file", "args": "130 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/CMakeLists.txt 80"}
+{"tool": "read_file", "args": "40 <worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/golden/test.log 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "run_command", "args": "cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"reg\" --output-on-failure -j4"}
+{"tool": "run_command", "args": "rg -n \"get_\" src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell__s1/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log"}

@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "grep -rn \"SEQLCKZMB\\|SEQREQZMB\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "720 ~/Tools/uvm-core/src/seq/uvm_sequencer_base.svh 580"}
+{"tool": "run_command", "args": "grep -rn \"grant_queued_locks\\|m_choose_next_request\" src/"}
+{"tool": "read_file", "args": "990 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 820"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sequence_request\" src/"}
+{"tool": "read_file", "args": "230 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.h 180"}
+{"tool": "run_command", "args": "grep -rn \"class uvm_process\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/phasing/uvm_process.h 1"}
+{"tool": "read_file", "args": "320 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 270"}
+{"tool": "read_file", "args": "1280 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 1230"}
+{"tool": "run_command", "args": "grep -rn -A 35 \"task uvm_sequencer_base::wait_for_grant\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "1050 ~/Tools/uvm-core/src/seq/uvm_sequencer_base.svh 1030"}
+{"tool": "run_command", "args": "grep -rn \"sc_process_handle\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_sequence_process\" src/"}
+{"tool": "read_file", "args": "630 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequence_base.cpp 610"}
+{"tool": "read_file", "args": "670 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequence_base.cpp 630"}
+{"tool": "read_file", "args": "1195 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequence_base.cpp 1170"}
+{"tool": "run_command", "args": "grep -rn -A 25 \"m_kill_sequence\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_process\" src/"}
+{"tool": "run_command", "args": "echo $SYSTEMC_HOME && find $SYSTEMC_HOME -name \"sc_process_handle.h\""}
+{"tool": "run_command", "args": "ls -la ~/.local/opt/accellera/systemc"}
+{"tool": "run_command", "args": "find -L ~/.local/opt/accellera -name \"sc_process_handle.h\""}
+{"tool": "run_command", "args": "grep -n -E \"(bool|void).*\\(.*\\)\" ~/.local/opt/accellera/systemc/include/sysc/kernel/sc_process_handle.h"}
+{"tool": "read_file", "args": "495 ~/.local/opt/accellera/systemc/include/sysc/kernel/sc_process_handle.h 460"}
+{"tool": "run_command", "args": "grep -rn \"process_id\" src/"}
+{"tool": "run_command", "args": "grep -rn \"SEQLCKZMB\\|SEQREQZMB\\|process_id\" tests/"}
+{"tool": "run_command", "args": "find tests -name \"*seq*\""}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ls -d *build*"}
+{"tool": "run_command", "args": "grep -rn \"BUILD_TEST\" CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -rn \"add_subdirectory\" CMakeLists.txt"}
+{"tool": "read_file", "args": "559 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/CMakeLists.txt 520"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples_uvmsc/sequence/sequence_lock_grab"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/tests/CMakeLists.txt 50"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_BUILD_TYPE=Debug"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R sequence"}
+{"tool": "run_command", "args": "cmake --build build --target examples_uvmsc-sequence-sequence_lock_grab && ctest --test-dir build -R examples_uvmsc/sequence/sequence_lock_grab -V"}
+{"tool": "run_command", "args": "grep -rn -E \"terminated|kill|status\" ~/.local/opt/accellera/systemc/include/sysc/kernel/"}
+{"tool": "read_file", "args": "265 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_param_base.h 245"}
+{"tool": "read_file", "args": "235 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer.h 215"}
+{"tool": "read_file", "args": "365 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer.h 345"}
+{"tool": "run_command", "args": "grep -rn \"delete\" src/uvmsc/seq/"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 85"}
+{"tool": "read_file", "args": "750 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 680"}
+{"tool": "read_file", "args": "800 <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp 750"}
+{"tool": "run_command", "args": "grep -rn -A 40 \"function void uvm_sequencer_base::remove_sequence_from_queues\" ~/Tools/uvm-core/src"}
+{"tool": "run_command", "args": "find src -name \"*uvm_process*\""}
+{"tool": "run_command", "args": "grep -rn -A 20 \"dump_state\" ~/.local/opt/accellera/systemc/include/sysc/kernel/"}
+{"tool": "run_command", "args": "grep -rn \"UVM_ERROR\" src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "run_command", "args": "grep -rn \"UVM_\\|uvm_report\" src/uvmsc/seq/uvm_sequencer_base.cpp"}
+{"tool": "run_command", "args": "grep -rn \"SQRUNL\" ~/Tools/uvm-core/src"}
+{"tool": "run_command", "args": "sed -n '1184,1190p' ~/Tools/uvm-core/src/seq/uvm_sequencer_base.svh"}
+{"tool": "run_command", "args": "grep -rn \"SEQLCKZMB\\|SEQREQZMB\" ~/Tools/uvm-core/tests/ 2>/dev/null"}
+{"tool": "run_command", "args": "ls -la ~/Tools/uvm-core"}
+{"tool": "run_command", "args": "git log -n 5 --oneline"}
+{"tool": "run_command", "args": "grep -rn \"arb_sequence_q\" src/"}
+{"tool": "run_command", "args": "grep -rn \"lock_list\" src/"}
+{"tool": "run_command", "args": "grep -rn \"UVM_ERROR\" tests/"}

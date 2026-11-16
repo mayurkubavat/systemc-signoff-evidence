@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "50 <cli-home>/... 1"}
+{"tool": "read_file", "args": "50 <cli-home>/... 1"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "git status; find . -name \"*pool*\""}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvmsc/conf/uvm_object_string_pool.h 1"}
+{"tool": "read_file", "args": "240 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvmsc/conf/uvm_object_string_pool.h 200"}
+{"tool": "run_command", "args": "find src -name \"uvm.h\" -o -name \"uvm\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvmsc/conf/uvm_conf.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvmsc/conf/uvm_queue.h 1"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvmsc/conf/uvm_queue.h 100"}
+{"tool": "read_file", "args": "394 <worktree>/uvm-systemc__uvm-pool__tools__s2/src/uvmsc/conf/uvm_queue.h 251"}
+{"tool": "run_command", "args": "grep -rn \"POOLDEL\" ."}
+{"tool": "search_web", "args": "\"uvm_pool\" \"uvm_object_string_pool\" uvm 1.2"}
+{"tool": "search_web", "args": "\"class uvm_pool\" \"POOLDEL\" uvm_pool.svh"}
+{"tool": "search_web", "args": "\"uvm_pool.svh\" github"}
+{"tool": "search_web", "args": "site:github.com/accellera-official \"uvm_pool\" \"POOLDEL\""}
+{"tool": "search_web", "args": "\"function void do_print\" \"uvm_pool\" uvm_pool.svh"}
+{"tool": "search_web", "args": "site:raw.githubusercontent.com \"class uvm_pool\""}
+{"tool": "search_web", "args": "\"class uvm_pool #(type KEY\""}
+{"tool": "search_web", "args": "\"class uvm_pool\" \"function void do_print\" site:github.com"}
+{"tool": "search_web", "args": "\"print_array_header\" \"uvm_pool\""}
+{"tool": "search_web", "args": "\"class uvm_pool #(type KEY=int, string T\" OR \"class uvm_pool #(type KEY=int, type T=int)\""}
+{"tool": "search_web", "args": "site:raw.githubusercontent.com \"class uvm_pool #(type KEY\""}
+{"tool": "run_command", "args": "git grep \"POOLDEL\""}
+{"tool": "search_web", "args": "\"uvm_pool\" \"doesn't exist\""}
+{"tool": "search_web", "args": "\"POOLDEL\" \"uvm\""}
+{"tool": "search_web", "args": "site:github.com/accellera-official \"doesn't exist\" delete"}
+{"tool": "search_web", "args": "\"uvm_object_string_pool\" \"doesn't exist\""}
+{"tool": "search_web", "args": "\"UVMObjectStringPool\" \"POOLDEL\" OR \"delete\" site:github.com"}
+{"tool": "search_web", "args": "site:github.com \"class uvm_pool\" \"delete\""}
+{"tool": "search_web", "args": "\"uvm_report_warning\" \"POOLDEL\""}
+{"tool": "search_web", "args": "\"uvm_report_warning\" \"POOLDEL\" site:github.com"}
+{"tool": "search_web", "args": "\"POOLDEL\" \"uvm-systemc\" OR \"systemc\""}
+{"tool": "search_web", "args": "site:github.com/accellera-official/uvm-systemc \"uvm_object_string_pool\""}
+{"tool": "search_web", "args": "site:github.com/accellera-official/uvm-core \"uvm_pool\""}
+{"tool": "search_web", "args": "\"accellera-official/uvm-core\" \"src/base/uvm_pool.svh\""}
+{"tool": "search_web", "args": "\"function void delete\" \"uvm_pool\" OR \"uvm_object_string_pool\""}
+{"tool": "search_web", "args": "\"pool.delete\" \"uvm_pool\" \"uvm-core\""}
+{"tool": "search_web", "args": "\"POOLDEL\" \"key\" \"doesn't exist\""}
+{"tool": "search_web", "args": "\"POOLDEL\" \"UVM 1.2\""}
+{"tool": "search_web", "args": "\"uvm_object_string_pool\" \"delete\" \"Class Reference\""}
+{"tool": "search_web", "args": "\"class uvm_object_string_pool\" \"delete\" site:github.com"}
+{"tool": "search_web", "args": "\"POOLDEL\" \"uvm_pool.svh\" OR \"uvm_object_string_pool.svh\""}
+{"tool": "search_web", "args": "\"delete: key\" \"doesn't exist\" \"POOLDEL\""}
+{"tool": "search_web", "args": "\"class uvm_pool\" \"virtual function void delete\""}
+{"tool": "search_web", "args": "\"POOLDEL\" uvm_object_string_pool"}
+{"tool": "search_web", "args": "\"uvm_object_string_pool\" \"delete\" \"POOLDEL\""}
+{"tool": "search_web", "args": "\"POOLDEL\" filetype:pdf"}
+{"tool": "search_web", "args": "\"uvm_object_string_pool\" site:raw.githubusercontent.com"}
+{"tool": "search_web", "args": "\"uvm_object_string_pool\" \"delete\" \"doesn't exist\""}
+{"tool": "run_command", "args": "git log -S \"POOLDEL\" -p"}
+{"tool": "run_command", "args": "git show 893882fa013bec803ee49b7da9a4ca0717c6dbcc:src/uvmsc/conf/uvm_pool.h"}
+{"tool": "run_command", "args": "git show 893882fa013bec803ee49b7da9a4ca0717c6dbcc~1:src/uvmsc/conf/uvm_pool.h"}
+{"tool": "run_command", "args": "git show 893882fa013bec803ee49b7da9a4ca0717c6dbcc --stat"}
+{"tool": "run_command", "args": "git show 893882fa013bec803ee49b7da9a4ca0717c6dbcc -- src/uvmsc/conf/uvm_object_string_pool.h"}
+{"tool": "run_command", "args": "git grep \"uvm_object_string_pool.h\""}

@@ -1,0 +1,41 @@
+{"tool": "run_command", "args": "rg -n \"reg_rw\" src/ test/ examples/"}
+{"tool": "run_command", "args": "ls -la && echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "read_file", "args": "130 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"reg_rw\" tests/"}
+{"tool": "run_command", "args": "rg -n \"reg_rw\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log 1"}
+{"tool": "run_command", "args": "rg -n \"enable_testing|add_test|UVM_SYSTEMC_BUILD_TESTS|BUILD_TESTS\" CMakeLists.txt"}
+{"tool": "run_command", "args": "rg -n \"option\\(\" CMakeLists.txt && ls tests"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ls tests"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=~/.local/opt/accellera/systemc"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-registers-models-aliasing -j 8"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"aliasing|factory/basic\""}
+{"tool": "run_command", "args": "ctest --test-dir build -R examples/simple/registers/models/aliasing --output-on-failure"}
+{"tool": "run_command", "args": "./build/tests/examples-simple-registers-models-aliasing | head -n 30"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/70regs/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/70regs/02regs/ tests/tests/uvm-systemc/unit_tests/00basic/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/golden/test.log 1"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-factory-basic -j 8 && ctest --test-dir build -R \"factory/basic\" --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"TPRGED\" tests/"}
+{"tool": "run_command", "args": "rg -n \"All types registered with the factory\" tests/"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 120"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/test.cpp 60"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30reg_rw_factory/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30reg_rw_factory/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-30reg_rw_factory -j 8 && ctest --test-dir build -R 30reg_rw_factory --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30reg_rw_factory/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-30reg_rw_factory -j 8 && ctest --test-dir build -R 30reg_rw_factory --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"reg_rw\" ~/Tools/uvm-core/src/"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-30reg_rw_factory -j 8 && ctest --test-dir build -R 30reg_rw_factory --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"70regs|registers|factory\""}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-factory-basic examples-simple-registers-models-aliasing examples-simple-registers-models-fifo_reg examples-simple-registers-models-ro_wo_same_addr unit_tests-70regs-01fields-01reset unit_tests-70regs-01fields-02policy unit_tests-70regs-01fields-04write unit_tests-70regs-01fields-10maxsize unit_tests-70regs-02regs-10maxsize unit_tests-70regs-02regs-20compare_mismatch unit_tests-70regs-05mem-10maxsize unit_tests-70regs-05mem-20mem_access unit_tests-70regs-30bkdr-01\u2026"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"70regs|registers|factory\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log"}
+{"tool": "run_command", "args": "python3 -c '\nfor path in [\n    \"tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log\",\n    \"tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log\",\n]:\n    with open(path, \"rb\") as f:\n        data = f.read()\n    data = data.replace(b\"UVM_WARNING   :   1\\r\\n\", b\"UVM_WARNING   :   0\\r\\n\")\n    data = data.replace(b\"UVM_WARNING   :   1\\n\", b\"UVM_WARNING   :   0\\n\")\n    data = data.replace(b\"[TPRGED]                1\\r\\n\", b\"\")\n    data = data.\u2026"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"factory/basic|registers/models|30reg_rw_factory\" --output-on-failure"}
+{"tool": "run_command", "args": "git status -s && git diff --stat"}

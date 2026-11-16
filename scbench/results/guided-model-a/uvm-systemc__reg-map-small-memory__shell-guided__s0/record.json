@@ -8,48 +8,60 @@
     "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "edit_file": 2,
-      "read_file": 21,
-      "run_command": 33,
-      "write_file": 3
+      "read_file": 25,
+      "run_command": 32,
+      "write_file": 2
     },
     "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 262817,
-      "output_tokens": 28509,
-      "thinking_tokens": 20695,
-      "cache_read_input_tokens": 2522546
+      "input_tokens": 269484,
+      "output_tokens": 23351,
+      "thinking_tokens": 17161,
+      "cache_read_input_tokens": 2596344
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 218.0,
-    "graded_status": "pass"
+    "wall_s": 206.5,
+    "graded_status": "fail"
   },
   "grade": {
-    "passed": true,
+    "passed": false,
     "tests": [
       {
-        "passed": true,
+        "passed": false,
         "test": "uvm-systemc/unit_tests/70regs/05mem/30stride",
-        "seconds": 0.3,
-        "uvm_counts": {
-          "UVM_INFO": 0,
-          "UVM_WARNING": 0,
-          "UVM_ERROR": 0,
-          "UVM_FATAL": 0
-        },
+        "seconds": 0.4,
+        "uvm_counts": null,
         "first_uvm_problem": null,
-        "sim_log": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/70regs/05mem/30stride/test.log"
+        "sim_log": "<worktree>/uvm-systemc__reg-map-small-memory__shell-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/70regs/05mem/30stride/test.log",
+        "golden_diff": [
+          "--- 30stride/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,14 +1,3 @@",
+          " SystemC Simulation",
+          "-one: offset 0x100, addresses 0x100 to 0x100, stride 4",
+          "+one: offset 0x100, addresses 0x100 to 0x100, stride 0",
+          " eight: offset 0x200, addresses 0x200 to 0x21c, stride 4",
+          "-eight: offset 0x400, addresses 0x400 to 0x41c, stride 4",
+          "-one: offset 0x300, addresses 0x300 to 0x300, stride 4",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
+          "---- UVM Report Summary ---",
+          "-** Report counts by severity",
+          "-UVM_INFO      :   0",
+          "-UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "-UVM_FATAL     :   0",
+          "-** Report counts by id",
+          "-** UVM TEST PASSED **"
+        ]
       }
     ],
-    "agent_diffstat": [
-      " 1 file changed, 23 insertions(+), 4 deletions(-)"
-    ]
+    "agent_diffstat": []
   },
-  "status": "pass"
+  "status": "fail"
 }

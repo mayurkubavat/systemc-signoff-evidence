@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "find src -name \"sc_signal.h\""}
+{"tool": "run_command", "args": "ls src/sysc/communication/"}
+{"tool": "read_file", "args": "0 300 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 1"}
+{"tool": "read_file", "args": "0 600 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 301"}
+{"tool": "read_file", "args": "0 200 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_buffer.h 1"}
+{"tool": "run_command", "args": "git grep \"sc_signal<\" src/sysc/"}
+{"tool": "run_command", "args": "git grep \"sc_gen_unique_name\" src/sysc/"}
+{"tool": "read_file", "args": "0 1150 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/kernel/sc_simcontext.cpp 1100"}
+{"tool": "read_file", "args": "0 1200 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/kernel/sc_simcontext.cpp 1151"}
+{"tool": "run_command", "args": "git grep \"gen_unique_name\" src/sysc/kernel/"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/kernel/sc_name_gen.cpp 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME: $SYSTEMC_HOME\""}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "git grep -i \"test\" CMakeLists.txt"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "find tests/systemc/communication -maxdepth 2"}
+{"tool": "run_command", "args": "ls -la tests/systemc/communication/sc_signal/constructors"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/tests/systemc/communication/sc_signal/constructors/test01.cpp 1"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/tests/systemc/communication/sc_signal/constructors/golden/test01.log 1"}
+{"tool": "run_command", "args": "ls -la tests/systemc/communication/sc_buffer/test0*"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/tests/systemc/communication/sc_buffer/test01/test01.cpp 1"}
+{"tool": "run_command", "args": "which cmake ninja ctest"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_INSTALL_PREFIX=\"$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ninja -C build systemc"}
+{"tool": "run_command", "args": "ninja -C build tests-systemc-communication-sc_signal-constructors"}
+{"tool": "run_command", "args": "ninja -C build tests/systemc-communication-sc_signal-constructors"}
+{"tool": "run_command", "args": "ctest --test-dir build -R sc_signal-constructors -V"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "read_file", "args": "0 150 <worktree>/systemc__signal-default-name__shell__s0/tests/CMakeLists.txt 95"}
+{"tool": "run_command", "args": "git grep \"enable_testing\""}
+{"tool": "run_command", "args": "ctest --test-dir build/tests -N"}
+{"tool": "run_command", "args": "ctest --test-dir build/tests -R constructors -V"}
+{"tool": "run_command", "args": "ninja -C build tests/systemc-communication-sc_buffer-test01 && ctest --test-dir build/tests -R \"sc_buffer/test01\" -V"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/kernel/sc_object.cpp 50"}
+{"tool": "read_file", "args": "0 160 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/kernel/sc_object.cpp 101"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal_resolved.h 1"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal_rv.h 1"}
+{"tool": "read_file", "args": "0 140 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal_rv.h 101"}
+{"tool": "read_file", "args": "0 100 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_clock.h 1"}
+{"tool": "read_file", "args": "0 60 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_clock.cpp 1"}
+{"tool": "read_file", "args": "0 120 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_clock.cpp 61"}
+{"tool": "run_command", "args": "git grep \"sc_signal_t\" src/"}
+{"tool": "run_command", "args": "git grep \"sc_signal_t\" tests/"}
+{"tool": "run_command", "args": "git grep \"sc_signal_t\" examples/"}
+{"tool": "read_file", "args": "0 250 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.cpp 150"}
+{"tool": "read_file", "args": "0 382 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.cpp 251"}
+{"tool": "run_command", "args": "git grep \"sc_fifo\" src/sysc/communication/sc_fifo.h"}
+{"tool": "run_command", "args": "git grep \"test_constructors\" tests/"}
+{"tool": "run_command", "args": "cat << 'EOF' > /tmp/test_signal_repro.cpp\n#include <systemc>\n#include <iostream>\n\nstruct named_type\n{\n    named_type()\n      : name( sc_core::sc_gen_unique_name( \"named_type\" ) )\n    {}\n    named_type( const char* s )\n      : name( s )\n    {}\n    bool operator==( const named_type& other ) const\n    {\n        return name == other.name;\n    }\n    std::string name;\n};\n\ninline ::std::ostream& operator<<( ::std::ostream& os, const named_type& val )\n{\n    return os << val.name;\n}\n\nint sc_main(int, char*[])\n{\n    \u2026"}
+{"tool": "run_command", "args": "c++ -std=c++17 /tmp/test_signal_repro.cpp -Isrc -Lbuild/src -Wl,-rpath,$(pwd)/build/src -lsystemc -o /tmp/test_signal_repro && /tmp/test_signal_repro"}
+{"tool": "run_command", "args": "rm -f /tmp/test_signal_repro /tmp/test_signal_repro.cpp"}
+{"tool": "run_command", "args": "git grep \"value_type()\" src/"}
+{"tool": "read_file", "args": "0 270 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 165"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}
+{"tool": "read_file", "args": "0 385 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 360"}
+{"tool": "read_file", "args": "0 540 <worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h 410"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s0/src/sysc/communication/sc_signal.h"}

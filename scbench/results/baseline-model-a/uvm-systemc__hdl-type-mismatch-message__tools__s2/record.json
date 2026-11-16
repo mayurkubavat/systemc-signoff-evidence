@@ -9,28 +9,27 @@
     "non_json_lines": 0,
     "tool_calls": {
       "edit_file": 3,
-      "mcp__scbench__build": 3,
+      "mcp__scbench__build": 2,
       "mcp__scbench__list_tests": 1,
       "mcp__scbench__run_regression": 1,
-      "mcp__scbench__run_test": 2,
-      "read_file": 24,
-      "run_command": 21,
-      "write_file": 1
+      "mcp__scbench__run_test": 4,
+      "read_file": 23,
+      "run_command": 24
     },
-    "tool_calls_total": 56,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 279611,
-      "output_tokens": 47801,
-      "thinking_tokens": 38047,
-      "cache_read_input_tokens": 3181199
+      "input_tokens": 270891,
+      "output_tokens": 39590,
+      "thinking_tokens": 32689,
+      "cache_read_input_tokens": 3078749
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 356.4,
+    "wall_s": 302.5,
     "graded_status": "pass"
   },
   "grade": {
@@ -39,7 +38,7 @@
       {
         "passed": true,
         "test": "uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch",
-        "seconds": 0.4,
+        "seconds": 0.3,
         "uvm_counts": {
           "UVM_INFO": 0,
           "UVM_WARNING": 0,
@@ -51,7 +50,7 @@
       }
     ],
     "agent_diffstat": [
-      " 1 file changed, 45 insertions(+), 7 deletions(-)"
+      " 1 file changed, 52 insertions(+), 7 deletions(-)"
     ]
   },
   "status": "pass"

@@ -8,51 +8,68 @@
     "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "edit_file": 2,
-      "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_regression": 1,
-      "mcp__scbench__run_test": 9,
+      "mcp__scbench__list_tests": 5,
+      "mcp__scbench__run_test": 4,
       "read_file": 23,
-      "run_command": 21,
-      "write_file": 2
+      "run_command": 26
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 269434,
-      "output_tokens": 19945,
-      "thinking_tokens": 14640,
-      "cache_read_input_tokens": 2407510
+      "input_tokens": 258606,
+      "output_tokens": 18949,
+      "thinking_tokens": 14929,
+      "cache_read_input_tokens": 2374537
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 300.9,
-    "graded_status": "pass"
+    "wall_s": 173.0,
+    "graded_status": "fail"
   },
   "grade": {
-    "passed": true,
+    "passed": false,
     "tests": [
       {
-        "passed": true,
+        "passed": false,
         "test": "uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw",
         "seconds": 0.3,
         "uvm_counts": {
           "UVM_INFO": 0,
-          "UVM_WARNING": 0,
-          "UVM_ERROR": 0,
+          "UVM_WARNING": 1,
+          "UVM_ERROR": 1,
           "UVM_FATAL": 0
         },
-        "first_uvm_problem": null,
-        "sim_log": "<worktree>/uvm-systemc__reg-map-internal-names__tools-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.log"
+        "first_uvm_problem": "UVM_ERROR <worktree>/uvm-systemc__reg-map-internal-names__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.cpp(52) @ 0 s: reporter [Test] The factory did not create the user class reg_rw",
+        "sim_log": "<worktree>/uvm-systemc__reg-map-internal-names__tools-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.log",
+        "golden_diff": [
+          "--- 05factory_reg_rw/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,11 +1,13 @@",
+          " SystemC Simulation",
+          "-created the user class reg_rw, marker 42",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] The factory did not create the user class reg_rw",
+          " UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
+          " --- UVM Report Summary ---",
+          " ** Report counts by severity",
+          " UVM_INFO      :   0",
+          "-UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "+UVM_WARNING   :   1",
+          "+UVM_ERROR     :   1",
+          " UVM_FATAL     :   0",
+          " ** Report counts by id",
+          "-** UVM TEST PASSED **",
+          "+[TPRGED]                1",
+          "+[Test]                  1",
+          "+!! UVM TEST FAILED !!"
+        ]
       }
     ],
-    "agent_diffstat": [
-      " 2 files changed, 1 insertion(+), 46 deletions(-)"
-    ]
+    "agent_diffstat": []
   },
-  "status": "pass"
+  "status": "fail"
 }

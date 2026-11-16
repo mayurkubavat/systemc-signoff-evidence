@@ -8,25 +8,25 @@
     "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "edit_file": 1,
-      "read_file": 18,
-      "run_command": 40
+      "edit_file": 3,
+      "read_file": 22,
+      "run_command": 34
     },
     "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 256529,
-      "output_tokens": 17821,
-      "thinking_tokens": 13658,
-      "cache_read_input_tokens": 2006905
+      "input_tokens": 275063,
+      "output_tokens": 33427,
+      "thinking_tokens": 28771,
+      "cache_read_input_tokens": 2510401
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 216.4,
+    "wall_s": 237.4,
     "graded_status": "fail"
   },
   "grade": {
@@ -42,22 +42,18 @@
         "golden_diff": [
           "--- default_name/golden/default_name.log",
           "+++ default_name.log.stripped",
-          "@@ -1,7 +1,7 @@",
-          " SystemC Simulation",
-          "-signal_0",
-          "-sig_0",
-          "-buffer_0",
-          "-buf_0",
-          "+item_0",
-          "+item_1",
-          "+item_2",
-          "+item_3",
+          "@@ -4,4 +4,4 @@",
+          " buffer_0",
+          " buf_0",
           "",
-          " default constructed items: 4"
+          "-default constructed items: 4",
+          "+default constructed items: 8"
         ]
       }
     ],
-    "agent_diffstat": []
+    "agent_diffstat": [
+      " 2 files changed, 22 insertions(+), 2 deletions(-)"
+    ]
   },
   "status": "fail"
 }

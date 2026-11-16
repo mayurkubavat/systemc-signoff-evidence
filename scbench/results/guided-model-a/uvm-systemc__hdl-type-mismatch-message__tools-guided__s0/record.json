@@ -5,30 +5,32 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 180,
+    "events": 181,
     "non_json_lines": 0,
     "tool_calls": {
-      "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_regression": 2,
+      "edit_file": 3,
+      "mcp__scbench__build": 2,
+      "mcp__scbench__list_tests": 2,
       "mcp__scbench__run_test": 2,
-      "read_file": 30,
-      "run_command": 23
+      "read_file": 23,
+      "run_command": 25,
+      "write_file": 2
     },
-    "tool_calls_total": 58,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 276722,
-      "output_tokens": 37553,
-      "thinking_tokens": 32453,
-      "cache_read_input_tokens": 2788175
+      "input_tokens": 277729,
+      "output_tokens": 45399,
+      "thinking_tokens": 36131,
+      "cache_read_input_tokens": 3819834
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 253.4,
+    "wall_s": 288.3,
     "graded_status": "fail"
   },
   "grade": {
@@ -49,28 +51,26 @@
         "golden_diff": [
           "--- 30type_mismatch/golden/test.log",
           "+++ test.log.stripped",
-          "@@ -1,13 +1,13 @@",
+          "@@ -1,11 +1,11 @@",
           " SystemC Simulation",
           " read with sc_uint<16>: ok, value 0x01234",
           " four type mismatches are expected",
           "-UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow (sc_object) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
           "+UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow is not of type uvm_sc_if or sc_signal.",
           " read with uvm_reg_data_t: failed",
-          "-UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.narrow (sc_object) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
-          "+UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.narrow is not of type uvm_sc_if or sc_signal.",
+          " UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.narrow (sc_object) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
           " deposit with uvm_reg_data_t: failed",
           "-UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.sig (sc_signal) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
           "+UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.sig is not of type uvm_sc_if or sc_signal.",
           " read signal with uvm_reg_data_t: failed",
-          "-UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.sig (sc_signal) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
-          "+UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.sig is not of type uvm_sc_if or sc_signal.",
-          " deposit signal with uvm_reg_data_t: failed",
-          " UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
-          " --- UVM Report Summary ---"
+          " UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.sig (sc_signal) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
+          " deposit signal with uvm_reg_data_t: failed"
         ]
       }
     ],
-    "agent_diffstat": []
+    "agent_diffstat": [
+      " 1 file changed, 39 insertions(+), 1 deletion(-)"
+    ]
   },
   "status": "fail"
 }

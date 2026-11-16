@@ -72,7 +72,8 @@ def stats(xs: list[float]) -> dict:
 
 
 def arm_summary(recs: list[dict], tasks: list[str], seeds: list[int]) -> dict:
-    graded = [r for r in recs if r["status"] in ("pass", "fail")]
+    # every figure (graded, passes, turns, tool calls, ...) covers only the given tasks
+    graded = [r for r in recs if r["status"] in ("pass", "fail") and r["task"] in tasks]
     per_seed = {}
     for s in seeds:
         g = [r for r in graded if r["seed"] == s and r["task"] in tasks]

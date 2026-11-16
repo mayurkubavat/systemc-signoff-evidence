@@ -5,28 +5,28 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 179,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 2,
-      "read_file": 22,
-      "run_command": 31,
-      "search_web": 4
+      "manage_task": 1,
+      "read_file": 25,
+      "run_command": 21,
+      "search_web": 11
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 270169,
-      "output_tokens": 26579,
-      "thinking_tokens": 22914,
-      "cache_read_input_tokens": 2882977
+      "input_tokens": 306996,
+      "output_tokens": 34926,
+      "thinking_tokens": 31321,
+      "cache_read_input_tokens": 2540187
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 239.0,
+    "wall_s": 300.9,
     "graded_status": "fail"
   },
   "grade": {
@@ -35,7 +35,7 @@
       {
         "passed": false,
         "test": "uvm-systemc/unit_tests/00basic/99fixes/04re_match",
-        "seconds": 0.7,
+        "seconds": 0.1,
         "uvm_counts": null,
         "first_uvm_problem": null,
         "sim_log": "<worktree>/uvm-systemc__re-match-search__shell__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/04re_match/test.log",

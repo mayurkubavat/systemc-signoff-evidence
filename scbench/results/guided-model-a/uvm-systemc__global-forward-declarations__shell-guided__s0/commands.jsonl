@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "git grep -n \"class uvm_object;\""}
+{"tool": "run_command", "args": "git grep -n \"class uvm_printer;\" ; git grep -n \"class uvm_event_callback;\""}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.h 25"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.h 61"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h 30"}
+{"tool": "read_file", "args": "45 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_before_get_dap.h 30"}
+{"tool": "read_file", "args": "45 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_simple_lock_dap.h 30"}
+{"tool": "run_command", "args": "python3 -c '\nimport os, re\n\nfor root, dirs, files in os.walk(\"src\"):\n    for file in files:\n        if file.endswith((\".h\", \".cpp\")):\n            path = os.path.join(root, file)\n            with open(path, \"r\", errors=\"ignore\") as f:\n                content = f.read()\n            # check lines before namespace uvm\n            # find all forward declarations \"class uvm_...\" or \"struct uvm_...\"\n            # which appear outside namespace uvm\n            lines = content.splitlines()\n            ns_depth = 0\n \u2026"}
+{"tool": "run_command", "args": "python3 -c '\nimport os, re\n\nfor root, dirs, files in os.walk(\"src\"):\n    for file in files:\n        if file.endswith((\".h\", \".cpp\")):\n            path = os.path.join(root, file)\n            with open(path, \"r\", errors=\"ignore\") as f:\n                content = f.read()\n            lines = content.splitlines()\n            in_ns_uvm = False\n            for idx, line in enumerate(lines, 1):\n                clean = line.strip()\n                if clean.startswith(\"namespace uvm\") and \"{\" in clean:\n              \u2026"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.cpp 195"}
+{"tool": "read_file", "args": "350 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.cpp 280"}
+{"tool": "read_file", "args": "45 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.cpp 20"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_get_dap_base.h 30"}
+{"tool": "read_file", "args": "30 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_get_dap_base.h 1"}
+{"tool": "read_file", "args": "35 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_before_get_dap.h 20"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "find tests -maxdepth 3"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -name \"*event*\""}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests; ls tests/tests/uvm-systemc/bugs"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_343"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_343/get_physical_addresses; ls -la tests/tests/uvm-systemc/unit_tests/00basic"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer; cat tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/sc_main.cpp"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "git grep -n \"ENABLE_REGRESSION\""}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/INSTALL.md 15"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "read_file", "args": "75 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event_callback.h 35"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_names/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_names/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep 02global_names"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-02global_names"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/factory/uvm_factory.h 30"}
+{"tool": "run_command", "args": "git log -n 5 -p src/uvmsc/dap/uvm_get_to_lock_dap.h"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_component.h 30"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/base/uvm_event.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_get_to_lock_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_set_before_get_dap.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/src/uvmsc/dap/uvm_simple_lock_dap.h"}
+{"tool": "run_command", "args": "git diff src/"}
+{"tool": "run_command", "args": "python3 -c '\nimport os, re\n\nfor root, dirs, files in os.walk(\"src\"):\n    for file in files:\n        if file.endswith((\".h\", \".cpp\")):\n            path = os.path.join(root, file)\n            with open(path, \"r\", errors=\"ignore\") as f:\n                content = f.read()\n            lines = content.splitlines()\n            in_ns_uvm = False\n            for idx, line in enumerate(lines, 1):\n                clean = line.strip()\n                if clean.startswith(\"namespace uvm\"):\n                    in_ns_uvm =\u2026"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-02global_names"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02global_names\" -V"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02global_names/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02global_names\" -V"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00basic\""}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-00hello unit_tests-00basic-99fixes-01global_comparer"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"00basic\""}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-70regs-01fields-02policy"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"02policy\" -V"}
+{"tool": "run_command", "args": "ninja -C build examples-simple-callbacks-basic && ctest --test-dir build -R \"simple/callbacks/basic\" -V"}
+{"tool": "run_command", "args": "git status"}

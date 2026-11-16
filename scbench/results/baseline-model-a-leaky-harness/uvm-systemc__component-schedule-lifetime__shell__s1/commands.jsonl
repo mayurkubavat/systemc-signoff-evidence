@@ -1,0 +1,57 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && git log -n 5 --oneline"}
+{"tool": "run_command", "args": "grep -rn \"set_domain\" src/"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.cpp 1"}
+{"tool": "run_command", "args": "grep -n \"~uvm_component\" src/uvmsc/base/uvm_component.*"}
+{"tool": "read_file", "args": "1480 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.cpp 1425"}
+{"tool": "read_file", "args": "700 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.cpp 620"}
+{"tool": "run_command", "args": "grep -rn \"m_schedule_list\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_children\" src/"}
+{"tool": "read_file", "args": "1640 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.cpp 1600"}
+{"tool": "read_file", "args": "1605 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.cpp 1585"}
+{"tool": "run_command", "args": "grep -rn \"child\" src/uvmsc/base/uvm_component.h"}
+{"tool": "run_command", "args": "git log -S \"m_children\" -p -n 3"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sched\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/phasing/uvm_domain.cpp 40"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/phasing/uvm_domain.cpp 160"}
+{"tool": "read_file", "args": "480 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.h 455"}
+{"tool": "run_command", "args": "grep -rn \"class uvm_root\" src/"}
+{"tool": "run_command", "args": "grep -rn \"child\" src/uvmsc/base/uvm_root.*"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_root.cpp 315"}
+{"tool": "run_command", "args": "grep -rn \"run_test\" src/uvmsc/base/uvm_root.*"}
+{"tool": "read_file", "args": "220 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_root.cpp 120"}
+{"tool": "run_command", "args": "grep -rn \"get_first_child\" src/"}
+{"tool": "run_command", "args": "git log -S \"m_schedule_list\" -p"}
+{"tool": "run_command", "args": "grep -rn \"m_schedule_list\" ."}
+{"tool": "read_file", "args": "480 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.h 380"}
+{"tool": "run_command", "args": "git log -S \"delete_child\" -p"}
+{"tool": "run_command", "args": "git log -S \"m_children_by_handle\" -p"}
+{"tool": "run_command", "args": "mkdir -p build && cd build && cmake -GNinja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME .. && ninja"}
+{"tool": "run_command", "args": "cd build && cmake -GNinja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON .. && ninja"}
+{"tool": "run_command", "args": "cd build && ninja check"}
+{"tool": "manage_task", "args": "status <id>/task-62"}
+{"tool": "schedule", "args": "10 Check if task finished"}
+{"tool": "manage_task", "args": "status <id>/task-62"}
+{"tool": "run_command", "args": "cd build && ctest -R \"01twodomains\" --output-on-failure"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/10domains/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/10domains/01twodomains/test.cpp 1"}
+{"tool": "read_file", "args": "155 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/tests/tests/uvm-systemc/unit_tests/40phasing/10domains/01twodomains/test.cpp 101"}
+{"tool": "run_command", "args": "grep -rn \"m_add_child\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_children_cnt\" src/"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/src/uvmsc/base/uvm_component.cpp 200"}
+{"tool": "search_web", "args": "\"m_delete_child\" site:accellera.org OR site:verificationacademy.com OR site:github.com"}
+{"tool": "search_web", "args": "\"m_children_by_handle\" uvm"}
+{"tool": "run_command", "args": "git log --all --grep=\"dangling\" --oneline"}
+{"tool": "run_command", "args": "git show 879c015"}
+{"tool": "run_command", "args": "git branch -a"}
+{"tool": "run_command", "args": "git diff HEAD 879c015"}
+{"tool": "run_command", "args": "grep -rn \"20component_lifetime\" tests/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/tests/CMakeLists.txt 61"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/tests/CMakeLists.txt 121"}
+{"tool": "run_command", "args": "git format-patch -1 879c015 --stdout | git apply"}
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "cd build && cmake .. && ninja"}
+{"tool": "run_command", "args": "cd build && ninja unit_tests-40phasing-20component_lifetime"}
+{"tool": "run_command", "args": "cd build && ctest -R \"20component_lifetime\" --output-on-failure"}
+{"tool": "run_command", "args": "cd build && MallocScribble=1 ctest -R \"20component_lifetime\" --output-on-failure"}

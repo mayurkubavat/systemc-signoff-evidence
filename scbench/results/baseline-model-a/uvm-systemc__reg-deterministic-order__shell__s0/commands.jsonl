@@ -1,0 +1,57 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git log -n 5"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DCMAKE_BUILD_TYPE=Release"}
+{"tool": "run_command", "args": "grep -i \"test\" CMakeLists.txt"}
+{"tool": "run_command", "args": "grep -C 5 \"ENABLE_REGRESSION\" CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DCMAKE_BUILD_TYPE=Release -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 00hello -V"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep -i \"test\""}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "grep -rn \"get_registers\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "grep -rn \"get_memories\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "grep -rn \"get_blocks\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "grep -rn \"get_maps\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "300 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.h 150"}
+{"tool": "read_file", "args": "397 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.h 301"}
+{"tool": "run_command", "args": "grep -n \"m_regs\\[\\|m_blks\\[\\|m_mems\\[\\|m_vregs\\[\\|m_maps\\[\\|m_roots\\[\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "read_file", "args": "1865 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 1820"}
+{"tool": "read_file", "args": "600 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 450"}
+{"tool": "run_command", "args": "grep -n \"std::map\" src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "read_file", "args": "340 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.h 280"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/reg"}
+{"tool": "run_command", "args": "grep -rn \"get_root_blocks\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "780 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 680"}
+{"tool": "read_file", "args": "685 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 660"}
+{"tool": "run_command", "args": "grep -rn \"do_print\" src/uvmsc/reg/"}
+{"tool": "read_file", "args": "1970 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 1909"}
+{"tool": "read_file", "args": "2400 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_map.cpp 2334"}
+{"tool": "run_command", "args": "grep -rn \"get_inst_id\" src/uvmsc/"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/base/uvm_object.cpp 120"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/base/uvm_object.cpp 60"}
+{"tool": "run_command", "args": "grep -n \"class uvm_reg\" src/uvmsc/reg/*.h"}
+{"tool": "run_command", "args": "grep -n \"class uvm_mem \" src/uvmsc/reg/uvm_mem.h"}
+{"tool": "run_command", "args": "grep -n \"class uvm_vreg \" src/uvmsc/reg/uvm_vreg.h"}
+{"tool": "run_command", "args": "grep -n \"id\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "read_file", "args": "400 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/src/uvmsc/reg/uvm_reg_block.cpp 380"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 20compare_mismatch -V"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/golden/test.log 40"}
+{"tool": "read_file", "args": "536 <worktree>/uvm-systemc__reg-deterministic-order__shell__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 490"}
+{"tool": "run_command", "args": "grep -n \"std::map\" src/uvmsc/reg/uvm_reg_file.h src/uvmsc/reg/uvm_reg_file.cpp"}
+{"tool": "run_command", "args": "grep -n \"std::map\" src/uvmsc/reg/uvm_reg.h src/uvmsc/reg/uvm_reg.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_fields\" src/uvmsc/reg/uvm_reg.h"}
+{"tool": "run_command", "args": "grep -n \"std::map\" src/uvmsc/reg/uvm_mem.h src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_maps\\|m_vregs\" src/uvmsc/reg/uvm_mem.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_maps\" src/uvmsc/reg/uvm_reg.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_blks\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_regs\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_vregs\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_mems\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_maps\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "run_command", "args": "grep -n \"m_submaps\\|m_regs_info\\|m_mems_info\" src/uvmsc/reg/uvm_reg_map.cpp"}

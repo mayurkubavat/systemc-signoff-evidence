@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la \"<cli-home>/...\""}
+{"tool": "run_command", "args": "cat \"<cli-home>/...\" \"<cli-home>/...\" \"<cli-home>/...\""}
+{"tool": "run_command", "args": "find ~/Tools/uvm-core/src -name \"*objection*\""}
+{"tool": "run_command", "args": "find src -name \"*objection*\""}
+{"tool": "run_command", "args": "find src -name \"*callback*\""}
+{"tool": "run_command", "args": "grep -n -C 5 \"uvm_objection_callback\" ~/Tools/uvm-core/src/base/uvm_objection.svh"}
+{"tool": "run_command", "args": "sed -n '955,1035p' ~/Tools/uvm-core/src/base/uvm_objection.svh"}
+{"tool": "run_command", "args": "sed -n '1415,1455p' ~/Tools/uvm-core/src/base/uvm_objection.svh"}
+{"tool": "run_command", "args": "grep -n \"raised\\|dropped\\|all_dropped\" src/uvmsc/phasing/uvm_objection.h src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "run_command", "args": "cat src/uvmsc/macros/uvm_callback_defines.h"}
+{"tool": "run_command", "args": "grep -rn \"UVM_REGISTER_CB\" src/"}
+{"tool": "run_command", "args": "grep -rn \"UVM_DO_CALLBACKS\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_reg_cbs\" src/"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/objections/basic'} scbench run_test"}
+{"tool": "run_command", "args": "ls -la unit_tests/40phasing/"}
+{"tool": "run_command", "args": "find tests -maxdepth 3"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/objections/basic"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/04objection"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/unit_tests/40phasing/04objection'} scbench run_test"}
+{"tool": "run_command", "args": "find src -name \"uvm*.h\""}
+{"tool": "run_command", "args": "cat src/uvm.h"}
+{"tool": "run_command", "args": "cat src/uvm"}
+{"tool": "run_command", "args": "cat src/uvmsc/phasing/uvm_phasing.h"}
+{"tool": "run_command", "args": "cat src/uvmsc/phasing/uvm_objection.h"}
+{"tool": "run_command", "args": "head -n 50 src/uvmsc/cb/uvm_callback.h"}
+{"tool": "run_command", "args": "sed -n '51,90p' src/uvmsc/cb/uvm_callback.h"}
+{"tool": "run_command", "args": "head -n 60 src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "sed -n '60,130p' src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "cat src/uvmsc/reg/uvm_reg_cbs.h"}
+{"tool": "run_command", "args": "sed -n '325,335p' src/uvmsc/reg/uvm_reg.h"}
+{"tool": "run_command", "args": "grep -rn \"m_register_pair\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_register_cb\" src/"}
+{"tool": "run_command", "args": "sed -n '245,260p' src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "sed -n '260,320p' src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "grep -rn -C 10 \"check_registration\" src/"}
+{"tool": "run_command", "args": "grep -rn -C 10 \"m_is_registered\" src/"}
+{"tool": "run_command", "args": "sed -n '790,810p' src/uvmsc/base/uvm_object.cpp"}
+{"tool": "run_command", "args": "cat tests/tests/uvm-systemc/examples/simple/callbacks/basic/test.cpp"}
+{"tool": "run_command", "args": "find tests examples -name \"*callback*\""}
+{"tool": "run_command", "args": "ls -la examples/uvmsc/simple/callbacks/basic/"}
+{"tool": "run_command", "args": "cat examples/uvmsc/simple/callbacks/basic/bus_driver.h"}
+{"tool": "run_command", "args": "cat examples/uvmsc/simple/callbacks/basic/bus_driver_cb.h"}
+{"tool": "run_command", "args": "cat examples/uvmsc/simple/callbacks/basic/top.h"}
+{"tool": "run_command", "args": "cat src/uvmsc/cb/uvm_callback_iter.h"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/phasing/"}
+{"tool": "run_command", "args": "cat src/uvmsc/cb/uvm_cbs.h"}
+{"tool": "run_command", "args": "sed -n '240,300p' src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "cat -n src/uvmsc/report/uvm_report_catcher.cpp"}
+{"tool": "run_command", "args": "sed -n '230,245p' src/uvmsc/report/uvm_report_catcher.h"}
+{"tool": "run_command", "args": "grep -rn -A 10 \"m_am_i_a\" src/"}
+{"tool": "run_command", "args": "grep -rn \"m_init_objections\" src/"}
+{"tool": "run_command", "args": "grep -rn \"new uvm_objection\" src/"}
+{"tool": "run_command", "args": "grep -n -C 5 \"uvm_objection_callback\" ~/Tools/uvm-core/src/base/uvm_objection.svh"}
+{"tool": "run_command", "args": "sed -n '580,630p' src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "run_command", "args": "sed -n '765,850p' src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "run_command", "args": "sed -n '880,950p' src/uvmsc/phasing/uvm_objection.cpp"}

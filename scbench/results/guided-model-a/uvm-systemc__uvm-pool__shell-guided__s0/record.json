@@ -5,28 +5,27 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 179,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 1,
-      "read_file": 28,
-      "run_command": 28
+      "read_file": 16,
+      "run_command": 42
     },
-    "tool_calls_total": 57,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 253557,
-      "output_tokens": 19301,
-      "thinking_tokens": 15394,
-      "cache_read_input_tokens": 2597336
+      "input_tokens": 268928,
+      "output_tokens": 19485,
+      "thinking_tokens": 15845,
+      "cache_read_input_tokens": 2479458
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 210.3,
+    "wall_s": 193.0,
     "graded_status": "fail"
   },
   "grade": {
@@ -40,7 +39,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-00basic-10pool",
-          "seconds": 14.6,
+          "seconds": 3.3,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-pool__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",

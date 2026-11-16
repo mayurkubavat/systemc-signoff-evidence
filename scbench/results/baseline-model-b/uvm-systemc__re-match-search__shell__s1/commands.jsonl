@@ -1,0 +1,74 @@
+{"tool": "run_command", "args": "rg -n \"uvm_re_match|wait_modified|uvm_resource_db\" src/ test/"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && cmake --version && ninja --version && ctest --version"}
+{"tool": "run_command", "args": "rg -n \"test|TEST|SYSTEMC\" CMakeLists.txt"}
+{"tool": "read_file", "args": "560 <worktree>/uvm-systemc__re-match-search__shell__s1/CMakeLists.txt 520"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON && cmake --build build -j 8"}
+{"tool": "read_file", "args": "310 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/base/uvm_globals.cpp 255"}
+{"tool": "read_file", "args": "620 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/base/uvm_globals.cpp 420"}
+{"tool": "read_file", "args": "420 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/base/uvm_globals.cpp 311"}
+{"tool": "read_file", "args": "600 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_pool.cpp 515"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_base.cpp 115"}
+{"tool": "read_file", "args": "445 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_config_db.h 240"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j 8"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__re-match-search__shell__s1/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests -j 8"}
+{"tool": "run_command", "args": "rg -n \"uvm_glob_to_re|uvm_is_match|uvm_re_match\" src/ tests/"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "run_command", "args": "rg -l \"uvm_config_db|uvm_resource_db|wait_modified|uvm_re_match|uvm_is_match\" tests/"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_config_db.h 140"}
+{"tool": "read_file", "args": "490 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_config_db.h 440"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "read_file", "args": "115 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_base.cpp 1"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j 8"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "manage_task", "args": "status <id>/task-46"}
+{"tool": "read_file", "args": "520 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_pool.cpp 445"}
+{"tool": "manage_task", "args": "list"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/base/uvm_globals.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/base/uvm_globals.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__re-match-search__shell__s1/tests/CMakeLists.txt 60"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/00hello/"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__re-match-search__shell__s1/tests/CMakeLists.txt 151"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/00hello/test.cpp 1"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/00hello/golden/"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/golden/test.log"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-00basic-99fixes-02re_match -j 8 && ctest --test-dir build -R 02re_match --output-on-failure"}
+{"tool": "read_file", "args": "345 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_db.h 155"}
+{"tool": "read_file", "args": "445 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_pool.cpp 380"}
+{"tool": "run_command", "args": "rg -n \"lookup_name\" src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "read_file", "args": "360 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_pool.cpp 287"}
+{"tool": "run_command", "args": "rg -n \"get_by_name\" src/uvmsc/conf/uvm_resource.h"}
+{"tool": "read_file", "args": "350 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/base/uvm_globals.cpp 325"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_pool.cpp 160"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_pool.cpp 115"}
+{"tool": "read_file", "args": "175 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource.h 130"}
+{"tool": "read_file", "args": "275 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource.h 200"}
+{"tool": "read_file", "args": "75 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_resource_db.h 55"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match -j 8 && ctest --test-dir build -R 02re_match --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match -j 8 && ctest --test-dir build -R 02re_match --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"SC_FORK\" tests/"}
+{"tool": "read_file", "args": "90 <worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/examples/simple/objections/basic/test.cpp 65"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_config_db.h 50"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match -j 8 && ./build/tests/unit_tests-00basic-99fixes-02re_match"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match -j 8 && ./build/tests/unit_tests-00basic-99fixes-02re_match"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02re_match -j 8 && ctest --test-dir build -R 02re_match --output-on-failure"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__re-match-search__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02re_match/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 02re_match --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests -j 8 && ctest --test-dir build --output-on-failure -j 8"}
+{"tool": "run_command", "args": "git status && git diff src/"}

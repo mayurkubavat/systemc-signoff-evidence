@@ -1,0 +1,57 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git log -n 5 --oneline"}
+{"tool": "run_command", "args": "git show c4945ec --stat"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "which cmake ninja ctest"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME && ninja -C build"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -n -i \"test\" CMakeLists.txt"}
+{"tool": "read_file", "args": "0 540 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/CMakeLists.txt 520"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON && ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 30objection_callbacks --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep -E \"check|test\""}
+{"tool": "run_command", "args": "ninja -C build unit_tests-40phasing-30objection_callbacks && ctest --test-dir build -R 30objection_callbacks --output-on-failure"}
+{"tool": "run_command", "args": "ls src/uvmsc/base"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvm.h 1"}
+{"tool": "read_file", "args": "0 245 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvm.h 190"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvm 1"}
+{"tool": "run_command", "args": "grep -rn -i \"heartbeat\" ."}
+{"tool": "read_file", "args": "0 180 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/RELEASENOTES.md 155"}
+{"tool": "run_command", "args": "find ~ -name \"uvm_heartbeat.svh\" 2>/dev/null"}
+{"tool": "read_file", "args": "0 250 ~/Silicon/active/svlang/references/corpus/uvm-1.2/src/base/uvm_heartbeat.svh 1"}
+{"tool": "read_file", "args": "0 350 ~/Silicon/active/svlang/references/corpus/uvm-1.2/src/base/uvm_heartbeat.svh 250"}
+{"tool": "read_file", "args": "0 120 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/phasing/uvm_objection_callback.h 1"}
+{"tool": "run_command", "args": "git show c4945ec:src/uvmsc/phasing/uvm_objection.cpp | grep -C 10 \"uvm_objection_cbs_t\""}
+{"tool": "run_command", "args": "git diff HEAD~1 HEAD src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/cb/uvm_callbacks.h 1"}
+{"tool": "run_command", "args": "grep -n -A 20 \"m_register_pair\" src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "grep -n -A 30 \"bool uvm_callbacks<T,CB>::add(\" src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "run_command", "args": "grep -n \"add(\" src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "read_file", "args": "0 275 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/cb/uvm_callbacks.h 235"}
+{"tool": "run_command", "args": "grep -n \"callback_mode\" src/uvmsc/cb/uvm_callback.h"}
+{"tool": "run_command", "args": "grep -n \"delete\" src/uvmsc/cb/uvm_callbacks.h"}
+{"tool": "read_file", "args": "0 120 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "read_file", "args": "0 160 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/base/uvm_event.h 120"}
+{"tool": "run_command", "args": "grep -n -A 25 \"wait_trigger(\" src/uvmsc/base/uvm_event.cpp"}
+{"tool": "run_command", "args": "grep -rn \"default_event\" src/"}
+{"tool": "run_command", "args": "grep -n -A 20 \"void uvm_event::reset\" src/uvmsc/base/uvm_event.cpp"}
+{"tool": "run_command", "args": "grep -rn \"sc_spawn\" src/"}
+{"tool": "run_command", "args": "grep -rn \"\\.kill(\" src/"}
+{"tool": "run_command", "args": "sed -n '145,160p' src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "run_command", "args": "sed -n '1170,1185p' src/uvmsc/seq/uvm_sequence_base.cpp"}
+{"tool": "run_command", "args": "grep -rn \"kill_process\" ~/.local/opt/accellera/systemc/include/"}
+{"tool": "read_file", "args": "0 370 ~/.local/opt/accellera/systemc/include/sysc/kernel/sc_process_handle.h 340"}
+{"tool": "run_command", "args": "find ~/.local/opt/accellera/systemc -name \"*.cpp\" 2>/dev/null"}
+{"tool": "run_command", "args": "find ~ -name \"sc_thread_process.cpp\" 2>/dev/null"}
+{"tool": "run_command", "args": "grep -n -A 30 \"sc_thread_process::kill_process\" ~/Tools/systemc/src/sysc/kernel/sc_thread_process.cpp"}
+{"tool": "read_file", "args": "0 505 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/cb/uvm_callbacks.h 460"}
+{"tool": "run_command", "args": "grep -rn \"sc_time_stamp\" src/"}
+{"tool": "run_command", "args": "grep -rn \"to_string()\" src/"}
+{"tool": "read_file", "args": "0 200 <worktree>/uvm-systemc__uvm-heartbeat__shell__s2/src/uvmsc/policy/uvm_recorder.cpp 185"}
+{"tool": "run_command", "args": "find ~/Tools/uvm-core -name \"*heartbeat*\" 2>/dev/null"}
+{"tool": "run_command", "args": "grep -rn \"HBFAIL\" ~/Silicon/ 2>/dev/null"}
+{"tool": "manage_task", "args": "kill <id>/task-116"}
+{"tool": "run_command", "args": "git diff ~/Silicon/active/svlang/references/corpus/uvm-1.2/src/base/uvm_heartbeat.svh ~/Silicon/active/svlang/references/corpus/uvm-2020-2.0/src/base/uvm_heartbeat.svh"}

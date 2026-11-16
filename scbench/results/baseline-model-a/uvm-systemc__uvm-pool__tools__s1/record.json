@@ -5,29 +5,29 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 186,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "read_file": 15,
-      "run_command": 17,
-      "search_web": 28
+      "read_file": 11,
+      "run_command": 10,
+      "search_web": 35
     },
-    "tool_calls_total": 62,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 266241,
-      "output_tokens": 20540,
-      "thinking_tokens": 17463,
-      "cache_read_input_tokens": 2885131
+      "input_tokens": 258776,
+      "output_tokens": 16300,
+      "thinking_tokens": 13580,
+      "cache_read_input_tokens": 2644810
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 248.5,
+    "wall_s": 368.0,
     "graded_status": "fail"
   },
   "grade": {
@@ -41,7 +41,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-00basic-10pool",
-          "seconds": 13.9,
+          "seconds": 3.7,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-pool__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",

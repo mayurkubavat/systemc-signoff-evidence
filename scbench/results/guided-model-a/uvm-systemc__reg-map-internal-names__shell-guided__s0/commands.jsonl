@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" src/"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" ~/Tools/uvm-core/src"}
+{"tool": "read_file", "args": "50 ~/Tools/uvm-core/src/reg/uvm_reg_map.svh 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 40"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" ."}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/test.cpp 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log 1"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" ~/Tools/uvm-core/src/reg/ || true"}
+{"tool": "read_file", "args": "100 ~/Tools/uvm-core/src/reg/uvm_reg_map.svh 40"}
+{"tool": "run_command", "args": "git log -S \"reg_rw\" -p src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "grep -rn \"registered twice\" src/"}
+{"tool": "run_command", "args": "grep -rn \"already registered\" src/"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/factory/uvm_default_factory.cpp 160"}
+{"tool": "run_command", "args": "grep -rn \"UVM_OBJECT_UTILS\" src/"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log 30"}
+{"tool": "read_file", "args": "1381 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log 1350"}
+{"tool": "run_command", "args": "grep -rn \"TPRGED\" tests/"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" tests/ | grep golden"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME: $SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "read_file", "args": "70 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/CMakeLists.txt 71"}
+{"tool": "read_file", "args": "559 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/CMakeLists.txt 480"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | grep -i factory"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | grep -i reg"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/70regs/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ninja -C build check_tests_uvm-systemc_examples_simple_factory_basic_Release"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep -i factory"}
+{"tool": "run_command", "args": "ninja -C build examples-simple-factory-basic"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"uvm-systemc/examples/simple/factory/basic/Release\" -V"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep -i ro_wo"}
+{"tool": "run_command", "args": "ninja -C build examples-simple-registers-models-ro_wo_same_addr && ctest --test-dir build -R \"ro_wo_same_addr\" -V"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/01fields/01reset/test.cpp 1"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/99fixes"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "55 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 50"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02reg_rw/test.cpp"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/cmake/run-test.py 50"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/cmake/run-test.py 101"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"01global_comparer\" -V"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-01global_comparer && ctest --test-dir build -R \"01global_comparer\" -V"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/build/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.log 1"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02reg_rw/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build"}
+{"tool": "run_command", "args": "ninja -C build -t targets | grep -i 02reg_rw"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-02reg_rw && ctest --test-dir build -R \"02reg_rw\" -V"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/build/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02reg_rw/test.log 1"}
+{"tool": "read_file", "args": "95 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 40"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "git diff src/"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-00basic-99fixes-02reg_rw && ctest --test-dir build -R \"02reg_rw\" -V"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__shell-guided__s0/build/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02reg_rw/test.log 1"}

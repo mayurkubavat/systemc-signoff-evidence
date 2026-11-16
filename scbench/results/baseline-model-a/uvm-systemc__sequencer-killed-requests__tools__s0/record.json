@@ -11,24 +11,24 @@
       "manage_task": 1,
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
-      "read_file": 21,
-      "run_command": 22,
-      "search_web": 13
+      "mcp__scbench__run_test": 2,
+      "read_file": 26,
+      "run_command": 28
     },
     "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 282597,
-      "output_tokens": 46631,
-      "thinking_tokens": 43118,
-      "cache_read_input_tokens": 2923291
+      "input_tokens": 278185,
+      "output_tokens": 48603,
+      "thinking_tokens": 44741,
+      "cache_read_input_tokens": 2473097
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 269.8,
+    "wall_s": 270.2,
     "graded_status": "fail"
   },
   "grade": {
@@ -37,7 +37,7 @@
       {
         "passed": false,
         "test": "uvm-systemc/unit_tests/30seq/01lock_zombie",
-        "seconds": 0.3,
+        "seconds": 0.4,
         "uvm_counts": null,
         "first_uvm_problem": null,
         "sim_log": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/01lock_zombie/test.log",

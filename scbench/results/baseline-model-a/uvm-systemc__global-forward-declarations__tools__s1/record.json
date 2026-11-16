@@ -5,72 +5,49 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
       "edit_file": 4,
-      "mcp__scbench__build": 3,
+      "mcp__scbench__build": 5,
       "mcp__scbench__list_tests": 1,
-      "mcp__scbench__run_regression": 2,
-      "mcp__scbench__run_test": 1,
-      "read_file": 22,
-      "run_command": 27
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 2,
+      "read_file": 20,
+      "run_command": 24,
+      "write_file": 2
     },
-    "tool_calls_total": 60,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 268075,
-      "output_tokens": 18726,
-      "thinking_tokens": 13937,
-      "cache_read_input_tokens": 2063257
+      "input_tokens": 253208,
+      "output_tokens": 20020,
+      "thinking_tokens": 14857,
+      "cache_read_input_tokens": 1998130
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 205.8,
-    "graded_status": "fail"
+    "wall_s": 253.7,
+    "graded_status": "pass"
   },
   "grade": {
-    "passed": false,
+    "passed": true,
     "tests": [
       {
-        "passed": false,
+        "passed": true,
         "test": "uvm-systemc/unit_tests/00basic/99fixes/06global_names",
-        "stage": "build",
-        "build": {
-          "ok": false,
-          "stage": "build",
-          "target": "unit_tests-00basic-99fixes-06global_names",
-          "seconds": 4.9,
-          "errors": [
-            {
-              "file": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
-              "line": 31,
-              "col": 1,
-              "message": "reference to 'uvm_object' is ambiguous"
-            },
-            {
-              "file": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
-              "line": 32,
-              "col": 1,
-              "message": "reference to 'uvm_printer' is ambiguous"
-            },
-            {
-              "file": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
-              "line": 33,
-              "col": 1,
-              "message": "reference to 'uvm_event_callback' is ambiguous"
-            }
-          ],
-          "error_count": 3,
-          "warning_count": 1,
-          "linker_errors": []
-        }
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.log"
       }
     ],
-    "agent_diffstat": []
+    "agent_diffstat": [
+      " 4 files changed, 3 insertions(+), 13 deletions(-)"
+    ]
   },
-  "status": "fail"
+  "status": "pass"
 }

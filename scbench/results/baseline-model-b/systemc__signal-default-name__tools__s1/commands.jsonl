@@ -1,0 +1,33 @@
+{"tool": "run_command", "args": "rg -n \"class .*sc_signal\" src/"}
+{"tool": "run_command", "args": "rg -n \"class .*sc_buffer\" src/"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "250 <worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h 80"}
+{"tool": "read_file", "args": "420 <worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h 251"}
+{"tool": "read_file", "args": "120 <worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_buffer.h 1"}
+{"tool": "read_file", "args": "673 <worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h 421"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "run_command", "args": "rg -n \"sc_gen_unique_name\" src/sysc/communication/"}
+{"tool": "read_file", "args": "100 <worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal_resolved.h 50"}
+{"tool": "read_file", "args": "135 <worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal_rv.h 90"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "find tests -maxdepth 4 -iname \"*signal*\" -o -iname \"*buffer*\""}
+{"tool": "run_command", "args": "find tests/systemc/communication/sc_signal tests/systemc/communication/sc_buffer -type f"}
+{"tool": "read_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/tests/systemc/communication/sc_signal/constructors/test01.cpp"}
+{"tool": "read_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/tests/systemc/communication/sc_signal/constructors/golden/test01.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'systemc/communication/sc_signal/constructors'} scbench run_test"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "run_command", "args": "rg -n \"constructors\" tests/"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/tests/systemc/communication/sc_signal/constructors/test01.cpp"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/tests/systemc/communication/sc_signal/constructors/test01.cpp"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__tools__s1/tests/systemc/communication/sc_signal/constructors/golden/test01.log"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{'test': 'systemc/communication/sc_signal/constructors'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'systemc/communication/sc_buffer/test01'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'systemc/communication/sc_buffer/test02'} scbench run_test"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'sc_signal'} scbench run_regression"}
+{"tool": "run_command", "args": "git status -s && git diff"}

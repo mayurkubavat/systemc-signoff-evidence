@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git log -n 5 --oneline"}
+{"tool": "run_command", "args": "git grep \"get_registers\""}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME"}
+{"tool": "run_command", "args": "git grep \"ENABLE_REGRESSION\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 00hello --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build check"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/src/uvmsc/reg/uvm_reg_block.h 1"}
+{"tool": "read_file", "args": "397 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/src/uvmsc/reg/uvm_reg_block.h 101"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "schedule", "args": "5 check task status"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "run_command", "args": "ps aux | grep -E \"ninja|c\\+\\+|ld\""}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/tests/CMakeLists.txt 150"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/cmake/UVMSystemCTesting.cmake 1"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "run_command", "args": "tail -n 20 build/.ninja_log"}
+{"tool": "run_command", "args": "tail -n 30 build/Testing/Temporary/LastTest.log"}
+{"tool": "manage_task", "args": "status <id>/task-22"}
+{"tool": "run_command", "args": "ls -la build/tests/Testing/"}
+{"tool": "run_command", "args": "tail -n 30 build/tests/Testing/Temporary/LastTest.log"}
+{"tool": "run_command", "args": "ls -la build/tests/Testing/Temporary/"}
+{"tool": "run_command", "args": "tail -n 25 build/tests/Testing/Temporary/LastTest.log.tmp"}
+{"tool": "read_file", "args": "500 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/src/uvmsc/reg/uvm_reg_block.cpp 400"}
+{"tool": "read_file", "args": "600 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/src/uvmsc/reg/uvm_reg_block.cpp 501"}
+{"tool": "run_command", "args": "grep -n -A 50 \"uvm_reg_block::do_print\" src/uvmsc/reg/uvm_reg_block.cpp"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/src/uvmsc/reg/uvm_reg_map.h 1"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/golden"}
+{"tool": "run_command", "args": "git show 01fb39b --stat"}
+{"tool": "run_command", "args": "cat build/tests/Testing/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/test.diff"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"ubus|01twodomains\" --output-on-failure"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/test.cpp 1"}
+{"tool": "read_file", "args": "190 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/test.cpp 101"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 1"}
+{"tool": "run_command", "args": "grep -n -A 50 \"class mmap0_type\" tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h"}
+{"tool": "run_command", "args": "grep -n -A 40 \"class rfile0_t\" tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h"}
+{"tool": "read_file", "args": "508 <worktree>/uvm-systemc__reg-deterministic-order__shell__s2/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 471"}

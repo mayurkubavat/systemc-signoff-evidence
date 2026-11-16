@@ -1,0 +1,58 @@
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "find src -name \"*.h\" -o -name \"*.cpp\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvm.h 1"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvm.h 150"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/phasing/uvm_objection.h 100"}
+{"tool": "read_file", "args": "257 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/phasing/uvm_objection.h 201"}
+{"tool": "run_command", "args": "grep -rn \"heartbeat\" ."}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/RELEASENOTES.md 150"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/base/CMakeLists.txt 1"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"uvm_heartbeat_modes\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"ILHBVNT\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" github"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"HBFAIL\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"function void set_heartbeat\""}
+{"tool": "search_web", "args": "\"Did not receive an update of objection\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"m_sc\" or \"m_event\" or \"m_objection\" filetype:svh OR site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat extends uvm_object\" site:github.com"}
+{"tool": "search_web", "args": "\"NOEVNT\" \"No event has been set for the heartbeat\" OR \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_error\" OR \"uvm_warning\" OR \"uvm_fatal\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"start\""}
+{"tool": "search_web", "args": "\"uvm_fatal\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"since last event trigger at time\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"cntxt\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" site:raw.githubusercontent.com"}
+{"tool": "search_web", "args": "\"chipsalliance\" \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"No event has been set for the heartbeat\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"NOEVNT\""}
+{"tool": "search_web", "args": "`\"uvm_warning\" \"NOEVNT\"` OR `\"uvm_error\" \"NOEVNT\"` OR `\"uvm_fatal\" \"NOEVNT\"`"}
+{"tool": "search_web", "args": "\"ILHBVNT\" OR \"NOEVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" OR \"NOEVNT\" OR \"HBFAIL\""}
+{"tool": "search_web", "args": "\"NOEVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat::start\" OR \"uvm_heartbeat::set_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" site:github.com"}
+{"tool": "search_web", "args": "\"ILHBVNT\" site:verificationacademy.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" site:asicpoint.com"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/phasing/uvm_objection_callback.h 1"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"uvm_objection_callback\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat_cbs\" OR \"uvm_heartbeat_callback\" OR \"uvm_heartbeat_cb\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" \"since last event trigger at time\" site:github.com"}
+{"tool": "search_web", "args": "\"HBFAIL\" \"Did not recieve an update of\""}
+{"tool": "search_web", "args": "\"Did not recieve an update of\""}
+{"tool": "search_web", "args": "\"Did not recieve an update of\" \"objection\""}
+{"tool": "search_web", "args": "\"HBFAIL\" \"Did not\""}
+{"tool": "search_web", "args": "\"HBFAIL\" \"since last event trigger at time\""}
+{"tool": "search_web", "args": "site:raw.githubusercontent.com \"HBFAIL\""}
+{"tool": "search_web", "args": "\"HBFAIL\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" \"UVM_ALL_ACTIVE\""}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/phasing/uvm_objection.cpp 150"}

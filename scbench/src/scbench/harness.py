@@ -1,8 +1,9 @@
 """Run agents on benchmark tasks, with and without the verification tools.
 
 For each task and arm the harness:
-  1. makes a detached git worktree at the task's base commit (the hidden
-     regression test does not exist there yet),
+  1. makes a workspace holding a one-commit snapshot of the task's base tree,
+     with no history, branches or remote, so the reference change and the
+     hidden regression test are not reachable from it,
   2. runs an agent with the task text through a generic adapter (below),
      either shell-only or with the scbench MCP server configured,
   3. restores the hidden test files from the gold commit and grades the
@@ -99,14 +100,42 @@ def make_prompt(task: dict, wt: Path, arm: str, max_turns: int) -> str:
 def sh(cmd: list[str], cwd: Path | None = None, check: bool = True) -> str:
     return subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, check=check).stdout
 
-def make_worktree(repo: Path, base: str, dest: Path) -> None:
-    if dest.exists():
-        sh(["git", "-C", str(repo), "worktree", "remove", "--force", str(dest)], check=False)
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    sh(["git", "-C", str(repo), "worktree", "add", "--detach", str(dest), base])
+_SNAP_LOCK = threading.Lock()
 
-def drop_worktree(repo: Path, dest: Path) -> None:
-    sh(["git", "-C", str(repo), "worktree", "remove", "--force", str(dest)], check=False)
+
+def snapshot_repo(repo: Path, base: str, cache: Path) -> tuple[Path, str]:
+    """A repository holding one commit: the tree of `base`, with no history,
+    branches or other objects. Agent workspaces are made from it, so the gold
+    commits and task branches of the fork are not reachable from a workspace.
+    Returns the snapshot path and its single commit id."""
+    snap = cache / f"{repo.parent.name}-{base[:12]}"
+    with _SNAP_LOCK:
+        head = snap / ".snapshot-head"
+        if not head.exists():
+            snap.mkdir(parents=True, exist_ok=True)
+            arch = subprocess.run(["git", "-C", str(repo), "archive", "--format=tar", base],
+                                  capture_output=True, check=True).stdout
+            subprocess.run(["tar", "-x", "-C", str(snap)], input=arch, check=True)
+            env = dict(os.environ, GIT_AUTHOR_NAME="scbench", GIT_AUTHOR_EMAIL="scbench@localhost",
+                       GIT_COMMITTER_NAME="scbench", GIT_COMMITTER_EMAIL="scbench@localhost",
+                       GIT_AUTHOR_DATE="2000-01-01T00:00:00Z", GIT_COMMITTER_DATE="2000-01-01T00:00:00Z")
+            for cmd in (["init", "-q", "-b", "base"], ["add", "-A", "-f"],
+                        ["commit", "-q", "--no-verify", "-m", "base snapshot"]):
+                subprocess.run(["git", "-C", str(snap), *cmd], check=True, env=env, capture_output=True)
+            head.write_text(sh(["git", "-C", str(snap), "rev-parse", "HEAD"]).strip())
+        return snap, head.read_text().strip()
+
+
+def make_worktree(snap: Path, snap_head: str, dest: Path) -> None:
+    if dest.exists():
+        sh(["git", "-C", str(snap), "worktree", "remove", "--force", str(dest)], check=False)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    sh(["git", "-C", str(snap), "worktree", "add", "--detach", str(dest), snap_head])
+
+
+def drop_worktree(snap: Path, dest: Path) -> None:
+    sh(["git", "-C", str(snap), "worktree", "remove", "--force", str(dest)], check=False)
+
 
 def mcp_servers(wt: Path, profile: str, arm: str) -> dict:
     servers = {}
@@ -126,15 +155,22 @@ def mcp_config(path: Path, wt: Path, profile: str, arm: str) -> Path:
     path.write_text(json.dumps({"mcpServers": mcp_servers(wt, profile, arm)}, indent=2))
     return path
 
-def grade(task: dict, repo: Path, wt: Path) -> dict:
+def grade(task: dict, repo: Path, wt: Path, snap_head: str) -> dict:
     # Agents may have created files with the hidden names; the gold version wins.
-    sh(["git", "-C", str(wt), "checkout", task["gold"], "--", *task["hidden_files"]])
-    diff = sh(["git", "-C", str(wt), "diff", "--stat", task["base"], "--",
+    # The hidden files come from the full fork clone, never from the workspace.
+    for f in task["hidden_files"]:
+        data = subprocess.run(["git", "-C", str(repo), "show", f"{task['gold']}:{f}"],
+                              capture_output=True, check=True).stdout
+        p = wt / f
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(data)
+    diff = sh(["git", "-C", str(wt), "diff", "--stat", snap_head, "--",
                *[f":(exclude){f}" for f in task["hidden_files"]]], check=False)
     ws = tools.Workspace(str(wt), task["project"], str(wt / "build-grade"))
     results = [ws.run_test(t) for t in task["tests"]]
     return {"passed": all(r.get("passed") for r in results), "tests": results,
             "agent_diffstat": diff.strip().splitlines()[-1:] if diff.strip() else []}
+
 
 GRADED = ("pass", "fail")
 
@@ -199,11 +235,15 @@ def run_one(t: dict, arm: str, seed: int, a: argparse.Namespace, wb: Path, out_r
     run_dir = out_root / tag
     run_dir.mkdir(parents=True, exist_ok=True)
     wt = Path(a.worktrees) / tag
-    make_worktree(repo, t["base"], wt)
+    snap, snap_head = snapshot_repo(repo, t["base"], Path(a.worktrees) / "_snapshots")
+    make_worktree(snap, snap_head, wt)
     rec = {"task": t["id"], "arm": arm, "seed": seed, "model": a.model or "unspecified"}
     try:
         if arm == "gold":
-            sh(["git", "-C", str(wt), "checkout", t["gold"], "--", "."])
+            patch = subprocess.run(["git", "-C", str(repo), "diff", "--binary", t["base"], t["gold"]],
+                                   capture_output=True, check=True).stdout
+            subprocess.run(["git", "-C", str(wt), "apply", "--whitespace=nowarn"], input=patch, check=True,
+                           capture_output=True)
         elif arm != "base":
             rec["agent"] = run_agent(t, wt, arm, a.agent_cmd, a.max_turns, a.timeout, run_dir)
         st = rec.get("agent", {}).get("status")
@@ -211,13 +251,13 @@ def run_one(t: dict, arm: str, seed: int, a: argparse.Namespace, wb: Path, out_r
             rec["status"] = st
             rec["error"] = rec["agent"].get("error", "")
         else:
-            rec["grade"] = grade(t, repo, wt)
+            rec["grade"] = grade(t, repo, wt, snap_head)
             rec["status"] = "pass" if rec["grade"]["passed"] else "fail"
     except subprocess.CalledProcessError as e:
         rec["status"] = "error"
         rec["error"] = f"{e.cmd}: {e.stderr[-2000:] if e.stderr else ''}"
     finally:
-        drop_worktree(repo, wt)
+        drop_worktree(snap, wt)
     (run_dir / "record.json").write_text(json.dumps(rec, indent=2))
     return rec
 

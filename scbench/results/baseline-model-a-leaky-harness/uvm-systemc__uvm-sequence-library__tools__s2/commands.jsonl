@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "50 <cli-home>/... 1"}
+{"tool": "read_file", "args": "50 <cli-home>/... 1"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "find src -type f"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvm.h 1"}
+{"tool": "read_file", "args": "245 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvm.h 150"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvm 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/seq/uvm_seq.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/macros/uvm_sequence_defines.h 1"}
+{"tool": "read_file", "args": "173 <worktree>/uvm-systemc__uvm-sequence-library__tools__s2/src/uvmsc/macros/uvm_sequence_defines.h 100"}
+{"tool": "run_command", "args": "grep -rn \"uvm_sequence_library\" ."}
+{"tool": "run_command", "args": "git log -n 5"}
+{"tool": "search_web", "args": "\"uvm_sequence_library\" \"SEQLIB\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" \"SEQLIB\" github"}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"SEQLIB\""}
+{"tool": "search_web", "args": "\"uvm_sequence_library.svh\" \"class uvm_sequence_library\" github"}
+{"tool": "search_web", "args": "\"function void init_sequence_library\" \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "site:github.com \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"task uvm_sequence_library::body\""}
+{"tool": "search_web", "args": "\"SEQLIB/START\" uvm"}
+{"tool": "search_web", "args": "site:github.com \"Starting sequence library\" uvm_sequence_library.svh"}
+{"tool": "search_web", "args": "\"class uvm_sequence_library_cfg\" \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "\"seqs_distrib\" \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "\"seqs_distrib\" \"print_array_header\" uvm_sequence_library"}
+{"tool": "search_web", "args": "\"function void uvm_sequence_library::do_print\""}
+{"tool": "search_web", "args": "\"super.do_print(printer)\" \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "\"printer.print_array_header(\\\"seqs_distrib\\\"\""}
+{"tool": "search_web", "args": "\"`define UVM_SEQUENCE_LIBRARY_UTILS\""}
+{"tool": "search_web", "args": "\"`define uvm_sequence_library_utils\" site:github.com"}
+{"tool": "search_web", "args": "\"`define uvm_add_to_seq_lib\" site:github.com"}
+{"tool": "search_web", "args": "\"m_add_typewide_sequence\" site:github.com"}
+{"tool": "search_web", "args": "\"m_static_check\" \"uvm_sequence_library\" site:github.com"}
+{"tool": "search_web", "args": "\"function bit uvm_sequence_library::m_static_check\""}
+{"tool": "search_web", "args": "\"function bit uvm_sequence_library::m_check\""}
+{"tool": "search_web", "args": "\"function bit uvm_sequence_library::m_check\" \"uvm_sequence_base\""}
+{"tool": "search_web", "args": "\"SEQLIB/\" uvm_report"}
+{"tool": "search_web", "args": "\"SEQLIB/\" site:github.com/edaplayground/eda-playground"}
+{"tool": "search_web", "args": "\"SEQLIB/NOSEQS\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/BAD_SEQ_TYPE\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB/END\" site:github.com"}
+{"tool": "search_web", "args": "\"`uvm_info(\\\"SEQLIB/START\\\"\" site:github.com"}
+{"tool": "search_web", "args": "\"`uvm_info(\\\"SEQLIB/DSTRB\\\"\" site:github.com"}
+{"tool": "search_web", "args": "\"SEQLIB\" site:github.com \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"SEQLIB/\" site:github.com/accellera-official"}
+{"tool": "search_web", "args": "site:github.com/accellera-official/uvm-core \"uvm_sequence_library.svh\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library\" site:github.com/edaplayground/eda-playground"}
+{"tool": "search_web", "args": "site:raw.githubusercontent.com/edaplayground/eda-playground \"uvm_sequence_library\""}
+{"tool": "search_web", "args": "\"class uvm_sequence_library_cfg\" site:github.com/edaplayground/eda-playground"}
+{"tool": "search_web", "args": "\"default_sequence.config\" site:github.com/edaplayground/eda-playground"}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" site:github.com/edaplayground/eda-playground"}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" \"default_sequence.config\""}
+{"tool": "search_web", "args": "\"default_sequence.config\" \"get(\" site:github.com"}
+{"tool": "search_web", "args": "\"default_sequence.selection_mode\" \"default_sequence.config\" site:github.com"}
+{"tool": "search_web", "args": "\"default_sequence.min_random_count\" site:github.com"}
+{"tool": "search_web", "args": "\"phase_name\" \"default_sequence.config\" site:github.com"}
+{"tool": "search_web", "args": "\"Starting sequence library\" site:raw.githubusercontent.com/edaplayground/eda-playground"}

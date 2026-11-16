@@ -1,0 +1,58 @@
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "run_command", "args": "find . -name \"*uvm_reg_map*\""}
+{"tool": "run_command", "args": "grep -n \"reg_rw\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/src/uvmsc/reg/uvm_reg_map.cpp 30"}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" ."}
+{"tool": "run_command", "args": "grep -rn \"reg_rw\" src/"}
+{"tool": "run_command", "args": "git log -S \"reg_rw\" -p src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log 1"}
+{"tool": "call_mcp_tool", "args": "{} scbench run_regression"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{'test': 'examples/simple/factory/basic'} scbench run_test"}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'factory'} scbench list_tests"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/factory/basic'} scbench run_test"}
+{"tool": "run_command", "args": "git grep \"class reg_rw\""}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'aliasing'} scbench list_tests"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/aliasing'} scbench run_test"}
+{"tool": "run_command", "args": "grep -n \"UVM_WARNING\" <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/build-scbench/tests/Testing/uvm-systemc/examples/simple/registers/models/aliasing/sc_main.log"}
+{"tool": "run_command", "args": "git log -n 5"}
+{"tool": "run_command", "args": "grep -n \"adapter\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/factory/basic/"}
+{"tool": "run_command", "args": "git grep \"reg_rw\" -- \"*golden*\""}
+{"tool": "read_file", "args": "55 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/examples/uvmsc/simple/registers/models/aliasing/reg_agent.h 25"}
+{"tool": "run_command", "args": "find . -path \"*factory/basic*golden*\""}
+{"tool": "read_file", "args": "30 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/uvmsv.log 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/uvmsv.log 31"}
+{"tool": "run_command", "args": "grep \"TPRGED\" tests/tests/uvm-systemc/examples/simple/registers/models/*/golden/*.log"}
+{"tool": "run_command", "args": "grep -C 5 \"TPRGED\" tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log"}
+{"tool": "run_command", "args": "tail -n 35 tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log"}
+{"tool": "run_command", "args": "tail -n 35 tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log"}
+{"tool": "run_command", "args": "head -n 20 tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log"}
+{"tool": "run_command", "args": "find . -name \"*verify-uvm*\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/scripts/verify-uvm.pl 1"}
+{"tool": "read_file", "args": "95 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/src/uvmsc/reg/uvm_reg_map.cpp 40"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__tools__s1/src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/factory/basic'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/aliasing'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{'pattern': 'ro_wo'} scbench list_tests"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/ro_wo_same_addr'} scbench run_test"}
+{"tool": "call_mcp_tool", "args": "{} scbench run_regression"}
+{"tool": "read_file", "args": "30 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/factory/basic/golden/test.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/factory/basic'} scbench run_test"}
+{"tool": "read_file", "args": "1385 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log 1360"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/registers/models/aliasing/golden/sc_main.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/aliasing'} scbench run_test"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log 25"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-map-internal-names__tools__s1/tests/tests/uvm-systemc/examples/simple/registers/models/ro_wo_same_addr/golden/sc_main.log"}
+{"tool": "call_mcp_tool", "args": "{'test': 'uvm-systemc/examples/simple/registers/models/ro_wo_same_addr'} scbench run_test"}
+{"tool": "run_command", "args": "git status"}
+{"tool": "call_mcp_tool", "args": "{} scbench run_regression"}
+{"tool": "run_command", "args": "find examples/ -name \"golden\" -o -name \"*.log\""}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/99fixes/"}

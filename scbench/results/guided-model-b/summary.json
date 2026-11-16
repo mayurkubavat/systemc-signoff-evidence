@@ -1,0 +1,502 @@
+{
+  "config": {
+    "first_start": "2026-11-15T17:36:03-08:00",
+    "model": "model-b",
+    "max_turns": 60,
+    "timeout_s": 3600,
+    "arms": [
+      "shell-guided",
+      "tools-guided"
+    ],
+    "seeds": 1,
+    "only": null,
+    "tasks_sha256": "9d09d8d42d86d897",
+    "runs_planned": 30,
+    "order": "seed-major",
+    "jobs": 2,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "harness_commit": "0b6f107",
+    "last_start": "2026-11-15T17:36:03-08:00",
+    "starts": [
+      "2026-11-15T17:36:03-08:00"
+    ]
+  },
+  "runs_planned": 30,
+  "records": 30,
+  "status_counts": {
+    "fail": 9,
+    "pass": 21
+  },
+  "rate_limited_events_in_log": 0,
+  "error_events_in_log": 0,
+  "limit_probes": 0,
+  "usage_window_first_last": null,
+  "suspect_tasks": [
+    "uvm-systemc:uvm-sequence-library"
+  ],
+  "arms": {
+    "shell-guided": {
+      "graded": 15,
+      "pass": 10,
+      "pass_at_1": 0.667,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 15,
+          "pass": 10,
+          "rate": 0.667
+        }
+      },
+      "pass_at_3": 0.667,
+      "pass_at_3_tasks": 15,
+      "any_pass_tasks": 10,
+      "turns": {
+        "n": 15,
+        "mean": 29.2,
+        "median": 27,
+        "total": 438
+      },
+      "wall_s": {
+        "n": 15,
+        "mean": 197.55,
+        "median": 174.0,
+        "total": 2963.3
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 15,
+        "mean": 17522.87,
+        "median": 15582,
+        "total": 262843
+      },
+      "tool_calls": {
+        "scbench": 0,
+        "Bash": 356,
+        "total": 701,
+        "scbench_per_run": 0,
+        "Bash_per_run": 23.73
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 0,
+      "timed_out": 0
+    },
+    "tools-guided": {
+      "graded": 15,
+      "pass": 11,
+      "pass_at_1": 0.733,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 15,
+          "pass": 11,
+          "rate": 0.733
+        }
+      },
+      "pass_at_3": 0.733,
+      "pass_at_3_tasks": 15,
+      "any_pass_tasks": 11,
+      "turns": {
+        "n": 15,
+        "mean": 25.33,
+        "median": 25,
+        "total": 380
+      },
+      "wall_s": {
+        "n": 15,
+        "mean": 190.45,
+        "median": 190.6,
+        "total": 2856.7
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 15,
+        "mean": 17507.4,
+        "median": 16920,
+        "total": 262611
+      },
+      "tool_calls": {
+        "scbench": 147,
+        "Bash": 171,
+        "total": 719,
+        "scbench_per_run": 9.8,
+        "Bash_per_run": 11.4
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 0,
+      "timed_out": 0
+    }
+  },
+  "arms_valid": {
+    "shell-guided": {
+      "graded": 14,
+      "pass": 10,
+      "pass_at_1": 0.714,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 14,
+          "pass": 10,
+          "rate": 0.714
+        }
+      },
+      "pass_at_3": 0.714,
+      "pass_at_3_tasks": 14,
+      "any_pass_tasks": 10,
+      "turns": {
+        "n": 14,
+        "mean": 28.36,
+        "median": 26.5,
+        "total": 397
+      },
+      "wall_s": {
+        "n": 14,
+        "mean": 192.28,
+        "median": 170.55,
+        "total": 2691.9
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 14,
+        "mean": 16181.57,
+        "median": 15297.0,
+        "total": 226542
+      },
+      "tool_calls": {
+        "scbench": 0,
+        "Bash": 321,
+        "total": 625,
+        "scbench_per_run": 0,
+        "Bash_per_run": 22.93
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 0,
+      "timed_out": 0
+    },
+    "tools-guided": {
+      "graded": 14,
+      "pass": 11,
+      "pass_at_1": 0.786,
+      "pass_at_1_per_seed": {
+        "0": {
+          "graded": 14,
+          "pass": 11,
+          "rate": 0.786
+        }
+      },
+      "pass_at_3": 0.786,
+      "pass_at_3_tasks": 14,
+      "any_pass_tasks": 11,
+      "turns": {
+        "n": 14,
+        "mean": 24.79,
+        "median": 24.5,
+        "total": 347
+      },
+      "wall_s": {
+        "n": 14,
+        "mean": 182.79,
+        "median": 188.85,
+        "total": 2559.0
+      },
+      "cost_usd": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "total": 0
+      },
+      "output_tokens": {
+        "n": 14,
+        "mean": 16035.43,
+        "median": 16352.0,
+        "total": 224496
+      },
+      "tool_calls": {
+        "scbench": 138,
+        "Bash": 156,
+        "total": 648,
+        "scbench_per_run": 9.86,
+        "Bash_per_run": 11.14
+      },
+      "web_search_calls": 0,
+      "hit_max_turns": 0,
+      "timed_out": 0
+    }
+  },
+  "per_task": {
+    "systemc:signal-default-name": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:component-schedule-lifetime": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:config-db-exists": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:global-forward-declarations": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:hdl-type-mismatch-message": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:objection-callbacks": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:re-match-search": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:reg-deterministic-order": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:reg-map-internal-names": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:reg-map-small-memory": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:resource-pool-spell-check": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:sequencer-killed-requests": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:uvm-heartbeat": {
+      "shell-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "pass"
+        }
+      }
+    },
+    "uvm-systemc:uvm-pool": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    },
+    "uvm-systemc:uvm-sequence-library": {
+      "shell-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      },
+      "tools-guided": {
+        "seeds": {
+          "0": "fail"
+        }
+      }
+    }
+  },
+  "failures": [
+    {
+      "task": "systemc:signal-default-name",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "configure: -- SystemCTLM_VERSION = 2.0.6\n-- INSTALL_TO_LIB_BUILD_TYPE_DIR = OFF\n-- INSTALL_TO_LIB_TARGET_ARCH_DIR = OFF\n-- INSTALL_LIB_TARGET_ARCH_SYMLINK = OFF\n-- -------",
+      "turns": 24,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:reg-deterministic-order",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'registers of the block: reg0 reg1 reg2 reg3', got ''",
+      "turns": 31,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:reg-deterministic-order",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'registers of the block: reg0 reg1 reg2 reg3', got ''",
+      "turns": 33,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:sequencer-killed-requests",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "uvm: UVM_ERROR <worktree>/uvm-systemc__sequencer-killed-requests__shell-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp(851) @",
+      "turns": 40,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:sequencer-killed-requests",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "uvm: UVM_ERROR <worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp(852) @",
+      "turns": 33,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:uvm-pool",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'copy           uvm_pool          -     @<removed by verify-uvm.pl>', got 'copy           uvm::uvm_pool     -     @<removed by verify-uvm.pl>'",
+      "turns": 26,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:uvm-pool",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "golden: expected 'copy           uvm_pool          -     @<removed by verify-uvm.pl>', got 'copy           uvm::uvm_pool     -     @<removed by verify-uvm.pl>'",
+      "turns": 16,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:uvm-sequence-library",
+      "arm": "shell-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: uvm_sequence_library.h:521: assigning to 'uvm_object_wrapper *' from 'const uvm_object_wrapper *' discards qualifiers",
+      "turns": 41,
+      "terminal_reason": null
+    },
+    {
+      "task": "uvm-systemc:uvm-sequence-library",
+      "arm": "tools-guided",
+      "seed": 0,
+      "status": "fail",
+      "reason": "build: uvm_sequence_library.h:519: assigning to 'uvm_object_wrapper *' from 'const uvm_object_wrapper *' discards qualifiers",
+      "turns": 33,
+      "terminal_reason": null
+    }
+  ]
+}

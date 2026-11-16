@@ -5,28 +5,27 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 187,
     "non_json_lines": 0,
     "tool_calls": {
-      "manage_task": 1,
-      "read_file": 13,
-      "run_command": 18,
-      "search_web": 27
+      "manage_task": 5,
+      "read_file": 14,
+      "run_command": 38
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 57,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 303513,
-      "output_tokens": 7078,
-      "thinking_tokens": 4135,
-      "cache_read_input_tokens": 3034539
+      "input_tokens": 259354,
+      "output_tokens": 13930,
+      "thinking_tokens": 8525,
+      "cache_read_input_tokens": 2932439
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 283.8,
+    "wall_s": 259.4,
     "graded_status": "fail"
   },
   "grade": {
@@ -40,7 +39,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-00basic-12heartbeat",
-          "seconds": 4.1,
+          "seconds": 3.7,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__uvm-heartbeat__shell__s1/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",

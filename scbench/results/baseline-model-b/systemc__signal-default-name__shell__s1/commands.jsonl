@@ -1,0 +1,38 @@
+{"tool": "run_command", "args": "ls -la && rg -n \"class sc_signal\\b|sc_signal_t\" src/"}
+{"tool": "run_command", "args": "rg -n \"sc_gen_unique_name\" src/sysc/communication/ && rg -n \"class sc_buffer\" src/"}
+{"tool": "read_file", "args": "450 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h 145"}
+{"tool": "read_file", "args": "673 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h 451"}
+{"tool": "read_file", "args": "100 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_buffer.h 1"}
+{"tool": "run_command", "args": "which cmake ninja ctest; echo \"SYSTEMC_HOME=$SYSTEMC_HOME\"; ls -la \"$SYSTEMC_HOME\" 2>/dev/null || true"}
+{"tool": "run_command", "args": "ls tests/ && rg -n \"ENABLE_TESTS|BUILD_TESTING|add_test|SYSTEMC\" CMakeLists.txt tests/CMakeLists.txt 2>/dev/null || true"}
+{"tool": "read_file", "args": "120 <worktree>/systemc__signal-default-name__shell__s1/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "rg -n \"ENABLE_REGRESSION\" CMakeLists.txt cmake/"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "cmake --build build --target systemc"}
+{"tool": "read_file", "args": "150 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/kernel/sc_name_gen.cpp 1"}
+{"tool": "run_command", "args": "rg -n \"sc_signal_t\\b\" src/"}
+{"tool": "read_file", "args": "120 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal_resolved.h 60"}
+{"tool": "read_file", "args": "130 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal_rv.h 95"}
+{"tool": "run_command", "args": "find tests/systemc/communication -maxdepth 3"}
+{"tool": "run_command", "args": "find tests/systemc/communication/sc_signal -maxdepth 2"}
+{"tool": "read_file", "args": "150 <worktree>/systemc__signal-default-name__shell__s1/tests/systemc/communication/sc_signal/constructors/test01.cpp 1"}
+{"tool": "run_command", "args": "ls -la tests/systemc/communication/sc_signal/constructors/golden/ && cat tests/systemc/communication/sc_signal/constructors/golden/expected.log 2>/dev/null || head -n 50 tests/systemc/communication/sc_signal/constructors/golden/*"}
+{"tool": "run_command", "args": "cmake --build build --target systemc-communication-sc_signal-constructors && ctest --test-dir build -R \"sc_signal/constructors\" --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R sc_signal"}
+{"tool": "run_command", "args": "ctest --test-dir build -N | head -n 30"}
+{"tool": "run_command", "args": "rg -n \"enable_testing|BUILD_TESTING\" CMakeLists.txt cmake/"}
+{"tool": "run_command", "args": "ctest --test-dir build/tests -N -R sc_signal"}
+{"tool": "run_command", "args": "ctest --test-dir build/tests -R \"sc_signal/constructors\" --output-on-failure"}
+{"tool": "read_file", "args": "145 <worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h 60"}
+{"tool": "read_file", "args": "150 <worktree>/systemc__signal-default-name__shell__s1/tests/CMakeLists.txt 120"}
+{"tool": "write_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/tests/systemc/communication/sc_signal/default_name/test01.cpp"}
+{"tool": "write_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/tests/systemc/communication/sc_signal/default_name/golden/test01.log"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/tests/systemc/communication/sc_signal/default_name/test01.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target systemc-communication-sc_signal-default_name && ctest --test-dir build/tests -R \"sc_signal/default_name\" --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "edit_file", "args": "<worktree>/systemc__signal-default-name__shell__s1/src/sysc/communication/sc_signal.h"}
+{"tool": "run_command", "args": "cmake --build build --target systemc systemc-communication-sc_signal-default_name systemc-communication-sc_signal-constructors && ctest --test-dir build/tests -R \"sc_signal/(default_name|constructors)\" --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target all-tests && ctest --test-dir build/tests -R \"communication/sc_(signal|buffer)\" --output-on-failure -j8"}
+{"tool": "run_command", "args": "git status && git diff src/"}

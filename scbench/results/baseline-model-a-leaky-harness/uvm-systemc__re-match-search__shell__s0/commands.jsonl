@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "git log -n 5 --oneline"}
+{"tool": "run_command", "args": "git grep \"uvm_re_match\""}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME: $SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "which cmake ninja ctest"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DCMAKE_CXX_STANDARD=17"}
+{"tool": "run_command", "args": "git grep \"ENABLE_REGRESSION\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ctest --test-dir build -N"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure"}
+{"tool": "run_command", "args": "ninja -C build -t targets | head -n 30"}
+{"tool": "run_command", "args": "ninja -C build all"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__re-match-search__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__re-match-search__shell__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_globals.cpp 70"}
+{"tool": "read_file", "args": "580 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_globals.cpp 450"}
+{"tool": "read_file", "args": "455 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_globals.cpp 380"}
+{"tool": "read_file", "args": "425 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_globals.cpp 340"}
+{"tool": "read_file", "args": "345 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_globals.cpp 315"}
+{"tool": "manage_task", "args": "status <id>/task-32"}
+{"tool": "run_command", "args": "git grep -n \"uvm_glob_to_re\""}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_resource_base.cpp 120"}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_resource_base.cpp 155"}
+{"tool": "run_command", "args": "git log -S \"uvm_glob_to_re\" -p src/uvmsc/base/uvm_globals.cpp"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure"}
+{"tool": "manage_task", "args": "status <id>/task-55"}
+{"tool": "run_command", "args": "git grep -n \"set(\" src/uvmsc/conf/uvm_resource_db.h"}
+{"tool": "read_file", "args": "235 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_resource_db.h 190"}
+{"tool": "run_command", "args": "git grep -n \"uvm_resource(\" src/"}
+{"tool": "read_file", "args": "165 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_resource.h 145"}
+{"tool": "run_command", "args": "git grep -n \"uvm_resource_base::uvm_resource_base\" src/uvmsc/conf/"}
+{"tool": "read_file", "args": "90 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_resource_base.cpp 50"}
+{"tool": "run_command", "args": "git grep -n \"match_scope\" src/uvmsc/conf/"}
+{"tool": "run_command", "args": "git log -S \"The glob string is empty\""}
+{"tool": "search_web", "args": "\"uvm_glob_to_re\" empty string"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"examples/integrated/ubus\" --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"01twodomains\" --output-on-failure"}
+{"tool": "read_file", "args": "340 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_config_db.h 270"}
+{"tool": "read_file", "args": "280 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_config_db.h 230"}
+{"tool": "read_file", "args": "470 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/conf/uvm_config_db.h 400"}
+{"tool": "run_command", "args": "git grep \"uvm_root(\" src/"}
+{"tool": "run_command", "args": "git grep -n \"get_full_name\" src/uvmsc/base/uvm_component.cpp"}
+{"tool": "read_file", "args": "170 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_component.cpp 145"}
+{"tool": "run_command", "args": "git grep -n \"uvm_root::uvm_root\" src/uvmsc/base/uvm_root.cpp"}
+{"tool": "read_file", "args": "110 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_root.cpp 75"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_component.cpp 80"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_component.cpp 50"}
+{"tool": "run_command", "args": "git grep -n \"get_full_name\" src/uvmsc/base/uvm_root.*"}
+{"tool": "run_command", "args": "git grep -n \"m_add_child\" src/uvmsc/base/uvm_component.cpp"}
+{"tool": "read_file", "args": "1640 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_component.cpp 1595"}
+{"tool": "run_command", "args": "git grep -n \"m_name\" src/uvmsc/base/uvm_component.*"}
+{"tool": "read_file", "args": "1515 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_component.cpp 1495"}
+{"tool": "read_file", "args": "1675 <worktree>/uvm-systemc__re-match-search__shell__s0/src/uvmsc/base/uvm_component.cpp 1650"}
+{"tool": "run_command", "args": "git grep \"get_full_name\" src/uvmsc/base/uvm_root.h"}
+{"tool": "search_web", "args": "\"uvm_config_db\" wait_modified \"m_waiters\""}
+{"tool": "search_web", "args": "\"m_waiters[field_name]\" uvm_config_db"}
+{"tool": "search_web", "args": "\"w = m_waiters[field_name].get(i)\" \"uvm_config_db.svh\""}

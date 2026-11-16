@@ -1,0 +1,51 @@
+{"tool": "run_command", "args": "rg -n \"get_registers|get_memories|get_blocks|m_regs|m_mems|m_blks|m_maps\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "ls -la && find tests -maxdepth 3 -iname \"*reg*\""}
+{"tool": "run_command", "args": "rg -n \"std::map<\" src/uvmsc/reg/ && find tests examples -maxdepth 4 -type d"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/70regs && head -n 40 CMakeLists.txt"}
+{"tool": "run_command", "args": "rg -n \"option\\(|ENABLE_TESTS|BUILD_TESTING|tests\" CMakeLists.txt && find tests/tests/uvm-systemc/unit_tests/70regs -maxdepth 3"}
+{"tool": "read_file", "args": "540 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/CMakeLists.txt 520"}
+{"tool": "run_command", "args": "cat tests/CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/test.cpp 1"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-10maxsize && ctest --test-dir build -R 70regs/02regs/10maxsize --output-on-failure"}
+{"tool": "read_file", "args": "390 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_block.h 335"}
+{"tool": "read_file", "args": "335 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.h 280"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/10maxsize/golden/test.log 1"}
+{"tool": "run_command", "args": "rg -n \"create_map|add_submap\" src/uvmsc/reg/uvm_reg_block.cpp src/uvmsc/reg/uvm_reg_map.cpp | head -n 30"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=\"$SYSTEMC_HOME\" && cmake --build build --target unit_tests-70regs-02regs-30creation_order && ctest --test-dir build -R 70regs/02regs/30creation_order --output-on-failure"}
+{"tool": "run_command", "args": "rg -n \"\\.erase\\(\" src/uvmsc/reg/"}
+{"tool": "run_command", "args": "rg -n \"m_submaps|m_regs_info|m_mems_info|m_parent_maps\" src/uvmsc/reg/uvm_reg_map.cpp"}
+{"tool": "run_command", "args": "rg -n \"m_roots|add_map\" src/uvmsc/reg/uvm_reg_block.cpp src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_model.h 1"}
+{"tool": "run_command", "args": "tail -n 30 src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "run_command", "args": "rg -n \"uvm_reg_model\\.h\" src/uvmsc/reg/uvm_reg_block.h src/uvmsc/reg/uvm_reg_map.h src/uvmsc/reg/uvm_reg.h src/uvmsc/reg/uvm_mem.h"}
+{"tool": "read_file", "args": "1800 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.cpp 1780"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_model.h"}
+{"tool": "read_file", "args": "432 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg.h 424"}
+{"tool": "read_file", "args": "393 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_mem.h 370"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_block.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_map.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_mem.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_mem.h"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-30creation_order && ctest --test-dir build -R 70regs/02regs/30creation_order --output-on-failure"}
+{"tool": "read_file", "args": "315 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/src/uvmsc/reg/uvm_reg_block.h 295"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-30creation_order && ctest --test-dir build -R 70regs/02regs/30creation_order --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-70regs-02regs-30creation_order && ctest --test-dir build -R 70regs/02regs/30creation_order --output-on-failure"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"70regs|registers\""}
+{"tool": "run_command", "args": "cmake --build build --target \\\n  examples-simple-registers-models-aliasing \\\n  examples-simple-registers-models-fifo_reg \\\n  examples-simple-registers-models-ro_wo_same_addr \\\n  unit_tests-70regs-01fields-01reset \\\n  unit_tests-70regs-01fields-02policy \\\n  unit_tests-70regs-01fields-04write \\\n  unit_tests-70regs-01fields-10maxsize \\\n  unit_tests-70regs-02regs-10maxsize \\\n  unit_tests-70regs-02regs-20compare_mismatch \\\n  unit_tests-70regs-02regs-30creation_order \\\n  unit_tests-70regs-05mem-10maxsize \\\n  unit\u2026"}
+{"tool": "read_file", "args": "105 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/golden/test.log 75"}
+{"tool": "read_file", "args": "105 <worktree>/uvm-systemc__reg-deterministic-order__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/rdb.h 60"}
+{"tool": "run_command", "args": "git status -s && git diff --stat"}

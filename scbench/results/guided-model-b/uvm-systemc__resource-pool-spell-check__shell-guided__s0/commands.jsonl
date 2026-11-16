@@ -1,0 +1,39 @@
+{"tool": "run_command", "args": "rg -n \"spell_check|spell_chkr\" src test"}
+{"tool": "run_command", "args": "rg -n \"spell_check|uvm_spell_chkr\" ~/Tools/uvm-core/src"}
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "read_file", "args": "140 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 95"}
+{"tool": "read_file", "args": "340 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 300"}
+{"tool": "read_file", "args": "250 ~/Tools/uvm-core/src/base/uvm_spell_chkr.svh 1"}
+{"tool": "run_command", "args": "find tests -maxdepth 4 -name \"CMakeLists.txt\" -o -name \"*.cpp\" | head -n 40"}
+{"tool": "run_command", "args": "find tests -maxdepth 3 -type d"}
+{"tool": "run_command", "args": "rg -l \"uvm_resource_db|uvm_resource_pool\" tests"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests -maxdepth 2"}
+{"tool": "run_command", "args": "rg -l \"config_db|resource\" tests/tests/uvm-systemc"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.h 1"}
+{"tool": "run_command", "args": "rg -n \"read_by_name|get_by_name\" src/uvmsc/conf/"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/bugs -maxdepth 2"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && which cmake ninja ctest"}
+{"tool": "run_command", "args": "rg -n \"ENABLE_REGRESSION|CMAKE_PREFIX_PATH|SYSTEMC\" CMakeLists.txt"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests/00basic -type f"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/configuration/manual/sc_main.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/examples/simple/configuration/manual/golden/sc_main.log 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"config|resource|basic\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "read_file", "args": "183 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.h 121"}
+{"tool": "run_command", "args": "rg -n \"UVM_INFO|uvm_report_info\" src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02spell_check/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02spell_check/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON && cmake --build build --target unit_tests-00basic-99fixes-02spell_check"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 02spell_check --output-on-failure"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp 1"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/src/uvmsc/conf/uvm_resource_pool.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02spell_check && ctest --test-dir build -R 02spell_check --output-on-failure"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02spell_check/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-00basic-99fixes-02spell_check && ctest --test-dir build -R 02spell_check --output-on-failure"}
+{"tool": "run_command", "args": "cmake --build build --target examples-simple-configuration-manual unit_tests-00basic-00hello unit_tests-00basic-99fixes-01global_comparer unit_tests-00basic-99fixes-02spell_check && ctest --test-dir build -R \"configuration|00basic\" --output-on-failure"}
+{"tool": "run_command", "args": "git status"}

@@ -1,5 +1,5 @@
 {
-  "first_start": "2026-11-15T17:36:23-08:00",
+  "first_start": "2026-11-16T00:16:19-08:00",
   "model": "model-a",
   "max_turns": 60,
   "timeout_s": 3600,
@@ -12,11 +12,11 @@
   "tasks_sha256": "9d09d8d42d86d897",
   "runs_planned": 30,
   "order": "seed-major",
-  "jobs": 1,
+  "jobs": 3,
   "guided_sha256": "4b0a3d727de44ed1",
-  "harness_commit": "0b6f107",
-  "last_start": "2026-11-15T17:36:23-08:00",
+  "harness_commit": "e281cad",
+  "last_start": "2026-11-16T00:16:19-08:00",
   "starts": [
-    "2026-11-15T17:36:23-08:00"
+    "2026-11-16T00:16:19-08:00"
   ]
 }

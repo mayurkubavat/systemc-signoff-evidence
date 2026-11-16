@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "grep -rn \"uvm_objection_callback\" ~/Tools/uvm-core/src/"}
+{"tool": "read_file", "args": "0 1440 ~/Tools/uvm-core/src/base/uvm_objection.svh 1385"}
+{"tool": "read_file", "args": "0 1460 ~/Tools/uvm-core/src/base/uvm_objection.svh 1441"}
+{"tool": "read_file", "args": "0 1035 ~/Tools/uvm-core/src/base/uvm_objection.svh 960"}
+{"tool": "read_file", "args": "0 90 ~/Tools/uvm-core/src/base/uvm_objection.svh 70"}
+{"tool": "run_command", "args": "find src include -type f -name \"*objection*\""}
+{"tool": "run_command", "args": "find src -maxdepth 3"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvm.h 1"}
+{"tool": "read_file", "args": "0 245 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvm.h 101"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvm 1"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/phasing/uvm_phasing.h 1"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "0 252 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/phasing/uvm_objection.h 101"}
+{"tool": "run_command", "args": "grep -rn \"uvm_callbacks<\" src/"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/macros/uvm_callback_defines.h 1"}
+{"tool": "run_command", "args": "grep -rn \"UVM_DO_CALLBACKS\" src/"}
+{"tool": "run_command", "args": "grep -rn \"uvm_reg_cb\" src/"}
+{"tool": "read_file", "args": "0 60 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 30"}
+{"tool": "run_command", "args": "grep -rn \"uvm_reg_cbs\" src/uvmsc/cb/"}
+{"tool": "run_command", "args": "grep -n -C 5 \"uvm_do_callbacks\" ~/Tools/uvm-core/src/base/uvm_objection.svh"}
+{"tool": "run_command", "args": "grep -n -A 30 \"void uvm_objection::raised\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "0 370 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/phasing/uvm_objection.cpp 340"}
+{"tool": "run_command", "args": "grep -n -C 5 \"raised(\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/phasing/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -rn \"uvm_objection_callback\" ."}
+{"tool": "run_command", "args": "grep -rn \"uvm_objection_cbs\" ."}
+{"tool": "run_command", "args": "find tests -name \"*objection*\""}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/04objection tests/tests/uvm-systemc/examples/simple/objections"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/40phasing/"}
+{"tool": "run_command", "args": "find tests -name \"CMakeLists.txt\""}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "0 186 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME: $SYSTEMC_HOME\""}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "0 300 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/CMakeLists.txt 200"}
+{"tool": "read_file", "args": "0 420 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/CMakeLists.txt 370"}
+{"tool": "read_file", "args": "0 559 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/CMakeLists.txt 470"}
+{"tool": "run_command", "args": "ls -d *build* 2>/dev/null || echo \"No build dir\""}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_BUILD_TYPE=Debug"}
+{"tool": "run_command", "args": "ninja -C build unit_tests-40phasing-04objection"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 04objection -V"}
+{"tool": "read_file", "args": "0 165 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 100"}
+{"tool": "read_file", "args": "0 300 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 240"}
+{"tool": "run_command", "args": "grep -rn \"check_registration\" src/uvmsc/cb/"}
+{"tool": "read_file", "args": "0 160 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks_base.cpp 120"}
+{"tool": "read_file", "args": "0 862 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 810"}
+{"tool": "run_command", "args": "grep -rn \"::add(\" ."}
+{"tool": "run_command", "args": "grep -rn \"uvm_report_catcher\" src/uvmsc/report/"}
+{"tool": "read_file", "args": "0 240 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/report/uvm_report_catcher.h 220"}
+{"tool": "run_command", "args": "grep -rn \"m_register_cb\" src/"}
+{"tool": "read_file", "args": "0 810 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/base/uvm_object.cpp 790"}
+{"tool": "read_file", "args": "0 100 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callback_iter.h 1"}
+{"tool": "read_file", "args": "0 680 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 580"}
+{"tool": "read_file", "args": "0 810 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 780"}
+{"tool": "run_command", "args": "grep -rn -A 30 \"m_get_tw_cb_q\" src/uvmsc/cb/"}
+{"tool": "read_file", "args": "0 380 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 300"}
+{"tool": "read_file", "args": "0 520 <worktree>/uvm-systemc__objection-callbacks__shell-guided__s0/src/uvmsc/cb/uvm_callbacks.h 465"}
+{"tool": "run_command", "args": "grep -rn \"UVM_CB_TRACE_NOOBJ\" src/"}
+{"tool": "run_command", "args": "git log -p -n 1 src/uvmsc/macros/uvm_callback_defines.h"}

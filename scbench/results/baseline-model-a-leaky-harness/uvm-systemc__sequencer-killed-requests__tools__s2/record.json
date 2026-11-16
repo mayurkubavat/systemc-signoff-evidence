@@ -1,0 +1,77 @@
+{
+  "task": "uvm-systemc:sequencer-killed-requests",
+  "arm": "tools",
+  "seed": 2,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 181,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 1,
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 1,
+      "read_file": 22,
+      "run_command": 27,
+      "search_web": 7
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 263365,
+      "output_tokens": 26360,
+      "thinking_tokens": 22637,
+      "cache_read_input_tokens": 2595699
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 230.3,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/30seq/01lock_zombie",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__sequencer-killed-requests__tools__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/01lock_zombie/test.log",
+        "golden_diff": [
+          "--- 01lock_zombie/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -2,23 +2,3 @@",
+          " UVM_INFO @ 0 s: reporter [RNTST] Running test test...",
+          " 10 ns: driver got item 100",
+          " 10 ns: the two waiting processes were killed",
+          "-UVM_ERROR <removed by verify-uvm.pl> @ 10 ns: test.sqr [SEQLCKZMB] The task responsible for requesting a lock on sequencer 'test.sqr' for sequence 'test.sqr.lock_zombie' has been killed, to avoid a deadlock the sequence will be removed from the arbitration queues.",
+          "-UVM_ERROR <removed by verify-uvm.pl> @ 10 ns: test.sqr [SEQREQZMB] The task responsible for requesting a wait_for_grant on sequencer 'test.sqr' for sequence 'grant_zombie' has been killed, to avoid a deadlock the sequence will be removed from the arbitration queues.",
+          "-20 ns: driver got item 101",
+          "-30 ns: driver got item 102",
+          "-40 ns: driver got item 300",
+          "-50 ns: driver got item 200",
+          "-60 ns: driver got item 201",
+          "-sequencer is free",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 210 ns: reporter [UVM/REPORT/SERVER]",
+          "---- UVM Report Summary ---",
+          "-** Report counts by severity",
+          "-UVM_INFO      :   1",
+          "-UVM_WARNING   :   0",
+          "-UVM_ERROR     :   2",
+          "-UVM_FATAL     :   0",
+          "-** Report counts by id",
+          "-[RNTST]                 1",
+          "-[SEQLCKZMB]             1",
+          "-[SEQREQZMB]             1",
+          "-UVM_INFO @ 210 ns: reporter [FINISH] UVM-SystemC phasing completed; simulation finished"
+        ]
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

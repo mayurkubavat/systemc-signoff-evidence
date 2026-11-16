@@ -1,0 +1,60 @@
+{"tool": "run_command", "args": "find src/uvmsc/base tests/uvmsc -maxdepth 3 | sort"}
+{"tool": "run_command", "args": "find ~/Tools/uvm-core/src -name \"*heartbeat*\""}
+{"tool": "run_command", "args": "ls -la && echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "find tests -maxdepth 3 | sort | head -n 60"}
+{"tool": "read_file", "args": "450 ~/Tools/uvm-core/src/base/uvm_heartbeat.svh 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/files.am 1"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests -maxdepth 2 | sort"}
+{"tool": "run_command", "args": "find src/uvmsc -name \"*objection*\" -o -name \"*callback*\""}
+{"tool": "run_command", "args": "rg -n \"sc_spawn|sc_process_handle\" src/uvmsc/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/phasing/uvm_objection_callback.h 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_event.h 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DBUILD_TESTS=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/golden/test.log 1"}
+{"tool": "read_file", "args": "120 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_object_globals.h 1"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_event.cpp 80"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvm.h 1"}
+{"tool": "run_command", "args": "ls -la src/ src/uvmsc/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvm 1"}
+{"tool": "run_command", "args": "rg -n \"uvm_objection_cbs_t|raised\\(|dropped\\(\" src/uvmsc/phasing/"}
+{"tool": "run_command", "args": "rg -n \"uvm_report_fatal|uvm_report_warning|uvm_report_error\" src/uvmsc/base/uvm_component.h src/uvmsc/report/uvm_report_object.h"}
+{"tool": "read_file", "args": "365 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/phasing/uvm_objection.cpp 320"}
+{"tool": "read_file", "args": "125 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/report/uvm_report_object.h 85"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_event.h 115"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/CMakeLists.txt 101"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"objection_callbacks\""}
+{"tool": "run_command", "args": "rg -i \"heartbeat\" src/ tests/"}
+{"tool": "run_command", "args": "ls tests/tests/uvm-systemc/unit_tests/00basic/ tests/tests/uvm-systemc/unit_tests/40phasing/"}
+{"tool": "run_command", "args": "rg -n \"to_string\\(\\)|sc_time_stamp\" src/uvmsc/phasing/uvm_objection.cpp src/uvmsc/base/"}
+{"tool": "run_command", "args": "rg -n \"uvm_report_fatal\" src/uvmsc/"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/40heartbeat/test.cpp"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/40heartbeat/golden/test.log"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME && cmake --build build --target unit_tests-40phasing-40heartbeat"}
+{"tool": "run_command", "args": "rg -n \"do_delete\" src/uvmsc/cb/"}
+{"tool": "run_command", "args": "rg -n \"get_root\" src/uvmsc/base/uvm_coreservice_t.h"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_heartbeat.h"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_heartbeat.cpp"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/uvm_base.h"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/CMakeLists.txt"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/CMakeLists.txt"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/CMakeLists.txt"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/files.am"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/src/uvmsc/base/files.am"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-40heartbeat"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/40heartbeat/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-40heartbeat && ctest --test-dir build -R 40heartbeat -V"}
+{"tool": "edit_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/40heartbeat/test.cpp"}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-40heartbeat && ctest --test-dir build -R 40heartbeat -V"}
+{"tool": "write_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__shell-guided__s0/tests/tests/uvm-systemc/unit_tests/40phasing/40heartbeat/golden/test.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 40heartbeat -V"}
+{"tool": "run_command", "args": "ctest --test-dir build -N -R \"40phasing\""}
+{"tool": "run_command", "args": "cmake --build build --target unit_tests-40phasing-01predef unit_tests-40phasing-02simple_rt unit_tests-40phasing-04objection unit_tests-40phasing-05waitphase unit_tests-40phasing-06started_ended unit_tests-40phasing-08phase_ready_to_end-01basic unit_tests-40phasing-09schedules-01is_before_after unit_tests-40phasing-10domains-01twodomains unit_tests-40phasing-10domains-02reusedom unit_tests-40phasing-10domains-03lockstep unit_tests-40phasing-10domains-04lockstep_jump unit_tests-40phasing-10domains-05simple_s\u2026"}
+{"tool": "run_command", "args": "ctest --test-dir build -R 40phasing"}
+{"tool": "run_command", "args": "ctest --test-dir build -R \"10domains/01twodomains\" -V | tail -n 30"}
+{"tool": "run_command", "args": "git status -s"}

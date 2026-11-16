@@ -1,0 +1,169 @@
+{
+  "task": "uvm-systemc:objection-callbacks",
+  "arm": "shell",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 184,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 7,
+      "read_file": 19,
+      "run_command": 27,
+      "search_web": 5
+    },
+    "tool_calls_total": 58,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 262866,
+      "output_tokens": 7875,
+      "thinking_tokens": 4265,
+      "cache_read_input_tokens": 2452977
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 186.5,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/40phasing/30objection_callbacks",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-40phasing-30objection_callbacks",
+          "seconds": 6.7,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 32,
+              "col": 22,
+              "message": "expected class name"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 37,
+              "col": 65,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 38,
+              "col": 14,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 48,
+              "col": 50,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 48,
+              "col": 67,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 54,
+              "col": 51,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 54,
+              "col": 68,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 60,
+              "col": 55,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 60,
+              "col": 72,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 35,
+              "col": 38,
+              "message": "member initializer 'uvm_objection_callback' does not name a non-static data member or base class"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 40,
+              "col": 54,
+              "message": "use of undeclared identifier 'get_name'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 105,
+              "col": 5,
+              "message": "use of undeclared identifier 'uvm_objection_cbs_t'; did you mean 'uvm_objection_event'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 105,
+              "col": 26,
+              "message": "no member named 'add' in 'uvm::uvm_objection_event'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 106,
+              "col": 5,
+              "message": "use of undeclared identifier 'uvm_objection_cbs_t'; did you mean 'uvm_objection_event'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 106,
+              "col": 26,
+              "message": "no member named 'add' in 'uvm::uvm_objection_event'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 107,
+              "col": 17,
+              "message": "no member named 'callback_mode' in 'my_cb'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 116,
+              "col": 5,
+              "message": "use of undeclared identifier 'uvm_objection_cbs_t'; did you mean 'uvm_objection_event'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 116,
+              "col": 26,
+              "message": "no member named 'do_delete' in 'uvm::uvm_objection_event'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__objection-callbacks__shell__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",
+              "line": 130,
+              "col": 3,
+              "message": "use of undeclared identifier 'uvm_objection_cbs_t'; did you mean 'uvm_objection_event'?"
+            }
+          ],
+          "error_count": 19,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

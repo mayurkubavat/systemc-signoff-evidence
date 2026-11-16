@@ -9,25 +9,25 @@
     "non_json_lines": 0,
     "tool_calls": {
       "edit_file": 4,
-      "read_file": 23,
-      "run_command": 30,
-      "write_file": 2
+      "read_file": 19,
+      "run_command": 32,
+      "write_file": 3
     },
-    "tool_calls_total": 59,
+    "tool_calls_total": 58,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 244662,
-      "output_tokens": 18379,
-      "thinking_tokens": 13293,
-      "cache_read_input_tokens": 1757190
+      "input_tokens": 253957,
+      "output_tokens": 18820,
+      "thinking_tokens": 13593,
+      "cache_read_input_tokens": 2145964
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
     "guided_sha256": "4b0a3d727de44ed1",
-    "wall_s": 164.2,
+    "wall_s": 207.4,
     "graded_status": "pass"
   },
   "grade": {

@@ -1,0 +1,55 @@
+{"tool": "run_command", "args": "git status"}
+{"tool": "run_command", "args": "find . -name \"*config_db*\""}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__config-db-exists__shell__s0/src/uvmsc/conf/uvm_config_db.h 1"}
+{"tool": "read_file", "args": "490 <worktree>/uvm-systemc__config-db-exists__shell__s0/src/uvmsc/conf/uvm_config_db.h 250"}
+{"tool": "run_command", "args": "grep -rn \"get_full_name\" src/"}
+{"tool": "read_file", "args": "250 <worktree>/uvm-systemc__config-db-exists__shell__s0/src/uvmsc/conf/uvm_resource_db.h 150"}
+{"tool": "run_command", "args": "find tests -type f"}
+{"tool": "run_command", "args": "grep -rn \"uvm_config_db\" tests/"}
+{"tool": "run_command", "args": "grep -rn \"exists(\" tests/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s0/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\""}
+{"tool": "run_command", "args": "grep -i -E \"test|build_test\" CMakeLists.txt"}
+{"tool": "read_file", "args": "559 <worktree>/uvm-systemc__config-db-exists__shell__s0/CMakeLists.txt 520"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "186 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/CMakeLists.txt 100"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc/unit_tests -maxdepth 3"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/examples/simple/configuration"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/bugs/bug_184"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes"}
+{"tool": "run_command", "args": "ls -la tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp 1"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/golden/test.log 1"}
+{"tool": "run_command", "args": "ninja --version && cmake --version"}
+{"tool": "run_command", "args": "grep -rn \"SystemC\" CMakeLists.txt"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON"}
+{"tool": "run_command", "args": "ninja -C build"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "manage_task", "args": "status <id>/task-60"}
+{"tool": "schedule", "args": "10 Check task completion"}
+{"tool": "manage_task", "args": "status <id>/task-60"}
+{"tool": "schedule", "args": "5 Check task completion again"}
+{"tool": "run_command", "args": "ctest --test-dir build --output-on-failure -j8"}
+{"tool": "manage_task", "args": "status <id>/task-74"}
+{"tool": "schedule", "args": "3 Check ctest task"}
+{"tool": "manage_task", "args": "status <id>/task-74"}
+{"tool": "schedule", "args": "5 Check ctest finish"}
+{"tool": "manage_task", "args": "status <id>/task-74"}
+{"tool": "run_command", "args": "ps aux | grep -E \"ctest|python|test\""}
+{"tool": "read_file", "args": "0 200 <cli-home>/... 1"}
+{"tool": "read_file", "args": "0 1641 <cli-home>/... 1500"}
+{"tool": "manage_task", "args": "kill <id>/task-74"}
+{"tool": "run_command", "args": "./build/tests/bugs-bug_184-basic_read_write_memory_management"}
+{"tool": "manage_task", "args": "kill <id>/task-99"}
+{"tool": "run_command", "args": "git log -n 5 -p src/uvmsc/conf/uvm_config_db.h"}
+{"tool": "run_command", "args": "grep -rn \"uvm_config_db\" src/"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -type d -name \"*config*\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s0/cmake/run-test.py 1"}
+{"tool": "read_file", "args": "160 <worktree>/uvm-systemc__config-db-exists__shell__s0/cmake/run-test.py 100"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/00hello/test.cpp 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/00hello/golden/test.log 1"}
+{"tool": "run_command", "args": "find tests/tests/uvm-systemc -name \"*fixes*\""}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/tests/uvm-systemc/examples/simple/configuration/manual/sc_main.cpp 1"}

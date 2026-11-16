@@ -5,30 +5,30 @@
   "model": "model-a",
   "agent": {
     "exit": 1,
-    "events": 182,
+    "events": 180,
     "non_json_lines": 0,
     "tool_calls": {
       "mcp__scbench__build": 1,
       "mcp__scbench__list_tests": 1,
       "mcp__scbench__run_test": 1,
-      "read_file": 29,
-      "run_command": 17,
-      "search_web": 11
+      "read_file": 28,
+      "run_command": 19,
+      "search_web": 9
     },
-    "tool_calls_total": 60,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 262226,
-      "output_tokens": 16409,
-      "thinking_tokens": 12707,
-      "cache_read_input_tokens": 2640324
+      "input_tokens": 241321,
+      "output_tokens": 17809,
+      "thinking_tokens": 14071,
+      "cache_read_input_tokens": 2624177
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 196.1,
+    "wall_s": 224.2,
     "graded_status": "fail"
   },
   "grade": {
@@ -42,7 +42,7 @@
           "ok": false,
           "stage": "build",
           "target": "unit_tests-40phasing-30objection_callbacks",
-          "seconds": 6.9,
+          "seconds": 3.8,
           "errors": [
             {
               "file": "<worktree>/uvm-systemc__objection-callbacks__tools__s0/tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp",

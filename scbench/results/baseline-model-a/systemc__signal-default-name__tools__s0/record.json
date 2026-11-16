@@ -10,43 +10,52 @@
     "tool_calls": {
       "edit_file": 5,
       "mcp__scbench__build": 2,
-      "mcp__scbench__list_tests": 2,
-      "mcp__scbench__run_regression": 1,
-      "mcp__scbench__run_test": 8,
-      "read_file": 19,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_test": 5,
+      "read_file": 25,
       "run_command": 21
     },
-    "tool_calls_total": 58,
+    "tool_calls_total": 59,
     "num_turns": 60,
     "total_cost_usd": null,
     "usage": {
-      "input_tokens": 274116,
-      "output_tokens": 35496,
-      "thinking_tokens": 30823,
-      "cache_read_input_tokens": 3078747
+      "input_tokens": 269999,
+      "output_tokens": 40754,
+      "thinking_tokens": 36098,
+      "cache_read_input_tokens": 3218009
     },
     "terminal_reason": "max_turns",
     "status": "ok",
     "model_requested": "model-a",
     "max_turns": 60,
-    "wall_s": 326.7,
-    "graded_status": "pass"
+    "wall_s": 313.8,
+    "graded_status": "fail"
   },
   "grade": {
-    "passed": true,
+    "passed": false,
     "tests": [
       {
-        "passed": true,
+        "passed": false,
         "test": "systemc/communication/sc_signal/default_name",
         "seconds": 0.3,
         "uvm_counts": null,
         "first_uvm_problem": null,
-        "sim_log": "<worktree>/systemc__signal-default-name__tools__s0/build-grade/tests/Testing/systemc/communication/sc_signal/default_name/default_name.log"
+        "sim_log": "<worktree>/systemc__signal-default-name__tools__s0/build-grade/tests/Testing/systemc/communication/sc_signal/default_name/default_name.log",
+        "golden_diff": [
+          "--- default_name/golden/default_name.log",
+          "+++ default_name.log.stripped",
+          "@@ -4,4 +4,4 @@",
+          " buffer_0",
+          " buf_0",
+          "",
+          "-default constructed items: 4",
+          "+default constructed items: 8"
+        ]
       }
     ],
     "agent_diffstat": [
-      " 3 files changed, 28 insertions(+), 7 deletions(-)"
+      " 2 files changed, 14 insertions(+), 7 deletions(-)"
     ]
   },
-  "status": "pass"
+  "status": "fail"
 }

@@ -1,0 +1,58 @@
+{"tool": "run_command", "args": "ls -la <cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "read_file", "args": "<cli-home>/..."}
+{"tool": "call_mcp_tool", "args": "{} scbench build"}
+{"tool": "call_mcp_tool", "args": "{} scbench list_tests"}
+{"tool": "run_command", "args": "find src -name \"*objection*\""}
+{"tool": "run_command", "args": "ls -la src/uvmsc/base"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/base/uvm_base.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvm.h"}
+{"tool": "read_file", "args": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvm"}
+{"tool": "run_command", "args": "grep -rn -i \"heartbeat\" src/"}
+{"tool": "run_command", "args": "grep -rn -i \"heartbeat\" ."}
+{"tool": "read_file", "args": "180 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/RELEASENOTES.md 150"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" class \"UVM_ALL_ACTIVE\" \"HBFAIL\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" site:github.com file:uvm_heartbeat.svh"}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"HBFAIL\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"ILHBVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"class uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"uvm_fatal\" \"HBFAIL\" site:github.com"}
+{"tool": "read_file", "args": "150 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "257 <worktree>/uvm-systemc__uvm-heartbeat__tools__s1/src/uvmsc/phasing/uvm_objection.h 151"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"m_objection\" \"m_cntxt\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"HBFAIL\" \"Did not receive an update\""}
+{"tool": "search_web", "args": "\"class uvm_heartbeat extends uvm_object\" \"m_start_heartbeat\" OR \"set_heartbeat\" github"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"function void start\" site:github.com"}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "site:github.com \"uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "site:github.com \"src/base/uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_warning\" OR \"uvm_error\" OR \"uvm_fatal\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" site:github.com"}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "search_web", "args": "uvm_heartbeat"}
+{"tool": "search_web", "args": "\"uvm_heartbeat_callback\""}
+{"tool": "search_web", "args": "uvm_heartbeat.svh"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"Did not receive an update of\" \"last event trigger\""}
+{"tool": "search_web", "args": "\"Did not receive an update of\" site:github.com"}
+{"tool": "search_web", "args": "\"HBFAIL\" \"Did not receive an update of\""}
+{"tool": "search_web", "args": "\"Did not recieve an update of\""}
+{"tool": "search_web", "args": "uvm_heartbeat"}
+{"tool": "search_web", "args": "\"uvm_heartbeat_callback\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat_callback\" site:github.com"}
+{"tool": "search_web", "args": "uvm_heartbeat"}
+{"tool": "search_web", "args": "\"Heartbeats provide a mechanism\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"fork\" \"join_none\" \"uvm_event\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_\""}
+{"tool": "search_web", "args": "\"uvm-1.2/src/base/uvm_heartbeat.svh\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" OR \"NOEVNT\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" github"}
+{"tool": "search_web", "args": "ILHBVNT"}
+{"tool": "search_web", "args": "\"Heartbeats: Proving the Bench Works, Window by Window\""}
+{"tool": "search_web", "args": "NOEVNT"}
+{"tool": "search_web", "args": "\"NOEVNT\" \"heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_warning\" OR \"uvm_error\" OR \"uvm_fatal\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"start\""}
+{"tool": "search_web", "args": "\"start(e)\""}

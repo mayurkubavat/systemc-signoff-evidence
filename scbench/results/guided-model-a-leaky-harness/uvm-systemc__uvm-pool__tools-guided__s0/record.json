@@ -1,0 +1,171 @@
+{
+  "task": "uvm-systemc:uvm-pool",
+  "arm": "tools-guided",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_test": 1,
+      "read_file": 23,
+      "run_command": 32
+    },
+    "tool_calls_total": 58,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 265146,
+      "output_tokens": 23277,
+      "thinking_tokens": 19351,
+      "cache_read_input_tokens": 2816648
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 217.8,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/10pool",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-00basic-10pool",
+          "seconds": 16.8,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 32,
+              "col": 18,
+              "message": "no template named 'uvm_pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 59,
+              "col": 3,
+              "message": "use of undeclared identifier 'uvm_pool'; did you mean 'uvm_root'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 62,
+              "col": 38,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 62,
+              "col": 66,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 65,
+              "col": 3,
+              "message": "use of undeclared identifier 'pool'; did you mean 'powl'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 65,
+              "col": 7,
+              "message": "member reference base type 'long double (long double, long double)' is not a structure or union"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 66,
+              "col": 3,
+              "message": "use of undeclared identifier 'pool'; did you mean 'powl'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 66,
+              "col": 7,
+              "message": "member reference base type 'long double (long double, long double)' is not a structure or union"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 67,
+              "col": 3,
+              "message": "use of undeclared identifier 'pool'; did you mean 'powl'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 67,
+              "col": 7,
+              "message": "member reference base type 'long double (long double, long double)' is not a structure or union"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 68,
+              "col": 3,
+              "message": "use of undeclared identifier 'pool'; did you mean 'powl'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 68,
+              "col": 7,
+              "message": "member reference base type 'long double (long double, long double)' is not a structure or union"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 70,
+              "col": 26,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 70,
+              "col": 59,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 71,
+              "col": 35,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 72,
+              "col": 33,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 73,
+              "col": 33,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 73,
+              "col": 69,
+              "message": "use of undeclared identifier 'pool'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-pool__tools-guided__s0/tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+              "line": 75,
+              "col": 8,
+              "message": "use of undeclared identifier 'pool'; did you mean 'powl'?"
+            }
+          ],
+          "error_count": 19,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

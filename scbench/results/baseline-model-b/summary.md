@@ -24,19 +24,19 @@ Model `model-b`, vendor CLI, max turns 60, timeout 3600 s, 3 seeds, arms shell, 
 
 | Metric | shell | tools |
 |---|---|---|
-| graded runs | 45 | 45 |
+| graded runs | 42 | 42 |
 | passes | 28 | 29 |
 | pass@1 (mean over seeds) | 66.7% | 69.0% |
 | pass@1 per seed | s0: 10/14, s1: 9/14, s2: 9/14 | s0: 9/14, s1: 10/14, s2: 10/14 |
 | pass@3 (tasks with 3 graded seeds) | 71.4% of 14 | 71.4% of 14 |
-| turns mean / median | 44.49 / 44 | 32.78 / 34 |
+| turns mean / median | 43.88 / 41.50 | 31.86 / 32.50 |
 | web searches (one vendor CLI only) | 0 | 0 |
 | hit max turns / timed out | 8 / 0 | 0 / 0 |
-| agent wall time mean / median / total (min) | 4.50 / 4.30 / 200.60 | 4.70 / 4.60 / 213.40 |
+| agent wall time mean / median / total (min) | 4.40 / 4.30 / 184.00 | 4.70 / 4.50 / 196.20 |
 | API-equivalent cost mean / total (USD) | n/a | n/a |
-| output tokens mean / total | 23,623 / 1,063,064 | 23,490 / 1,057,050 |
-| tool calls per run: scbench / shell | 0 / 24.89 | 11.20 / 14.24 |
-| tool calls total: scbench / shell / all | 0 / 1120 / 2415 | 504 / 641 / 2570 |
+| output tokens mean / total | 22,003 / 924,130 | 21,864 / 918,296 |
+| tool calls per run: scbench / shell | 0 / 24.52 | 11.31 / 13.74 |
+| tool calls total: scbench / shell / all | 0 / 1030 / 2205 | 475 / 577 / 2331 |
 
 ## Per task
 

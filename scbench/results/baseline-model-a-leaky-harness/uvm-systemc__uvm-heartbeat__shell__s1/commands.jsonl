@@ -1,0 +1,59 @@
+{"tool": "run_command", "args": "ls -la"}
+{"tool": "run_command", "args": "echo \"SYSTEMC_HOME=$SYSTEMC_HOME\" && which cmake && which ninja && which ctest"}
+{"tool": "run_command", "args": "find src -name \"*.h\" -o -name \"*.cpp\""}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvm.h 1"}
+{"tool": "run_command", "args": "ls -la src/"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvm 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/base/uvm_base.h 1"}
+{"tool": "read_file", "args": "80 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "grep -n -C 5 \"tests\" CMakeLists.txt"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/CMakeLists.txt 1"}
+{"tool": "read_file", "args": "60 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/base/CMakeLists.txt 1"}
+{"tool": "run_command", "args": "ls -la src/uvmsc/base"}
+{"tool": "read_file", "args": "50 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/base/files.am 1"}
+{"tool": "run_command", "args": "cmake -B build -G Ninja -DENABLE_REGRESSION=ON -DCMAKE_PREFIX_PATH=$SYSTEMC_HOME && cmake --build build"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "run_command", "args": "ctest --test-dir build -V -R 00basic/00hello"}
+{"tool": "run_command", "args": "ninja -C build -t targets"}
+{"tool": "run_command", "args": "ninja -C build all-tests"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" filetype:svh OR \"uvm_heartbeat.svh\" github"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"class uvm_heartbeat\" site:github.com"}
+{"tool": "search_web", "args": "\"task run()\" \"uvm_heartbeat\" \"HBFAIL\" site:github.com"}
+{"tool": "run_command", "args": "ctest --test-dir build"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"HBFAIL\" \"ILHBVNT\" \"NOEVNT\""}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"class uvm_heartbeat\" site:raw.githubusercontent.com OR site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"m_cntxt\" \"m_objection\" \"HBFAIL\" site:github.com"}
+{"tool": "search_web", "args": "\"function new(string name\" \"uvm_heartbeat\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat.svh\" \"uvm_warning\" OR \"uvm_fatal\" site:github.com"}
+{"tool": "search_web", "args": "\"Did not receive an update\" \"uvm_heartbeat\" site:github.com"}
+{"tool": "manage_task", "args": "status <id>/task-47"}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"NOEVNT\" site:github.com"}
+{"tool": "search_web", "args": "\"ILHBVNT\""}
+{"tool": "run_command", "args": "cat build/tests/Testing/uvm-systemc/examples/integrated/ubus/test.run-test.log"}
+{"tool": "run_command", "args": "grep -A 20 \"Test  #4:\" build/Testing/Temporary/LastTest.log"}
+{"tool": "run_command", "args": "ctest --test-dir build -V -R integrated/ubus"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat extends uvm_object\" site:github.com"}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_error\" OR \"uvm_fatal\" OR \"uvm_warning\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" filetype:svh OR site:accellera.org OR \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"\\\"ILHBVNT\\\"\" OR \"\\\"NOEVNT\\\"\" OR \"\\\"HBFAIL\\\"\" site:github.com"}
+{"tool": "search_web", "args": "\"ILHBVNT\" \"uvm\""}
+{"tool": "search_web", "args": "site:asicpoint.com \"heartbeat\""}
+{"tool": "search_web", "args": "site:asicpoint.com \"NOEVNT\" OR \"ILHBVNT\" OR \"HBFAIL\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_heartbeat\""}
+{"tool": "search_web", "args": "\"NOEVNT\" \"uvm_warning\" OR \"uvm_error\" OR \"uvm_fatal\""}
+{"tool": "run_command", "args": "grep -rn \"UVM_ERROR\" src/"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/phasing/uvm_objection.h 1"}
+{"tool": "read_file", "args": "200 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/phasing/uvm_objection.h 100"}
+{"tool": "read_file", "args": "257 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/phasing/uvm_objection.h 201"}
+{"tool": "read_file", "args": "100 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/phasing/uvm_objection_callback.h 1"}
+{"tool": "run_command", "args": "grep -n -C 5 \"uvm_objection_cbs_t\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "run_command", "args": "grep -n -C 5 \"raised(\" src/uvmsc/phasing/uvm_objection.cpp"}
+{"tool": "read_file", "args": "370 <worktree>/uvm-systemc__uvm-heartbeat__shell__s1/src/uvmsc/phasing/uvm_objection.cpp 330"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"set_heartbeat\" \"UVM_ALL_ACTIVE\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"m_objection\" \"uvm_objection_callback\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat_callback\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"m_event\" \"m_mode\" site:github.com"}
+{"tool": "search_web", "args": "\"class uvm_heartbeat\" \"class\" \"extends uvm_objection_callback\" site:github.com"}
+{"tool": "search_web", "args": "\"uvm_heartbeat\" \"raised(\" OR \"dropped(\" site:github.com"}
