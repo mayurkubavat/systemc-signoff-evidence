@@ -1,0 +1,76 @@
+{
+  "task": "uvm-systemc:global-forward-declarations",
+  "arm": "tools",
+  "seed": 1,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 182,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 4,
+      "mcp__scbench__build": 3,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 2,
+      "mcp__scbench__run_test": 1,
+      "read_file": 22,
+      "run_command": 27
+    },
+    "tool_calls_total": 60,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 268075,
+      "output_tokens": 18726,
+      "thinking_tokens": 13937,
+      "cache_read_input_tokens": 2063257
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 205.8,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/06global_names",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-00basic-99fixes-06global_names",
+          "seconds": 4.9,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 31,
+              "col": 1,
+              "message": "reference to 'uvm_object' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 32,
+              "col": 1,
+              "message": "reference to 'uvm_printer' is ambiguous"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__global-forward-declarations__tools__s1/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp",
+              "line": 33,
+              "col": 1,
+              "message": "reference to 'uvm_event_callback' is ambiguous"
+            }
+          ],
+          "error_count": 3,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

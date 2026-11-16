@@ -1,0 +1,63 @@
+{
+  "task": "systemc:signal-default-name",
+  "arm": "shell-guided",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 1,
+      "read_file": 18,
+      "run_command": 40
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 256529,
+      "output_tokens": 17821,
+      "thinking_tokens": 13658,
+      "cache_read_input_tokens": 2006905
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 216.4,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "systemc/communication/sc_signal/default_name",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/systemc__signal-default-name__shell-guided__s0/build-grade/tests/Testing/systemc/communication/sc_signal/default_name/default_name.log",
+        "golden_diff": [
+          "--- default_name/golden/default_name.log",
+          "+++ default_name.log.stripped",
+          "@@ -1,7 +1,7 @@",
+          " SystemC Simulation",
+          "-signal_0",
+          "-sig_0",
+          "-buffer_0",
+          "-buf_0",
+          "+item_0",
+          "+item_1",
+          "+item_2",
+          "+item_3",
+          "",
+          " default constructed items: 4"
+        ]
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

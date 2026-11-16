@@ -1,0 +1,50 @@
+{
+  "task": "uvm-systemc:global-forward-declarations",
+  "arm": "shell-guided",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 180,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 4,
+      "read_file": 23,
+      "run_command": 30,
+      "write_file": 2
+    },
+    "tool_calls_total": 59,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 244662,
+      "output_tokens": 18379,
+      "thinking_tokens": 13293,
+      "cache_read_input_tokens": 1757190
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 164.2,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/06global_names",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__global-forward-declarations__shell-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 4 files changed, 9 insertions(+), 9 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

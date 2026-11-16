@@ -1,0 +1,22 @@
+{
+  "first_start": "2026-11-15T17:36:03-08:00",
+  "model": "model-b",
+  "max_turns": 60,
+  "timeout_s": 3600,
+  "arms": [
+    "shell-guided",
+    "tools-guided"
+  ],
+  "seeds": 1,
+  "only": null,
+  "tasks_sha256": "9d09d8d42d86d897",
+  "runs_planned": 30,
+  "order": "seed-major",
+  "jobs": 2,
+  "guided_sha256": "4b0a3d727de44ed1",
+  "harness_commit": "0b6f107",
+  "last_start": "2026-11-15T17:36:03-08:00",
+  "starts": [
+    "2026-11-15T17:36:03-08:00"
+  ]
+}

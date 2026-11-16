@@ -1,0 +1,176 @@
+{
+  "task": "uvm-systemc:uvm-sequence-library",
+  "arm": "tools",
+  "seed": 1,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 359,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 9,
+      "mcp__scbench__build": 2,
+      "mcp__scbench__list_tests": 2,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 4,
+      "read_file": 42,
+      "run_command": 23,
+      "write_file": 5
+    },
+    "tool_calls_total": 88,
+    "num_turns": 44,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 258890,
+      "output_tokens": 46792,
+      "thinking_tokens": 27467,
+      "cache_read_input_tokens": 2921374
+    },
+    "duration_ms": 350995,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 353.9,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/30seq/02sequence_library",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-30seq-02sequence_library",
+          "seconds": 8.4,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "redefinition of 'IsSequenceItem'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "redefinition of 'type_id'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "class member cannot be redeclared"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s1/tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp",
+              "line": 107,
+              "col": 3,
+              "message": "redefinition of 'IsSequenceItem'"
+            }
+          ],
+          "error_count": 19,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": [
+      " 4 files changed, 50 insertions(+)"
+    ]
+  },
+  "status": "fail"
+}

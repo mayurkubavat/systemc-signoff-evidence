@@ -1,0 +1,92 @@
+{
+  "task": "uvm-systemc:config-db-exists",
+  "arm": "shell",
+  "seed": 0,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 179,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 7,
+      "read_file": 16,
+      "run_command": 28,
+      "schedule": 4
+    },
+    "tool_calls_total": 55,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 281712,
+      "output_tokens": 17805,
+      "thinking_tokens": 14347,
+      "cache_read_input_tokens": 2954034
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 268.4,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists",
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 1,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 4,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": "UVM_ERROR <worktree>/uvm-systemc__config-db-exists__shell__s0/tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/test.cpp(50) @ 0 s: reporter [Test] exists() result is not as expected for field 'from_top'",
+        "sim_log": "<worktree>/uvm-systemc__config-db-exists__shell__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/test.log",
+        "golden_diff": [
+          "--- 03config_db_exists/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -4,24 +4,29 @@",
+          " context 'test' inst 'env' field 'for_all': get=1 exists=1",
+          " context 'test' inst '' field 'for_test': get=1 exists=1",
+          " context 'test' inst 'env' field 'for_test': get=0 exists=0",
+          "-context '' inst 'test.env' field 'from_top': get=1 exists=1",
+          "-context '' inst 'test.env' field 'from_test': get=1 exists=1",
+          "+context '' inst 'test.env' field 'from_top': get=1 exists=0",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] exists() result is not as expected for field 'from_top'",
+          "+context '' inst 'test.env' field 'from_test': get=1 exists=0",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] exists() result is not as expected for field 'from_test'",
+          " context '' inst 'test.other' field 'from_top': get=0 exists=0",
+          " context '' inst '' field 'at_top': get=1 exists=1",
+          " context 'test.env' inst '' field 'from_test': get=1 exists=1",
+          " context 'test.env' inst '' field 'for_all': get=1 exists=1",
+          "-context '' inst 'test.env' field 'from_test': get=1 exists=1",
+          "-context '' inst 'test.env' field 'from_top': get=1 exists=1",
+          "+context '' inst 'test.env' field 'from_test': get=1 exists=0",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] exists() result is not as expected for field 'from_test'",
+          "+context '' inst 'test.env' field 'from_top': get=1 exists=0",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [Test] exists() result is not as expected for field 'from_top'",
+          " context 'test.env' inst '' field 'from_tset': get=0 exists=0",
+          " context 'test.env' inst '' field 'from_test': get=0 exists=0",
+          "-** UVM TEST PASSED **",
+          "+!! UVM TEST FAILED !!",
+          " UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
+          " --- UVM Report Summary ---",
+          " ** Report counts by severity",
+          " UVM_INFO      :   1",
+          " UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "+UVM_ERROR     :   4",
+          " UVM_FATAL     :   0",
+          " ** Report counts by id",
+          " [RNTST]                 1",
+          "+[Test]                  4",
+          " UVM_INFO @ 0 s: reporter [FINISH] UVM-SystemC phasing completed; simulation finished"
+        ]
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

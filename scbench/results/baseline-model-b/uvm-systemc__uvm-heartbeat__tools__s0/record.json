@@ -1,0 +1,102 @@
+{
+  "task": "uvm-systemc:uvm-heartbeat",
+  "arm": "tools",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 290,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 7,
+      "mcp__scbench__build": 2,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 5,
+      "read_file": 31,
+      "run_command": 22,
+      "write_file": 4
+    },
+    "tool_calls_total": 73,
+    "num_turns": 43,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 199602,
+      "output_tokens": 40442,
+      "thinking_tokens": 25968,
+      "cache_read_input_tokens": 2630352
+    },
+    "duration_ms": 358956,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 361.8,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/12heartbeat",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 2,
+          "UVM_WARNING": 8,
+          "UVM_ERROR": 2,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": "UVM_ERROR <worktree>/uvm-systemc__uvm-heartbeat__tools__s0/src/uvmsc/base/uvm_heartbeat.cpp(257) @ 0 s: reporter [NOEVNT] start() was called for: hb with a null trigger and no currently set trigger",
+        "sim_log": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/12heartbeat/test.log",
+        "golden_diff": [
+          "--- 12heartbeat/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,60 +1,44 @@",
+          " SystemC Simulation",
+          " UVM_INFO @ 0 s: reporter [RNTST] Running test test...",
+          " a warning for a start without event is expected",
+          "-UVM_WARNING @ 0 s: test [NOEVNT] start() was called for: hb with a null trigger and no currently set trigger",
+          "+UVM_ERROR <removed by verify-uvm.pl> @ 0 s: reporter [NOEVNT] start() was called for: hb with a null trigger and no currently set trigger",
+          " default mode is UVM_ALL_ACTIVE: 1",
+          " 0 s: all active, all three alive",
+          "   failures: 0",
+          " 30 ns: all active, c2 silent",
+          "-UVM_WARNING @ 40 ns: test [HBFAIL] Did not recieve an update of hb_objection for component test.c2 since last event trigger at time 30 ns : last update time was 25 ns",
+          "-UVM_WARNING @ 50 ns: test [HBFAIL] Did not recieve an update of hb_objection for component test.c2 since last event trigger at time 40 ns : last update time was 25 ns",
+          "+UVM_WARNING <removed by verify-uvm.pl> @ 40 ns: reporter [HBFAIL] Did not receive an update of hb_objection on any component(s) test.c2 since last event trigger at time 30 ns",
+          "+UVM_WARNING <removed by verify-uvm.pl> @ 50 ns: reporter [HBFAIL] Did not receive an update of hb_objection on any component(s) test.c2 since last event trigger at time 40 ns",
+          "   failures: 2",
+          " 50 ns: any active, only c1 alive",
+          "   failures: 0",
+          " 70 ns: any active, nobody alive",
+          "-UVM_WARNING @ 80 ns: test [HBFAIL] Did not recieve an update of hb_objection on any component since last event trigger at time 70 ns. The list of registered components is:",
+          "-  test.c0",
+          "-  test.c1",
+          "-  test.c2",
+          "-UVM_WARNING @ 90 ns: test [HBFAIL] Did not recieve an update of hb_objection on any component since last event trigger at time 80 ns. The list of registered components is:",
+          "-  test.c0",
+          "-  test.c1",
+          "-  test.c2",
+          "+UVM_WARNING <removed by verify-uvm.pl> @ 80 ns: reporter [HBFAIL] No components triggered the heartbeat objection in the window from 70 ns to 80 ns",
+          "+UVM_WARNING <removed by verify-uvm.pl> @ 90 ns: reporter [HBFAIL] No components triggered the heartbeat objection in the window from 80 ns to 90 ns",
+          "   failures: 2",
+          " 90 ns: one active, only c0 alive",
+          "   failures: 0",
+          " 110 ns: one active, c0 and c1 alive",
+          "-UVM_WARNING @ 120 ns: test [HBFAIL] Recieved update of hb_objection from more than one component since last event trigger at time 110 ns. The list of triggered components is:",
+          "-  test.c0 (updated: 115 ns)",
+          "-  test.c1 (updated: 115 ns)",
+          "-UVM_WARNING @ 130 ns: test [HBFAIL] Recieved update of hb_objection from more than one component since last event trigger at time 120 ns. The list of triggered components is:",
+          "-  test.c0 (updated: 125 ns)",
+          "-  test.c1 (updated: 125 ns)",
+          "... (diff truncated)"
+        ]
+      }
+    ],
+    "agent_diffstat": [
+      " 3 files changed, 6 insertions(+)"
+    ]
+  },
+  "status": "fail"
+}

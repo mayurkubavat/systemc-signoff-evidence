@@ -1,0 +1,59 @@
+{
+  "task": "uvm-systemc:reg-map-small-memory",
+  "arm": "tools",
+  "seed": 1,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 239,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 7,
+      "mcp__scbench__build": 3,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 6,
+      "read_file": 16,
+      "run_command": 15,
+      "write_file": 3
+    },
+    "tool_calls_total": 52,
+    "num_turns": 40,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 119038,
+      "output_tokens": 25258,
+      "thinking_tokens": 11715,
+      "cache_read_input_tokens": 1530371
+    },
+    "duration_ms": 300841,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 303.5,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/70regs/05mem/30stride",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 0,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__reg-map-small-memory__tools__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/70regs/05mem/30stride/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 2 files changed, 69 insertions(+), 46 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

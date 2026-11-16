@@ -1,0 +1,59 @@
+{
+  "task": "uvm-systemc:reg-map-internal-names",
+  "arm": "tools-guided",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 193,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 4,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 2,
+      "mcp__scbench__run_test": 11,
+      "read_file": 10,
+      "run_command": 11,
+      "write_file": 2
+    },
+    "tool_calls_total": 41,
+    "num_turns": 25,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 80675,
+      "output_tokens": 9157,
+      "thinking_tokens": 3784,
+      "cache_read_input_tokens": 709810
+    },
+    "duration_ms": 207079,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 209.7,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 0,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__reg-map-internal-names__tools-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 3 files changed, 2 insertions(+), 48 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

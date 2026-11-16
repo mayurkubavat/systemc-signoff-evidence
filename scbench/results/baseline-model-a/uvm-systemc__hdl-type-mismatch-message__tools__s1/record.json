@@ -1,0 +1,76 @@
+{
+  "task": "uvm-systemc:hdl-type-mismatch-message",
+  "arm": "tools",
+  "seed": 1,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 181,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 2,
+      "manage_task": 1,
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 2,
+      "read_file": 23,
+      "run_command": 27
+    },
+    "tool_calls_total": 58,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 271795,
+      "output_tokens": 37205,
+      "thinking_tokens": 30794,
+      "cache_read_input_tokens": 2587532
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 266.3,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 0,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 4,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": "UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow is not of type uvm_sc_if or sc_signal.",
+        "sim_log": "<worktree>/uvm-systemc__hdl-type-mismatch-message__tools__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch/test.log",
+        "golden_diff": [
+          "--- 30type_mismatch/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,11 +1,11 @@",
+          " SystemC Simulation",
+          " read with sc_uint<16>: ok, value 0x01234",
+          " four type mismatches are expected",
+          "-UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow (sc_object) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
+          "+UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.narrow is not of type uvm_sc_if or sc_signal.",
+          " read with uvm_reg_data_t: failed",
+          " UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.narrow (sc_object) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
+          " deposit with uvm_reg_data_t: failed",
+          "-UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.sig (sc_signal) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
+          "+UVM_ERROR @ 0 s: reporter [HDL_READ] Object top.sig is not of type uvm_sc_if or sc_signal.",
+          " read signal with uvm_reg_data_t: failed",
+          " UVM_ERROR @ 0 s: reporter [HDL_DEPOSIT] Object top.sig (sc_signal) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of 64 bits (register and memory backdoor accesses use uvm_reg_data_t).",
+          " deposit signal with uvm_reg_data_t: failed"
+        ]
+      }
+    ],
+    "agent_diffstat": [
+      " 1 file changed, 49 insertions(+), 5 deletions(-)"
+    ]
+  },
+  "status": "fail"
+}

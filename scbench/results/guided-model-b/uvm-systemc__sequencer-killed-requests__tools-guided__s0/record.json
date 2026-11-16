@@ -1,0 +1,55 @@
+{
+  "task": "uvm-systemc:sequencer-killed-requests",
+  "arm": "tools-guided",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 240,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 12,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 8,
+      "read_file": 21,
+      "run_command": 11,
+      "write_file": 3
+    },
+    "tool_calls_total": 57,
+    "num_turns": 33,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 114445,
+      "output_tokens": 23768,
+      "thinking_tokens": 12363,
+      "cache_read_input_tokens": 1488822
+    },
+    "duration_ms": 237516,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 240.0,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/30seq/01lock_zombie",
+        "seconds": 300.1,
+        "uvm_counts": null,
+        "first_uvm_problem": "UVM_ERROR <worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/src/uvmsc/seq/uvm_sequencer_base.cpp(852) @ 10 ns: test.sqr [SEQLCKZMB] The task responsible for requesting a lock on sequencer 'test.sqr' for sequence 'test.sqr.lock_zombie' has been killed, to avoid a deadlock the sequence will be removed from the arbitration queues.",
+        "sim_log": "<worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/01lock_zombie/test.log",
+        "log_tail": "Test project <worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/build-grade/tests\n    Start 49: uvm-systemc/unit_tests/30seq/01lock_zombie/cxx17/Debug\n1/1 Test #49: uvm-systemc/unit_tests/30seq/01lock_zombie/cxx17/Debug ...***Timeout 300.04 sec\nstarting 'uvm-systemc/unit_tests/30seq/01lock_zombie': <<worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/build-grade/tests/unit_tests-30seq-01lock_zombie> logging to <<FileHandler <worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/01lock_zombie/test.run-test.log (DEBUG)>> pwd <<worktree>/uvm-systemc__sequencer-killed-requests__tools-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/01lock_zombie>\n\n\n0% tests passed, 1 tests failed out of 1\n\nLabel Time Summary:\nunit_tests    = 300.04 sec*proc (1 test)\n\nTotal Test time (real) = 300.04 sec\n\nThe following tests FAILED:\n\t 49 - uvm-systemc/unit_tests/30seq/01lock_zombie/cxx17/Debug (Timeout) unit_tests\nErrors while running CTest"
+      }
+    ],
+    "agent_diffstat": [
+      " 3 files changed, 48 insertions(+), 33 deletions(-)"
+    ]
+  },
+  "status": "fail"
+}

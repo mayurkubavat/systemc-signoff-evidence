@@ -1,0 +1,55 @@
+{
+  "task": "uvm-systemc:component-schedule-lifetime",
+  "arm": "shell",
+  "seed": 1,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 178,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 2,
+      "read_file": 17,
+      "run_command": 35,
+      "schedule": 1,
+      "search_web": 2
+    },
+    "tool_calls_total": 57,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 241949,
+      "output_tokens": 19632,
+      "thinking_tokens": 16123,
+      "cache_read_input_tokens": 2590435
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 291.2,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/40phasing/20component_lifetime",
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 3,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__component-schedule-lifetime__shell__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/40phasing/20component_lifetime/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 2 files changed, 22 insertions(+), 5 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

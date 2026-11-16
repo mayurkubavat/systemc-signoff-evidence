@@ -1,0 +1,55 @@
+{
+  "task": "uvm-systemc:re-match-search",
+  "arm": "shell",
+  "seed": 1,
+  "model": "model-b",
+  "agent": {
+    "exit": 1,
+    "events": 213,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 12,
+      "manage_task": 7,
+      "read_file": 27,
+      "run_command": 25,
+      "write_file": 3
+    },
+    "tool_calls_total": 74,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 301550,
+      "output_tokens": 36514,
+      "thinking_tokens": 25267,
+      "cache_read_input_tokens": 3868096
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 364.6,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/04re_match",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 1,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__re-match-search__shell__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/04re_match/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 2 files changed, 11 insertions(+), 13 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

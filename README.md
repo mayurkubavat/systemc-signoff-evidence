@@ -19,6 +19,7 @@ the measurement scripts and their outputs.
 | `analysis/proofbar.py` | Git-only measurement of each branch: tests added, golden-log tests, test and source lines, lizard complexity. Produces `data/proofbar.json`. |
 | `analysis/recount.py` | The recount on the 58 pushed branches with rename detection and stubs excluded, own-diff and diff-vs-main views. Produces `data/recount.json`. |
 | `analysis/suite_cost.py` | Build and suite timings. Produces `data/suite_cost.json`. |
+| `scbench/` | A benchmark of 15 maintenance tasks built from these branches, the verification tool server and harness used to run coding agents on them, and the graded pilot results (see `scbench/README.md`). |
 | `data/branches.tsv` | Manifest: library, branch, commit SHA and the branch it is stacked on, for all 58 branches. |
 | `data/*.md` | Human-readable versions of the JSON outputs. |
 

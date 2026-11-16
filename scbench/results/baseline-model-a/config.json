@@ -1,0 +1,22 @@
+{
+  "first_start": "2026-11-15T15:01:10-08:00",
+  "model": "model-a",
+  "max_turns": 60,
+  "timeout_s": 3600,
+  "arms": [
+    "shell",
+    "tools"
+  ],
+  "seeds": 3,
+  "only": null,
+  "tasks_sha256": "9d09d8d42d86d897",
+  "runs_planned": 90,
+  "order": "seed-major",
+  "harness_commit": "61751d5",
+  "last_start": "2026-11-15T15:14:32-08:00",
+  "starts": [
+    "2026-11-15T15:01:10-08:00",
+    "2026-11-15T15:14:32-08:00"
+  ],
+  "jobs": 3
+}

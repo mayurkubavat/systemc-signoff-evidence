@@ -1,0 +1,97 @@
+{
+  "task": "uvm-systemc:uvm-sequence-library",
+  "arm": "tools",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 305,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 10,
+      "mcp__scbench__build": 2,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 5,
+      "read_file": 32,
+      "run_command": 16,
+      "write_file": 5
+    },
+    "tool_calls_total": 72,
+    "num_turns": 46,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 161811,
+      "output_tokens": 45956,
+      "thinking_tokens": 28235,
+      "cache_read_input_tokens": 2860590
+    },
+    "duration_ms": 334688,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 337.6,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/30seq/02sequence_library",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__uvm-sequence-library__tools__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/30seq/02sequence_library/test.log",
+        "golden_diff": [
+          "--- 02sequence_library/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -3,92 +3,8 @@",
+          " ok: the library has the two sequences which were added by type",
+          " ok: the sequences are in the order in which they were added",
+          " ok: another library type has its own sequences",
+          "-caught SEQLIB/BAD_SEQ_TYPE",
+          "-ok: a sequence is added once, and only a sequence is added",
+          "-caught SEQ_LIB/GET_SEQ",
+          "-ok: there is no sequence beyond the last one",
+          "+caught SEQLIB/NULLSEQ",
+          "+FAILED: a sequence is added once, and only a sequence is added",
+          "+FAILED: there is no sequence beyond the last one",
+          " ok: a sequence added to one library is not in the next one",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [SEQLIB/START] Starting sequence library seq_lib in unknown phase: 6 iterations in mode UVM_SEQ_LIB_RANDC",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 60 ns: reporter [SEQLIB/END] Ending sequence library in phase unknown",
+          "-driven: seq_c seq_a seq_b seq_c seq_b seq_a",
+          "-ok: six sequences were executed",
+          "-ok: random cyclic selection runs every sequence twice in six",
+          "-ok: the library counts the sequences it executed",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 60 ns: reporter [SEQLIB/START] Starting sequence library seq_lib in unknown phase: 5 iterations in mode UVM_SEQ_LIB_RAND",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 110 ns: reporter [SEQLIB/END] Ending sequence library in phase unknown",
+          "-driven: seq_b seq_a seq_a seq_b seq_b",
+          "-ok: the number of sequences is between the minimum and the maximum",
+          "-ok: random selection runs the sequences of the library",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 110 ns: reporter [SEQLIB/START] Starting sequence library seq_lib in unknown phase: 5 iterations in mode UVM_SEQ_LIB_USER",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 160 ns: reporter [SEQLIB/END] Ending sequence library in phase unknown",
+          "-driven: seq_a seq_c seq_a seq_c seq_a",
+          "-ok: user selection goes through the sequences in turn by default",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 160 ns: reporter [SEQLIB/START] Starting sequence library seq_lib in unknown phase: 3 iterations in mode UVM_SEQ_LIB_ITEM",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 190 ns: reporter [SEQLIB/END] Ending sequence library in phase unknown",
+          "-driven: library library library",
+          "-ok: item mode sends items, no sequences",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 190 ns: reporter [SEQLIB/START] Starting sequence library user_lib in unknown phase: 2 iterations in mode UVM_SEQ_LIB_USER",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 210 ns: reporter [SEQLIB/END] Ending sequence library in phase unknown",
+          "-driven: seq_b seq_b",
+          "-ok: select_sequence can be overridden",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 210 ns: reporter [SEQLIB/START] Starting sequence library seq_lib in unknown phase: 4 iterations in mode UVM_SEQ_LIB_RANDC",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 250 ns: reporter [SEQLIB/END] Ending sequence library in phase unknown",
+          "-driven: seq_d seq_a seq_c seq_b",
+          "... (diff truncated)"
+        ]
+      }
+    ],
+    "agent_diffstat": [
+      " 4 files changed, 78 insertions(+)"
+    ]
+  },
+  "status": "fail"
+}

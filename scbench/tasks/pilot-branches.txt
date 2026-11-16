@@ -1,0 +1,17 @@
+# Pilot: 15 changes, each adding one regression test with a golden log.
+# <project> <branch>
+uvm-systemc fix/component-schedule-lifetime
+uvm-systemc fix/config-db-exists
+uvm-systemc fix/global-forward-declarations
+uvm-systemc fix/hdl-type-mismatch-message
+uvm-systemc fix/re-match-search
+uvm-systemc fix/reg-deterministic-order
+uvm-systemc fix/reg-map-internal-names
+uvm-systemc fix/reg-map-small-memory
+uvm-systemc fix/resource-pool-spell-check
+uvm-systemc fix/sequencer-killed-requests
+uvm-systemc feature/uvm-pool
+uvm-systemc feature/uvm-heartbeat
+uvm-systemc feature/uvm-sequence-library
+uvm-systemc feature/objection-callbacks
+systemc fix/signal-default-name

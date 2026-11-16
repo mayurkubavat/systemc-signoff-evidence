@@ -1,0 +1,50 @@
+{
+  "task": "systemc:signal-default-name",
+  "arm": "shell",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 201,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 5,
+      "read_file": 9,
+      "run_command": 18,
+      "write_file": 2
+    },
+    "tool_calls_total": 34,
+    "num_turns": 35,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 107382,
+      "output_tokens": 13172,
+      "thinking_tokens": 7927,
+      "cache_read_input_tokens": 1179120
+    },
+    "duration_ms": 148582,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 151.1,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "systemc/communication/sc_signal/default_name",
+        "seconds": 0.3,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/systemc__signal-default-name__shell__s0/build-grade/tests/Testing/systemc/communication/sc_signal/default_name/default_name.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 2 files changed, 14 insertions(+), 7 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

@@ -1,0 +1,56 @@
+{
+  "task": "uvm-systemc:resource-pool-spell-check",
+  "arm": "shell-guided",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 165,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 3,
+      "read_file": 12,
+      "run_command": 22,
+      "write_file": 2
+    },
+    "tool_calls_total": 39,
+    "num_turns": 23,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 74232,
+      "output_tokens": 9377,
+      "thinking_tokens": 3998,
+      "cache_read_input_tokens": 711115
+    },
+    "duration_ms": 155791,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 158.5,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name",
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 2,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__resource-pool-spell-check__shell-guided__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 1 file changed, 89 insertions(+), 3 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

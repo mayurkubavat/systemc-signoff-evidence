@@ -1,0 +1,67 @@
+{
+  "task": "uvm-systemc:reg-map-small-memory",
+  "arm": "shell",
+  "seed": 2,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 178,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 1,
+      "read_file": 25,
+      "run_command": 25,
+      "search_web": 6
+    },
+    "tool_calls_total": 57,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 289340,
+      "output_tokens": 40259,
+      "thinking_tokens": 36395,
+      "cache_read_input_tokens": 3677385
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 371.9,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/70regs/05mem/30stride",
+        "seconds": 0.4,
+        "uvm_counts": null,
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__reg-map-small-memory__shell__s2/build-grade/tests/Testing/uvm-systemc/unit_tests/70regs/05mem/30stride/test.log",
+        "golden_diff": [
+          "--- 30stride/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -1,14 +1,3 @@",
+          " SystemC Simulation",
+          "-one: offset 0x100, addresses 0x100 to 0x100, stride 4",
+          "+one: offset 0x100, addresses 0x100 to 0x100, stride 0",
+          " eight: offset 0x200, addresses 0x200 to 0x21c, stride 4",
+          "-eight: offset 0x400, addresses 0x400 to 0x41c, stride 4",
+          "-one: offset 0x300, addresses 0x300 to 0x300, stride 4",
+          "-UVM_INFO <removed by verify-uvm.pl> @ 0 s: reporter [UVM/REPORT/SERVER]",
+          "---- UVM Report Summary ---",
+          "-** Report counts by severity",
+          "-UVM_INFO      :   0",
+          "-UVM_WARNING   :   0",
+          "-UVM_ERROR     :   0",
+          "-UVM_FATAL     :   0",
+          "-** Report counts by id",
+          "-** UVM TEST PASSED **"
+        ]
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

@@ -1,0 +1,382 @@
+[
+  {
+    "id": "uvm-systemc:component-schedule-lifetime",
+    "project": "uvm-systemc",
+    "branch": "fix/component-schedule-lifetime",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "879c015eacc3db0846e6c5a531c143a5d192e990",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/40phasing/20component_lifetime/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/40phasing/20component_lifetime/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/40phasing/20component_lifetime"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/base/uvm_component.cpp",
+      "src/uvmsc/base/uvm_component.h"
+    ],
+    "description": "uvm_component: do not leave dangling references when deleted\n\nA component which calls set_domain() for a domain without schedule creates the schedule and adds it to the domain, where the common domain and other components refer to it. The component deleted the schedule in its destructor, so deleting the component before the test ran left freed phase nodes in the domain graph, which the phasing then read. The parent component also kept the deleted component in its child lists, which run_test() traverses.",
+    "description_reviewed": false,
+    "description_original": "uvm_component: do not leave dangling references when deleted\n\nA component which calls set_domain() for a domain without schedule creates the schedule and adds it to the domain, where the common domain and other components refer to it. The component deleted the schedule in its destructor, so deleting the component before the test ran left freed phase nodes in the domain graph, which the phasing then read. The parent component also kept the deleted component in its child lists, which run_test() traverses.",
+    "description_edited": "agent",
+    "description_note": "No sentence states the fix; unchanged (the root-cause sentences are diagnosis and were kept)."
+  },
+  {
+    "id": "uvm-systemc:config-db-exists",
+    "project": "uvm-systemc",
+    "branch": "fix/config-db-exists",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "1013c1956c8cfe03871c6d6ec37217a5b30de2f6",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/conf/uvm_config_db.h"
+    ],
+    "description": "uvm_config_db: make exists() find settings looked up from the root\n\nexists() prefixed the instance name with the full name of the context even when no context was given, so a lookup such as exists(nullptr, \"top.env\", \"field\") searched the scope \"uvm_top.top.env\" and returned false for a setting that get() with the same arguments returns.",
+    "description_reviewed": false,
+    "description_original": "uvm_config_db: make exists() find settings looked up from the root\n\nexists() prefixed the instance name with the full name of the context even when no context was given, so a lookup such as exists(nullptr, \"top.env\", \"field\") searched the scope \"uvm_top.top.env\" and returned false for a setting that get() with the same arguments returns.",
+    "description_edited": "agent",
+    "description_note": "No sentence states the fix; unchanged."
+  },
+  {
+    "id": "uvm-systemc:global-forward-declarations",
+    "project": "uvm-systemc",
+    "branch": "fix/global-forward-declarations",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "0ae0ff273d160e26869ac73760ab09ef62e57cbf",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/99fixes/06global_names"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/base/uvm_event.h",
+      "src/uvmsc/dap/uvm_get_to_lock_dap.h",
+      "src/uvmsc/dap/uvm_set_before_get_dap.h",
+      "src/uvmsc/dap/uvm_simple_lock_dap.h"
+    ],
+    "description": "Unqualified uvm class names are ambiguous at global scope after using namespace uvm\n\nuvm_event.h and three data access policy headers declared uvm_object, uvm_printer and uvm_event_callback at global scope, in addition to the classes of namespace uvm. After using namespace uvm, unqualified uses of these names at global scope were ambiguous and did not compile. uvm_event::add_callback() and delete_callback() were even declared with the global uvm_event_callback, so user code could not call them with a uvm::uvm_event_callback.\n\nRequired: after #include <uvm> and using namespace uvm, global-scope declarations such as\n  uvm_object* p;  uvm_printer* q;  uvm_event_callback* r;\ncompile, and uvm_event::add_callback() and delete_callback() take a uvm::uvm_event_callback*.",
+    "description_reviewed": false,
+    "description_original": "Move the forward declarations of uvm classes into namespace uvm\n\nuvm_event.h and three data access policy headers declared uvm_object, uvm_printer and uvm_event_callback at global scope, in addition to the classes of namespace uvm. After using namespace uvm, unqualified uses of these names at global scope were ambiguous and did not compile. uvm_event::add_callback() and delete_callback() were even declared with the global uvm_event_callback, so user code could not call them with a uvm::uvm_event_callback.",
+    "description_edited": "agent",
+    "description_note": "Title stated the fix (move the declarations into namespace uvm); reworded as the symptom. Added the global-scope uses the hidden test compiles."
+  },
+  {
+    "id": "uvm-systemc:hdl-type-mismatch-message",
+    "project": "uvm-systemc",
+    "branch": "fix/hdl-type-mismatch-message",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "6d0044e90283ff400b00fb123310e0829c7f4484",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/dpi/uvm_hdl.h"
+    ],
+    "description": "uvm_hdl: explain why an object in the design cannot be accessed\n\nuvm_hdl_read() and uvm_hdl_deposit() find the object by name and then need a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS> with exactly the value type T of the access. When the object had another value type, they reported that it was \"not of type uvm_sc_if or sc_signal\", which is wrong for a uvm_sc_if of another type and does not say which type is needed. The errors of uvm_hdl_read() also used the id HDL_DEPOSIT.\n\nRequired message, as UVM_ERROR with id HDL_READ from uvm_hdl_read() and HDL_DEPOSIT from uvm_hdl_deposit(), where <path> is the object's name, <kind> its kind() and <N> the number of bits of T:\n  Object <path> (<kind>) cannot be accessed: it is not a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS>, or an sc_vector of them, with exactly the value type T of the access, a type of <N> bits (register and memory backdoor accesses use uvm_reg_data_t).\nAll errors of uvm_hdl_read() use the id HDL_READ.",
+    "description_reviewed": false,
+    "description_original": "uvm_hdl: explain why an object in the design cannot be accessed\n\nuvm_hdl_read() and uvm_hdl_deposit() find the object by name and then need a uvm_sc_if<T> or an sc_signal<T, SC_MANY_WRITERS> with exactly the value type T of the access. When the object had another value type, they reported that it was \"not of type uvm_sc_if or sc_signal\", which is wrong for a uvm_sc_if of another type and does not say which type is needed. The errors of uvm_hdl_read() also used the id HDL_DEPOSIT.",
+    "description_edited": "agent",
+    "description_note": "No fix sentence. Added the exact message text and ids: the hidden golden log compares it verbatim, so the task was not passable without it."
+  },
+  {
+    "id": "uvm-systemc:re-match-search",
+    "project": "uvm-systemc",
+    "branch": "fix/re-match-search",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "36483c08d50ddcc32a47e4c52e226f4f7c126875",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/04re_match/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/04re_match/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/99fixes/04re_match"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/base/uvm_globals.cpp",
+      "src/uvmsc/conf/uvm_config_db.h"
+    ],
+    "description": "uvm_re_match: search the regular expression in the string\n\nuvm_re_match() only matched when the expression covered the whole string, unlike the UVM reference implementation and the fallback for compilers without <regex>. A configuration setting for the scope \"/env/\" was therefore not found in \"test.env.agent\". Globs must still match whole names.\n\nRelated problems in the same lookups:\n- uvm_config_db<T>::wait_modified() was woken by settings for other instances, and was not woken by a setting for its own instance when that setting was made relative to a context, e.g. set(this, \"a\", \"speed\", 1) for a waiter wait_modified(a, \"\", \"speed\"), or by set(nullptr, \"\", \"level\", 1) for a waiter wait_modified(nullptr, \"\", \"level\").\n- A resource set with an empty scope (uvm_resource_db<T>::set(\"\", name, value)) was found in every scope; it should be found only for the empty name.",
+    "description_reviewed": false,
+    "description_original": "uvm_re_match: search the regular expression in the string\n\nuvm_re_match() used std::regex_match(), which only matches when the expression covers the whole string. The UVM reference implementation uses regexec(), which searches it, and so does the fallback for compilers without <regex>. A configuration setting for the scope \"/env/\" was therefore not found in \"test.env.agent\". Globs are converted with ^ and $ anchors, so they still match whole names; only a glob containing '|' now matches as in UVM-SV.",
+    "description_edited": "agent",
+    "description_note": "Removed the sentence on how globs are anchored after the change and the regexec() wording that named the fix. Added the wait_modified() and empty-scope symptoms the hidden test checks but the commit text did not mention."
+  },
+  {
+    "id": "uvm-systemc:reg-deterministic-order",
+    "project": "uvm-systemc",
+    "branch": "fix/reg-deterministic-order",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "d7af0781dc5411bd0c17353331accf11b7cb53a8",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/70regs/02regs/30creation_order"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/reg/uvm_mem.h",
+      "src/uvmsc/reg/uvm_reg.h",
+      "src/uvmsc/reg/uvm_reg_block.cpp",
+      "src/uvmsc/reg/uvm_reg_block.h",
+      "src/uvmsc/reg/uvm_reg_map.h",
+      "src/uvmsc/reg/uvm_reg_model.h",
+      "src/uvmsc/reg/uvm_reg_predictor.h"
+    ],
+    "description": "reg: iterate the register model in creation order\n\nThe blocks, maps, registers and memories of a register model are kept in maps keyed by the object pointer. Iterating them visits the objects in address order, so the order in which get_registers(), get_memories(), get_blocks() and the print functions return them depends on where the allocator places the objects. With the usual allocators this happens to be the order of creation, which the golden logs of the register tests rely on.",
+    "description_reviewed": false,
+    "description_original": "reg: iterate the register model in creation order\n\nThe blocks, maps, registers and memories of a register model are kept in maps keyed by the object pointer. Iterating them visits the objects in address order, so the order in which get_registers(), get_memories(), get_blocks() and the print functions return them depends on where the allocator places the objects. With the usual allocators this happens to be the order of creation, which the golden logs of the register tests rely on.",
+    "description_edited": "agent",
+    "description_note": "No sentence states the fix; unchanged (the title states the required order, not the change)."
+  },
+  {
+    "id": "uvm-systemc:reg-map-internal-names",
+    "project": "uvm-systemc",
+    "branch": "fix/reg-map-internal-names",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "a2e326f02dd74f38ca6dee4d03c81c6c79526d53",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/reg/uvm_reg_map.cpp"
+    ],
+    "description": "uvm_reg_map: the library registers a factory type named \"reg_rw\"\n\nuvm_reg_map.cpp defined a sequence item class reg_rw and registered it with the factory under the name \"reg_rw\". This is the name of the bus item in the register examples and in many user environments, so the factory reported that the name was registered twice and created the library class when such a user class was requested by name.",
+    "description_reviewed": false,
+    "description_original": "uvm_reg_map: remove the unused class reg_rw\n\nuvm_reg_map.cpp defined a sequence item class reg_rw, used nowhere, and registered it with the factory under the name \"reg_rw\". This is the name of the bus item in the register examples and in many user environments, so the factory reported that the name was registered twice and created the library class when such a user class was requested by name.",
+    "description_edited": "agent",
+    "description_note": "Title stated the fix (remove the class) and 'used nowhere' pointed at it; reworded as the symptom."
+  },
+  {
+    "id": "uvm-systemc:reg-map-small-memory",
+    "project": "uvm-systemc",
+    "branch": "fix/reg-map-small-memory",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "302a443cdbb773a4d7ce349b08443f7d81d70f3f",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/70regs/05mem/30stride"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/reg/uvm_reg_map.cpp",
+      "src/uvmsc/reg/uvm_reg_map.h"
+    ],
+    "description": "uvm_reg_map: wrong address stride and crash when a memory offset changes\n\nThe address interval between the locations of a memory was computed by dividing by the number of locations minus one, which is a division by zero for a memory with one location. When a memory was moved with uvm_mem::set_offset(), the interval was computed from the wrong pair of addresses, and the loop removing the old address range erased map elements while iterating over them, which crashed.\n\nRequired: a memory with one location gets the stride it would have with two locations.",
+    "description_reviewed": false,
+    "description_original": "uvm_reg_map: fix the address stride and the offset change of memories\n\nThe address interval between the locations of a memory was computed by dividing by the number of locations minus one, which is a division by zero for a memory with one location. When a memory was moved with uvm_mem::set_offset(), the interval was computed from the wrong pair of addresses, and the loop removing the old address range erased map elements while iterating over them, which crashed.",
+    "description_edited": "agent",
+    "description_note": "Title said 'fix the address stride ...'; reworded as the symptom. Added the expected stride for a one-location memory, which the golden log checks."
+  },
+  {
+    "id": "uvm-systemc:resource-pool-spell-check",
+    "project": "uvm-systemc",
+    "branch": "fix/resource-pool-spell-check",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "be58442ad606ca22141465a54784092178b7b9a8",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/conf/uvm_resource_pool.cpp"
+    ],
+    "description": "uvm_resource_pool: implement spell_check()\n\nuvm_resource_pool::spell_check() was a stub that always returned false. lookup_name() calls it whenever rpterr is set, so every by-name lookup with error reporting enabled returned an empty queue. This made uvm_resource_db<T>::read_by_name() and get_by_name() with the default rpterr=true fail even for resources that exist.\n\nRequired behaviour, as uvm_spell_chkr in UVM-SV: spell_check(s) returns true when a resource named s exists. Otherwise it returns false and reports UVM_INFO with id UVM/CONFIGDB/SPELLCHK and verbosity UVM_NONE, with the text\n  <s> not located, did you mean <name1>|<name2>\nlisting the existing names at the smallest edit distance from s in table order, or \"<s> not located, no alternatives to suggest\" when there are none.",
+    "description_reviewed": false,
+    "description_original": "uvm_resource_pool: implement spell_check()\n\nuvm_resource_pool::spell_check() was a stub that always returned false. lookup_name() calls it whenever rpterr is set, so every by-name lookup with error reporting enabled returned an empty queue. This made uvm_resource_db<T>::read_by_name() and get_by_name() with the default rpterr=true fail even for resources that exist.",
+    "description_edited": "agent",
+    "description_note": "No fix sentence. Added the report id, verbosity and text: the hidden golden log compares them verbatim."
+  },
+  {
+    "id": "uvm-systemc:sequencer-killed-requests",
+    "project": "uvm-systemc",
+    "branch": "fix/sequencer-killed-requests",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "ce20f0e2cce7a3e25b88ffbcf94ebe29fa175348",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/30seq/01lock_zombie/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/30seq/01lock_zombie/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/30seq/01lock_zombie"
+    ],
+    "gold_source_files": [
+      "src/uvmsc/seq/uvm_sequencer_base.cpp",
+      "src/uvmsc/seq/uvm_sequencer_base.h"
+    ],
+    "description": "seq: requests of killed processes stay in the sequencer\n\nA process which waits for a lock, a grab or a grant on a sequencer and is killed left its request in the arbitration queue. For a grant, the request was owned by the killed process and freed with it, so the sequencer read freed memory at the next arbitration. For a lock, the lock was granted to nobody and the sequencer stayed blocked.\n\nRequired, as in the UVM reference implementation: such a request is reported as UVM_ERROR, id SEQLCKZMB for a lock or grab and SEQREQZMB for a grant, with the text\n  The task responsible for requesting a <lock|wait_for_grant> on sequencer '<sequencer>' for sequence '<sequence>' has been killed, to avoid a deadlock the sequence will be removed from the arbitration queues.\nand the sequencer keeps serving the other sequences.",
+    "description_reviewed": false,
+    "description_original": "seq: drop the requests of killed processes from the sequencer\n\nA process which waits for a lock, a grab or a grant on a sequencer and is killed left its request in the arbitration queue. For a grant, the request was owned by the killed process and freed with it, so the sequencer read freed memory at the next arbitration. For a lock, the lock was granted to nobody and the sequencer stayed blocked.",
+    "description_edited": "agent",
+    "description_note": "Title stated the fix (drop the requests); reworded as the symptom. Added the report ids and text, which the golden log compares (the base source has them, with a leading space in the SEQREQZMB text)."
+  },
+  {
+    "id": "uvm-systemc:uvm-pool",
+    "project": "uvm-systemc",
+    "branch": "feature/uvm-pool",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "174aa6069c1e9b770b40511b54ee6d48db303934",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/10pool/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/10pool"
+    ],
+    "gold_source_files": [
+      "msvc16/uvmsc/uvm-systemc.vcxproj",
+      "src/uvmsc/conf/CMakeLists.txt",
+      "src/uvmsc/conf/files.am",
+      "src/uvmsc/conf/uvm_conf.h",
+      "src/uvmsc/conf/uvm_object_string_pool.h",
+      "src/uvmsc/conf/uvm_pool.h"
+    ],
+    "description": "conf: add uvm_pool and make uvm_object_string_pool usable\n\nuvm_pool, the associative array as an object, was missing, and uvm_object_string_pool could not be instantiated: it derived from std::map and used a member which did not exist.\n\nRequired public API (namespace uvm, available through #include <uvm>), following UVM 1.2:\n- template <typename KEY = int, typename T = int> class uvm_pool : public uvm_object\n    explicit uvm_pool(const std::string& name = \"\");\n    static uvm_pool* get_global_pool();  static T get_global(const KEY& key);\n    T get(const KEY& key);  // adds a default T when the key is missing\n    void add(const KEY& key, const T& item);\n    int num() const;  void do_delete(const KEY& key);  bool exists(const KEY& key) const;\n    bool first(KEY& key) const;  bool last(KEY& key) const;\n    bool next(KEY& key) const;   bool prev(KEY& key) const;\n  copy(), print() and sprint() work. T need not have an operator<<; such a value prints as <value>.\n- template <typename T> class uvm_object_string_pool : public uvm_pool<std::string, T*>\n    explicit uvm_object_string_pool(const std::string& name = \"\");\n    static uvm_object_string_pool* get_global_pool();  static T* get_global(const std::string& key);\n    T* get(const std::string& key);  // creates a T named key when missing\n    void do_delete(const std::string& key);\n- typedef uvm_object_string_pool<uvm_event> uvm_event_pool;\nWarnings (id POOLDEL), their texts and the print format follow the UVM 1.2 reference.",
+    "description_reviewed": false,
+    "description_original": "conf: add uvm_pool and make uvm_object_string_pool usable\n\nuvm_pool, the associative array as an object, was missing, and uvm_object_string_pool could not be instantiated: it derived from std::map and used a member which did not exist.",
+    "description_edited": "agent",
+    "description_note": "No fix sentence. Added the public API of the hidden test (it does not compile at base), names and signatures only."
+  },
+  {
+    "id": "uvm-systemc:uvm-heartbeat",
+    "project": "uvm-systemc",
+    "branch": "feature/uvm-heartbeat",
+    "base": "c4945ec0437ed8041cab949197c189b148daf67e",
+    "gold": "c1eb3febe7a12026c8af863aca52dc7885dfda82",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/00basic/12heartbeat"
+    ],
+    "gold_source_files": [
+      "msvc16/uvmsc/uvm-systemc.vcxproj",
+      "src/uvmsc/base/CMakeLists.txt",
+      "src/uvmsc/base/files.am",
+      "src/uvmsc/base/uvm_base.h",
+      "src/uvmsc/base/uvm_heartbeat.cpp",
+      "src/uvmsc/base/uvm_heartbeat.h"
+    ],
+    "description": "base: add uvm_heartbeat\n\nuvm_heartbeat watches a set of components through an objection: each of them has to raise or drop the objection between two triggers of the heartbeat event, and HBFAIL is reported when the activity does not fit the mode UVM_ALL_ACTIVE, UVM_ANY_ACTIVE or UVM_ONE_ACTIVE. It follows the UVM reference implementation.\n\nRequired public API (namespace uvm, available through #include <uvm>):\n  enum uvm_heartbeat_modes { UVM_ALL_ACTIVE, UVM_ONE_ACTIVE, UVM_ANY_ACTIVE, UVM_NO_HB_MODE };\n  class uvm_heartbeat : public uvm_object\n    uvm_heartbeat(const std::string& name, uvm_component* cntxt, uvm_objection* objection = nullptr);\n    virtual ~uvm_heartbeat();\n    uvm_heartbeat_modes set_mode(uvm_heartbeat_modes mode = UVM_NO_HB_MODE);  // returns the mode\n    void set_heartbeat(uvm_event* e, const std::vector<uvm_component*>& comps);\n    void add(uvm_component* comp);\n    void remove(uvm_component* comp);\n    void start(uvm_event* e = nullptr);\n    void stop();\nThe reports (HBFAIL, NOEVNT, ILHBVNT) and their texts follow the UVM 1.2 reference. stop() leaves other processes waiting on the same event alone, and a heartbeat can be deleted after the simulation, also while started.",
+    "description_reviewed": false,
+    "description_original": "base: add uvm_heartbeat\n\nuvm_heartbeat watches a set of components through an objection: each of them has to raise or drop the objection between two triggers of the heartbeat event, and HBFAIL is reported when the activity does not fit the mode UVM_ALL_ACTIVE, UVM_ANY_ACTIVE or UVM_ONE_ACTIVE. It follows the UVM reference implementation and uses the objection callbacks.",
+    "description_edited": "agent",
+    "description_note": "Removed 'uses the objection callbacks' (names the mechanism). Added the public API of the hidden test (it does not compile at base) and the stop/delete behaviour it checks."
+  },
+  {
+    "id": "uvm-systemc:uvm-sequence-library",
+    "project": "uvm-systemc",
+    "branch": "feature/uvm-sequence-library",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "67336eb9f47024e0f1e6061b8bb8456ea2336fe3",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/30seq/02sequence_library"
+    ],
+    "gold_source_files": [
+      "msvc16/uvmsc/uvm-systemc.vcxproj",
+      "src/uvmsc/macros/uvm_sequence_defines.h",
+      "src/uvmsc/seq/CMakeLists.txt",
+      "src/uvmsc/seq/files.am",
+      "src/uvmsc/seq/uvm_seq.h",
+      "src/uvmsc/seq/uvm_sequence_library.h"
+    ],
+    "description": "seq: add uvm_sequence_library\n\nRequired public API (namespace uvm, available through #include <uvm>), following UVM 1.2:\n  enum uvm_sequence_lib_mode { UVM_SEQ_LIB_RAND, UVM_SEQ_LIB_RANDC, UVM_SEQ_LIB_ITEM, UVM_SEQ_LIB_USER };\n  class uvm_sequence_library_cfg : public uvm_object\n    explicit uvm_sequence_library_cfg(const std::string& name = \"\", uvm_sequence_lib_mode mode = UVM_SEQ_LIB_RAND,\n                                      unsigned int min = 1, unsigned int max = 10);\n    uvm_sequence_lib_mode selection_mode;  unsigned int min_random_count, max_random_count;\n  template <typename REQ = uvm_sequence_item, typename RSP = REQ>\n  class uvm_sequence_library : public uvm_sequence<REQ,RSP>\n    explicit uvm_sequence_library(const std::string& name = \"\");\n    uvm_sequence_lib_mode selection_mode;   // default UVM_SEQ_LIB_RAND\n    unsigned int min_random_count, max_random_count;  // default 10 each\n    unsigned int sequence_count;\n    virtual unsigned int select_sequence(unsigned int max);\n    static void add_typewide_sequence(uvm_object_wrapper* seq_type);\n    static void add_typewide_sequences(const std::vector<uvm_object_wrapper*>& seq_types);\n    void add_sequence(uvm_object_wrapper* seq_type);\n    virtual void add_sequences(const std::vector<uvm_object_wrapper*>& seq_types);\n    virtual void remove_sequence(uvm_object_wrapper* seq_type);\n    virtual void get_sequences(std::vector<uvm_object_wrapper*>& seq_types);\n    virtual uvm_object_wrapper* get_sequence(unsigned int idx);\n    void init_sequence_library();\n   protected:\n    unsigned int sequences_executed;\n    std::map<std::string, int> seqs_distrib;\n  Macros UVM_SEQUENCE_LIBRARY_UTILS(TYPE) and UVM_ADD_TO_SEQ_LIB(TYPE, LIBTYPE).\nThe library reads \"default_sequence.config\" (a uvm_sequence_library_cfg*), \"default_sequence.selection_mode\", \"default_sequence.min_random_count\" and \"default_sequence.max_random_count\" from uvm_config_db in the scope of its sequencer. Reports (SEQLIB/...), their texts and the print format follow the UVM 1.2 reference.",
+    "description_reviewed": false,
+    "description_original": "seq: add uvm_sequence_library",
+    "description_edited": "agent",
+    "description_note": "Description was the title only. Added the public API of the hidden test (it does not compile at base). Caveat: the golden log prints the random order of the executed sequences and their counts, which depend on the gold random generator, so an independent correct implementation may still fail the golden comparison."
+  },
+  {
+    "id": "uvm-systemc:objection-callbacks",
+    "project": "uvm-systemc",
+    "branch": "feature/objection-callbacks",
+    "base": "9e12a34376d02d32d1668353ca03074e5487a848",
+    "gold": "c4945ec0437ed8041cab949197c189b148daf67e",
+    "commits": 1,
+    "hidden_files": [
+      "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/golden/test.log",
+      "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp"
+    ],
+    "tests": [
+      "uvm-systemc/unit_tests/40phasing/30objection_callbacks"
+    ],
+    "gold_source_files": [
+      "msvc16/uvmsc/uvm-systemc.vcxproj",
+      "src/uvmsc/macros/uvm_callback_defines.h",
+      "src/uvmsc/phasing/CMakeLists.txt",
+      "src/uvmsc/phasing/files.am",
+      "src/uvmsc/phasing/uvm_objection.cpp",
+      "src/uvmsc/phasing/uvm_objection.h",
+      "src/uvmsc/phasing/uvm_objection_callback.h",
+      "src/uvmsc/phasing/uvm_phasing.h"
+    ],
+    "description": "phasing: add uvm_objection_callback\n\nCallbacks could not be attached to an objection: the class uvm_objection_callback and the callback type uvm_objection_cbs_t were missing, and uvm_objection did not call any callbacks.\n\nRequired public API (namespace uvm, available through #include <uvm>), following UVM 1.2:\n  class uvm_objection_callback : public uvm_callback\n    explicit uvm_objection_callback(const std::string& name = \"uvm_objection_callback\");\n    virtual void raised(uvm_objection* objection, uvm_object* obj, uvm_object* source_obj,\n                        const std::string& description, int count);\n    virtual void dropped(uvm_objection* objection, uvm_object* obj, uvm_object* source_obj,\n                         const std::string& description, int count);\n    virtual void all_dropped(uvm_objection* objection, uvm_object* obj, uvm_object* source_obj,\n                             const std::string& description, int count);\n  typedef uvm_callbacks<uvm_objection, uvm_objection_callback> uvm_objection_cbs_t;\nuvm_objection_cbs_t::add(nullptr, cb) attaches a callback to every objection, add(&objection, cb) to one; do_delete() and callback_mode(0) stop it. The callbacks are called with the same arguments and in the same places (each level of the hierarchy) as in the UVM 1.2 reference.",
+    "description_reviewed": false,
+    "description_original": "phasing: add uvm_objection_callback\n\nCallbacks could not be attached to an objection: the class uvm_objection_callback and the callback type uvm_objection_cbs_t were missing, and uvm_objection did not call any callbacks.",
+    "description_edited": "agent",
+    "description_note": "No fix sentence. Added the public API of the hidden test (it does not compile at base)."
+  },
+  {
+    "id": "systemc:signal-default-name",
+    "project": "systemc",
+    "branch": "fix/signal-default-name",
+    "base": "cf66346d8b752958a39cee435b3558686f6796dd",
+    "gold": "ad3d332ca74ab906bf0899850543ae5a0bb70db4",
+    "commits": 1,
+    "hidden_files": [
+      "tests/systemc/communication/sc_signal/default_name/default_name.cpp",
+      "tests/systemc/communication/sc_signal/default_name/golden/default_name.log"
+    ],
+    "tests": [
+      "systemc/communication/sc_signal/default_name"
+    ],
+    "gold_source_files": [
+      "src/sysc/communication/sc_signal.h"
+    ],
+    "description": "sc_signal: use the name before the value is created\n\nThe constructors of sc_signal<T> pass the name together with a default constructed T to their base class. A name returned by sc_gen_unique_name() is only valid until the next call of that function, so when the constructor of T generates a name itself, the signal is created with the name of that other object. This happens with sc_signal<T>() when the compiler evaluates the name first, and always when the result of sc_gen_unique_name() is passed as the name, as sc_buffer<T>() does.",
+    "description_reviewed": false,
+    "description_original": "sc_signal: use the name before the value is created\n\nThe constructors of sc_signal<T> pass the name together with a default constructed T to their base class. A name returned by sc_gen_unique_name() is only valid until the next call of that function, so when the constructor of T generates a name itself, the signal is created with the name of that other object. This happens with sc_signal<T>() when the compiler evaluates the name first, and always when the result of sc_gen_unique_name() is passed as the name, as sc_buffer<T>() does.",
+    "description_edited": "agent",
+    "description_note": "No sentence states the fix; unchanged."
+  }
+]

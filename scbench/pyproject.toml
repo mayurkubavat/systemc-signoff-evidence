@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sc-agent-bench"
+version = "0.1.0"
+description = "Verification tools for AI agents on SystemC, UVM-SystemC, CRAVE and FC4SC, and a benchmark of real maintenance tasks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Mayur Kubavat" }]
+dependencies = ["mcp>=1.9.0,<2"]
+
+[project.scripts]
+scbench-mcp = "scbench.server:main"
+scbench-mine = "scbench.mine:main"
+scbench-run = "scbench.harness:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scbench"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

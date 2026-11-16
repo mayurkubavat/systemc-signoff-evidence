@@ -1,0 +1,88 @@
+{
+  "task": "uvm-systemc:re-match-search",
+  "arm": "shell",
+  "seed": 0,
+  "model": "model-c",
+  "agent": {
+    "exit": 0,
+    "events": 209,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "Bash": 25,
+      "Edit": 3,
+      "Grep": 6,
+      "Read": 5,
+      "Write": 1
+    },
+    "tool_calls_total": 40,
+    "total_cost_usd": 1.1030970000000002,
+    "num_turns": 41,
+    "duration_ms": 351268,
+    "duration_api_ms": 201259,
+    "is_error": false,
+    "subtype": "success",
+    "terminal_reason": "completed",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 76,
+      "cache_creation_input_tokens": 58698,
+      "cache_read_input_tokens": 1541445,
+      "output_tokens": 16246,
+      "output_tokens_details": {
+        "thinking_tokens": 3320
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 58698,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 960,
+          "cache_read_input_tokens": 62512,
+          "cache_creation_input_tokens": 2076,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 2076
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "status": "ok",
+    "model_requested": "model-c",
+    "max_turns": 60,
+    "wall_s": 352.1,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/04re_match",
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 1,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__re-match-search__shell__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/04re_match/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 2 files changed, 20 insertions(+), 16 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

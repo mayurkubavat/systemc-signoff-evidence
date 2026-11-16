@@ -1,0 +1,94 @@
+{
+  "task": "uvm-systemc:uvm-pool",
+  "arm": "tools",
+  "seed": 1,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 301,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 4,
+      "mcp__scbench__build": 2,
+      "mcp__scbench__list_tests": 3,
+      "mcp__scbench__run_regression": 1,
+      "mcp__scbench__run_test": 4,
+      "read_file": 35,
+      "run_command": 17,
+      "write_file": 5
+    },
+    "tool_calls_total": 71,
+    "num_turns": 43,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 135415,
+      "output_tokens": 31763,
+      "thinking_tokens": 17784,
+      "cache_read_input_tokens": 2251643
+    },
+    "duration_ms": 332348,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 335.1,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/10pool",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 0,
+          "UVM_WARNING": 2,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__uvm-pool__tools__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/10pool/test.log",
+        "golden_diff": [
+          "--- 10pool/golden/test.log",
+          "+++ test.log.stripped",
+          "@@ -6,20 +6,20 @@",
+          " forward: 10 20 25 30",
+          " backward: 30 25 20 10",
+          " a warning for a key which does not exist is expected",
+          "-UVM_WARNING @ 0 s: reporter [POOLDEL] delete: pool key doesn't exist. Ignoring delete request",
+          "+UVM_WARNING @ 0 s: reporter [POOLDEL] delete: key doesn't exist",
+          " after delete: num 3",
+          " copy has 3 items, the original 2",
+          " forward: 10 20 30",
+          " backward: 30 20 10",
+          "----------------------------------------------------",
+          "-Name           Type              Size  Value",
+          "----------------------------------------------------",
+          "-copy           uvm_pool          -     @<removed by verify-uvm.pl>",
+          "-  pool         aa_object_string  3     -",
+          "-    [-key0--]                    -1    ten",
+          "-    [-key1--]                    -1    twenty again",
+          "-    [-key2--]                    -1    thirty",
+          "----------------------------------------------------",
+          "+----------------------------------------------",
+          "+Name      Type              Size  Value",
+          "+----------------------------------------------",
+          "+copy      uvm::uvm_pool     -     @<removed by verify-uvm.pl>",
+          "+  pool    aa_object_string  3     -",
+          "+    [10]                    -1    ten",
+          "+    [20]                    -1    twenty again",
+          "+    [30]                    -1    thirty",
+          "+----------------------------------------------",
+          " global get(1) = 'global one'",
+          " event names: a, b; num 2",
+          " second get returns the same event: 1"
+        ]
+      }
+    ],
+    "agent_diffstat": [
+      " 4 files changed, 51 insertions(+), 43 deletions(-)"
+    ]
+  },
+  "status": "fail"
+}

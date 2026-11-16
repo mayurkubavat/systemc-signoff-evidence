@@ -1,0 +1,90 @@
+{
+  "task": "uvm-systemc:config-db-exists",
+  "arm": "tools",
+  "seed": 0,
+  "model": "model-c",
+  "agent": {
+    "exit": 0,
+    "events": 56,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "Bash": 7,
+      "Edit": 1,
+      "Grep": 1,
+      "Read": 1,
+      "mcp__scbench__list_tests": 2,
+      "mcp__scbench__run_regression": 2,
+      "mcp__scbench__run_test": 2
+    },
+    "tool_calls_total": 16,
+    "total_cost_usd": 0.18024179999999998,
+    "num_turns": 17,
+    "duration_ms": 187295,
+    "duration_api_ms": 43192,
+    "is_error": false,
+    "subtype": "success",
+    "terminal_reason": "completed",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 24,
+      "cache_creation_input_tokens": 10168,
+      "cache_read_input_tokens": 154009,
+      "output_tokens": 3400,
+      "output_tokens_details": {
+        "thinking_tokens": 347
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 10168,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 520,
+          "cache_read_input_tokens": 17774,
+          "cache_creation_input_tokens": 839,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 839
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "status": "ok",
+    "model_requested": "model-c",
+    "max_turns": 60,
+    "wall_s": 188.4,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists",
+        "seconds": 0.4,
+        "uvm_counts": {
+          "UVM_INFO": 1,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__config-db-exists__tools__s0/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 1 file changed, 3 insertions(+), 2 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

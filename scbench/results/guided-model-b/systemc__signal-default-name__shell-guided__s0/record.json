@@ -1,0 +1,57 @@
+{
+  "task": "systemc:signal-default-name",
+  "arm": "shell-guided",
+  "seed": 0,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 147,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 2,
+      "read_file": 3,
+      "run_command": 24,
+      "write_file": 2
+    },
+    "tool_calls_total": 31,
+    "num_turns": 24,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 77728,
+      "output_tokens": 8763,
+      "thinking_tokens": 5264,
+      "cache_read_input_tokens": 618709
+    },
+    "duration_ms": 129969,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "guided_sha256": "4b0a3d727de44ed1",
+    "wall_s": 133.5,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "systemc/communication/sc_signal/default_name",
+        "stage": "configure",
+        "build": {
+          "ok": false,
+          "stage": "configure",
+          "seconds": 2.6,
+          "cmake_errors": [
+            "CMake Error at tests/CMakeLists.txt:63 (get_filename_component):"
+          ],
+          "log_tail": "-- SystemCTLM_VERSION = 2.0.6\n-- INSTALL_TO_LIB_BUILD_TYPE_DIR = OFF\n-- INSTALL_TO_LIB_TARGET_ARCH_DIR = OFF\n-- INSTALL_LIB_TARGET_ARCH_SYMLINK = OFF\n-- ------------------------------------------------------------------------\n-- CMAKE_SYSTEM = Darwin-27.2.0\n-- CMAKE_SYSTEM_PROCESSOR = arm64\n-- QT_ARCH = aarch64\n-- CMAKE_OSX_ARCHITECTURES = \n-- CMAKE_OSX_DEPLOYMENT_TARGET = \n-- CMAKE_OSX_SYSROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk\n-- ------------------------------------------------------------------------\n-- CMAKE_INSTALL_PREFIX = ~/.local/opt/accellera/systemc\n-- CMAKE_INSTALL_BINDIR = bin\n-- CMAKE_INSTALL_DOCDIR = share/doc/systemc\n-- CMAKE_INSTALL_INCLUDEDIR = include\n-- CMAKE_INSTALL_LIBDIR = lib\n-- INSTALL_CMAKEDIR = \n-- ========================================================================\n-- Disable SystemC unity build\n-- Found Python3: <scbench>/.venv/bin/python3.13 (found version \"3.13.5\") found components: Interpreter\n-- Configuring incomplete, errors occurred!\nCMake Error at tests/CMakeLists.txt:63 (get_filename_component):\n  get_filename_component unknown component\n  <worktree>/systemc__signal-default-name__shell-guided__s0/tests/systemc/communication/sc_signal/default_name/test.cpp\nCall Stack (most recent call first):\n  tests/CMakeLists.txt:131 (configure_and_add_regression_test)\n  tests/CMakeLists.txt:136 (discover_regression_tests)\n\n"
+        }
+      }
+    ],
+    "agent_diffstat": [
+      " 1 file changed, 8 insertions(+), 2 deletions(-)"
+    ]
+  },
+  "status": "fail"
+}

@@ -1,0 +1,55 @@
+{
+  "task": "uvm-systemc:reg-map-internal-names",
+  "arm": "shell",
+  "seed": 1,
+  "model": "model-b",
+  "agent": {
+    "exit": 0,
+    "events": 230,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "edit_file": 4,
+      "read_file": 14,
+      "run_command": 23,
+      "write_file": 3
+    },
+    "tool_calls_total": 44,
+    "num_turns": 40,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 125858,
+      "output_tokens": 10419,
+      "thinking_tokens": 3892,
+      "cache_read_input_tokens": 1535959
+    },
+    "duration_ms": 205844,
+    "terminal_reason": null,
+    "status": "ok",
+    "model_requested": "model-b",
+    "max_turns": 60,
+    "wall_s": 209.0,
+    "graded_status": "pass"
+  },
+  "grade": {
+    "passed": true,
+    "tests": [
+      {
+        "passed": true,
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw",
+        "seconds": 0.3,
+        "uvm_counts": {
+          "UVM_INFO": 0,
+          "UVM_WARNING": 0,
+          "UVM_ERROR": 0,
+          "UVM_FATAL": 0
+        },
+        "first_uvm_problem": null,
+        "sim_log": "<worktree>/uvm-systemc__reg-map-internal-names__shell__s1/build-grade/tests/Testing/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.log"
+      }
+    ],
+    "agent_diffstat": [
+      " 4 files changed, 3 insertions(+), 50 deletions(-)"
+    ]
+  },
+  "status": "pass"
+}

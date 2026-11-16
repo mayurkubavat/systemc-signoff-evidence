@@ -1,0 +1,130 @@
+{
+  "task": "uvm-systemc:uvm-heartbeat",
+  "arm": "tools",
+  "seed": 2,
+  "model": "model-a",
+  "agent": {
+    "exit": 1,
+    "events": 181,
+    "non_json_lines": 0,
+    "tool_calls": {
+      "manage_task": 1,
+      "mcp__scbench__build": 1,
+      "mcp__scbench__list_tests": 1,
+      "mcp__scbench__run_test": 1,
+      "read_file": 20,
+      "run_command": 32,
+      "search_web": 1
+    },
+    "tool_calls_total": 57,
+    "num_turns": 60,
+    "total_cost_usd": null,
+    "usage": {
+      "input_tokens": 307446,
+      "output_tokens": 35982,
+      "thinking_tokens": 31200,
+      "cache_read_input_tokens": 2743336
+    },
+    "terminal_reason": "max_turns",
+    "status": "ok",
+    "model_requested": "model-a",
+    "max_turns": 60,
+    "wall_s": 249.7,
+    "graded_status": "fail"
+  },
+  "grade": {
+    "passed": false,
+    "tests": [
+      {
+        "passed": false,
+        "test": "uvm-systemc/unit_tests/00basic/12heartbeat",
+        "stage": "build",
+        "build": {
+          "ok": false,
+          "stage": "build",
+          "target": "unit_tests-00basic-12heartbeat",
+          "seconds": 4.9,
+          "errors": [
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 80,
+              "col": 1,
+              "message": "unknown type name 'uvm_heartbeat'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 90,
+              "col": 3,
+              "message": "unknown type name 'uvm_heartbeat'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 101,
+              "col": 15,
+              "message": "cannot initialize object parameter of type 'uvm::uvm_component' with an expression of type 'test'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 105,
+              "col": 61,
+              "message": "cannot initialize a parameter of type 'uvm_component *' with an rvalue of type 'test *'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 133,
+              "col": 27,
+              "message": "cannot initialize a parameter of type 'uvm_object *' with an rvalue of type 'test *'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 146,
+              "col": 74,
+              "message": "use of undeclared identifier 'UVM_ALL_ACTIVE'; did you mean 'UVM_ACTIVE'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 151,
+              "col": 17,
+              "message": "use of undeclared identifier 'UVM_ANY_ACTIVE'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 155,
+              "col": 17,
+              "message": "use of undeclared identifier 'UVM_ONE_ACTIVE'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 161,
+              "col": 17,
+              "message": "use of undeclared identifier 'UVM_ALL_ACTIVE'; did you mean 'UVM_ACTIVE'?"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 183,
+              "col": 19,
+              "message": "unknown type name 'uvm_heartbeat'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+              "line": 195,
+              "col": 26,
+              "message": "cannot initialize a parameter of type 'uvm_object *' with an rvalue of type 'test *'"
+            },
+            {
+              "file": "<worktree>/uvm-systemc__uvm-heartbeat__tools__s2/src/uvmsc/factory/uvm_component_registry.h",
+              "line": 148,
+              "col": 10,
+              "message": "cannot initialize return object of type 'uvm_component *' with an lvalue of type 'test *'"
+            }
+          ],
+          "error_count": 12,
+          "warning_count": 1,
+          "linker_errors": []
+        }
+      }
+    ],
+    "agent_diffstat": []
+  },
+  "status": "fail"
+}

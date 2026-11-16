@@ -1,0 +1,16 @@
+--- restart Sun Nov 15 13:54:00 PST 2026 with --usage-cap 0.85 ---
+[2026-11-15 14:02:21] 1/90 uvm-systemc__component-schedule-lifetime__shell__s0: PASS
+[2026-11-15 14:07:00] 2/90 uvm-systemc__component-schedule-lifetime__tools__s0: PASS
+[2026-11-15 14:10:07] 3/90 uvm-systemc__config-db-exists__shell__s0: PASS
+[2026-11-15 14:13:22] 4/90 uvm-systemc__config-db-exists__tools__s0: PASS
+[2026-11-15 14:17:29] 5/90 uvm-systemc__global-forward-declarations__shell__s0: PASS
+[2026-11-15 14:23:01] 6/90 uvm-systemc__global-forward-declarations__tools__s0: PASS
+[2026-11-15 14:27:33] 7/90 uvm-systemc__hdl-type-mismatch-message__shell__s0: PASS
+[2026-11-15 14:31:17] 8/90 uvm-systemc__hdl-type-mismatch-message__tools__s0: PASS
+[2026-11-15 14:37:16] 9/90 uvm-systemc__re-match-search__shell__s0: PASS
+[2026-11-15 14:44:15] 10/90 uvm-systemc__re-match-search__tools__s0: PASS
+[2026-11-15 14:51:53] 11/90 uvm-systemc__reg-deterministic-order__shell__s0: FAIL
+[2026-11-15 15:00:29] 12/90 uvm-systemc__reg-deterministic-order__tools__s0: PASS
+[2026-11-15 15:07:02] 13/90 uvm-systemc__reg-map-internal-names__shell__s0: PASS
+[2026-11-15 15:13:09] 14/90 uvm-systemc__reg-map-internal-names__tools__s0: PASS
+--- stopped Sun Nov 15 15:14:13 PST 2026: moved to vendor model models (Mayur) ---
