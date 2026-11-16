@@ -1,5 +1,7 @@
 # systemc-signoff-evidence
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24267898.svg)](https://doi.org/10.5281/zenodo.24267898)
+
 Review reports, measurement scripts and data for the report "Proof Before
 Push", a sign-off checklist applied to changes in four open SystemC
 verification libraries (engrXiv preprint). It holds the evidence behind
