@@ -1,0 +1,11 @@
+Clean clone, fresh build dir, macOS arm64, clang, Debug, C++17, SystemC from ~/.local/opt/accellera/systemc
+main   9e12a3437: 92% tests passed, 6 tests failed out of 74; build warnings 68
+	  4 - uvm-systemc/examples/integrated/ubus/Debug (Failed) examples
+	 56 - uvm-systemc/unit_tests/40phasing/10domains/01twodomains/Debug (Failed) unit_tests
+	 57 - uvm-systemc/unit_tests/40phasing/10domains/02reusedom/Debug (Failed) unit_tests
+	 58 - uvm-systemc/unit_tests/40phasing/10domains/03lockstep/Debug (Failed) unit_tests
+	 59 - uvm-systemc/unit_tests/40phasing/10domains/04lockstep_jump/Debug (Failed) unit_tests
+	 69 - uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/Debug (Failed) unit_tests
+branch fix/phase-schedule-order 43316b337: 97% tests passed, 2 tests failed out of 74; build warnings 68
+	  4 - uvm-systemc/examples/integrated/ubus/Debug (Failed) examples
+	 69 - uvm-systemc/unit_tests/70regs/02regs/20compare_mismatch/Debug (Failed) unit_tests

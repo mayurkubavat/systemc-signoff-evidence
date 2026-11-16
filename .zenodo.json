@@ -1,0 +1,15 @@
+{
+  "upload_type": "dataset",
+  "title": "systemc-signoff-evidence: review reports, measurement scripts and data for Proof Before Push",
+  "creators": [
+    {
+      "name": "Kubavat, Mayur",
+      "orcid": "0009-0009-1087-8558",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "description": "Independent review reports, measurement scripts and data behind the report Proof Before Push, which applies a sign-off checklist (fail-then-pass test, baseline regression, clean build, independent review) to 58 change branches in four open SystemC verification libraries: SystemC, UVM-SystemC, CRAVE and FC4SC. Includes a manifest pinning each measured branch to its commit and instructions to reproduce Table 1.",
+  "license": "Apache-2.0",
+  "keywords": ["SystemC", "UVM-SystemC", "verification", "sign-off", "regression"],
+  "access_right": "open"
+}

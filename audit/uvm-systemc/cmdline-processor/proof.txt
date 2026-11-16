@@ -1,0 +1,6 @@
+main (9e12a34):   67/74 passed, 6 failed (known), 1 skipped   log: .audit/main-ctest.log
+branch (7951a5c): 71/78 passed, same 6 failed, 1 skipped       build dir: src/build-cmdline
+New tests: unit_tests/05cmdline/{01processor,02testname,03settings,04report} pass.
+On main, 01processor does not compile (no uvm_cmdline_processor); 02testname would run test_a.
+oss-guard check-range main..HEAD: ok (1 commits)
+git merge-tree with origin/pr-356: no conflicts

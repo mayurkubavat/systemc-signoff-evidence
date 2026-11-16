@@ -1,0 +1,14 @@
+$ c++ --version
+Apple clang version 21.0.0 (clang-2100.4.1.1)
+== master: c++ -std=c++17 -Imaster/includes t.cpp
+master/includes/fc4sc_base.hpp:66:15: error: unknown template name '__not_'
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map:652:89: error: no matching function for call to object of type 'const fc4sc::coverpoint<int>::IntervalComp'
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map:651:89: error: no matching function for call to object of type 'const fc4sc::coverpoint<int>::IntervalComp'
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/lazy_synth_three_way_comparator.h:45:21: error: no matching function for call to object of type 'const fc4sc::coverpoint<int>::IntervalComp'
+== fix: c++ -std=c++17 -Ifix/includes t.cpp
+cov=91.6667
+
+== full suite on feature/cmake-ci (fix/libcxx-build + fix/illegal-bin-rethrow + fix/ucis-history-self-parent + CMake/gtest)
+100% tests passed, 0 tests failed out of 56
+
+Total Test time (real) =   0.04 sec

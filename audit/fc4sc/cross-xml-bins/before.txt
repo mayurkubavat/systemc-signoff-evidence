@@ -1,0 +1,9 @@
+
+The following tests FAILED:
+	 21 - cross_xml.no_hits (Failed)
+	 22 - cross_xml.some_hits (Failed)
+Errors while running CTest
+Output from these tests are in: <workbench>/fc4sc/src/build-wip/Testing/Temporary/LastTest.log
+Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
+test/fc4sc/cross_xml_no_hits.xml:108: Schemas validity error : Element '{UCIS}contents': This element is not expected. Expected is ( {UCIS}index ).
+test/fc4sc/cross_xml_no_hits.xml fails to validate

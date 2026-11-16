@@ -1,0 +1,6279 @@
+{
+  "generated": "analysis/proofbar.py",
+  "branch_count": 59,
+  "summary": {
+    "uvm-systemc": {
+      "branches": 37,
+      "commits_total": 91,
+      "commits_median": 1,
+      "test_loc_total": 17067,
+      "test_code_loc_total": 13410,
+      "source_loc_total": 23788,
+      "test_loc_median": 185,
+      "source_loc_median": 101,
+      "test_to_source_ratio_median": 0.9,
+      "new_test_dirs_total": 92,
+      "new_test_files_total": 89,
+      "new_test_cases_total": 0,
+      "branches_adding_test": 33,
+      "branches_touching_test": 36,
+      "branches_no_test": [
+        "fix/phase-schedule-order",
+        "fix/reg-compare-mismatch-test",
+        "fix/ubus-portable-readback",
+        "fix/uvm-reg-set-parent"
+      ],
+      "branches_no_test_but_touch_test": [
+        "fix/phase-schedule-order",
+        "fix/reg-compare-mismatch-test",
+        "fix/ubus-portable-readback"
+      ],
+      "reviewed": 32,
+      "fail_then_pass": 12,
+      "fail_then_pass_repro_only": 6,
+      "baseline_compare": 24,
+      "complexity": {
+        "branches_with_source_changes": 33,
+        "branches_modifying_existing_functions": 30,
+        "branches_new_files_only": 3,
+        "new_files_only_tip_mean_ccn_median": 1.232,
+        "new_files_only_functions": 138,
+        "mean_ccn_delta_median": 0.044,
+        "mean_ccn_delta_mean": 0.103,
+        "lowered": 8,
+        "raised": 18,
+        "unchanged": 4,
+        "functions_added": 565,
+        "ccn_gt15_delta": 40,
+        "max_ccn_raised": 9,
+        "mean_nloc_delta_median": 0.06
+      },
+      "source_comment_lines_added": 6342,
+      "source_code_lines_added": 13416
+    },
+    "systemc": {
+      "branches": 2,
+      "commits_total": 2,
+      "commits_median": 1.0,
+      "test_loc_total": 97,
+      "test_code_loc_total": 90,
+      "source_loc_total": 13,
+      "test_loc_median": 48.5,
+      "source_loc_median": 6.5,
+      "test_to_source_ratio_median": 7.154,
+      "new_test_dirs_total": 1,
+      "new_test_files_total": 1,
+      "new_test_cases_total": 0,
+      "branches_adding_test": 1,
+      "branches_touching_test": 2,
+      "branches_no_test": [
+        "fix/simple-cpu-debug-assert"
+      ],
+      "branches_no_test_but_touch_test": [
+        "fix/simple-cpu-debug-assert"
+      ],
+      "reviewed": 1,
+      "fail_then_pass": 1,
+      "fail_then_pass_repro_only": 0,
+      "baseline_compare": 1,
+      "complexity": {
+        "branches_with_source_changes": 1,
+        "branches_modifying_existing_functions": 1,
+        "branches_new_files_only": 0,
+        "new_files_only_tip_mean_ccn_median": null,
+        "new_files_only_functions": 0,
+        "mean_ccn_delta_median": -0.007,
+        "mean_ccn_delta_mean": -0.007,
+        "lowered": 1,
+        "raised": 0,
+        "unchanged": 0,
+        "functions_added": 1,
+        "ccn_gt15_delta": 0,
+        "max_ccn_raised": 0,
+        "mean_nloc_delta_median": 0.03
+      },
+      "source_comment_lines_added": 5,
+      "source_code_lines_added": 7
+    },
+    "crave": {
+      "branches": 12,
+      "commits_total": 30,
+      "commits_median": 2.0,
+      "test_loc_total": 1645,
+      "test_code_loc_total": 1566,
+      "source_loc_total": 1928,
+      "test_loc_median": 0.0,
+      "source_loc_median": 0.0,
+      "test_to_source_ratio_median": 0.81,
+      "new_test_dirs_total": 0,
+      "new_test_files_total": 7,
+      "new_test_cases_total": 47,
+      "branches_adding_test": 4,
+      "branches_touching_test": 5,
+      "branches_no_test": [
+        "fix/cudd-without-autotools",
+        "fix/cxx17-clang-libcxx",
+        "fix/find-uvm-systemc",
+        "fix/installed-package-config",
+        "fix/metasmt-cxx-standard",
+        "fix/system-boost",
+        "fix/ubus-driver-stack",
+        "fix/z3-clang-build"
+      ],
+      "branches_no_test_but_touch_test": [
+        "fix/system-boost"
+      ],
+      "reviewed": 2,
+      "fail_then_pass": 1,
+      "fail_then_pass_repro_only": 0,
+      "baseline_compare": 0,
+      "complexity": {
+        "branches_with_source_changes": 4,
+        "branches_modifying_existing_functions": 4,
+        "branches_new_files_only": 0,
+        "new_files_only_tip_mean_ccn_median": null,
+        "new_files_only_functions": 0,
+        "mean_ccn_delta_median": 0.017,
+        "mean_ccn_delta_mean": 0.002,
+        "lowered": 1,
+        "raised": 3,
+        "unchanged": 0,
+        "functions_added": 189,
+        "ccn_gt15_delta": 2,
+        "max_ccn_raised": 3,
+        "mean_nloc_delta_median": -0.65
+      },
+      "source_comment_lines_added": 414,
+      "source_code_lines_added": 1297
+    },
+    "fc4sc": {
+      "branches": 8,
+      "commits_total": 19,
+      "commits_median": 1.5,
+      "test_loc_total": 692,
+      "test_code_loc_total": 632,
+      "source_loc_total": 205,
+      "test_loc_median": 32.0,
+      "source_loc_median": 16.0,
+      "test_to_source_ratio_median": 3.278,
+      "new_test_dirs_total": 0,
+      "new_test_files_total": 4,
+      "new_test_cases_total": 9,
+      "branches_adding_test": 4,
+      "branches_touching_test": 5,
+      "branches_no_test": [
+        "fix/gcc-cstdint",
+        "fix/libcxx-build",
+        "fix/nonstandard-uint",
+        "fix/ucis-history-self-parent"
+      ],
+      "branches_no_test_but_touch_test": [
+        "fix/nonstandard-uint"
+      ],
+      "reviewed": 4,
+      "fail_then_pass": 2,
+      "fail_then_pass_repro_only": 0,
+      "baseline_compare": 0,
+      "complexity": {
+        "branches_with_source_changes": 8,
+        "branches_modifying_existing_functions": 8,
+        "branches_new_files_only": 0,
+        "new_files_only_tip_mean_ccn_median": null,
+        "new_files_only_functions": 0,
+        "mean_ccn_delta_median": 0.0,
+        "mean_ccn_delta_mean": 0.172,
+        "lowered": 0,
+        "raised": 2,
+        "unchanged": 6,
+        "functions_added": 0,
+        "ccn_gt15_delta": 2,
+        "max_ccn_raised": 2,
+        "mean_nloc_delta_median": 0.0
+      },
+      "source_comment_lines_added": 57,
+      "source_code_lines_added": 128
+    }
+  },
+  "totals": {
+    "branches": 59,
+    "branches_no_test": 17,
+    "branches_no_test_but_touch_test": 6,
+    "reviewed_branches": 39,
+    "fail_then_pass_branches": 16,
+    "baseline_branches": 25,
+    "topics": 30,
+    "topics_fail_then_pass": 15,
+    "topics_baseline": 16,
+    "topics_both": 8,
+    "review_rounds": {
+      "2": 10,
+      "1": 20
+    }
+  },
+  "top5_mean_ccn_increase": [
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-config-bitstream",
+      "functions": 48,
+      "mean_ccn": 1.173,
+      "max_ccn": 15,
+      "mean_nloc": 3.06,
+      "ccn_gt15": 3,
+      "base_mean_ccn": 1.809,
+      "tip_mean_ccn": 2.982
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-processor",
+      "functions": 48,
+      "mean_ccn": 1.111,
+      "max_ccn": 15,
+      "mean_nloc": 2.87,
+      "ccn_gt15": 3,
+      "base_mean_ccn": 1.809,
+      "tip_mean_ccn": 2.92
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-objection-trace",
+      "functions": 48,
+      "mean_ccn": 0.767,
+      "max_ccn": 0,
+      "mean_nloc": 1.76,
+      "ccn_gt15": 3,
+      "base_mean_ccn": 2.51,
+      "tip_mean_ccn": 3.277
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/cross-bin-names",
+      "functions": 0,
+      "mean_ccn": 0.75,
+      "max_ccn": 6,
+      "mean_nloc": 1.31,
+      "ccn_gt15": 1,
+      "base_mean_ccn": 3.25,
+      "tip_mean_ccn": 4
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-seed",
+      "functions": 55,
+      "mean_ccn": 0.726,
+      "max_ccn": 1,
+      "mean_nloc": 1.67,
+      "ccn_gt15": 3,
+      "base_mean_ccn": 2.27,
+      "tip_mean_ccn": 2.996
+    }
+  ],
+  "findings": [
+    {
+      "project": "fc4sc",
+      "topic": "cross-xml-bins",
+      "id": "F1",
+      "sev": "medium",
+      "class": "performance",
+      "fixed": "fixed",
+      "text": "Saving was O(cross product) even with the cap (21.8 s for 65536x65536)",
+      "branches": [
+        "fix/cross-xml-bins"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "fc4sc",
+      "topic": "libcxx-build",
+      "id": "M1",
+      "sev": "medium",
+      "class": "API compatibility",
+      "fixed": "documented",
+      "text": "CG_CONS_DECL/DEF default-argument move breaks users with defaulted extra arguments",
+      "branches": [
+        "fix/libcxx-build"
+      ],
+      "fork": "n/a (not a code fix)"
+    },
+    {
+      "project": "systemc",
+      "topic": "signal-default-name",
+      "id": "1",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "Current and new value value-initialized separately; a first write could be lost",
+      "branches": [
+        "fix/signal-default-name"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "cmdline-config-bitstream",
+      "id": "F2",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "Decimal values >= 2^63 rejected although documented up to 64 bits",
+      "branches": [
+        "feature/cmdline-config-bitstream"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "cmdline-objection-trace",
+      "id": "F1",
+      "sev": "medium-low",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "Objections created before command-line init were not traced",
+      "branches": [
+        "feature/cmdline-objection-trace"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "cmdline-processor",
+      "id": "1",
+      "sev": "high",
+      "class": "build/portability",
+      "fixed": "partly",
+      "text": "Tree does not compile merged with PR #356",
+      "branches": [
+        "feature/cmdline-processor"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "cmdline-processor",
+      "id": "2",
+      "sev": "medium",
+      "class": "build/portability",
+      "fixed": "fixed",
+      "text": "msvc16 project lacked the two new .cpp files",
+      "branches": [
+        "feature/cmdline-processor"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "cmdline-processor",
+      "id": "3",
+      "sev": "medium",
+      "class": "input validation",
+      "fixed": "fixed",
+      "text": "Empty or invalid component pattern threw std::regex_error and aborted",
+      "branches": [
+        "feature/cmdline-processor"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "cmdline-processor",
+      "id": "4",
+      "sev": "medium",
+      "class": "memory safety",
+      "fixed": "fixed",
+      "text": "Empty +UVM_TESTNAME ran no test; a name matching a component segfaulted (null deref)",
+      "branches": [
+        "feature/cmdline-processor"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "component-schedule-lifetime",
+      "id": "7.1",
+      "sev": "medium",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Heap-use-after-free when a parent is deleted before its child",
+      "branches": [
+        "fix/component-schedule-lifetime"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "global-seed",
+      "id": "F1",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "+UVM_SEED applied in run_test, so components built in sc_main saw seed 1",
+      "branches": [
+        "feature/random-seed",
+        "feature/cmdline-seed"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "sequencer-1",
+      "sev": "medium",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Zombie request left in queue after its sequence restarted, read after delete",
+      "branches": [
+        "fix/sequencer-killed-requests"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "sequencer-2",
+      "sev": "medium",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Request leaked when a waiting sequence is killed",
+      "branches": [
+        "fix/sequencer-killed-requests"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "pool-1",
+      "sev": "high",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Double delete when uvm_object_string_pool is copy-constructed",
+      "branches": [
+        "feature/uvm-pool"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "pool-2",
+      "sev": "medium",
+      "class": "lifetime",
+      "fixed": "documented",
+      "text": "clone() refers to objects it does not own",
+      "branches": [
+        "feature/uvm-pool"
+      ],
+      "fork": "n/a (not a code fix)"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "pool-3",
+      "sev": "medium",
+      "class": "API compatibility",
+      "fixed": "fixed",
+      "text": "uvm_pool<KEY,T> required operator<< for T",
+      "branches": [
+        "feature/uvm-pool"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "barrier-1",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "reset(false) let old waiters pass with new arrivals",
+      "branches": [
+        "feature/uvm-barrier"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "heartbeat-1",
+      "sev": "high",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Destructor after end of simulation threw E572 and terminated",
+      "branches": [
+        "feature/uvm-heartbeat"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "seqlib-1",
+      "sev": "medium",
+      "class": "API compatibility",
+      "fixed": "fixed",
+      "text": "Default REQ (uvm_sequence_item) did not compile",
+      "branches": [
+        "feature/uvm-sequence-library"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "parity-batch-2",
+      "id": "seqlib-2",
+      "sev": "medium",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Test catcher was a local used after run_phase",
+      "branches": [
+        "feature/uvm-sequence-library"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "re-match-search",
+      "id": "1.1",
+      "sev": "medium/high",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "wait_modified not woken by set(cntxt, relative inst)",
+      "branches": [
+        "fix/re-match-search"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "re-match-search",
+      "id": "1.2",
+      "sev": "medium",
+      "class": "build/portability",
+      "fixed": "fixed",
+      "text": "Empty glob matched every scope on libstdc++",
+      "branches": [
+        "fix/re-match-search"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "re-match-search",
+      "id": "R1",
+      "sev": "medium",
+      "class": "test gap",
+      "fixed": "fixed",
+      "text": "Test did not detect a revert of 1.2 on libstdc++",
+      "branches": [
+        "fix/re-match-search"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-backdoor-access",
+      "id": "1",
+      "sev": "medium",
+      "class": "API misuse",
+      "fixed": "fixed",
+      "text": "uvm_reg_mem_hdl_paths_seq read paths with uvm_hdl_data_t, rejecting objects the backdoor accepts",
+      "branches": [
+        "feature/reg-backdoor-access"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-built-in-sequences",
+      "id": "F1",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "uvm_reg_access_seq errored on a register with a WO field (do_check substr)",
+      "branches": [
+        "feature/reg-built-in-sequences"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-deterministic-order",
+      "id": "1",
+      "sev": "high",
+      "class": "lifetime",
+      "fixed": "fixed",
+      "text": "Comparator dereferenced keys of deleted objects (crash / heap-use-after-free)",
+      "branches": [
+        "fix/reg-deterministic-order"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "A1",
+      "branch": "feature/reg-randomize",
+      "sev": "medium",
+      "class": "determinism",
+      "fixed": "fixed",
+      "text": "Fields with the same full name got order-dependent values",
+      "branches": [
+        "feature/reg-randomize"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "A2",
+      "branch": "feature/reg-randomize",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "block.randomize dropped pending uvm_reg_fifo writes",
+      "branches": [
+        "feature/reg-randomize"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "A3",
+      "branch": "feature/reg-randomize",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "32-bit seeds collided (22 pairs in 300k fields)",
+      "branches": [
+        "feature/reg-randomize"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "A4",
+      "branch": "feature/reg-randomize",
+      "sev": "medium",
+      "class": "determinism",
+      "fixed": "fixed",
+      "text": "Register hooks ran in heap-address order",
+      "branches": [
+        "feature/reg-randomize"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "A5",
+      "branch": "feature/reg-randomize",
+      "sev": "low-med",
+      "class": "logic",
+      "fixed": "partly",
+      "text": "Seed frozen at first randomize",
+      "branches": [
+        "feature/reg-randomize"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "B1",
+      "branch": "feature/reg-seq-seed",
+      "sev": "medium",
+      "class": "logic",
+      "fixed": "fixed",
+      "text": "Built-in sequences overwrote a user seed",
+      "branches": [
+        "feature/reg-seq-seed"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "reg-randomize",
+      "id": "D1",
+      "branch": "feature/crave-reg-randomize",
+      "sev": "medium",
+      "class": "test gap",
+      "fixed": "fixed",
+      "text": "CRAVE register example failed its spread check for 2 of 61 seeds",
+      "branches": [
+        "feature/crave-reg-randomize"
+      ],
+      "fork": "not pushed"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "tlm-fifos-comparators",
+      "id": "1",
+      "sev": "medium/low",
+      "class": "API compatibility",
+      "fixed": "fixed",
+      "text": "flush() required a default-constructible T",
+      "branches": [
+        "feature/tlm-fifos-comparators"
+      ],
+      "fork": "fork has fix"
+    },
+    {
+      "project": "uvm-systemc",
+      "topic": "tlm-fifos-comparators",
+      "id": "6",
+      "sev": "medium",
+      "class": "test gap",
+      "fixed": "fixed",
+      "text": "Six test mutations survived",
+      "branches": [
+        "feature/tlm-fifos-comparators"
+      ],
+      "fork": "fork has fix"
+    }
+  ],
+  "findings_by_class": {
+    "logic": 11,
+    "lifetime": 8,
+    "API compatibility": 4,
+    "build/portability": 3,
+    "test gap": 3,
+    "determinism": 2,
+    "performance": 1,
+    "input validation": 1,
+    "memory safety": 1,
+    "API misuse": 1
+  },
+  "findings_by_severity": {
+    "medium": 27,
+    "medium-low": 1,
+    "high": 4,
+    "medium/high": 1,
+    "low-med": 1,
+    "medium/low": 1
+  },
+  "findings_by_fix": {
+    "fixed": 31,
+    "documented": 2,
+    "partly": 2
+  },
+  "findings_by_fork": {
+    "fork has fix": 18,
+    "n/a (not a code fix)": 2,
+    "not pushed": 15
+  },
+  "suite_cost": {
+    "measured": {
+      "uvm-systemc": {
+        "commit": "main 9e12a3437",
+        "build_type": "Debug",
+        "configure_s": 1.6,
+        "build_library_s": 20.9,
+        "build_tests_s": 29.3,
+        "cxx_compiles": [
+          74,
+          95
+        ],
+        "clean_configure_build_s": 51.8,
+        "full_ctest": [
+          {
+            "jobs": 18,
+            "wall_s": 57.4,
+            "ctest_total_s": 57.41,
+            "tests": 74,
+            "failed": 6,
+            "sum_test_s": 73.7,
+            "slowest": [
+              {
+                "test": "uvm-systemc/bugs/bug_184/basic_read_write_memory_management/cxx17/Debug",
+                "s": 57.4
+              },
+              {
+                "test": "uvm-systemc/examples/integrated/ubus/cxx17/Debug",
+                "s": 0.5
+              },
+              {
+                "test": "uvm-systemc/examples/simple/registers/models/aliasing/cxx17/Debug",
+                "s": 0.46
+              }
+            ]
+          },
+          {
+            "jobs": 1,
+            "wall_s": 59.6,
+            "ctest_total_s": 59.58,
+            "tests": 74,
+            "failed": 6,
+            "sum_test_s": 59.5,
+            "slowest": [
+              {
+                "test": "uvm-systemc/bugs/bug_184/basic_read_write_memory_management/cxx17/Debug",
+                "s": 57.26
+              },
+              {
+                "test": "uvm-systemc/examples/integrated/ubus/cxx17/Debug",
+                "s": 0.07
+              },
+              {
+                "test": "uvm-systemc/examples/simple/registers/models/aliasing/cxx17/Debug",
+                "s": 0.05
+              }
+            ]
+          }
+        ],
+        "single_test": {
+          "test": "uvm-systemc/unit_tests/00basic/99fixes/01global_comparer",
+          "touch_test_source": {
+            "file": "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp",
+            "build_s": 0.9,
+            "run_s": 0.3,
+            "total_s": 1.2,
+            "passed": true
+          },
+          "touch_library_source": {
+            "file": "src/uvmsc/conf/uvm_resource_pool.cpp",
+            "build_s": 0.6,
+            "run_s": 0.3,
+            "total_s": 0.9,
+            "passed": true
+          }
+        }
+      },
+      "fc4sc": {
+        "commit": "development c6f01d8b2",
+        "build_type": "Release",
+        "configure_s": 1.5,
+        "build_s": 5.0,
+        "full_ctest": {
+          "jobs": 18,
+          "wall_s": 0.0,
+          "ctest_total_s": 0.02,
+          "tests": 58,
+          "failed": 0,
+          "sum_test_s": 0.3,
+          "slowest": [
+            {
+              "test": "separate_cvg.test1",
+              "s": 0.01
+            },
+            {
+              "test": "scoped_separate_cvg.test2",
+              "s": 0.01
+            },
+            {
+              "test": "illegal_bin.sample_expression_throws",
+              "s": 0.01
+            }
+          ]
+        }
+      },
+      "systemc": {
+        "commit": "main cf66346d8",
+        "build_type": "Release",
+        "configure_s": 4.2,
+        "build_s": 188.7,
+        "full_ctest": {
+          "tests": {
+            "jobs": 18,
+            "wall_s": 28.8,
+            "ctest_total_s": 28.73,
+            "tests": 916,
+            "failed": 0
+          },
+          "examples": {
+            "jobs": 18,
+            "wall_s": 1.2,
+            "ctest_total_s": 1.17,
+            "tests": 35,
+            "failed": 0
+          }
+        }
+      },
+      "crave": {
+        "commit": "development 1090f3387",
+        "build_type": "Release",
+        "configure_s": null,
+        "build_s_incl_z3_cudd": 58.8,
+        "full_ctest": {
+          "jobs": 18,
+          "wall_s": 15.4,
+          "ctest_total_s": 15.36,
+          "tests": 712,
+          "failed": 1,
+          "slowest": [
+            {
+              "test": "direct_Z3/cardinality_t/test_adder_cardinality_with_bv",
+              "s": 14.44
+            },
+            {
+              "test": "direct_Z3/cardinality_t/test_bdd_cardinality_with_bv",
+              "s": 6.96
+            },
+            {
+              "test": "ahb_mem_burst",
+              "s": 5.36
+            }
+          ],
+          "failed_tests": [
+            "direct_Z3/Array/read_value_X"
+          ]
+        },
+        "note": "suite_cost.py's CRAVE build failed once inside the CUDD sub-build (log truncated); the same commands rerun by hand in a fresh worktree built cleanly, and these numbers are from that run (configure not timed)."
+      }
+    },
+    "host": {
+      "cpus": 18,
+      "uname": "arm64"
+    },
+    "notes": [
+      "UVM-SystemC, SystemC: main. FC4SC, CRAVE: development (main does not build: FC4SC main has no CMake build, CRAVE main does not find SystemC; the fork fixes are what make it build).",
+      "UVM-SystemC full ctest is dominated by one test: bugs/bug_184/basic_read_write_memory_management takes ~57 s; the other 73 tests take ~2.2 s summed in the serial run. The 6 failures are the known upstream macOS failures.",
+      "A first UVM-SystemC run measured the clean configure+build at 14.8 s; the rerun (recorded, with compile counts 74+95) took 51.8 s. Treat ~15-50 s as the range on this Mac.",
+      "CRAVE build includes fetching and building Z3 and CUDD; one CRAVE test fails on development (direct_Z3/Array/read_value_X)."
+    ]
+  },
+  "branches": {
+    "uvm-systemc": [
+      {
+        "branch": "feature/algorithmic-comparator",
+        "base": "9e12a34376d0",
+        "tip": "9f9689410b8b",
+        "commits": 2,
+        "fork_tip": "9f9689410b8b",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 5,
+          "source": 7,
+          "test": 8
+        },
+        "loc_added": {
+          "build": 20,
+          "source": 947,
+          "test_golden": 125,
+          "test_code": 714
+        },
+        "test_loc_added": 839,
+        "test_code_loc_added": 714,
+        "source_loc_added": 947,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/04algorithmic_comparator"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/04algorithmic_comparator/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 328,
+          "code": 465
+        },
+        "complexity_source": {
+          "files": 7,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 56,
+            "mean_ccn": 1.232,
+            "max_ccn": 3,
+            "mean_nloc": 5.39,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 56,
+            "mean_ccn": 1.232,
+            "max_ccn": 3,
+            "mean_nloc": 5.39,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 11,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 100,
+            "mean_ccn": 1.36,
+            "max_ccn": 4,
+            "mean_nloc": 6.65,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 100,
+            "mean_ccn": 1.36,
+            "max_ccn": 4,
+            "mean_nloc": 6.65,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "algorithmic-comparator"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/cmdline-config-bitstream",
+        "base": "9e12a34376d0",
+        "tip": "27c242a64509",
+        "commits": 2,
+        "fork_tip": "27c242a64509",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 3,
+          "source": 7,
+          "test": 10
+        },
+        "loc_added": {
+          "build": 15,
+          "source": 1666,
+          "test_golden": 236,
+          "test_code": 623
+        },
+        "test_loc_added": 859,
+        "test_code_loc_added": 623,
+        "source_loc_added": 1666,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06config_bitstream"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06config_bitstream/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 344,
+          "code": 1022
+        },
+        "complexity_source": {
+          "files": 7,
+          "base": {
+            "functions": 115,
+            "mean_ccn": 1.809,
+            "max_ccn": 8,
+            "mean_nloc": 8,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 163,
+            "mean_ccn": 2.982,
+            "max_ccn": 23,
+            "mean_nloc": 11.06,
+            "ccn_gt15": 3
+          },
+          "delta": {
+            "functions": 48,
+            "mean_ccn": 1.173,
+            "max_ccn": 15,
+            "mean_nloc": 3.06,
+            "ccn_gt15": 3
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 12,
+          "base": {
+            "functions": 115,
+            "mean_ccn": 1.809,
+            "max_ccn": 8,
+            "mean_nloc": 8,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 201,
+            "mean_ccn": 2.672,
+            "max_ccn": 23,
+            "mean_nloc": 10.59,
+            "ccn_gt15": 3
+          },
+          "delta": {
+            "functions": 86,
+            "mean_ccn": 0.863,
+            "max_ccn": 15,
+            "mean_nloc": 2.59,
+            "ccn_gt15": 3
+          }
+        },
+        "audit": {
+          "topics": [
+            "cmdline-config-bitstream"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/cmdline-objection-trace",
+        "base": "9e12a34376d0",
+        "tip": "d35776f76a14",
+        "commits": 2,
+        "fork_tip": "d35776f76a14",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 3,
+          "source": 8,
+          "test": 10
+        },
+        "loc_added": {
+          "build": 15,
+          "source": 1634,
+          "test_golden": 226,
+          "test_code": 619
+        },
+        "test_loc_added": 845,
+        "test_code_loc_added": 619,
+        "source_loc_added": 1634,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05objection_trace"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05objection_trace/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 340,
+          "code": 1001
+        },
+        "complexity_source": {
+          "files": 8,
+          "base": {
+            "functions": 147,
+            "mean_ccn": 2.51,
+            "max_ccn": 25,
+            "mean_nloc": 10.72,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 195,
+            "mean_ccn": 3.277,
+            "max_ccn": 25,
+            "mean_nloc": 12.48,
+            "ccn_gt15": 5
+          },
+          "delta": {
+            "functions": 48,
+            "mean_ccn": 0.767,
+            "max_ccn": 0,
+            "mean_nloc": 1.76,
+            "ccn_gt15": 3
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 13,
+          "base": {
+            "functions": 147,
+            "mean_ccn": 2.51,
+            "max_ccn": 25,
+            "mean_nloc": 10.72,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 235,
+            "mean_ccn": 2.936,
+            "max_ccn": 25,
+            "mean_nloc": 11.7,
+            "ccn_gt15": 5
+          },
+          "delta": {
+            "functions": 88,
+            "mean_ccn": 0.426,
+            "max_ccn": 0,
+            "mean_nloc": 0.98,
+            "ccn_gt15": 3
+          }
+        },
+        "audit": {
+          "topics": [
+            "cmdline-objection-trace"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/cmdline-processor",
+        "base": "9e12a34376d0",
+        "tip": "7951a5cbbcba",
+        "commits": 1,
+        "fork_tip": "7951a5cbbcba",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 3,
+          "source": 7,
+          "test": 8
+        },
+        "loc_added": {
+          "build": 15,
+          "source": 1618,
+          "test_golden": 196,
+          "test_code": 520
+        },
+        "test_loc_added": 716,
+        "test_code_loc_added": 520,
+        "source_loc_added": 1618,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 335,
+          "code": 992
+        },
+        "complexity_source": {
+          "files": 7,
+          "base": {
+            "functions": 115,
+            "mean_ccn": 1.809,
+            "max_ccn": 8,
+            "mean_nloc": 8,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 163,
+            "mean_ccn": 2.92,
+            "max_ccn": 23,
+            "mean_nloc": 10.87,
+            "ccn_gt15": 3
+          },
+          "delta": {
+            "functions": 48,
+            "mean_ccn": 1.111,
+            "max_ccn": 15,
+            "mean_nloc": 2.87,
+            "ccn_gt15": 3
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 11,
+          "base": {
+            "functions": 115,
+            "mean_ccn": 1.809,
+            "max_ccn": 8,
+            "mean_nloc": 8,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 195,
+            "mean_ccn": 2.662,
+            "max_ccn": 23,
+            "mean_nloc": 10.48,
+            "ccn_gt15": 3
+          },
+          "delta": {
+            "functions": 80,
+            "mean_ccn": 0.853,
+            "max_ccn": 15,
+            "mean_nloc": 2.48,
+            "ccn_gt15": 3
+          }
+        },
+        "audit": {
+          "topics": [
+            "cmdline-processor"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/cmdline-seed",
+        "base": "9e12a34376d0",
+        "tip": "28973d2f3c0e",
+        "commits": 5,
+        "fork_tip": "de608d3ac534",
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 3,
+          "source": 11,
+          "test": 17
+        },
+        "loc_added": {
+          "build": 15,
+          "source": 1846,
+          "test_golden": 266,
+          "test_code": 951
+        },
+        "test_loc_added": 1217,
+        "test_code_loc_added": 951,
+        "source_loc_added": 1846,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 393,
+          "code": 1124
+        },
+        "complexity_source": {
+          "files": 11,
+          "base": {
+            "functions": 174,
+            "mean_ccn": 2.27,
+            "max_ccn": 30,
+            "mean_nloc": 10.43,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 229,
+            "mean_ccn": 2.996,
+            "max_ccn": 31,
+            "mean_nloc": 12.1,
+            "ccn_gt15": 4
+          },
+          "delta": {
+            "functions": 55,
+            "mean_ccn": 0.726,
+            "max_ccn": 1,
+            "mean_nloc": 1.67,
+            "ccn_gt15": 3
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 19,
+          "base": {
+            "functions": 174,
+            "mean_ccn": 2.27,
+            "max_ccn": 30,
+            "mean_nloc": 10.43,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 287,
+            "mean_ccn": 2.672,
+            "max_ccn": 31,
+            "mean_nloc": 11.24,
+            "ccn_gt15": 4
+          },
+          "delta": {
+            "functions": 113,
+            "mean_ccn": 0.402,
+            "max_ccn": 1,
+            "mean_nloc": 0.81,
+            "ccn_gt15": 3
+          }
+        },
+        "audit": {
+          "topics": [
+            "global-seed",
+            "reg-randomize"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/crave-randomization",
+        "base": "9e12a34376d0",
+        "tip": "485d098bbde7",
+        "commits": 1,
+        "fork_tip": "485d098bbde7",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 1,
+          "doc": 1,
+          "example": 7,
+          "test": 2
+        },
+        "loc_added": {
+          "build": 16,
+          "doc": 16,
+          "example": 535,
+          "test_other": 12,
+          "test_golden": 6
+        },
+        "test_loc_added": 18,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [
+          "tests/tests/crave/constrained_random"
+        ],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 6,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 19,
+            "mean_ccn": 2.421,
+            "max_ccn": 8,
+            "mean_nloc": 9.32,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 19,
+            "mean_ccn": 2.421,
+            "max_ccn": 8,
+            "mean_nloc": 9.32,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "feature/crave-reg-randomize",
+        "base": "9e12a34376d0",
+        "tip": "bb5d44fd709d",
+        "commits": 15,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 4,
+          "doc": 1,
+          "example": 9,
+          "source": 22,
+          "test": 26
+        },
+        "loc_added": {
+          "build": 31,
+          "doc": 16,
+          "example": 817,
+          "source": 2156,
+          "test_other": 12,
+          "test_golden": 324,
+          "test_code": 1636
+        },
+        "test_loc_added": 1972,
+        "test_code_loc_added": 1636,
+        "source_loc_added": 2156,
+        "new_test_dirs_with_golden": [
+          "tests/tests/crave/constrained_random",
+          "tests/tests/crave/constrained_registers",
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 509,
+          "code": 1266
+        },
+        "complexity_source": {
+          "files": 22,
+          "base": {
+            "functions": 400,
+            "mean_ccn": 3.3,
+            "max_ccn": 44,
+            "mean_nloc": 13.98,
+            "ccn_gt15": 14
+          },
+          "tip": {
+            "functions": 468,
+            "mean_ccn": 3.498,
+            "max_ccn": 44,
+            "mean_nloc": 14.19,
+            "ccn_gt15": 17
+          },
+          "delta": {
+            "functions": 68,
+            "mean_ccn": 0.198,
+            "max_ccn": 0,
+            "mean_nloc": 0.21,
+            "ccn_gt15": 3
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 41,
+          "base": {
+            "functions": 400,
+            "mean_ccn": 3.3,
+            "max_ccn": 44,
+            "mean_nloc": 13.98,
+            "ccn_gt15": 14
+          },
+          "tip": {
+            "functions": 602,
+            "mean_ccn": 3.093,
+            "max_ccn": 44,
+            "mean_nloc": 12.86,
+            "ccn_gt15": 17
+          },
+          "delta": {
+            "functions": 202,
+            "mean_ccn": -0.207,
+            "max_ccn": 0,
+            "mean_nloc": -1.12,
+            "ccn_gt15": 3
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-randomize"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/crave-seed",
+        "base": "9e12a34376d0",
+        "tip": "6a3278106f38",
+        "commits": 9,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 4,
+          "doc": 1,
+          "example": 7,
+          "source": 11,
+          "test": 19
+        },
+        "loc_added": {
+          "build": 31,
+          "doc": 16,
+          "example": 536,
+          "source": 1846,
+          "test_other": 12,
+          "test_golden": 272,
+          "test_code": 951
+        },
+        "test_loc_added": 1235,
+        "test_code_loc_added": 951,
+        "source_loc_added": 1846,
+        "new_test_dirs_with_golden": [
+          "tests/tests/crave/constrained_random",
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/04report/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 393,
+          "code": 1124
+        },
+        "complexity_source": {
+          "files": 11,
+          "base": {
+            "functions": 174,
+            "mean_ccn": 2.27,
+            "max_ccn": 30,
+            "mean_nloc": 10.43,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 229,
+            "mean_ccn": 2.996,
+            "max_ccn": 31,
+            "mean_nloc": 12.1,
+            "ccn_gt15": 4
+          },
+          "delta": {
+            "functions": 55,
+            "mean_ccn": 0.726,
+            "max_ccn": 1,
+            "mean_nloc": 1.67,
+            "ccn_gt15": 3
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 25,
+          "base": {
+            "functions": 174,
+            "mean_ccn": 2.27,
+            "max_ccn": 30,
+            "mean_nloc": 10.43,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 306,
+            "mean_ccn": 2.657,
+            "max_ccn": 31,
+            "mean_nloc": 11.13,
+            "ccn_gt15": 4
+          },
+          "delta": {
+            "functions": 132,
+            "mean_ccn": 0.387,
+            "max_ccn": 1,
+            "mean_nloc": 0.7,
+            "ccn_gt15": 3
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-randomize"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/fc4sc-coverage",
+        "base": "9e12a34376d0",
+        "tip": "b25887537d9d",
+        "commits": 6,
+        "fork_tip": "841c82582ca8",
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 2,
+          "doc": 2,
+          "example": 6,
+          "source": 2,
+          "test": 5
+        },
+        "loc_added": {
+          "build": 34,
+          "doc": 17,
+          "example": 333,
+          "source": 59,
+          "test_other": 15,
+          "test_golden": 29,
+          "test_code": 76
+        },
+        "test_loc_added": 120,
+        "test_code_loc_added": 76,
+        "source_loc_added": 59,
+        "new_test_dirs_with_golden": [
+          "tests/tests/fc4sc/coverage/subscriber",
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 3,
+          "code": 50
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 113,
+            "mean_ccn": 3.708,
+            "max_ccn": 44,
+            "mean_nloc": 17.81,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 113,
+            "mean_ccn": 3.805,
+            "max_ccn": 44,
+            "mean_nloc": 18.2,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.097,
+            "max_ccn": 0,
+            "mean_nloc": 0.39,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 7,
+          "base": {
+            "functions": 113,
+            "mean_ccn": 3.708,
+            "max_ccn": 44,
+            "mean_nloc": 17.81,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 130,
+            "mean_ccn": 3.5,
+            "max_ccn": 44,
+            "mean_nloc": 16.8,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 17,
+            "mean_ccn": -0.208,
+            "max_ccn": 0,
+            "mean_nloc": -1.01,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "feature/fc4sc-coverage-rebased",
+        "base": "9e12a34376d0",
+        "tip": "841c82582ca8",
+        "commits": 1,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 2,
+          "doc": 1,
+          "example": 6,
+          "test": 3
+        },
+        "loc_added": {
+          "build": 34,
+          "doc": 5,
+          "example": 333,
+          "test_other": 15,
+          "test_golden": 15
+        },
+        "test_loc_added": 30,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [
+          "tests/tests/fc4sc/coverage/subscriber"
+        ],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 4,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 16,
+            "mean_ccn": 1.125,
+            "max_ccn": 2,
+            "mean_nloc": 5.81,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 16,
+            "mean_ccn": 1.125,
+            "max_ccn": 2,
+            "mean_nloc": 5.81,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "feature/objection-callbacks",
+        "base": "9e12a34376d0",
+        "tip": "c4945ec0437e",
+        "commits": 1,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 3,
+          "source": 5,
+          "test": 2
+        },
+        "loc_added": {
+          "build": 4,
+          "source": 141,
+          "test_golden": 44,
+          "test_code": 134
+        },
+        "test_loc_added": 178,
+        "test_code_loc_added": 134,
+        "source_loc_added": 141,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 60,
+          "code": 60
+        },
+        "complexity_source": {
+          "files": 5,
+          "base": {
+            "functions": 34,
+            "mean_ccn": 4.794,
+            "max_ccn": 25,
+            "mean_nloc": 19.56,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 38,
+            "mean_ccn": 4.395,
+            "max_ccn": 25,
+            "mean_nloc": 18.29,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 4,
+            "mean_ccn": -0.399,
+            "max_ccn": 0,
+            "mean_nloc": -1.27,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 6,
+          "base": {
+            "functions": 34,
+            "mean_ccn": 4.794,
+            "max_ccn": 25,
+            "mean_nloc": 19.56,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 49,
+            "mean_ccn": 3.653,
+            "max_ccn": 25,
+            "mean_nloc": 15.51,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 15,
+            "mean_ccn": -1.141,
+            "max_ccn": 0,
+            "mean_nloc": -4.05,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "parity-batch-2"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "repro-only",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/random-seed",
+        "base": "9e12a34376d0",
+        "tip": "0814dcb4ce61",
+        "commits": 2,
+        "fork_tip": "e807d3a1f37f",
+        "fork_equals_local": false,
+        "files_changed": {
+          "source": 4,
+          "test": 7
+        },
+        "loc_added": {
+          "source": 163,
+          "test_golden": 52,
+          "test_code": 482
+        },
+        "test_loc_added": 534,
+        "test_code_loc_added": 482,
+        "source_loc_added": 163,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 47,
+          "code": 86
+        },
+        "complexity_source": {
+          "files": 4,
+          "base": {
+            "functions": 59,
+            "mean_ccn": 3.169,
+            "max_ccn": 30,
+            "mean_nloc": 15.17,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 65,
+            "mean_ccn": 3.077,
+            "max_ccn": 31,
+            "mean_nloc": 14.69,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 6,
+            "mean_ccn": -0.092,
+            "max_ccn": 1,
+            "mean_nloc": -0.48,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 7,
+          "base": {
+            "functions": 59,
+            "mean_ccn": 3.169,
+            "max_ccn": 30,
+            "mean_nloc": 15.17,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 96,
+            "mean_ccn": 2.635,
+            "max_ccn": 31,
+            "mean_nloc": 12.33,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 37,
+            "mean_ccn": -0.534,
+            "max_ccn": 1,
+            "mean_nloc": -2.84,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "global-seed",
+            "reg-randomize"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/reg-backdoor-access",
+        "base": "9e12a34376d0",
+        "tip": "95f2f76248ad",
+        "commits": 6,
+        "fork_tip": "95f2f76248ad",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 3,
+          "source": 12,
+          "test": 11
+        },
+        "loc_added": {
+          "build": 31,
+          "source": 2269,
+          "test_golden": 373,
+          "test_code": 935
+        },
+        "test_loc_added": 1308,
+        "test_code_loc_added": 935,
+        "source_loc_added": 2269,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20reg_access",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20reg_access/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/reg_seq_tb.h"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 648,
+          "code": 1259
+        },
+        "complexity_source": {
+          "files": 12,
+          "base": {
+            "functions": 144,
+            "mean_ccn": 4.701,
+            "max_ccn": 44,
+            "mean_nloc": 18.38,
+            "ccn_gt15": 12
+          },
+          "tip": {
+            "functions": 187,
+            "mean_ccn": 4.861,
+            "max_ccn": 44,
+            "mean_nloc": 19.86,
+            "ccn_gt15": 19
+          },
+          "delta": {
+            "functions": 43,
+            "mean_ccn": 0.16,
+            "max_ccn": 0,
+            "mean_nloc": 1.48,
+            "ccn_gt15": 7
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 18,
+          "base": {
+            "functions": 159,
+            "mean_ccn": 4.377,
+            "max_ccn": 44,
+            "mean_nloc": 17.29,
+            "ccn_gt15": 12
+          },
+          "tip": {
+            "functions": 258,
+            "mean_ccn": 3.95,
+            "max_ccn": 44,
+            "mean_nloc": 16.58,
+            "ccn_gt15": 19
+          },
+          "delta": {
+            "functions": 99,
+            "mean_ccn": -0.427,
+            "max_ccn": 0,
+            "mean_nloc": -0.71,
+            "ccn_gt15": 7
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-backdoor-access"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/reg-built-in-sequences",
+        "base": "9e12a34376d0",
+        "tip": "a895010087d9",
+        "commits": 3,
+        "fork_tip": "a895010087d9",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 3,
+          "source": 10,
+          "test": 6
+        },
+        "loc_added": {
+          "build": 31,
+          "source": 2193,
+          "test_golden": 292,
+          "test_code": 655
+        },
+        "test_loc_added": 947,
+        "test_code_loc_added": 655,
+        "source_loc_added": 2193,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/reg_seq_tb.h"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 639,
+          "code": 1202
+        },
+        "complexity_source": {
+          "files": 10,
+          "base": {
+            "functions": 138,
+            "mean_ccn": 4.732,
+            "max_ccn": 44,
+            "mean_nloc": 18.41,
+            "ccn_gt15": 12
+          },
+          "tip": {
+            "functions": 180,
+            "mean_ccn": 4.817,
+            "max_ccn": 44,
+            "mean_nloc": 19.48,
+            "ccn_gt15": 19
+          },
+          "delta": {
+            "functions": 42,
+            "mean_ccn": 0.085,
+            "max_ccn": 0,
+            "mean_nloc": 1.07,
+            "ccn_gt15": 7
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 13,
+          "base": {
+            "functions": 138,
+            "mean_ccn": 4.732,
+            "max_ccn": 44,
+            "mean_nloc": 18.41,
+            "ccn_gt15": 12
+          },
+          "tip": {
+            "functions": 223,
+            "mean_ccn": 4.229,
+            "max_ccn": 44,
+            "mean_nloc": 17.19,
+            "ccn_gt15": 19
+          },
+          "delta": {
+            "functions": 85,
+            "mean_ccn": -0.503,
+            "max_ccn": 0,
+            "mean_nloc": -1.22,
+            "ccn_gt15": 7
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-built-in-sequences"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/reg-randomize",
+        "base": "9e12a34376d0",
+        "tip": "7946e8d1fa3b",
+        "commits": 5,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "source": 15,
+          "test": 11
+        },
+        "loc_added": {
+          "source": 473,
+          "test_golden": 82,
+          "test_code": 969
+        },
+        "test_loc_added": 1051,
+        "test_code_loc_added": 969,
+        "source_loc_added": 473,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 163,
+          "code": 228
+        },
+        "complexity_source": {
+          "files": 15,
+          "base": {
+            "functions": 285,
+            "mean_ccn": 3.902,
+            "max_ccn": 44,
+            "mean_nloc": 16.39,
+            "ccn_gt15": 14
+          },
+          "tip": {
+            "functions": 304,
+            "mean_ccn": 3.786,
+            "max_ccn": 44,
+            "mean_nloc": 15.87,
+            "ccn_gt15": 14
+          },
+          "delta": {
+            "functions": 19,
+            "mean_ccn": -0.116,
+            "max_ccn": 0,
+            "mean_nloc": -0.52,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 20,
+          "base": {
+            "functions": 285,
+            "mean_ccn": 3.902,
+            "max_ccn": 44,
+            "mean_nloc": 16.39,
+            "ccn_gt15": 14
+          },
+          "tip": {
+            "functions": 364,
+            "mean_ccn": 3.431,
+            "max_ccn": 44,
+            "mean_nloc": 14.61,
+            "ccn_gt15": 14
+          },
+          "delta": {
+            "functions": 79,
+            "mean_ccn": -0.471,
+            "max_ccn": 0,
+            "mean_nloc": -1.78,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-randomize"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/reg-seq-seed",
+        "base": "9e12a34376d0",
+        "tip": "8d343ce8072b",
+        "commits": 6,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 3,
+          "source": 14,
+          "test": 13
+        },
+        "loc_added": {
+          "build": 31,
+          "source": 2387,
+          "test_golden": 340,
+          "test_code": 1039
+        },
+        "test_loc_added": 1379,
+        "test_code_loc_added": 1039,
+        "source_loc_added": 2387,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02randval_seed"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02randval_seed/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/reg_seq_tb.h"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 697,
+          "code": 1303
+        },
+        "complexity_source": {
+          "files": 14,
+          "base": {
+            "functions": 197,
+            "mean_ccn": 4.264,
+            "max_ccn": 44,
+            "mean_nloc": 17.44,
+            "ccn_gt15": 13
+          },
+          "tip": {
+            "functions": 246,
+            "mean_ccn": 4.358,
+            "max_ccn": 44,
+            "mean_nloc": 18.19,
+            "ccn_gt15": 20
+          },
+          "delta": {
+            "functions": 49,
+            "mean_ccn": 0.094,
+            "max_ccn": 0,
+            "mean_nloc": 0.75,
+            "ccn_gt15": 7
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 20,
+          "base": {
+            "functions": 197,
+            "mean_ccn": 4.264,
+            "max_ccn": 44,
+            "mean_nloc": 17.44,
+            "ccn_gt15": 13
+          },
+          "tip": {
+            "functions": 310,
+            "mean_ccn": 3.806,
+            "max_ccn": 44,
+            "mean_nloc": 16.04,
+            "ccn_gt15": 20
+          },
+          "delta": {
+            "functions": 113,
+            "mean_ccn": -0.458,
+            "max_ccn": 0,
+            "mean_nloc": -1.4,
+            "ccn_gt15": 7
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-randomize"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/tlm-fifos-comparators",
+        "base": "9e12a34376d0",
+        "tip": "0164557ae6e5",
+        "commits": 1,
+        "fork_tip": "0164557ae6e5",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 5,
+          "source": 6,
+          "test": 6
+        },
+        "loc_added": {
+          "build": 16,
+          "source": 823,
+          "test_golden": 105,
+          "test_code": 567
+        },
+        "test_loc_added": 672,
+        "test_code_loc_added": 567,
+        "source_loc_added": 823,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 269,
+          "code": 416
+        },
+        "complexity_source": {
+          "files": 6,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 53,
+            "mean_ccn": 1.226,
+            "max_ccn": 3,
+            "mean_nloc": 5.25,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 53,
+            "mean_ccn": 1.226,
+            "max_ccn": 3,
+            "mean_nloc": 5.25,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 9,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 86,
+            "mean_ccn": 1.372,
+            "max_ccn": 4,
+            "mean_nloc": 6.69,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 86,
+            "mean_ccn": 1.372,
+            "max_ccn": 4,
+            "mean_nloc": 6.69,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "tlm-fifos-comparators"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/uvm-barrier",
+        "base": "9e12a34376d0",
+        "tip": "ac0af552cdd5",
+        "commits": 2,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 5,
+          "source": 6,
+          "test": 5
+        },
+        "loc_added": {
+          "build": 10,
+          "source": 894,
+          "test_golden": 87,
+          "test_code": 275
+        },
+        "test_loc_added": 362,
+        "test_code_loc_added": 275,
+        "source_loc_added": 894,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/10pool",
+          "tests/tests/uvm-systemc/unit_tests/00basic/11barrier"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/00basic/11barrier/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 372,
+          "code": 361
+        },
+        "complexity_source": {
+          "files": 6,
+          "base": {
+            "functions": 9,
+            "mean_ccn": 1.556,
+            "max_ccn": 2,
+            "mean_nloc": 7.44,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 39,
+            "mean_ccn": 1.641,
+            "max_ccn": 5,
+            "mean_nloc": 6.79,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 30,
+            "mean_ccn": 0.085,
+            "max_ccn": 3,
+            "mean_nloc": -0.65,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 8,
+          "base": {
+            "functions": 9,
+            "mean_ccn": 1.556,
+            "max_ccn": 2,
+            "mean_nloc": 7.44,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 47,
+            "mean_ccn": 1.723,
+            "max_ccn": 5,
+            "mean_nloc": 8.72,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 38,
+            "mean_ccn": 0.167,
+            "max_ccn": 3,
+            "mean_nloc": 1.28,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "parity-batch-2"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "repro-only",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/uvm-heartbeat",
+        "base": "9e12a34376d0",
+        "tip": "c1eb3febe7a1",
+        "commits": 2,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 5,
+          "source": 8,
+          "test": 4
+        },
+        "loc_added": {
+          "build": 10,
+          "source": 784,
+          "test_golden": 120,
+          "test_code": 342
+        },
+        "test_loc_added": 462,
+        "test_code_loc_added": 342,
+        "source_loc_added": 784,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat",
+          "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat/test.cpp",
+          "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 241,
+          "code": 416
+        },
+        "complexity_source": {
+          "files": 8,
+          "base": {
+            "functions": 34,
+            "mean_ccn": 4.794,
+            "max_ccn": 25,
+            "mean_nloc": 19.56,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 58,
+            "mean_ccn": 4.138,
+            "max_ccn": 25,
+            "mean_nloc": 16.55,
+            "ccn_gt15": 3
+          },
+          "delta": {
+            "functions": 24,
+            "mean_ccn": -0.656,
+            "max_ccn": 0,
+            "mean_nloc": -3.01,
+            "ccn_gt15": 1
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 10,
+          "base": {
+            "functions": 34,
+            "mean_ccn": 4.794,
+            "max_ccn": 25,
+            "mean_nloc": 19.56,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 78,
+            "mean_ccn": 3.41,
+            "max_ccn": 25,
+            "mean_nloc": 14.47,
+            "ccn_gt15": 3
+          },
+          "delta": {
+            "functions": 44,
+            "mean_ccn": -1.384,
+            "max_ccn": 0,
+            "mean_nloc": -5.09,
+            "ccn_gt15": 1
+          }
+        },
+        "audit": {
+          "topics": [
+            "parity-batch-2"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "repro-only",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/uvm-pool",
+        "base": "9e12a34376d0",
+        "tip": "174aa6069c1e",
+        "commits": 1,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 3,
+          "source": 3,
+          "test": 2
+        },
+        "loc_added": {
+          "build": 4,
+          "source": 535,
+          "test_golden": 42,
+          "test_code": 139
+        },
+        "test_loc_added": 181,
+        "test_code_loc_added": 139,
+        "source_loc_added": 535,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/10pool"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/10pool/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 212,
+          "code": 228
+        },
+        "complexity_source": {
+          "files": 3,
+          "base": {
+            "functions": 9,
+            "mean_ccn": 1.556,
+            "max_ccn": 2,
+            "mean_nloc": 7.44,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 28,
+            "mean_ccn": 1.571,
+            "max_ccn": 3,
+            "mean_nloc": 6.25,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 19,
+            "mean_ccn": 0.015,
+            "max_ccn": 1,
+            "mean_nloc": -1.19,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 4,
+          "base": {
+            "functions": 9,
+            "mean_ccn": 1.556,
+            "max_ccn": 2,
+            "mean_nloc": 7.44,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 30,
+            "mean_ccn": 1.8,
+            "max_ccn": 5,
+            "mean_nloc": 8.33,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 21,
+            "mean_ccn": 0.244,
+            "max_ccn": 3,
+            "mean_nloc": 0.89,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "parity-batch-2"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "repro-only",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "feature/uvm-sequence-library",
+        "base": "9e12a34376d0",
+        "tip": "67336eb9f470",
+        "commits": 1,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "build": 3,
+          "source": 3,
+          "test": 2
+        },
+        "loc_added": {
+          "build": 4,
+          "source": 972,
+          "test_golden": 94,
+          "test_code": 419
+        },
+        "test_loc_added": 513,
+        "test_code_loc_added": 419,
+        "source_loc_added": 972,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 266,
+          "code": 556
+        },
+        "complexity_source": {
+          "files": 3,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 29,
+            "mean_ccn": 3.276,
+            "max_ccn": 19,
+            "mean_nloc": 13.83,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 29,
+            "mean_ccn": 3.276,
+            "max_ccn": 19,
+            "mean_nloc": 13.83,
+            "ccn_gt15": 1
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 4,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 55,
+            "mean_ccn": 2.745,
+            "max_ccn": 24,
+            "mean_nloc": 11.35,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 55,
+            "mean_ccn": 2.745,
+            "max_ccn": 24,
+            "mean_nloc": 11.35,
+            "ccn_gt15": 2
+          }
+        },
+        "audit": {
+          "topics": [
+            "parity-batch-2"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "repro-only",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/component-schedule-lifetime",
+        "base": "9e12a34376d0",
+        "tip": "879c015eacc3",
+        "commits": 1,
+        "fork_tip": "879c015eacc3",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 2,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 22,
+          "test_golden": 17,
+          "test_code": 92
+        },
+        "test_loc_added": 109,
+        "test_code_loc_added": 92,
+        "source_loc_added": 22,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/40phasing/20component_lifetime"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/40phasing/20component_lifetime/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 7,
+          "code": 11
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 93,
+            "mean_ccn": 1.602,
+            "max_ccn": 6,
+            "mean_nloc": 7.01,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 93,
+            "mean_ccn": 1.634,
+            "max_ccn": 6,
+            "mean_nloc": 7.1,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.032,
+            "max_ccn": 0,
+            "mean_nloc": 0.09,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 93,
+            "mean_ccn": 1.602,
+            "max_ccn": 6,
+            "mean_nloc": 7.01,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 97,
+            "mean_ccn": 1.608,
+            "max_ccn": 6,
+            "mean_nloc": 7.13,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 4,
+            "mean_ccn": 0.006,
+            "max_ccn": 0,
+            "mean_nloc": 0.12,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "component-schedule-lifetime"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/config-db-exists",
+        "base": "9e12a34376d0",
+        "tip": "1013c1956c8c",
+        "commits": 1,
+        "fork_tip": "1013c1956c8c",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 4,
+          "test_golden": 27,
+          "test_code": 129
+        },
+        "test_loc_added": 156,
+        "test_code_loc_added": 129,
+        "source_loc_added": 4,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 1,
+          "code": 3
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 9,
+            "mean_ccn": 4.222,
+            "max_ccn": 13,
+            "mean_nloc": 19.56,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 9,
+            "mean_ccn": 4.333,
+            "max_ccn": 13,
+            "mean_nloc": 19.67,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.111,
+            "max_ccn": 0,
+            "mean_nloc": 0.11,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 9,
+            "mean_ccn": 4.222,
+            "max_ccn": 13,
+            "mean_nloc": 19.56,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 16,
+            "mean_ccn": 3.125,
+            "max_ccn": 13,
+            "mean_nloc": 14.88,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 7,
+            "mean_ccn": -1.097,
+            "max_ccn": 0,
+            "mean_nloc": -4.68,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "config-db-exists"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/global-forward-declarations",
+        "base": "9e12a34376d0",
+        "tip": "0ae0ff273d16",
+        "commits": 1,
+        "fork_tip": "0ae0ff273d16",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 4,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 12,
+          "test_golden": 4,
+          "test_code": 48
+        },
+        "test_loc_added": 52,
+        "test_code_loc_added": 48,
+        "source_loc_added": 12,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 4,
+          "code": 4
+        },
+        "complexity_source": {
+          "files": 4,
+          "base": {
+            "functions": 33,
+            "mean_ccn": 1.273,
+            "max_ccn": 2,
+            "mean_nloc": 7.36,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 33,
+            "mean_ccn": 1.273,
+            "max_ccn": 2,
+            "mean_nloc": 7.36,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 5,
+          "base": {
+            "functions": 33,
+            "mean_ccn": 1.273,
+            "max_ccn": 2,
+            "mean_nloc": 7.36,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 34,
+            "mean_ccn": 1.324,
+            "max_ccn": 3,
+            "mean_nloc": 7.5,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": 0.051,
+            "max_ccn": 1,
+            "mean_nloc": 0.14,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "global-forward-declarations"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/hdl-type-mismatch-message",
+        "base": "9e12a34376d0",
+        "tip": "6d0044e90283",
+        "commits": 1,
+        "fork_tip": "6d0044e90283",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 21,
+          "test_golden": 22,
+          "test_code": 78
+        },
+        "test_loc_added": 100,
+        "test_code_loc_added": 78,
+        "source_loc_added": 21,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 2,
+          "code": 18
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 5,
+            "mean_ccn": 9.4,
+            "max_ccn": 22,
+            "mean_nloc": 39.8,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 6,
+            "mean_ccn": 8,
+            "max_ccn": 22,
+            "mean_nloc": 35,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": -1.4,
+            "max_ccn": 0,
+            "mean_nloc": -4.8,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 5,
+            "mean_ccn": 9.4,
+            "max_ccn": 22,
+            "mean_nloc": 39.8,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 8,
+            "mean_ccn": 7.125,
+            "max_ccn": 22,
+            "mean_nloc": 30.12,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 3,
+            "mean_ccn": -2.275,
+            "max_ccn": 0,
+            "mean_nloc": -9.68,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "hdl-type-mismatch-message"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/phase-schedule-order",
+        "base": "9e12a34376d0",
+        "tip": "ae77928221d3",
+        "commits": 1,
+        "fork_tip": "ae77928221d3",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 2,
+          "test": 3
+        },
+        "loc_added": {
+          "source": 23,
+          "test_golden": 5
+        },
+        "test_loc_added": 5,
+        "test_code_loc_added": 0,
+        "source_loc_added": 23,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 3,
+          "code": 18
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 54,
+            "mean_ccn": 6.37,
+            "max_ccn": 50,
+            "mean_nloc": 24.59,
+            "ccn_gt15": 4
+          },
+          "tip": {
+            "functions": 55,
+            "mean_ccn": 6.273,
+            "max_ccn": 50,
+            "mean_nloc": 24.22,
+            "ccn_gt15": 4
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": -0.097,
+            "max_ccn": 0,
+            "mean_nloc": -0.37,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 54,
+            "mean_ccn": 6.37,
+            "max_ccn": 50,
+            "mean_nloc": 24.59,
+            "ccn_gt15": 4
+          },
+          "tip": {
+            "functions": 55,
+            "mean_ccn": 6.273,
+            "max_ccn": 50,
+            "mean_nloc": 24.22,
+            "ccn_gt15": 4
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": -0.097,
+            "max_ccn": 0,
+            "mean_nloc": -0.37,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "phase-schedule-order"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/re-match-search",
+        "base": "9e12a34376d0",
+        "tip": "36483c08d50d",
+        "commits": 1,
+        "fork_tip": "36483c08d50d",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 2,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 23,
+          "test_golden": 27,
+          "test_code": 158
+        },
+        "test_loc_added": 185,
+        "test_code_loc_added": 158,
+        "source_loc_added": 23,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/04re_match"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/04re_match/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 10,
+          "code": 12
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 29,
+            "mean_ccn": 3.897,
+            "max_ccn": 18,
+            "mean_nloc": 18.28,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 29,
+            "mean_ccn": 3.931,
+            "max_ccn": 18,
+            "mean_nloc": 18.24,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.034,
+            "max_ccn": 0,
+            "mean_nloc": -0.04,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 29,
+            "mean_ccn": 3.897,
+            "max_ccn": 18,
+            "mean_nloc": 18.28,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 40,
+            "mean_ccn": 3.15,
+            "max_ccn": 18,
+            "mean_nloc": 15.35,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 11,
+            "mean_ccn": -0.747,
+            "max_ccn": 0,
+            "mean_nloc": -2.93,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "re-match-search"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/reg-compare-mismatch-test",
+        "base": "9e12a34376d0",
+        "tip": "ba4cbddd9b34",
+        "commits": 1,
+        "fork_tip": "ba4cbddd9b34",
+        "fork_equals_local": true,
+        "files_changed": {
+          "test": 2
+        },
+        "loc_added": {
+          "test_golden": 27,
+          "test_code": 1
+        },
+        "test_loc_added": 28,
+        "test_code_loc_added": 1,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 1,
+          "base": {
+            "functions": 12,
+            "mean_ccn": 1.167,
+            "max_ccn": 2,
+            "mean_nloc": 6.83,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 12,
+            "mean_ccn": 1.167,
+            "max_ccn": 2,
+            "mean_nloc": 6.83,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-compare-mismatch-test"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/reg-data-width-128",
+        "base": "9e12a34376d0",
+        "tip": "c137759bd5d8",
+        "commits": 2,
+        "fork_tip": "c137759bd5d8",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 4,
+          "test": 4
+        },
+        "loc_added": {
+          "source": 15,
+          "test_golden": 25,
+          "test_code": 120
+        },
+        "test_loc_added": 145,
+        "test_code_loc_added": 120,
+        "source_loc_added": 15,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 2,
+          "code": 12
+        },
+        "complexity_source": {
+          "files": 4,
+          "base": {
+            "functions": 164,
+            "mean_ccn": 4.03,
+            "max_ccn": 32,
+            "mean_nloc": 18.31,
+            "ccn_gt15": 13
+          },
+          "tip": {
+            "functions": 164,
+            "mean_ccn": 4.03,
+            "max_ccn": 32,
+            "mean_nloc": 18.32,
+            "ccn_gt15": 13
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.01,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 6,
+          "base": {
+            "functions": 195,
+            "mean_ccn": 3.631,
+            "max_ccn": 32,
+            "mean_nloc": 16.38,
+            "ccn_gt15": 13
+          },
+          "tip": {
+            "functions": 200,
+            "mean_ccn": 3.585,
+            "max_ccn": 32,
+            "mean_nloc": 16.27,
+            "ccn_gt15": 13
+          },
+          "delta": {
+            "functions": 5,
+            "mean_ccn": -0.046,
+            "max_ccn": 0,
+            "mean_nloc": -0.11,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-data-width-128"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/reg-deterministic-order",
+        "base": "9e12a34376d0",
+        "tip": "d7af0781dc54",
+        "commits": 1,
+        "fork_tip": "d7af0781dc54",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 7,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 53,
+          "test_golden": 28,
+          "test_code": 193
+        },
+        "test_loc_added": 221,
+        "test_code_loc_added": 193,
+        "source_loc_added": 53,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 13,
+          "code": 33
+        },
+        "complexity_source": {
+          "files": 7,
+          "base": {
+            "functions": 76,
+            "mean_ccn": 3.289,
+            "max_ccn": 16,
+            "mean_nloc": 14.97,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 80,
+            "mean_ccn": 3.175,
+            "max_ccn": 16,
+            "mean_nloc": 14.35,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 4,
+            "mean_ccn": -0.114,
+            "max_ccn": 0,
+            "mean_nloc": -0.62,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 8,
+          "base": {
+            "functions": 76,
+            "mean_ccn": 3.289,
+            "max_ccn": 16,
+            "mean_nloc": 14.97,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 95,
+            "mean_ccn": 2.926,
+            "max_ccn": 16,
+            "mean_nloc": 13.14,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 19,
+            "mean_ccn": -0.363,
+            "max_ccn": 0,
+            "mean_nloc": -1.83,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-deterministic-order"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/reg-field-full-width",
+        "base": "9e12a34376d0",
+        "tip": "142b260b9bf0",
+        "commits": 1,
+        "fork_tip": "142b260b9bf0",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 2,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 11,
+          "test_golden": 17,
+          "test_code": 110
+        },
+        "test_loc_added": 127,
+        "test_code_loc_added": 110,
+        "source_loc_added": 11,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 1,
+          "code": 9
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 75,
+            "mean_ccn": 5.413,
+            "max_ccn": 32,
+            "mean_nloc": 20.44,
+            "ccn_gt15": 11
+          },
+          "tip": {
+            "functions": 75,
+            "mean_ccn": 5.413,
+            "max_ccn": 32,
+            "mean_nloc": 20.47,
+            "ccn_gt15": 11
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.03,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 75,
+            "mean_ccn": 5.413,
+            "max_ccn": 32,
+            "mean_nloc": 20.44,
+            "ccn_gt15": 11
+          },
+          "tip": {
+            "functions": 80,
+            "mean_ccn": 5.162,
+            "max_ccn": 32,
+            "mean_nloc": 19.82,
+            "ccn_gt15": 11
+          },
+          "delta": {
+            "functions": 5,
+            "mean_ccn": -0.251,
+            "max_ccn": 0,
+            "mean_nloc": -0.62,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-field-full-width"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/reg-map-internal-names",
+        "base": "9e12a34376d0",
+        "tip": "a2e326f02dd7",
+        "commits": 1,
+        "fork_tip": "a2e326f02dd7",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 5
+        },
+        "loc_added": {
+          "source": 0,
+          "test_golden": 14,
+          "test_code": 66
+        },
+        "test_loc_added": 80,
+        "test_code_loc_added": 66,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 54,
+            "mean_ccn": 5.167,
+            "max_ccn": 29,
+            "mean_nloc": 26.7,
+            "ccn_gt15": 6
+          },
+          "tip": {
+            "functions": 52,
+            "mean_ccn": 5.308,
+            "max_ccn": 29,
+            "mean_nloc": 27.5,
+            "ccn_gt15": 6
+          },
+          "delta": {
+            "functions": -2,
+            "mean_ccn": 0.141,
+            "max_ccn": 0,
+            "mean_nloc": 0.8,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 54,
+            "mean_ccn": 5.167,
+            "max_ccn": 29,
+            "mean_nloc": 26.7,
+            "ccn_gt15": 6
+          },
+          "tip": {
+            "functions": 54,
+            "mean_ccn": 5.185,
+            "max_ccn": 29,
+            "mean_nloc": 26.91,
+            "ccn_gt15": 6
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.018,
+            "max_ccn": 0,
+            "mean_nloc": 0.21,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-map-internal-names"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/reg-map-small-memory",
+        "base": "9e12a34376d0",
+        "tip": "302a443cdbb7",
+        "commits": 1,
+        "fork_tip": "302a443cdbb7",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 2,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 38,
+          "test_golden": 14,
+          "test_code": 99
+        },
+        "test_loc_added": 113,
+        "test_code_loc_added": 99,
+        "source_loc_added": 38,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 10,
+          "code": 22
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 55,
+            "mean_ccn": 5.091,
+            "max_ccn": 29,
+            "mean_nloc": 26.36,
+            "ccn_gt15": 6
+          },
+          "tip": {
+            "functions": 56,
+            "mean_ccn": 5.036,
+            "max_ccn": 29,
+            "mean_nloc": 26.09,
+            "ccn_gt15": 6
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": -0.055,
+            "max_ccn": 0,
+            "mean_nloc": -0.27,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 55,
+            "mean_ccn": 5.091,
+            "max_ccn": 29,
+            "mean_nloc": 26.36,
+            "ccn_gt15": 6
+          },
+          "tip": {
+            "functions": 61,
+            "mean_ccn": 4.721,
+            "max_ccn": 29,
+            "mean_nloc": 24.66,
+            "ccn_gt15": 6
+          },
+          "delta": {
+            "functions": 6,
+            "mean_ccn": -0.37,
+            "max_ccn": 0,
+            "mean_nloc": -1.7,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "reg-map-small-memory"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/resource-pool-spell-check",
+        "base": "9e12a34376d0",
+        "tip": "be58442ad606",
+        "commits": 1,
+        "fork_tip": "be58442ad606",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 57,
+          "test_golden": 14,
+          "test_code": 76
+        },
+        "test_loc_added": 90,
+        "test_code_loc_added": 76,
+        "source_loc_added": 57,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 3,
+          "code": 48
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 27,
+            "mean_ccn": 3.667,
+            "max_ccn": 10,
+            "mean_nloc": 17.19,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 27,
+            "mean_ccn": 4.074,
+            "max_ccn": 12,
+            "mean_nloc": 18.74,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.407,
+            "max_ccn": 2,
+            "mean_nloc": 1.55,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 27,
+            "mean_ccn": 3.667,
+            "max_ccn": 10,
+            "mean_nloc": 17.19,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 28,
+            "mean_ccn": 4.179,
+            "max_ccn": 12,
+            "mean_nloc": 19.29,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": 0.512,
+            "max_ccn": 2,
+            "mean_nloc": 2.1,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/sequencer-killed-requests",
+        "base": "9e12a34376d0",
+        "tip": "ce20f0e2cce7",
+        "commits": 1,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "source": 2,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 101,
+          "test_golden": 24,
+          "test_code": 184
+        },
+        "test_loc_added": 208,
+        "test_code_loc_added": 184,
+        "source_loc_added": 101,
+        "new_test_dirs_with_golden": [
+          "tests/tests/uvm-systemc/unit_tests/30seq/01lock_zombie"
+        ],
+        "new_test_files": [
+          "tests/tests/uvm-systemc/unit_tests/30seq/01lock_zombie/test.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 27,
+          "code": 65
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 46,
+            "mean_ccn": 3.196,
+            "max_ccn": 30,
+            "mean_nloc": 14.87,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 48,
+            "mean_ccn": 3.25,
+            "max_ccn": 31,
+            "mean_nloc": 15.38,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 2,
+            "mean_ccn": 0.054,
+            "max_ccn": 1,
+            "mean_nloc": 0.51,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 46,
+            "mean_ccn": 3.196,
+            "max_ccn": 30,
+            "mean_nloc": 14.87,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 63,
+            "mean_ccn": 2.794,
+            "max_ccn": 31,
+            "mean_nloc": 13.02,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 17,
+            "mean_ccn": -0.402,
+            "max_ccn": 1,
+            "mean_nloc": -1.85,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "parity-batch-2"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "repro-only",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/ubus-portable-readback",
+        "base": "9e12a34376d0",
+        "tip": "db68776eeb2b",
+        "commits": 1,
+        "fork_tip": "db68776eeb2b",
+        "fork_equals_local": true,
+        "files_changed": {
+          "example": 1,
+          "test": 1
+        },
+        "loc_added": {
+          "example": 10,
+          "test_code": 10
+        },
+        "test_loc_added": 10,
+        "test_code_loc_added": 10,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 16,
+            "mean_ccn": 2.625,
+            "max_ccn": 5,
+            "mean_nloc": 10.5,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 18,
+            "mean_ccn": 2.444,
+            "max_ccn": 5,
+            "mean_nloc": 9.78,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 2,
+            "mean_ccn": -0.181,
+            "max_ccn": 0,
+            "mean_nloc": -0.72,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "ubus-portable-readback"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/uvm-reg-set-parent",
+        "base": "9e12a34376d0",
+        "tip": "82d70825f594",
+        "commits": 1,
+        "fork_tip": "82d70825f594",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1
+        },
+        "loc_added": {
+          "source": 2
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 2,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 2
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 86,
+            "mean_ccn": 3.721,
+            "max_ccn": 44,
+            "mean_nloc": 18.01,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 86,
+            "mean_ccn": 3.721,
+            "max_ccn": 44,
+            "mean_nloc": 18.03,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.02,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 1,
+          "base": {
+            "functions": 86,
+            "mean_ccn": 3.721,
+            "max_ccn": 44,
+            "mean_nloc": 18.01,
+            "ccn_gt15": 2
+          },
+          "tip": {
+            "functions": 86,
+            "mean_ccn": 3.721,
+            "max_ccn": 44,
+            "mean_nloc": 18.03,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.02,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      }
+    ],
+    "systemc": [
+      {
+        "branch": "fix/signal-default-name",
+        "base": "cf66346d8b75",
+        "tip": "ad3d332ca74a",
+        "commits": 1,
+        "fork_tip": "ad3d332ca74a",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 2
+        },
+        "loc_added": {
+          "source": 13,
+          "test_code": 86,
+          "test_golden": 7
+        },
+        "test_loc_added": 93,
+        "test_code_loc_added": 86,
+        "source_loc_added": 13,
+        "new_test_dirs_with_golden": [
+          "tests/systemc/communication/sc_signal/default_name"
+        ],
+        "new_test_files": [
+          "tests/systemc/communication/sc_signal/default_name/default_name.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 5,
+          "code": 7
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 47,
+            "mean_ccn": 1.34,
+            "max_ccn": 4,
+            "mean_nloc": 3.53,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 48,
+            "mean_ccn": 1.333,
+            "max_ccn": 4,
+            "mean_nloc": 3.56,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": -0.007,
+            "max_ccn": 0,
+            "mean_nloc": 0.03,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 47,
+            "mean_ccn": 1.34,
+            "max_ccn": 4,
+            "mean_nloc": 3.53,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 53,
+            "mean_ccn": 1.302,
+            "max_ccn": 4,
+            "mean_nloc": 3.66,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 6,
+            "mean_ccn": -0.038,
+            "max_ccn": 0,
+            "mean_nloc": 0.13,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "signal-default-name"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": true,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/simple-cpu-debug-assert",
+        "base": "cf66346d8b75",
+        "tip": "0a4793a189cf",
+        "commits": 1,
+        "fork_tip": "0a4793a189cf",
+        "fork_equals_local": true,
+        "files_changed": {
+          "test": 1
+        },
+        "loc_added": {
+          "test_code": 4
+        },
+        "test_loc_added": 4,
+        "test_code_loc_added": 4,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 1,
+          "base": {
+            "functions": 5,
+            "mean_ccn": 4.6,
+            "max_ccn": 12,
+            "mean_nloc": 36.4,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 5,
+            "mean_ccn": 4.6,
+            "max_ccn": 12,
+            "mean_nloc": 37,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.6,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      }
+    ],
+    "crave": [
+      {
+        "branch": "fix/bdd-solver-odr",
+        "base": "881049157d97",
+        "tip": "49da55ab66dc",
+        "commits": 3,
+        "fork_tip": "49da55ab66dc",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 9,
+          "build": 1,
+          "test": 7
+        },
+        "loc_added": {
+          "source": 570,
+          "build": 1,
+          "test_other": 24,
+          "test_code": 415
+        },
+        "test_loc_added": 439,
+        "test_code_loc_added": 415,
+        "source_loc_added": 570,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "crave/tests/core/test_BddSampler.cpp",
+          "crave/tests/sysc/process_stability.cpp"
+        ],
+        "new_test_cases": 11,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 118,
+          "code": 387
+        },
+        "complexity_source": {
+          "files": 9,
+          "base": {
+            "functions": 95,
+            "mean_ccn": 1.779,
+            "max_ccn": 16,
+            "mean_nloc": 5.83,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 155,
+            "mean_ccn": 1.723,
+            "max_ccn": 22,
+            "mean_nloc": 4.72,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 60,
+            "mean_ccn": -0.056,
+            "max_ccn": 6,
+            "mean_nloc": -1.11,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 14,
+          "base": {
+            "functions": 107,
+            "mean_ccn": 2.028,
+            "max_ccn": 16,
+            "mean_nloc": 6.81,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 184,
+            "mean_ccn": 1.967,
+            "max_ccn": 22,
+            "mean_nloc": 6.03,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 77,
+            "mean_ccn": -0.061,
+            "max_ccn": 6,
+            "mean_nloc": -0.78,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/cudd-without-autotools",
+        "base": "881049157d97",
+        "tip": "cfa0d6721133",
+        "commits": 1,
+        "fork_tip": "cfa0d6721133",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 1
+        },
+        "loc_added": {
+          "build": 1
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/cxx17-clang-libcxx",
+        "base": "881049157d97",
+        "tip": "9618585a396b",
+        "commits": 2,
+        "fork_tip": "9618585a396b",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 4
+        },
+        "loc_added": {
+          "source": 57
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 57,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 30,
+          "code": 21
+        },
+        "complexity_source": {
+          "files": 4,
+          "base": {
+            "functions": 98,
+            "mean_ccn": 2.041,
+            "max_ccn": 16,
+            "mean_nloc": 8.32,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 99,
+            "mean_ccn": 2.061,
+            "max_ccn": 16,
+            "mean_nloc": 8.3,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": 0.02,
+            "max_ccn": 0,
+            "mean_nloc": -0.02,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 4,
+          "base": {
+            "functions": 98,
+            "mean_ccn": 2.041,
+            "max_ccn": 16,
+            "mean_nloc": 8.32,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 99,
+            "mean_ccn": 2.061,
+            "max_ccn": 16,
+            "mean_nloc": 8.3,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": 0.02,
+            "max_ccn": 0,
+            "mean_nloc": -0.02,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/default-dist-bdd",
+        "base": "881049157d97",
+        "tip": "a712ee8c2163",
+        "commits": 4,
+        "fork_tip": "a712ee8c2163",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 15,
+          "build": 1,
+          "test": 8
+        },
+        "loc_added": {
+          "source": 627,
+          "build": 1,
+          "test_other": 24,
+          "test_code": 568
+        },
+        "test_loc_added": 592,
+        "test_code_loc_added": 568,
+        "source_loc_added": 627,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "crave/tests/core/test_BddSampler.cpp",
+          "crave/tests/sysc/process_stability.cpp"
+        ],
+        "new_test_cases": 19,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 134,
+          "code": 422
+        },
+        "complexity_source": {
+          "files": 15,
+          "base": {
+            "functions": 178,
+            "mean_ccn": 1.601,
+            "max_ccn": 16,
+            "mean_nloc": 5.39,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 243,
+            "mean_ccn": 1.63,
+            "max_ccn": 22,
+            "mean_nloc": 4.76,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 65,
+            "mean_ccn": 0.029,
+            "max_ccn": 6,
+            "mean_nloc": -0.63,
+            "ccn_gt15": 1
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 21,
+          "base": {
+            "functions": 204,
+            "mean_ccn": 1.853,
+            "max_ccn": 16,
+            "mean_nloc": 6.0,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 300,
+            "mean_ccn": 1.887,
+            "max_ccn": 22,
+            "mean_nloc": 5.72,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 96,
+            "mean_ccn": 0.034,
+            "max_ccn": 6,
+            "mean_nloc": -0.28,
+            "ccn_gt15": 1
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/find-uvm-systemc",
+        "base": "881049157d97",
+        "tip": "a5fae78b40b8",
+        "commits": 1,
+        "fork_tip": "a5fae78b40b8",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 1
+        },
+        "loc_added": {
+          "build": 3
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "find-uvm-systemc"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/installed-package-config",
+        "base": "881049157d97",
+        "tip": "5f253984dbcd",
+        "commits": 4,
+        "fork_tip": "5f253984dbcd",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 5
+        },
+        "loc_added": {
+          "build": 17
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/macos-shared-systemc",
+        "base": "881049157d97",
+        "tip": "135cc0a84f57",
+        "commits": 2,
+        "fork_tip": "135cc0a84f57",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 1,
+          "example": 1,
+          "test": 2
+        },
+        "loc_added": {
+          "build": 4,
+          "example": 3,
+          "test_other": 4,
+          "test_code": 34
+        },
+        "test_loc_added": 38,
+        "test_code_loc_added": 34,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "crave/tests/sc_main_stub.cpp"
+        ],
+        "new_test_cases": 0,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 1,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 1,
+            "mean_ccn": 1,
+            "max_ccn": 1,
+            "mean_nloc": 1,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 1,
+            "mean_ccn": 1.0,
+            "max_ccn": 1,
+            "mean_nloc": 1.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/metasmt-cxx-standard",
+        "base": "881049157d97",
+        "tip": "6ad9020089b1",
+        "commits": 1,
+        "fork_tip": "6ad9020089b1",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 2
+        },
+        "loc_added": {
+          "build": 4
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/system-boost",
+        "base": "881049157d97",
+        "tip": "e1a36607c11d",
+        "commits": 4,
+        "fork_tip": "e1a36607c11d",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 2,
+          "test": 1
+        },
+        "loc_added": {
+          "build": 8,
+          "test_other": 3
+        },
+        "test_loc_added": 3,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/ubus-driver-stack",
+        "base": "881049157d97",
+        "tip": "0978f92a13c3",
+        "commits": 1,
+        "fork_tip": "0978f92a13c3",
+        "fork_equals_local": true,
+        "files_changed": {
+          "example": 2
+        },
+        "loc_added": {
+          "example": 18
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 19,
+            "mean_ccn": 2.526,
+            "max_ccn": 7,
+            "mean_nloc": 11.53,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 19,
+            "mean_ccn": 2.526,
+            "max_ccn": 7,
+            "mean_nloc": 11.95,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.42,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "ubus-driver-stack"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/vector-randomization",
+        "base": "881049157d97",
+        "tip": "def520b811c2",
+        "commits": 6,
+        "fork_tip": "def520b811c2",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 14,
+          "build": 1,
+          "test": 8
+        },
+        "loc_added": {
+          "source": 674,
+          "build": 1,
+          "test_other": 24,
+          "test_code": 549
+        },
+        "test_loc_added": 573,
+        "test_code_loc_added": 549,
+        "source_loc_added": 674,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "crave/tests/core/test_BddSampler.cpp",
+          "crave/tests/sysc/process_stability.cpp"
+        ],
+        "new_test_cases": 17,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 132,
+          "code": 467
+        },
+        "complexity_source": {
+          "files": 14,
+          "base": {
+            "functions": 187,
+            "mean_ccn": 1.882,
+            "max_ccn": 16,
+            "mean_nloc": 6.37,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 250,
+            "mean_ccn": 1.896,
+            "max_ccn": 22,
+            "mean_nloc": 5.7,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 63,
+            "mean_ccn": 0.014,
+            "max_ccn": 6,
+            "mean_nloc": -0.67,
+            "ccn_gt15": 1
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 20,
+          "base": {
+            "functions": 228,
+            "mean_ccn": 2.004,
+            "max_ccn": 16,
+            "mean_nloc": 6.68,
+            "ccn_gt15": 1
+          },
+          "tip": {
+            "functions": 320,
+            "mean_ccn": 2.044,
+            "max_ccn": 22,
+            "mean_nloc": 6.36,
+            "ccn_gt15": 2
+          },
+          "delta": {
+            "functions": 92,
+            "mean_ccn": 0.04,
+            "max_ccn": 6,
+            "mean_nloc": -0.32,
+            "ccn_gt15": 1
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/z3-clang-build",
+        "base": "881049157d97",
+        "tip": "9743d0776532",
+        "commits": 1,
+        "fork_tip": "9743d0776532",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 2
+        },
+        "loc_added": {
+          "build": 34
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 0,
+          "base": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      }
+    ],
+    "fc4sc": [
+      {
+        "branch": "feature/cmake-ci",
+        "base": "31b9339a34a4",
+        "tip": "bfe25e28118c",
+        "commits": 9,
+        "fork_tip": "bfe25e28118c",
+        "fork_equals_local": true,
+        "files_changed": {
+          "build": 2,
+          "doc": 1,
+          "example": 4,
+          "source": 4,
+          "test": 2
+        },
+        "loc_added": {
+          "build": 92,
+          "doc": 20,
+          "example": 37,
+          "source": 19,
+          "test_other": 60,
+          "test_code": 59
+        },
+        "test_loc_added": 119,
+        "test_code_loc_added": 59,
+        "source_loc_added": 19,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "test/fc4sc/illegal_bin_sample_expression_test.cpp"
+        ],
+        "new_test_cases": 1,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 10,
+          "code": 9
+        },
+        "complexity_source": {
+          "files": 4,
+          "base": {
+            "functions": 129,
+            "mean_ccn": 2.209,
+            "max_ccn": 14,
+            "mean_nloc": 9.64,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 129,
+            "mean_ccn": 2.209,
+            "max_ccn": 14,
+            "mean_nloc": 9.64,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 7,
+          "base": {
+            "functions": 132,
+            "mean_ccn": 2.197,
+            "max_ccn": 14,
+            "mean_nloc": 9.65,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 135,
+            "mean_ccn": 2.178,
+            "max_ccn": 14,
+            "mean_nloc": 9.57,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 3,
+            "mean_ccn": -0.019,
+            "max_ccn": 0,
+            "mean_nloc": -0.08,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/cross-bin-names",
+        "base": "31b9339a34a4",
+        "tip": "c8a829815429",
+        "commits": 2,
+        "fork_tip": null,
+        "fork_equals_local": false,
+        "files_changed": {
+          "example": 1,
+          "source": 2,
+          "test": 1
+        },
+        "loc_added": {
+          "example": 9,
+          "source": 79,
+          "test_code": 273
+        },
+        "test_loc_added": 273,
+        "test_code_loc_added": 273,
+        "source_loc_added": 79,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "test/fc4sc/cross_xml_test.cpp"
+        ],
+        "new_test_cases": 4,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 20,
+          "code": 49
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 16,
+            "mean_ccn": 3.25,
+            "max_ccn": 12,
+            "mean_nloc": 24.38,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 16,
+            "mean_ccn": 4,
+            "max_ccn": 18,
+            "mean_nloc": 25.69,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.75,
+            "max_ccn": 6,
+            "mean_nloc": 1.31,
+            "ccn_gt15": 1
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 16,
+            "mean_ccn": 3.25,
+            "max_ccn": 12,
+            "mean_nloc": 24.38,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 30,
+            "mean_ccn": 3.4,
+            "max_ccn": 18,
+            "mean_nloc": 19.23,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 14,
+            "mean_ccn": 0.15,
+            "max_ccn": 6,
+            "mean_nloc": -5.15,
+            "ccn_gt15": 1
+          }
+        },
+        "audit": {
+          "topics": [
+            "cross-bin-names"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/cross-xml-bins",
+        "base": "31b9339a34a4",
+        "tip": "691ae519c466",
+        "commits": 1,
+        "fork_tip": "691ae519c466",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 2,
+          "test": 1
+        },
+        "loc_added": {
+          "source": 72,
+          "test_code": 236
+        },
+        "test_loc_added": 236,
+        "test_code_loc_added": 236,
+        "source_loc_added": 72,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "test/fc4sc/cross_xml_test.cpp"
+        ],
+        "new_test_cases": 3,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 17,
+          "code": 45
+        },
+        "complexity_source": {
+          "files": 2,
+          "base": {
+            "functions": 16,
+            "mean_ccn": 3.25,
+            "max_ccn": 12,
+            "mean_nloc": 24.38,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 16,
+            "mean_ccn": 3.875,
+            "max_ccn": 16,
+            "mean_nloc": 25.62,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.625,
+            "max_ccn": 4,
+            "mean_nloc": 1.24,
+            "ccn_gt15": 1
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 16,
+            "mean_ccn": 3.25,
+            "max_ccn": 12,
+            "mean_nloc": 24.38,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 29,
+            "mean_ccn": 3.241,
+            "max_ccn": 16,
+            "mean_nloc": 18.9,
+            "ccn_gt15": 1
+          },
+          "delta": {
+            "functions": 13,
+            "mean_ccn": -0.009,
+            "max_ccn": 4,
+            "mean_nloc": -5.48,
+            "ccn_gt15": 1
+          }
+        },
+        "audit": {
+          "topics": [
+            "cross-xml-bins"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "no",
+          "baseline": false,
+          "rounds": 2
+        }
+      },
+      {
+        "branch": "fix/gcc-cstdint",
+        "base": "31b9339a34a4",
+        "tip": "bc04234334d6",
+        "commits": 1,
+        "fork_tip": "bc04234334d6",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1
+        },
+        "loc_added": {
+          "source": 1
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 1,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 1
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 31,
+            "mean_ccn": 1.516,
+            "max_ccn": 5,
+            "mean_nloc": 4.48,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 31,
+            "mean_ccn": 1.516,
+            "max_ccn": 5,
+            "mean_nloc": 4.48,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 1,
+          "base": {
+            "functions": 31,
+            "mean_ccn": 1.516,
+            "max_ccn": 5,
+            "mean_nloc": 4.48,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 31,
+            "mean_ccn": 1.516,
+            "max_ccn": 5,
+            "mean_nloc": 4.48,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/illegal-bin-rethrow",
+        "base": "31b9339a34a4",
+        "tip": "dec7a94fd416",
+        "commits": 2,
+        "fork_tip": "dec7a94fd416",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 1
+        },
+        "loc_added": {
+          "source": 2,
+          "test_code": 59
+        },
+        "test_loc_added": 59,
+        "test_code_loc_added": 59,
+        "source_loc_added": 2,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [
+          "test/fc4sc/illegal_bin_sample_expression_test.cpp"
+        ],
+        "new_test_cases": 1,
+        "adds_test": true,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 2
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 47,
+            "mean_ccn": 2.511,
+            "max_ccn": 14,
+            "mean_nloc": 9.91,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 47,
+            "mean_ccn": 2.511,
+            "max_ccn": 14,
+            "mean_nloc": 9.91,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 47,
+            "mean_ccn": 2.511,
+            "max_ccn": 14,
+            "mean_nloc": 9.91,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 50,
+            "mean_ccn": 2.44,
+            "max_ccn": 14,
+            "mean_nloc": 9.7,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 3,
+            "mean_ccn": -0.071,
+            "max_ccn": 0,
+            "mean_nloc": -0.21,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      },
+      {
+        "branch": "fix/libcxx-build",
+        "base": "31b9339a34a4",
+        "tip": "7d082865171b",
+        "commits": 2,
+        "fork_tip": "7d082865171b",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 3
+        },
+        "loc_added": {
+          "source": 17
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 17,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 10,
+          "code": 7
+        },
+        "complexity_source": {
+          "files": 3,
+          "base": {
+            "functions": 117,
+            "mean_ccn": 2.026,
+            "max_ccn": 14,
+            "mean_nloc": 7.57,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 117,
+            "mean_ccn": 2.026,
+            "max_ccn": 14,
+            "mean_nloc": 7.57,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 3,
+          "base": {
+            "functions": 117,
+            "mean_ccn": 2.026,
+            "max_ccn": 14,
+            "mean_nloc": 7.57,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 117,
+            "mean_ccn": 2.026,
+            "max_ccn": 14,
+            "mean_nloc": 7.57,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0.0,
+            "max_ccn": 0,
+            "mean_nloc": 0.0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "libcxx-build"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/nonstandard-uint",
+        "base": "31b9339a34a4",
+        "tip": "19dab21de5eb",
+        "commits": 1,
+        "fork_tip": "19dab21de5eb",
+        "fork_equals_local": true,
+        "files_changed": {
+          "source": 1,
+          "test": 1
+        },
+        "loc_added": {
+          "source": 15,
+          "test_code": 5
+        },
+        "test_loc_added": 5,
+        "test_code_loc_added": 5,
+        "source_loc_added": 15,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": true,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 15
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 4,
+            "mean_ccn": 1,
+            "max_ccn": 1,
+            "mean_nloc": 8,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 4,
+            "mean_ccn": 1,
+            "max_ccn": 1,
+            "mean_nloc": 8,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0,
+            "max_ccn": 0,
+            "mean_nloc": 0,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 2,
+          "base": {
+            "functions": 5,
+            "mean_ccn": 2,
+            "max_ccn": 6,
+            "mean_nloc": 15,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 5,
+            "mean_ccn": 2,
+            "max_ccn": 6,
+            "mean_nloc": 15,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0,
+            "max_ccn": 0,
+            "mean_nloc": 0,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [
+            "nonstandard-uint"
+          ],
+          "reviewed": true,
+          "fail_then_pass": "yes",
+          "baseline": false,
+          "rounds": 1
+        }
+      },
+      {
+        "branch": "fix/ucis-history-self-parent",
+        "base": "31b9339a34a4",
+        "tip": "773e201f675d",
+        "commits": 1,
+        "fork_tip": "773e201f675d",
+        "fork_equals_local": true,
+        "files_changed": {
+          "example": 1,
+          "source": 1
+        },
+        "loc_added": {
+          "example": 0,
+          "source": 0
+        },
+        "test_loc_added": 0,
+        "test_code_loc_added": 0,
+        "source_loc_added": 0,
+        "new_test_dirs_with_golden": [],
+        "new_test_files": [],
+        "new_test_cases": 0,
+        "adds_test": false,
+        "touches_test": false,
+        "source_lines_added": {
+          "comment": 0,
+          "code": 0
+        },
+        "complexity_source": {
+          "files": 1,
+          "base": {
+            "functions": 12,
+            "mean_ccn": 4,
+            "max_ccn": 12,
+            "mean_nloc": 29.83,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 12,
+            "mean_ccn": 4,
+            "max_ccn": 12,
+            "mean_nloc": 29.75,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0,
+            "max_ccn": 0,
+            "mean_nloc": -0.08,
+            "ccn_gt15": 0
+          }
+        },
+        "complexity_all_cxx": {
+          "files": 1,
+          "base": {
+            "functions": 12,
+            "mean_ccn": 4,
+            "max_ccn": 12,
+            "mean_nloc": 29.83,
+            "ccn_gt15": 0
+          },
+          "tip": {
+            "functions": 12,
+            "mean_ccn": 4,
+            "max_ccn": 12,
+            "mean_nloc": 29.75,
+            "ccn_gt15": 0
+          },
+          "delta": {
+            "functions": 0,
+            "mean_ccn": 0,
+            "max_ccn": 0,
+            "mean_nloc": -0.08,
+            "ccn_gt15": 0
+          }
+        },
+        "audit": {
+          "topics": [],
+          "reviewed": false,
+          "fail_then_pass": null,
+          "baseline": null,
+          "rounds": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "measured": {
+    "uvm-systemc": {
+      "commit": "main 9e12a3437",
+      "build_type": "Debug",
+      "configure_s": 1.6,
+      "build_library_s": 20.9,
+      "build_tests_s": 29.3,
+      "cxx_compiles": [
+        74,
+        95
+      ],
+      "clean_configure_build_s": 51.8,
+      "full_ctest": [
+        {
+          "jobs": 18,
+          "wall_s": 57.4,
+          "ctest_total_s": 57.41,
+          "tests": 74,
+          "failed": 6,
+          "sum_test_s": 73.7,
+          "slowest": [
+            {
+              "test": "uvm-systemc/bugs/bug_184/basic_read_write_memory_management/cxx17/Debug",
+              "s": 57.4
+            },
+            {
+              "test": "uvm-systemc/examples/integrated/ubus/cxx17/Debug",
+              "s": 0.5
+            },
+            {
+              "test": "uvm-systemc/examples/simple/registers/models/aliasing/cxx17/Debug",
+              "s": 0.46
+            }
+          ]
+        },
+        {
+          "jobs": 1,
+          "wall_s": 59.6,
+          "ctest_total_s": 59.58,
+          "tests": 74,
+          "failed": 6,
+          "sum_test_s": 59.5,
+          "slowest": [
+            {
+              "test": "uvm-systemc/bugs/bug_184/basic_read_write_memory_management/cxx17/Debug",
+              "s": 57.26
+            },
+            {
+              "test": "uvm-systemc/examples/integrated/ubus/cxx17/Debug",
+              "s": 0.07
+            },
+            {
+              "test": "uvm-systemc/examples/simple/registers/models/aliasing/cxx17/Debug",
+              "s": 0.05
+            }
+          ]
+        }
+      ],
+      "single_test": {
+        "test": "uvm-systemc/unit_tests/00basic/99fixes/01global_comparer",
+        "touch_test_source": {
+          "file": "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/01global_comparer/test.cpp",
+          "build_s": 0.9,
+          "run_s": 0.3,
+          "total_s": 1.2,
+          "passed": true
+        },
+        "touch_library_source": {
+          "file": "src/uvmsc/conf/uvm_resource_pool.cpp",
+          "build_s": 0.6,
+          "run_s": 0.3,
+          "total_s": 0.9,
+          "passed": true
+        }
+      }
+    },
+    "fc4sc": {
+      "commit": "development c6f01d8b2",
+      "build_type": "Release",
+      "configure_s": 1.5,
+      "build_s": 5.0,
+      "full_ctest": {
+        "jobs": 18,
+        "wall_s": 0.0,
+        "ctest_total_s": 0.02,
+        "tests": 58,
+        "failed": 0,
+        "sum_test_s": 0.3,
+        "slowest": [
+          {
+            "test": "separate_cvg.test1",
+            "s": 0.01
+          },
+          {
+            "test": "scoped_separate_cvg.test2",
+            "s": 0.01
+          },
+          {
+            "test": "illegal_bin.sample_expression_throws",
+            "s": 0.01
+          }
+        ]
+      }
+    },
+    "systemc": {
+      "commit": "main cf66346d8",
+      "build_type": "Release",
+      "configure_s": 4.2,
+      "build_s": 188.7,
+      "full_ctest": {
+        "tests": {
+          "jobs": 18,
+          "wall_s": 28.8,
+          "ctest_total_s": 28.73,
+          "tests": 916,
+          "failed": 0
+        },
+        "examples": {
+          "jobs": 18,
+          "wall_s": 1.2,
+          "ctest_total_s": 1.17,
+          "tests": 35,
+          "failed": 0
+        }
+      }
+    },
+    "crave": {
+      "commit": "development 1090f3387",
+      "build_type": "Release",
+      "configure_s": null,
+      "build_s_incl_z3_cudd": 58.8,
+      "full_ctest": {
+        "jobs": 18,
+        "wall_s": 15.4,
+        "ctest_total_s": 15.36,
+        "tests": 712,
+        "failed": 1,
+        "slowest": [
+          {
+            "test": "direct_Z3/cardinality_t/test_adder_cardinality_with_bv",
+            "s": 14.44
+          },
+          {
+            "test": "direct_Z3/cardinality_t/test_bdd_cardinality_with_bv",
+            "s": 6.96
+          },
+          {
+            "test": "ahb_mem_burst",
+            "s": 5.36
+          }
+        ],
+        "failed_tests": [
+          "direct_Z3/Array/read_value_X"
+        ]
+      },
+      "note": "suite_cost.py's CRAVE build failed once inside the CUDD sub-build (log truncated); the same commands rerun by hand in a fresh worktree built cleanly, and these numbers are from that run (configure not timed)."
+    }
+  },
+  "host": {
+    "cpus": 18,
+    "uname": "arm64"
+  },
+  "notes": [
+    "UVM-SystemC, SystemC: main. FC4SC, CRAVE: development (main does not build: FC4SC main has no CMake build, CRAVE main does not find SystemC; the fork fixes are what make it build).",
+    "UVM-SystemC full ctest is dominated by one test: bugs/bug_184/basic_read_write_memory_management takes ~57 s; the other 73 tests take ~2.2 s summed in the serial run. The 6 failures are the known upstream macOS failures.",
+    "A first UVM-SystemC run measured the clean configure+build at 14.8 s; the rerun (recorded, with compile counts 74+95) took 51.8 s. Treat ~15-50 s as the range on this Mac.",
+    "CRAVE build includes fetching and building Z3 and CUDD; one CRAVE test fails on development (direct_Z3/Array/read_value_X)."
+  ]
+}

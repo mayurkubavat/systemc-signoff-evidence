@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this data, please cite it as below."
+type: dataset
+title: "systemc-signoff-evidence: review reports, measurement scripts and data for Proof Before Push"
+authors:
+  - family-names: Kubavat
+    given-names: Mayur
+    orcid: "https://orcid.org/0009-0009-1087-8558"
+    affiliation: Independent Researcher
+abstract: >-
+  Independent review reports, measurement scripts and data behind the report
+  Proof Before Push, which applies a sign-off checklist (fail-then-pass test,
+  baseline regression, clean build, independent review) to 58 change branches
+  in four open SystemC verification libraries: SystemC, UVM-SystemC, CRAVE and
+  FC4SC.
+license: Apache-2.0
+repository-code: "https://github.com/mayurkubavat/systemc-signoff-evidence"
+keywords:
+  - SystemC
+  - UVM-SystemC
+  - verification
+  - sign-off
+  - regression

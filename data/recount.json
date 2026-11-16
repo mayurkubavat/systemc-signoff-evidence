@@ -1,0 +1,2193 @@
+{
+  "branches": {
+    "uvm-systemc": {
+      "fork": 36,
+      "local": 42,
+      "local_only": [
+        "feature/fc4sc-coverage-rebased",
+        "feature/hdl-polling",
+        "feature/push-driver-sequencer",
+        "feature/reg-transaction-order-policy",
+        "feature/transaction-recording",
+        "fix/sequencer-rsp-export"
+      ]
+    },
+    "crave": {
+      "fork": 12,
+      "local": 12,
+      "local_only": []
+    },
+    "fc4sc": {
+      "fork": 8,
+      "local": 8,
+      "local_only": []
+    },
+    "systemc": {
+      "fork": 2,
+      "local": 2,
+      "local_only": []
+    }
+  },
+  "manifest": {
+    "uvm-systemc:feature/algorithmic-comparator": "9f9689410b8bed8a0e2d10b207ae95e9b87a9851",
+    "uvm-systemc:feature/cmdline-config-bitstream": "27c242a64509b01c283e7a99c880d98788af099c",
+    "uvm-systemc:feature/cmdline-objection-trace": "d35776f76a140f49098d7465f9999eff607ad07c",
+    "uvm-systemc:feature/cmdline-processor": "7951a5cbbcba8c42413f354ce491e22cdc4f2d74",
+    "uvm-systemc:feature/cmdline-seed": "28973d2f3c0eaee19bc173e123eec0437d247aa3",
+    "uvm-systemc:feature/crave-randomization": "485d098bbde73abc05e9e5d1ac0b8eb4f35db02e",
+    "uvm-systemc:feature/crave-reg-randomize": "bb5d44fd709d356f3a5a9ffb07aa33b5ae49c0bd",
+    "uvm-systemc:feature/crave-seed": "6a3278106f38ea3c0a8663b97286c4c15403719f",
+    "uvm-systemc:feature/fc4sc-coverage": "841c82582ca837099bc2990b41ecf1ca7a8cb2ed",
+    "uvm-systemc:feature/objection-callbacks": "c4945ec0437ed8041cab949197c189b148daf67e",
+    "uvm-systemc:feature/random-seed": "0814dcb4ce6163e808058c04057e01423a7e5866",
+    "uvm-systemc:feature/reg-backdoor-access": "95f2f76248ade6664c6b2c4fdd1bd3b4ace56fe5",
+    "uvm-systemc:feature/reg-built-in-sequences": "a895010087d9f42a5b72499169746f3eff441148",
+    "uvm-systemc:feature/reg-randomize": "7946e8d1fa3b081f5a7613613ea35f9de3560a27",
+    "uvm-systemc:feature/reg-seq-seed": "8d343ce8072b4ae2b7a8aafb7bd74c2088f427bc",
+    "uvm-systemc:feature/tlm-fifos-comparators": "0164557ae6e5b5af7d07286eedfc18ddf0357a5f",
+    "uvm-systemc:feature/uvm-barrier": "cde2b9aa62c97847829dc4a409806f51bee054cc",
+    "uvm-systemc:feature/uvm-heartbeat": "4cf6020ea6d9ee5736b61fe7189a1dee7bd3f3b8",
+    "uvm-systemc:feature/uvm-pool": "174aa6069c1e9b770b40511b54ee6d48db303934",
+    "uvm-systemc:feature/uvm-sequence-library": "67336eb9f47024e0f1e6061b8bb8456ea2336fe3",
+    "uvm-systemc:fix/component-schedule-lifetime": "879c015eacc3db0846e6c5a531c143a5d192e990",
+    "uvm-systemc:fix/config-db-exists": "1013c1956c8cfe03871c6d6ec37217a5b30de2f6",
+    "uvm-systemc:fix/global-forward-declarations": "0ae0ff273d160e26869ac73760ab09ef62e57cbf",
+    "uvm-systemc:fix/hdl-type-mismatch-message": "6d0044e90283ff400b00fb123310e0829c7f4484",
+    "uvm-systemc:fix/phase-schedule-order": "ae77928221d3feae9361c2af7689454aecadd5c8",
+    "uvm-systemc:fix/re-match-search": "36483c08d50ddcc32a47e4c52e226f4f7c126875",
+    "uvm-systemc:fix/reg-compare-mismatch-test": "ba4cbddd9b342bfaff951cd56437fc4445caeb55",
+    "uvm-systemc:fix/reg-data-width-128": "c137759bd5d8c1f361a9a72d538ea2ed8e0d34eb",
+    "uvm-systemc:fix/reg-deterministic-order": "d7af0781dc5411bd0c17353331accf11b7cb53a8",
+    "uvm-systemc:fix/reg-field-full-width": "142b260b9bf014d6d96dd2e1f380af2fa9ab7e29",
+    "uvm-systemc:fix/reg-map-internal-names": "a2e326f02dd74f38ca6dee4d03c81c6c79526d53",
+    "uvm-systemc:fix/reg-map-small-memory": "302a443cdbb773a4d7ce349b08443f7d81d70f3f",
+    "uvm-systemc:fix/resource-pool-spell-check": "be58442ad606ca22141465a54784092178b7b9a8",
+    "uvm-systemc:fix/sequencer-killed-requests": "ce20f0e2cce7a3e25b88ffbcf94ebe29fa175348",
+    "uvm-systemc:fix/ubus-portable-readback": "db68776eeb2b11a0869ad961189ba6414b8a8bea",
+    "uvm-systemc:fix/uvm-reg-set-parent": "82d70825f5949961cf844f2876c8aefc86a08424",
+    "crave:fix/bdd-solver-odr": "49da55ab66dc898aa4b77eda559e7c03b3cfc9ea",
+    "crave:fix/cudd-without-autotools": "cfa0d67211337d0c6e9bc78c508d80e75f090348",
+    "crave:fix/cxx17-clang-libcxx": "9618585a396b543fd1e0c76dde0056a314261eac",
+    "crave:fix/default-dist-bdd": "a712ee8c216308b9f08a8975d06847cc477427ca",
+    "crave:fix/find-uvm-systemc": "a5fae78b40b809e435245813bc8638bc4c070adb",
+    "crave:fix/installed-package-config": "5f253984dbcd3f9d82ae71e2020548cb57c342e8",
+    "crave:fix/macos-shared-systemc": "135cc0a84f579343d52343966ee10796ad86dd8f",
+    "crave:fix/metasmt-cxx-standard": "6ad9020089b1438db02dfa2897d28f5ef97e941c",
+    "crave:fix/system-boost": "e1a36607c11d74279cc215656d4152a6ab8e73c4",
+    "crave:fix/ubus-driver-stack": "0978f92a13c32b601fa3b9571bde2d67f5e4bb9f",
+    "crave:fix/vector-randomization": "def520b811c27d94a85efca46a415d49b00aaa3a",
+    "crave:fix/z3-clang-build": "9743d0776532f830430c4b0bad5fce023b2470a2",
+    "fc4sc:feature/cmake-ci": "bfe25e28118c4218c1285d9612a2283481bec13a",
+    "fc4sc:fix/cross-bin-names": "c8a829815429b63a985fae98957ee33c70482210",
+    "fc4sc:fix/cross-xml-bins": "691ae519c466d6eaa79a964cbf5faf4e047306ce",
+    "fc4sc:fix/gcc-cstdint": "bc04234334d603f4110d36de9df80210e07d064e",
+    "fc4sc:fix/illegal-bin-rethrow": "dec7a94fd416661fbe4aa52f216028b44f26c2dd",
+    "fc4sc:fix/libcxx-build": "7d082865171be3c58ce04564558551653b72ff57",
+    "fc4sc:fix/nonstandard-uint": "19dab21de5eb723151b46029e31bbd6533209f29",
+    "fc4sc:fix/ucis-history-self-parent": "773e201f675d2fc09e806f793f810f70c0d5a0f4",
+    "systemc:fix/signal-default-name": "ad3d332ca74ab906bf0899850543ae5a0bb70db4",
+    "systemc:fix/simple-cpu-debug-assert": "0a4793a189cf67e1b3b303d3fc0fa6407d4b4d75"
+  },
+  "a_counts": {
+    "total": 58,
+    "per_library": {
+      "uvm-systemc": 36,
+      "crave": 12,
+      "fc4sc": 8,
+      "systemc": 2
+    },
+    "fc4sc_coverage_rebased": {
+      "exists_locally": true,
+      "on_fork": false,
+      "same_tree_as": [
+        "feature/fc4sc-coverage"
+      ],
+      "no_diff_with": [
+        "feature/fc4sc-coverage"
+      ]
+    },
+    "local_only": {
+      "uvm-systemc": [
+        "feature/fc4sc-coverage-rebased",
+        "feature/hdl-polling",
+        "feature/push-driver-sequencer",
+        "feature/reg-transaction-order-policy",
+        "feature/transaction-recording",
+        "fix/sequencer-rsp-export"
+      ]
+    }
+  },
+  "b_adds_test": {
+    "stacked_branches": [
+      {
+        "branch": "uvm-systemc:feature/algorithmic-comparator",
+        "parent": "feature/tlm-fifos-comparators"
+      },
+      {
+        "branch": "uvm-systemc:feature/cmdline-config-bitstream",
+        "parent": "feature/cmdline-processor"
+      },
+      {
+        "branch": "uvm-systemc:feature/cmdline-objection-trace",
+        "parent": "feature/cmdline-processor"
+      },
+      {
+        "branch": "uvm-systemc:feature/cmdline-seed",
+        "parent": "feature/cmdline-processor"
+      },
+      {
+        "branch": "uvm-systemc:feature/crave-reg-randomize",
+        "parent": "feature/crave-seed"
+      },
+      {
+        "branch": "uvm-systemc:feature/crave-seed",
+        "parent": "feature/cmdline-seed"
+      },
+      {
+        "branch": "uvm-systemc:feature/reg-backdoor-access",
+        "parent": "feature/reg-built-in-sequences"
+      },
+      {
+        "branch": "uvm-systemc:feature/reg-randomize",
+        "parent": "feature/random-seed"
+      },
+      {
+        "branch": "uvm-systemc:feature/reg-seq-seed",
+        "parent": "feature/reg-built-in-sequences"
+      },
+      {
+        "branch": "uvm-systemc:feature/uvm-barrier",
+        "parent": "feature/uvm-pool"
+      },
+      {
+        "branch": "uvm-systemc:feature/uvm-heartbeat",
+        "parent": "feature/objection-callbacks"
+      },
+      {
+        "branch": "uvm-systemc:fix/reg-data-width-128",
+        "parent": "fix/reg-field-full-width"
+      },
+      {
+        "branch": "crave:fix/default-dist-bdd",
+        "parent": "fix/bdd-solver-odr"
+      },
+      {
+        "branch": "crave:fix/vector-randomization",
+        "parent": "fix/bdd-solver-odr"
+      },
+      {
+        "branch": "fc4sc:feature/cmake-ci",
+        "parent": "fix/illegal-bin-rethrow"
+      },
+      {
+        "branch": "fc4sc:fix/cross-bin-names",
+        "parent": "fix/cross-xml-bins"
+      }
+    ],
+    "own_diff_adds_test": 38,
+    "diff_vs_main_adds_test": 40,
+    "per_library_own": {
+      "uvm-systemc": 31,
+      "crave": 3,
+      "fc4sc": 3,
+      "systemc": 1
+    },
+    "per_library_vs_main": {
+      "uvm-systemc": 32,
+      "crave": 3,
+      "fc4sc": 4,
+      "systemc": 1
+    },
+    "branches_touching_stubs": [
+      "crave:fix/macos-shared-systemc"
+    ],
+    "no_test_own": [
+      "uvm-systemc:fix/phase-schedule-order",
+      "uvm-systemc:fix/reg-compare-mismatch-test",
+      "uvm-systemc:fix/reg-data-width-128",
+      "uvm-systemc:fix/ubus-portable-readback",
+      "uvm-systemc:fix/uvm-reg-set-parent",
+      "crave:fix/cudd-without-autotools",
+      "crave:fix/cxx17-clang-libcxx",
+      "crave:fix/find-uvm-systemc",
+      "crave:fix/installed-package-config",
+      "crave:fix/macos-shared-systemc",
+      "crave:fix/metasmt-cxx-standard",
+      "crave:fix/system-boost",
+      "crave:fix/ubus-driver-stack",
+      "crave:fix/z3-clang-build",
+      "fc4sc:feature/cmake-ci",
+      "fc4sc:fix/gcc-cstdint",
+      "fc4sc:fix/libcxx-build",
+      "fc4sc:fix/nonstandard-uint",
+      "fc4sc:fix/ucis-history-self-parent",
+      "systemc:fix/simple-cpu-debug-assert"
+    ]
+  },
+  "c_golden_dirs": {
+    "distinct_union_vs_main": 39,
+    "distinct_union_own": 39,
+    "sum_over_branches_vs_main": 90,
+    "development_vs_main": 39,
+    "development_ref": "development"
+  },
+  "d_ratio_uvm": {
+    "own_cxx_only": 1.91,
+    "own_with_golden": 2.234,
+    "vs_main_cxx_only": 0.754,
+    "vs_main_with_golden": 0.886,
+    "branches_with_source": 30
+  },
+  "e_ccn": {
+    "uvm_own": {
+      "branches": 26,
+      "lowered": 10,
+      "raised": 12,
+      "unchanged": 4,
+      "median_delta": 0.0,
+      "largest_increase": {
+        "branch": "uvm-systemc:feature/cmdline-processor",
+        "before": 1.809,
+        "after": 2.92,
+        "delta": 1.111
+      }
+    },
+    "uvm_vs_main": {
+      "branches": 29,
+      "lowered": 8,
+      "raised": 17,
+      "unchanged": 4,
+      "median_delta": 0.034,
+      "largest_increase": {
+        "branch": "uvm-systemc:feature/cmdline-config-bitstream",
+        "before": 1.809,
+        "after": 2.982,
+        "delta": 1.173
+      }
+    },
+    "all_own": {
+      "branches": 39,
+      "lowered": 12,
+      "raised": 17,
+      "unchanged": 10,
+      "median_delta": 0.0,
+      "largest_increase": {
+        "branch": "uvm-systemc:feature/cmdline-processor",
+        "before": 1.809,
+        "after": 2.92,
+        "delta": 1.111
+      }
+    },
+    "all_vs_main": {
+      "branches": 42,
+      "lowered": 10,
+      "raised": 22,
+      "unchanged": 10,
+      "median_delta": 0.014,
+      "largest_increase": {
+        "branch": "uvm-systemc:feature/cmdline-config-bitstream",
+        "before": 1.809,
+        "after": 2.982,
+        "delta": 1.173
+      }
+    }
+  },
+  "f_audit": {
+    "topics_with_report": 30,
+    "topics_sanitizer": 13,
+    "topics_no_new_warnings": 4,
+    "sanitizer_topics": [
+      "uvm-systemc:cmdline-processor",
+      "uvm-systemc:component-schedule-lifetime",
+      "uvm-systemc:global-forward-declarations",
+      "uvm-systemc:hdl-type-mismatch-message",
+      "uvm-systemc:phase-schedule-order",
+      "uvm-systemc:re-match-search",
+      "uvm-systemc:reg-built-in-sequences",
+      "uvm-systemc:reg-data-width-128",
+      "uvm-systemc:reg-deterministic-order",
+      "uvm-systemc:reg-field-full-width",
+      "uvm-systemc:reg-map-internal-names",
+      "uvm-systemc:reg-map-small-memory",
+      "uvm-systemc:tlm-fifos-comparators"
+    ],
+    "warnings_topics": [
+      "fc4sc:cross-xml-bins",
+      "systemc:signal-default-name",
+      "uvm-systemc:phase-schedule-order",
+      "uvm-systemc:reg-deterministic-order"
+    ],
+    "fork_branches_with_review": 39,
+    "fork_branches_without_review": 19,
+    "parity_batch_2_sanitizer": false,
+    "topics_second_round": 10,
+    "audit_topics": 30
+  },
+  "rows": [
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/algorithmic-comparator",
+      "sha": "9f9689410b8bed8a0e2d10b207ae95e9b87a9851",
+      "parent": "feature/tlm-fifos-comparators",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/04algorithmic_comparator"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/04algorithmic_comparator"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 147,
+        "test_golden_loc": 20,
+        "source_loc": 124
+      },
+      "vs_main": {
+        "test_code_loc": 714,
+        "test_golden_loc": 125,
+        "source_loc": 947
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-config-bitstream",
+      "sha": "27c242a64509b01c283e7a99c880d98788af099c",
+      "parent": "feature/cmdline-processor",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/06config_bitstream"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/06config_bitstream"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 103,
+        "test_golden_loc": 40,
+        "source_loc": 50
+      },
+      "vs_main": {
+        "test_code_loc": 623,
+        "test_golden_loc": 236,
+        "source_loc": 1666
+      },
+      "ccn_own": {
+        "before": 6.361,
+        "after": 6.639,
+        "delta": 0.278
+      },
+      "ccn_vs_main": {
+        "before": 1.809,
+        "after": 2.982,
+        "delta": 1.173
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-objection-trace",
+      "sha": "d35776f76a140f49098d7465f9999eff607ad07c",
+      "parent": "feature/cmdline-processor",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/05objection_trace"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/05objection_trace"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 99,
+        "test_golden_loc": 30,
+        "source_loc": 16
+      },
+      "vs_main": {
+        "test_code_loc": 619,
+        "test_golden_loc": 226,
+        "source_loc": 1634
+      },
+      "ccn_own": {
+        "before": 5.735,
+        "after": 5.765,
+        "delta": 0.03
+      },
+      "ccn_vs_main": {
+        "before": 2.51,
+        "after": 3.277,
+        "delta": 0.767
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-processor",
+      "sha": "7951a5cbbcba8c42413f354ce491e22cdc4f2d74",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 520,
+        "test_golden_loc": 196,
+        "source_loc": 1618
+      },
+      "vs_main": {
+        "test_code_loc": 520,
+        "test_golden_loc": 196,
+        "source_loc": 1618
+      },
+      "ccn_own": {
+        "before": 1.809,
+        "after": 2.92,
+        "delta": 1.111
+      },
+      "ccn_vs_main": {
+        "before": 1.809,
+        "after": 2.92,
+        "delta": 1.111
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/cmdline-seed",
+      "sha": "28973d2f3c0eaee19bc173e123eec0437d247aa3",
+      "parent": "feature/cmdline-processor",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 431,
+        "test_golden_loc": 70,
+        "source_loc": 228
+      },
+      "vs_main": {
+        "test_code_loc": 951,
+        "test_golden_loc": 266,
+        "source_loc": 1846
+      },
+      "ccn_own": {
+        "before": 4.379,
+        "after": 4.304,
+        "delta": -0.075
+      },
+      "ccn_vs_main": {
+        "before": 2.27,
+        "after": 2.996,
+        "delta": 0.726
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/crave-randomization",
+      "sha": "485d098bbde73abc05e9e5d1ac0b8eb4f35db02e",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/crave/constrained_random"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/crave/constrained_random"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 6,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 6,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/crave-reg-randomize",
+      "sha": "bb5d44fd709d356f3a5a9ffb07aa33b5ae49c0bd",
+      "parent": "feature/crave-seed",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/crave/constrained_random",
+        "tests/tests/crave/constrained_registers",
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/crave/constrained_registers",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 685,
+        "test_golden_loc": 52,
+        "source_loc": 310
+      },
+      "vs_main": {
+        "test_code_loc": 1636,
+        "test_golden_loc": 324,
+        "source_loc": 2156
+      },
+      "ccn_own": {
+        "before": 4.093,
+        "after": 3.979,
+        "delta": -0.114
+      },
+      "ccn_vs_main": {
+        "before": 3.3,
+        "after": 3.498,
+        "delta": 0.198
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/crave-seed",
+      "sha": "6a3278106f38ea3c0a8663b97286c4c15403719f",
+      "parent": "feature/cmdline-seed",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/crave/constrained_random",
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/01processor",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/02testname",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/03settings",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/04report",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/05seed",
+        "tests/tests/uvm-systemc/unit_tests/05cmdline/06seed_invalid",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/crave/constrained_random"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 6,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 951,
+        "test_golden_loc": 272,
+        "source_loc": 1846
+      },
+      "ccn_own": null,
+      "ccn_vs_main": {
+        "before": 2.27,
+        "after": 2.996,
+        "delta": 0.726
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/fc4sc-coverage",
+      "sha": "841c82582ca837099bc2990b41ecf1ca7a8cb2ed",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/fc4sc/coverage/subscriber"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/fc4sc/coverage/subscriber"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 15,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 15,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/objection-callbacks",
+      "sha": "c4945ec0437ed8041cab949197c189b148daf67e",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 134,
+        "test_golden_loc": 44,
+        "source_loc": 141
+      },
+      "vs_main": {
+        "test_code_loc": 134,
+        "test_golden_loc": 44,
+        "source_loc": 141
+      },
+      "ccn_own": {
+        "before": 4.794,
+        "after": 4.395,
+        "delta": -0.399
+      },
+      "ccn_vs_main": {
+        "before": 4.794,
+        "after": 4.395,
+        "delta": -0.399
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/random-seed",
+      "sha": "0814dcb4ce6163e808058c04057e01423a7e5866",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 482,
+        "test_golden_loc": 52,
+        "source_loc": 163
+      },
+      "vs_main": {
+        "test_code_loc": 482,
+        "test_golden_loc": 52,
+        "source_loc": 163
+      },
+      "ccn_own": {
+        "before": 3.169,
+        "after": 3.077,
+        "delta": -0.092
+      },
+      "ccn_vs_main": {
+        "before": 3.169,
+        "after": 3.077,
+        "delta": -0.092
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/reg-backdoor-access",
+      "sha": "95f2f76248ade6664c6b2c4fdd1bd3b4ace56fe5",
+      "parent": "feature/reg-built-in-sequences",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20reg_access",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/20reg_access"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 280,
+        "test_golden_loc": 81,
+        "source_loc": 76
+      },
+      "vs_main": {
+        "test_code_loc": 935,
+        "test_golden_loc": 373,
+        "source_loc": 2269
+      },
+      "ccn_own": {
+        "before": 3.739,
+        "after": 3.892,
+        "delta": 0.153
+      },
+      "ccn_vs_main": {
+        "before": 4.701,
+        "after": 4.861,
+        "delta": 0.16
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/reg-built-in-sequences",
+      "sha": "a895010087d9f42a5b72499169746f3eff441148",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 655,
+        "test_golden_loc": 292,
+        "source_loc": 2193
+      },
+      "vs_main": {
+        "test_code_loc": 655,
+        "test_golden_loc": 292,
+        "source_loc": 2193
+      },
+      "ccn_own": {
+        "before": 4.732,
+        "after": 4.817,
+        "delta": 0.085
+      },
+      "ccn_vs_main": {
+        "before": 4.732,
+        "after": 4.817,
+        "delta": 0.085
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/reg-randomize",
+      "sha": "7946e8d1fa3b081f5a7613613ea35f9de3560a27",
+      "parent": "feature/random-seed",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/02weighted_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order",
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30randomize"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 487,
+        "test_golden_loc": 30,
+        "source_loc": 310
+      },
+      "vs_main": {
+        "test_code_loc": 969,
+        "test_golden_loc": 82,
+        "source_loc": 473
+      },
+      "ccn_own": {
+        "before": 4.093,
+        "after": 3.979,
+        "delta": -0.114
+      },
+      "ccn_vs_main": {
+        "before": 3.902,
+        "after": 3.786,
+        "delta": -0.116
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/reg-seq-seed",
+      "sha": "8d343ce8072b4ae2b7a8aafb7bd74c2088f427bc",
+      "parent": "feature/reg-built-in-sequences",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/01built_in",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02faults",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02randval_seed"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/01random_seed",
+        "tests/tests/uvm-systemc/unit_tests/20sequences/01random_arbitration",
+        "tests/tests/uvm-systemc/unit_tests/70regs/40sequences/02randval_seed"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 384,
+        "test_golden_loc": 68,
+        "source_loc": 199
+      },
+      "vs_main": {
+        "test_code_loc": 1039,
+        "test_golden_loc": 340,
+        "source_loc": 2387
+      },
+      "ccn_own": {
+        "before": 3.667,
+        "after": 3.58,
+        "delta": -0.087
+      },
+      "ccn_vs_main": {
+        "before": 4.264,
+        "after": 4.358,
+        "delta": 0.094
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/tlm-fifos-comparators",
+      "sha": "0164557ae6e5b5af7d07286eedfc18ddf0357a5f",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/01tlm_fifo",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/02analysis_fifo",
+        "tests/tests/uvm-systemc/unit_tests/11tlm/20fifos/03in_order_comparator"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 567,
+        "test_golden_loc": 105,
+        "source_loc": 823
+      },
+      "vs_main": {
+        "test_code_loc": 567,
+        "test_golden_loc": 105,
+        "source_loc": 823
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/uvm-barrier",
+      "sha": "cde2b9aa62c97847829dc4a409806f51bee054cc",
+      "parent": "feature/uvm-pool",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/10pool",
+        "tests/tests/uvm-systemc/unit_tests/00basic/11barrier"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/11barrier"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 136,
+        "test_golden_loc": 45,
+        "source_loc": 359
+      },
+      "vs_main": {
+        "test_code_loc": 275,
+        "test_golden_loc": 87,
+        "source_loc": 894
+      },
+      "ccn_own": null,
+      "ccn_vs_main": {
+        "before": 1.556,
+        "after": 1.641,
+        "delta": 0.085
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/uvm-heartbeat",
+      "sha": "4cf6020ea6d9ee5736b61fe7189a1dee7bd3f3b8",
+      "parent": "feature/objection-callbacks",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat",
+        "tests/tests/uvm-systemc/unit_tests/40phasing/30objection_callbacks"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/12heartbeat"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 208,
+        "test_golden_loc": 76,
+        "source_loc": 643
+      },
+      "vs_main": {
+        "test_code_loc": 342,
+        "test_golden_loc": 120,
+        "source_loc": 784
+      },
+      "ccn_own": null,
+      "ccn_vs_main": {
+        "before": 4.794,
+        "after": 4.138,
+        "delta": -0.656
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/uvm-pool",
+      "sha": "174aa6069c1e9b770b40511b54ee6d48db303934",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/10pool"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/10pool"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 139,
+        "test_golden_loc": 42,
+        "source_loc": 535
+      },
+      "vs_main": {
+        "test_code_loc": 139,
+        "test_golden_loc": 42,
+        "source_loc": 535
+      },
+      "ccn_own": {
+        "before": 1.556,
+        "after": 1.571,
+        "delta": 0.015
+      },
+      "ccn_vs_main": {
+        "before": 1.556,
+        "after": 1.571,
+        "delta": 0.015
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "feature/uvm-sequence-library",
+      "sha": "67336eb9f47024e0f1e6061b8bb8456ea2336fe3",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/30seq/02sequence_library"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 419,
+        "test_golden_loc": 94,
+        "source_loc": 972
+      },
+      "vs_main": {
+        "test_code_loc": 419,
+        "test_golden_loc": 94,
+        "source_loc": 972
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/component-schedule-lifetime",
+      "sha": "879c015eacc3db0846e6c5a531c143a5d192e990",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/40phasing/20component_lifetime"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/40phasing/20component_lifetime"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 92,
+        "test_golden_loc": 17,
+        "source_loc": 22
+      },
+      "vs_main": {
+        "test_code_loc": 92,
+        "test_golden_loc": 17,
+        "source_loc": 22
+      },
+      "ccn_own": {
+        "before": 1.602,
+        "after": 1.634,
+        "delta": 0.032
+      },
+      "ccn_vs_main": {
+        "before": 1.602,
+        "after": 1.634,
+        "delta": 0.032
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/config-db-exists",
+      "sha": "1013c1956c8cfe03871c6d6ec37217a5b30de2f6",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/03config_db_exists"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 129,
+        "test_golden_loc": 27,
+        "source_loc": 4
+      },
+      "vs_main": {
+        "test_code_loc": 129,
+        "test_golden_loc": 27,
+        "source_loc": 4
+      },
+      "ccn_own": {
+        "before": 4.222,
+        "after": 4.333,
+        "delta": 0.111
+      },
+      "ccn_vs_main": {
+        "before": 4.222,
+        "after": 4.333,
+        "delta": 0.111
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/global-forward-declarations",
+      "sha": "0ae0ff273d160e26869ac73760ab09ef62e57cbf",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/06global_names"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 48,
+        "test_golden_loc": 4,
+        "source_loc": 12
+      },
+      "vs_main": {
+        "test_code_loc": 48,
+        "test_golden_loc": 4,
+        "source_loc": 12
+      },
+      "ccn_own": {
+        "before": 1.273,
+        "after": 1.273,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 1.273,
+        "after": 1.273,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/hdl-type-mismatch-message",
+      "sha": "6d0044e90283ff400b00fb123310e0829c7f4484",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/30bkdr/30type_mismatch"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 78,
+        "test_golden_loc": 22,
+        "source_loc": 21
+      },
+      "vs_main": {
+        "test_code_loc": 78,
+        "test_golden_loc": 22,
+        "source_loc": 21
+      },
+      "ccn_own": {
+        "before": 9.4,
+        "after": 8,
+        "delta": -1.4
+      },
+      "ccn_vs_main": {
+        "before": 9.4,
+        "after": 8,
+        "delta": -1.4
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/phase-schedule-order",
+      "sha": "ae77928221d3feae9361c2af7689454aecadd5c8",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 5,
+        "source_loc": 23
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 5,
+        "source_loc": 23
+      },
+      "ccn_own": {
+        "before": 6.37,
+        "after": 6.273,
+        "delta": -0.097
+      },
+      "ccn_vs_main": {
+        "before": 6.37,
+        "after": 6.273,
+        "delta": -0.097
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/re-match-search",
+      "sha": "36483c08d50ddcc32a47e4c52e226f4f7c126875",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/04re_match"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/04re_match"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 158,
+        "test_golden_loc": 27,
+        "source_loc": 23
+      },
+      "vs_main": {
+        "test_code_loc": 158,
+        "test_golden_loc": 27,
+        "source_loc": 23
+      },
+      "ccn_own": {
+        "before": 3.897,
+        "after": 3.931,
+        "delta": 0.034
+      },
+      "ccn_vs_main": {
+        "before": 3.897,
+        "after": 3.931,
+        "delta": 0.034
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/reg-compare-mismatch-test",
+      "sha": "ba4cbddd9b342bfaff951cd56437fc4445caeb55",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 1,
+        "test_golden_loc": 27,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 1,
+        "test_golden_loc": 27,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/reg-data-width-128",
+      "sha": "c137759bd5d8c1f361a9a72d538ea2ed8e0d34eb",
+      "parent": "fix/reg-field-full-width",
+      "adds_test_vs_main": true,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width"
+      ],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 10,
+        "test_golden_loc": 8,
+        "source_loc": 4
+      },
+      "vs_main": {
+        "test_code_loc": 120,
+        "test_golden_loc": 25,
+        "source_loc": 15
+      },
+      "ccn_own": {
+        "before": 2.865,
+        "after": 2.865,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 4.03,
+        "after": 4.03,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/reg-deterministic-order",
+      "sha": "d7af0781dc5411bd0c17353331accf11b7cb53a8",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/02regs/30creation_order"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 193,
+        "test_golden_loc": 28,
+        "source_loc": 53
+      },
+      "vs_main": {
+        "test_code_loc": 193,
+        "test_golden_loc": 28,
+        "source_loc": 53
+      },
+      "ccn_own": {
+        "before": 3.289,
+        "after": 3.175,
+        "delta": -0.114
+      },
+      "ccn_vs_main": {
+        "before": 3.289,
+        "after": 3.175,
+        "delta": -0.114
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/reg-field-full-width",
+      "sha": "142b260b9bf014d6d96dd2e1f380af2fa9ab7e29",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/01fields/20full_width"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 110,
+        "test_golden_loc": 17,
+        "source_loc": 11
+      },
+      "vs_main": {
+        "test_code_loc": 110,
+        "test_golden_loc": 17,
+        "source_loc": 11
+      },
+      "ccn_own": {
+        "before": 5.413,
+        "after": 5.413,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 5.413,
+        "after": 5.413,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/reg-map-internal-names",
+      "sha": "a2e326f02dd74f38ca6dee4d03c81c6c79526d53",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/05factory_reg_rw"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 66,
+        "test_golden_loc": 14,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 66,
+        "test_golden_loc": 14,
+        "source_loc": 0
+      },
+      "ccn_own": {
+        "before": 5.167,
+        "after": 5.308,
+        "delta": 0.141
+      },
+      "ccn_vs_main": {
+        "before": 5.167,
+        "after": 5.308,
+        "delta": 0.141
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/reg-map-small-memory",
+      "sha": "302a443cdbb773a4d7ce349b08443f7d81d70f3f",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/70regs/05mem/30stride"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 99,
+        "test_golden_loc": 14,
+        "source_loc": 38
+      },
+      "vs_main": {
+        "test_code_loc": 99,
+        "test_golden_loc": 14,
+        "source_loc": 38
+      },
+      "ccn_own": {
+        "before": 5.091,
+        "after": 5.036,
+        "delta": -0.055
+      },
+      "ccn_vs_main": {
+        "before": 5.091,
+        "after": 5.036,
+        "delta": -0.055
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/resource-pool-spell-check",
+      "sha": "be58442ad606ca22141465a54784092178b7b9a8",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/00basic/99fixes/02resource_read_by_name"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 76,
+        "test_golden_loc": 14,
+        "source_loc": 57
+      },
+      "vs_main": {
+        "test_code_loc": 76,
+        "test_golden_loc": 14,
+        "source_loc": 57
+      },
+      "ccn_own": {
+        "before": 3.667,
+        "after": 4.074,
+        "delta": 0.407
+      },
+      "ccn_vs_main": {
+        "before": 3.667,
+        "after": 4.074,
+        "delta": 0.407
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/sequencer-killed-requests",
+      "sha": "ce20f0e2cce7a3e25b88ffbcf94ebe29fa175348",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/tests/uvm-systemc/unit_tests/30seq/01lock_zombie"
+      ],
+      "new_golden_dirs_own": [
+        "tests/tests/uvm-systemc/unit_tests/30seq/01lock_zombie"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 184,
+        "test_golden_loc": 24,
+        "source_loc": 101
+      },
+      "vs_main": {
+        "test_code_loc": 184,
+        "test_golden_loc": 24,
+        "source_loc": 101
+      },
+      "ccn_own": {
+        "before": 3.196,
+        "after": 3.25,
+        "delta": 0.054
+      },
+      "ccn_vs_main": {
+        "before": 3.196,
+        "after": 3.25,
+        "delta": 0.054
+      }
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/ubus-portable-readback",
+      "sha": "db68776eeb2b11a0869ad961189ba6414b8a8bea",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 10,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 10,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "uvm-systemc",
+      "branch": "fix/uvm-reg-set-parent",
+      "sha": "82d70825f5949961cf844f2876c8aefc86a08424",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 2
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 2
+      },
+      "ccn_own": {
+        "before": 3.721,
+        "after": 3.721,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 3.721,
+        "after": 3.721,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "crave",
+      "branch": "fix/bdd-solver-odr",
+      "sha": "49da55ab66dc898aa4b77eda559e7c03b3cfc9ea",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 415,
+        "test_golden_loc": 0,
+        "source_loc": 570
+      },
+      "vs_main": {
+        "test_code_loc": 415,
+        "test_golden_loc": 0,
+        "source_loc": 570
+      },
+      "ccn_own": {
+        "before": 1.779,
+        "after": 1.723,
+        "delta": -0.056
+      },
+      "ccn_vs_main": {
+        "before": 1.779,
+        "after": 1.723,
+        "delta": -0.056
+      }
+    },
+    {
+      "project": "crave",
+      "branch": "fix/cudd-without-autotools",
+      "sha": "cfa0d67211337d0c6e9bc78c508d80e75f090348",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/cxx17-clang-libcxx",
+      "sha": "9618585a396b543fd1e0c76dde0056a314261eac",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 57
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 57
+      },
+      "ccn_own": {
+        "before": 2.041,
+        "after": 2.061,
+        "delta": 0.02
+      },
+      "ccn_vs_main": {
+        "before": 2.041,
+        "after": 2.061,
+        "delta": 0.02
+      }
+    },
+    {
+      "project": "crave",
+      "branch": "fix/default-dist-bdd",
+      "sha": "a712ee8c216308b9f08a8975d06847cc477427ca",
+      "parent": "fix/bdd-solver-odr",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 153,
+        "test_golden_loc": 0,
+        "source_loc": 57
+      },
+      "vs_main": {
+        "test_code_loc": 568,
+        "test_golden_loc": 0,
+        "source_loc": 627
+      },
+      "ccn_own": {
+        "before": 1.784,
+        "after": 1.828,
+        "delta": 0.044
+      },
+      "ccn_vs_main": {
+        "before": 1.601,
+        "after": 1.63,
+        "delta": 0.029
+      }
+    },
+    {
+      "project": "crave",
+      "branch": "fix/find-uvm-systemc",
+      "sha": "a5fae78b40b809e435245813bc8638bc4c070adb",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/installed-package-config",
+      "sha": "5f253984dbcd3f9d82ae71e2020548cb57c342e8",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/macos-shared-systemc",
+      "sha": "135cc0a84f579343d52343966ee10796ad86dd8f",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [
+        "crave/tests/sc_main_stub.cpp"
+      ],
+      "own": {
+        "test_code_loc": 34,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 34,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/metasmt-cxx-standard",
+      "sha": "6ad9020089b1438db02dfa2897d28f5ef97e941c",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/system-boost",
+      "sha": "e1a36607c11d74279cc215656d4152a6ab8e73c4",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/ubus-driver-stack",
+      "sha": "0978f92a13c32b601fa3b9571bde2d67f5e4bb9f",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "crave",
+      "branch": "fix/vector-randomization",
+      "sha": "def520b811c27d94a85efca46a415d49b00aaa3a",
+      "parent": "fix/bdd-solver-odr",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 134,
+        "test_golden_loc": 0,
+        "source_loc": 104
+      },
+      "vs_main": {
+        "test_code_loc": 549,
+        "test_golden_loc": 0,
+        "source_loc": 674
+      },
+      "ccn_own": {
+        "before": 1.989,
+        "after": 2.179,
+        "delta": 0.19
+      },
+      "ccn_vs_main": {
+        "before": 1.882,
+        "after": 1.896,
+        "delta": 0.014
+      }
+    },
+    {
+      "project": "crave",
+      "branch": "fix/z3-clang-build",
+      "sha": "9743d0776532f830430c4b0bad5fce023b2470a2",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    },
+    {
+      "project": "fc4sc",
+      "branch": "feature/cmake-ci",
+      "sha": "bfe25e28118c4218c1285d9612a2283481bec13a",
+      "parent": "fix/illegal-bin-rethrow",
+      "adds_test_vs_main": true,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 17
+      },
+      "vs_main": {
+        "test_code_loc": 59,
+        "test_golden_loc": 0,
+        "source_loc": 19
+      },
+      "ccn_own": {
+        "before": 2.209,
+        "after": 2.209,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 2.209,
+        "after": 2.209,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/cross-bin-names",
+      "sha": "c8a829815429b63a985fae98957ee33c70482210",
+      "parent": "fix/cross-xml-bins",
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 37,
+        "test_golden_loc": 0,
+        "source_loc": 7
+      },
+      "vs_main": {
+        "test_code_loc": 273,
+        "test_golden_loc": 0,
+        "source_loc": 79
+      },
+      "ccn_own": {
+        "before": 4.833,
+        "after": 5,
+        "delta": 0.167
+      },
+      "ccn_vs_main": {
+        "before": 3.25,
+        "after": 4,
+        "delta": 0.75
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/cross-xml-bins",
+      "sha": "691ae519c466d6eaa79a964cbf5faf4e047306ce",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 236,
+        "test_golden_loc": 0,
+        "source_loc": 72
+      },
+      "vs_main": {
+        "test_code_loc": 236,
+        "test_golden_loc": 0,
+        "source_loc": 72
+      },
+      "ccn_own": {
+        "before": 3.25,
+        "after": 3.875,
+        "delta": 0.625
+      },
+      "ccn_vs_main": {
+        "before": 3.25,
+        "after": 3.875,
+        "delta": 0.625
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/gcc-cstdint",
+      "sha": "bc04234334d603f4110d36de9df80210e07d064e",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 1
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 1
+      },
+      "ccn_own": {
+        "before": 1.516,
+        "after": 1.516,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 1.516,
+        "after": 1.516,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/illegal-bin-rethrow",
+      "sha": "dec7a94fd416661fbe4aa52f216028b44f26c2dd",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 59,
+        "test_golden_loc": 0,
+        "source_loc": 2
+      },
+      "vs_main": {
+        "test_code_loc": 59,
+        "test_golden_loc": 0,
+        "source_loc": 2
+      },
+      "ccn_own": {
+        "before": 2.511,
+        "after": 2.511,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 2.511,
+        "after": 2.511,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/libcxx-build",
+      "sha": "7d082865171be3c58ce04564558551653b72ff57",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 17
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 17
+      },
+      "ccn_own": {
+        "before": 2.026,
+        "after": 2.026,
+        "delta": 0.0
+      },
+      "ccn_vs_main": {
+        "before": 2.026,
+        "after": 2.026,
+        "delta": 0.0
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/nonstandard-uint",
+      "sha": "19dab21de5eb723151b46029e31bbd6533209f29",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 5,
+        "test_golden_loc": 0,
+        "source_loc": 15
+      },
+      "vs_main": {
+        "test_code_loc": 5,
+        "test_golden_loc": 0,
+        "source_loc": 15
+      },
+      "ccn_own": {
+        "before": 1,
+        "after": 1,
+        "delta": 0
+      },
+      "ccn_vs_main": {
+        "before": 1,
+        "after": 1,
+        "delta": 0
+      }
+    },
+    {
+      "project": "fc4sc",
+      "branch": "fix/ucis-history-self-parent",
+      "sha": "773e201f675d2fc09e806f793f810f70c0d5a0f4",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 0,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": {
+        "before": 4,
+        "after": 4,
+        "delta": 0
+      },
+      "ccn_vs_main": {
+        "before": 4,
+        "after": 4,
+        "delta": 0
+      }
+    },
+    {
+      "project": "systemc",
+      "branch": "fix/signal-default-name",
+      "sha": "ad3d332ca74ab906bf0899850543ae5a0bb70db4",
+      "parent": null,
+      "adds_test_vs_main": true,
+      "adds_test_own": true,
+      "new_golden_dirs_vs_main": [
+        "tests/systemc/communication/sc_signal/default_name"
+      ],
+      "new_golden_dirs_own": [
+        "tests/systemc/communication/sc_signal/default_name"
+      ],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 86,
+        "test_golden_loc": 7,
+        "source_loc": 13
+      },
+      "vs_main": {
+        "test_code_loc": 86,
+        "test_golden_loc": 7,
+        "source_loc": 13
+      },
+      "ccn_own": {
+        "before": 1.34,
+        "after": 1.333,
+        "delta": -0.007
+      },
+      "ccn_vs_main": {
+        "before": 1.34,
+        "after": 1.333,
+        "delta": -0.007
+      }
+    },
+    {
+      "project": "systemc",
+      "branch": "fix/simple-cpu-debug-assert",
+      "sha": "0a4793a189cf67e1b3b303d3fc0fa6407d4b4d75",
+      "parent": null,
+      "adds_test_vs_main": false,
+      "adds_test_own": false,
+      "new_golden_dirs_vs_main": [],
+      "new_golden_dirs_own": [],
+      "stubs_touched": [],
+      "own": {
+        "test_code_loc": 4,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "vs_main": {
+        "test_code_loc": 4,
+        "test_golden_loc": 0,
+        "source_loc": 0
+      },
+      "ccn_own": null,
+      "ccn_vs_main": null
+    }
+  ]
+}

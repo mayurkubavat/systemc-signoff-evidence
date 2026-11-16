@@ -1,0 +1,11 @@
+UVM_SYSTEMC_HOME=~/.local/opt/accellera/uvm-systemc
+-- Found UVM-SystemC: ~/.local/opt/accellera/uvm-systemc/include
+-- RESULT master: no UVM::uvm-systemc target (UVM_SystemC_FOUND='')
+-- Found UVM-SystemC: ~/.local/opt/accellera/uvm-systemc/include
+-- RESULT fix: UVM::uvm-systemc target created
+
+== CRAVE default preset with the eight macOS build fixes merged (build3, 1930d955e)
+100% tests passed, 0 tests failed out of 253
+0
+UVM_SystemC_INCLUDE_DIR:PATH=~/.local/opt/accellera/uvm-systemc/include
+UVM_SystemC_LIBRARY:FILEPATH=~/.local/opt/accellera/uvm-systemc/lib/libuvm-systemc.dylib
